@@ -5,127 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/lesson3/styles/style.css">
+    <link rel="stylesheet" type="text/css" href="/lesson3/styles/style.css">
     <style>
-        * {
-            box-sizing: border-box;
-        }
 
-        body {
-            background-color: rgb(184, 9, 9);
-            margin: 0;
-        }
-
-        footer {
-            background-color: rgb(243, 112, 24);
-            color: white;
-            font-size: 30px;
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        div.group {
-            display: inline-block;
-            font-size: 20px;
-            padding: 20px;
-            background-color: rgb(8, 0, 0);
-            text-align: center;
-        }
-
-        img.main {
-
-            width: 50%;
-            text-align: center;
-            margin-top: 30px;
-            margin-bottom: 30px;
-
-        }
-
-
-        div.gallery {
-            border: 1px solid rgb(2, 2, 2);
-            text-align: center;
-        }
-
-        div.gallery:hover {
-            border: 1px solid #777;
-        }
-
-        div.gallery img {
-            width: 100%;
-            height: auto;
-        }
-
-        div.desc {
-            color: white;
-            padding: 15px;
-            text-align: center;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        .responsive {
-            padding: 0 6px;
-            float: left;
-            width: 24.99999%;
-        }
-
-        @media only screen and (max-width: 700px) {
-            .responsive {
-                width: 49.99999%;
-                margin: 6px 0;
-            }
-        }
-
-        @media only screen and (max-width: 500px) {
-            .responsive {
-                width: 100%;
-            }
-        }
-
-        .clearfix:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        .column1 {
-            float: left;
-            width: 33.33%;
-            padding: 15px;
-
-        }
-
-        .column2 {
-            color: aliceblue;
-            float: left;
-            width: 33.33%;
-            padding: 15px;
-        }
-
-        .column3 {
-
-
-            float: left;
-            width: 33.33%;
-            padding: 15px;
-        }
-
-        /* Clear floats after the columns */
-        .row:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-
-        /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
-        @media screen and (max-width:600px) {
-            .column {
-                width: 100%;
-            }
-        }
     </style>
 </head>
 
@@ -134,10 +16,11 @@
         <img class="main" width: 100%; src="/lesson2/images/title.gif" alt="header">
     </header>
     <div class="group">
+
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="img_5terre.jpg">
-                    <img src="/lesson2/images/img00.jpg" alt="Cinque Terre" width="600" height="400">
+                    <img src="/lesson2/images/img00.jpg" alt="Cat" width="600" height="400">
                 </a>
                 <div class="desc">Home</div>
             </div>
@@ -147,7 +30,7 @@
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="/lesson2/images/img01.jpg">
-                    <img src="/lesson2/images/img01.jpg" alt="Forest" width="600" height="400">
+                    <img src="/lesson2/images/img01.jpg" alt="Flower" width="600" height="400">
                 </a>
                 <div class="desc">About</div>
             </div>
@@ -156,7 +39,7 @@
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="/lesson2/images/img02.jpg">
-                    <img src="/lesson2/images/img02.jpg" alt="Northern Lights" width="600" height="400">
+                    <img src="/lesson2/images/img02.jpg" alt="Clock" width="600" height="400">
                 </a>
                 <div class="desc">Services</div>
             </div>
@@ -165,7 +48,7 @@
         <div class="responsive">
             <div class="gallery">
                 <a target="_blank" href="/lesson2/images/img03.jpg">
-                    <img src="/lesson2/images/img03.jpg" alt="Mountains" width="600" height="400">
+                    <img src="/lesson2/images/img03.jpg" alt="Flower" width="600" height="400">
                 </a>
                 <div class="desc">Contact</div>
             </div>
@@ -175,27 +58,29 @@
     </div>
     <div class="row">
         <div class="column1">
-            <h2>Column</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus
-                venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget
-                aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor
-                sed accumsan convallis.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis, minus.</p>
         </div>
 
         <div class="column2">
-            <h2>Column</h2>
+
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus
                 venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget
                 aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor
-                sed accumsan convallis.</p>
+                sed accumsan convallis.<br>
+
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod commodi
+                possimus nesciunt vitae doloremque voluptas neque repudiandae, reiciendis natus modi nihil perferendis
+                veritatis.<br>
+
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi aut nam illo, itaque
+                expedita unde. </p>
         </div>
 
         <div class="column3">
-            <h2>Column</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus
-                venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget
-                aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor
-                sed accumsan convallis.</p>
+            <h2>Title</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. </p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. </p>
         </div>
     </div>
 
