@@ -15,10 +15,10 @@ footer {
 }
 div.group {
     margin :5px;
-    
- 
+    margin-bottom: 0px;
+    padding-bottom: 0px;
     font-size: 20px;
-    padding: 20px;
+    padding-top: 20px;
     background-color: rgb(8, 0, 0);
    
 }
@@ -54,11 +54,12 @@ div.desc {
     text-align: center;
 }
 .responsive {
-    padding: 0 6px;
+    padding: 0px 40px 0px 40px;
     float: left;
     width: 24.99999%;
+    margin-bottom: 0px;
 }
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 600px) {
     .responsive {
         width: 49.99999%;
         margin: 12px 0;
@@ -103,10 +104,30 @@ div.desc {
     background-color: rgb(227, 221, 221);
     float: left;
     width: 23.33%;
-    padding: 15px;
+    
     font-size: 20px;
-    height: 30%;
+    height: 100%;
 }
+h2.colum3h2{
+    padding-top: 0px;
+    margin-top: 0px;
+    text-align: center;
+    background-color: rgb(189, 189, 189);
+}
+div.row div.column3 p.colum3p{
+    font-weight: normal;
+    position: relative;
+    padding-top: 15px;
+    padding-left: 3px;
+}
+div.row div.column3 p.colum3p:after {
+   content: "";
+   border-top: 1px solid #160a0b  ;
+   position: absolute;
+   top: 0px;
+   right: 20%;
+   left: 20%;
+  }
 
 /* Clear floats after the columns */
 .row {
