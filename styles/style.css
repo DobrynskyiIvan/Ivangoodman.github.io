@@ -2,7 +2,7 @@ body{
     padding: 0;
     margin: 0;
     line-height: 1;
-    background: greenyellow;
+    background: rgb(254, 255, 252);
     font-family: Arial, Helvetica, sans-serif;
 }
 .container{
@@ -18,7 +18,10 @@ body{
     padding: 5px;
 }
 #beetroot_img{
-    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
 }
 .lessons_list{
     border: 1px solid darkgrey;
