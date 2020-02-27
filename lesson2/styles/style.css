@@ -17,29 +17,28 @@ h1 {
 }
 
 p {
-    font-family: Georgia;
-    font-style: serif;
+    color:rgb(34, 31, 31);
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
     font-size: 20px;
-
+} 
+p i.eius{
+    color:rgb(13, 124, 228);
+    font-weight: bold;
 }
-
 span.span {
     color: rgb(95, 86, 211);
 }
-
 div.group {
     text-align: center;
 }
-
 img.main {
 
     width: 100%;
 
     margin-top: 30px;
     margin-bottom: 30px;
-
 }
-
 img.dashed2 {
     height: 10%;
     width: 10%;
@@ -48,5 +47,4 @@ img.dashed2 {
     margin-top: 30px;
     margin-bottom: 30px;
     margin-left: 10px;
-
 }
