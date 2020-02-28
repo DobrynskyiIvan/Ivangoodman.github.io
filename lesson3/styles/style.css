@@ -9,7 +9,7 @@ body {
 footer {
     background-color: rgb(233, 91, 17);
     color: white;
-    font-size: 30px;
+    font-size: 20px;
     text-align: center;
     margin-bottom: auto;
 }
@@ -17,7 +17,7 @@ div.group {
     margin :5px;
     margin-bottom: 0px;
     padding-bottom: 0px;
-    font-size: 20px;
+    font-size: 15px;
     padding-top: 20px;
     background-color: rgb(8, 0, 0);
    
