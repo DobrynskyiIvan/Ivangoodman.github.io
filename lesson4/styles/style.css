@@ -1,0 +1,319 @@
+
+
+  div.group2 {
+    
+    width: 1280px;
+  height: 976px;
+  background-color: #ffffff;
+    
+    margin-left: 135px;
+  }
+  div.main{
+    width: 1280px;
+    height: 418px;
+    text-transform: uppercase;
+
+
+  }
+  p.small{
+    width: 130px;
+    height: 9px;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.5;
+    letter-spacing: 4.8px;
+    text-align: right;
+    color: #898f99;
+    padding-left: 586px;
+    padding-top: 143px;
+    padding-bottom: 35px;
+   
+  }
+  h.head
+  {
+    margin-top: 35px;
+    width: 532px;
+    height: 36px;
+    font-family: Montserrat;
+    font-size: 48px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.63;
+    letter-spacing: 4.8px;
+    text-align: right;
+    color: #0ec8cb;
+    padding-left: 374px;
+  }
+  p.rest{
+    width: 580px;
+  height: 43px;
+  font-family: PTSans;
+  font-size: 18px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.67;
+  letter-spacing: normal;
+  text-align: center;
+  color: #999999;
+    padding-left: 383px;
+  }
+  .responsive2 {
+
+    margin-right: 170px;
+    margin-left: 170px;
+    margin-bottom: 138px;
+    
+}
+div.Rectangle { 
+    text-align: center;
+    width: 237px;
+  height: 420px;
+  border: solid 1px #ececec;
+  background-color: #f7f7f7;
+    float: left;
+    width: 24.5%;
+}
+div.Rectangle .circle1 {
+margin-top: 55px;
+margin-left: 85px;
+margin-bottom: 55px;
+    background:url(/lesson4/img/Anchor.png) no-repeat;
+    width: 66px;
+  height: 66px;
+  background-color: #f7f7f7;
+    }
+
+    div.Rectangle .circle2 {
+        background:url(/lesson4/img/Diamond\ black.png) no-repeat;
+        width: 66px;
+        height: 65px;
+       background-color: #f7f7f7;
+       margin-top: 55px;
+       margin-left: 90px;
+        margin-bottom: 42px;
+        }
+        div.Rectangle .circle3 {
+            background:url(/lesson4/img/Eyeglasses.png) no-repeat;
+            width: 66px;
+          height: 49px;
+          background-color: #f7f7f7;
+          margin-top: 63px;
+          margin-left: 85px;
+          margin-bottom: 64px;
+            }
+            div.Rectangle .circle4 {
+                background:url(/lesson4/img/Monitor.png) no-repeat;
+                width: 64px;
+              height: 53px;
+              background-color: #f7f7f7;
+              margin-top: 61px;
+              margin-left: 86px;
+              margin-bottom: 62px;
+                }
+ 
+ div.Rectangle  .desc2{
+    text-transform: uppercase;
+    width: 165px;
+    height: 16px;
+    font-family: Montserrat;
+    font-size: 21px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #1b1b1b;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    div.desctext2 {
+        margin-top: 33px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 174px;
+        height: 101px;
+        font-family: PTSans;
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.57;
+        letter-spacing: normal;
+        text-align: center;
+        color: #777777;
+     
+       
+    }
+ div.Rectangle:hover  {   
+      border: solid 1px #0ec8cb;
+  background-color: #0ec8cb;
+    }
+
+    div.Rectangle:hover .circle1 {
+        background:url(/lesson4/img/Anchor\ white.png) no-repeat;
+        }
+        div.Rectangle:hover .circle2 {
+            background:url(/lesson4/img/Diamond.png) no-repeat;
+            }
+            div.Rectangle:hover .circle3 {
+                background:url(/lesson4/img/Eyeglasses\ white.png) no-repeat;
+                }
+                div.Rectangle:hover .circle4 {
+                    background:url(/lesson4/img/Monitor\ white.png) no-repeat;
+                    }
+
+     div.Rectangle:hover  .desc2{
+            color: #ffffff;   
+        }
+     div.Rectangle:hover  div.desctext2{
+        color: #ffffff;  
+
+     }
+
+
+        
+
+
+
+
+
+
+
+
+
+  div.group {
+    
+    width: 1550px;
+    height: 289px;
+    background-color: #ffffff;
+    border: solid 1px #1275b9;
+  }
+.responsive {
+   
+    margin-top: 56px;
+    margin-bottom: 66px;
+    margin-right: 345px;
+    margin-left: 345px;
+}
+div.gallery { 
+    text-align: center;
+    float: left;
+    width: 33.3%;
+}
+.circle {
+    display: block;
+    width: 65px;
+    height: 63px;
+    border: solid 1px #1275b9;
+    background-color:  #1275b9;
+    border-radius: 50%;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-left: 77px;
+
+  }
+  .circle:hover {
+    background-color:#ffffff;
+   
+  }
+
+
+  .circle div.gallery .first {
+    background:url(/lesson4/img/Tablet\ white.png) no-repeat;
+    width: 24px;
+    height: 30px;
+    display: block;
+    margin: auto;
+   
+ 
+    }
+
+    .circle div.gallery .second 
+    {
+        background:url(/lesson4/img/Settings\ white.png) no-repeat;
+    }
+
+  .circle div.gallery .third {
+            background:url(/lesson4/img/Dashboard\ white.png) no-repeat;}
+        
+
+
+  .circle:hover div.gallery .first
+     {
+        background:url(/lesson4/img/Tablet.png) no-repeat;
+    }
+
+    .circle:hover div.gallery .second {
+        background:url(/lesson4/img/Settings\ blue.png) no-repeat;
+        
+        }
+        .circle:hover div.gallery .third {
+           
+            background:url(/lesson4/img/Dashboard\ blue.png) no-repeat;
+            }
+
+
+div.desc {
+    text-transform: uppercase;
+   
+    width: 150px;
+    height: 10px;
+    font-family:ProximaNova;
+    font-size: 14px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.71;
+    letter-spacing: 0.35px;
+    text-align: center;
+    color: #000000;
+    padding: 0px;
+   
+    margin-top: 20px;
+   
+   
+}
+div.desctext {
+    width: 220px;
+    height: 52px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 14px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.43;
+    letter-spacing: 0.35px;
+    text-align: center;
+    color: #9d9d9d;
+    display: block;
+    margin-top: 22px;
+    margin-bottom: 0px;
+ 
+   
+}
+
+
+@media only screen and (max-width: 600px) {
+    .responsive {
+        width: 49.99999%;
+        margin: 12px 0;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
