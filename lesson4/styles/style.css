@@ -1,4 +1,8 @@
+*{
+    margin: 0px;
+    padding: 0px;
 
+}
 
   div.group2 { 
     width: 1280px;
@@ -72,10 +76,9 @@ div.Rectangle .circle1 {
 margin-top: 55px;
 margin-left: 85px;
 width: 66px;
-  height: 66px;
+ height: 66px;
   background-color: #f7f7f7;
-  background:url(/lesson4/img/Anchor.png) no-repeat;
-    }
+  background:url(/lesson4/img/Anchor.png) no-repeat;    }
 
     div.Rectangle .circle2 {
         background:url(/lesson4/img/Diamond\ black.png) no-repeat;
@@ -141,23 +144,17 @@ width: 66px;
        
     }
  div.Rectangle:hover  {   
-      border: solid 1px #0ec8cb;
-  background-color: #0ec8cb;
-    }
+ border: solid 1px #0ec8cb;
+  background-color: #0ec8cb;    }
 
     div.Rectangle:hover .circle1 {
-        background:url(/lesson4/img/Anchor\ white.png) no-repeat;
-        }
+        background:url(/lesson4/img/Anchor\ white.png) no-repeat;        }
         div.Rectangle:hover .circle2 {
-            background:url(/lesson4/img/Diamond.png) no-repeat;
-            }
+            background:url(/lesson4/img/Diamond.png) no-repeat;            }
             div.Rectangle:hover .circle3 {
-                background:url(/lesson4/img/Eyeglasses\ white.png) no-repeat;
-                }
+                background:url(/lesson4/img/Eyeglasses\ white.png) no-repeat;                }
                 div.Rectangle:hover .circle4 {
-                    background:url(/lesson4/img/Monitor\ white.png) no-repeat;
-                    }
-
+                    background:url(/lesson4/img/Monitor\ white.png) no-repeat;                    }
      div.Rectangle:hover  .desc2{
             color: #ffffff;   
         }
@@ -168,10 +165,6 @@ width: 66px;
 
 
         
-
-
-
-
 
 
 
@@ -197,48 +190,32 @@ div.gallery {
     width: 33.3%;
 }
 .circle {
-    display: block;
     width: 65px;
-    height: 63px;
+    height: 65px;
     border: solid 1px #1275b9;
     background-color:  #1275b9;
     border-radius: 50%;
     margin-top: 0px;
-    margin-right: auto;
-    margin-left: 77px;
+    padding: auto;  }
 
-  }
   .circle:hover {
-    background-color:#ffffff;
-   
-  }
-
+    background-color:#ffffff;  }
 
   .circle div.gallery .first {
-    background:url(/lesson4/img/Tablet\ white.png) no-repeat;
-    width: 24px;
-    height: 30px;
-    display: block;
-    margin: auto;
-   
- 
-    }
+      opacity: 0;
+    width: 65px;
+    height: 65px;
+    background:url(/lesson4/img/Example!!!.png) no-repeat;
+    margin: auto;    }
 
     .circle div.gallery .second 
     {
         background:url(/lesson4/img/Settings\ white.png) no-repeat;
     }
-
   .circle div.gallery .third {
             background:url(/lesson4/img/Dashboard\ white.png) no-repeat;}
-        
-
-
-  .circle:hover div.gallery .first
-     {
-        background:url(/lesson4/img/Tablet.png) no-repeat;
-    }
-
+  .circle:hover div.gallery .first     {
+        background:url(/lesson4/img/Example!!!.png) no-repeat;    }
     .circle:hover div.gallery .second {
         background:url(/lesson4/img/Settings\ blue.png) no-repeat;
         
@@ -251,7 +228,6 @@ div.gallery {
 
 div.desc {
     text-transform: uppercase;
-   
     width: 150px;
     height: 10px;
     font-family:ProximaNova;
@@ -264,10 +240,7 @@ div.desc {
     text-align: center;
     color: #000000;
     padding: 0px;
-   
-    margin-top: 20px;
-   
-   
+    
 }
 div.desctext {
     width: 220px;
@@ -282,8 +255,7 @@ div.desctext {
     text-align: center;
     color: #9d9d9d;
     display: block;
-    margin-top: 22px;
-    margin-bottom: 0px;
+   
  
    
 }
