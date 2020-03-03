@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beetroot Academy</title>
     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="/styles/weather-icons.min.css">
+    <link rel="stylesheet" type="text/css" href="/styles/weather-icons-wind.min.css">
 </head>
 
 <body>
@@ -13,13 +15,28 @@
         <h1 class="title">Beetroot Academy Lessons</h1>
         <img id="beetroot_img"
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSpWnNrmvqSi_8JTLPDwJVYHWKMbLscAnw1_OUq2UaAfNWp0l1s">
-        <ul id="lessons_list" class="lessons_list">
+        <div class="basic_info">
+            <p class="right"> <a class="right" href=""> Git repositori</a> </p>
+            <p class="left"> <a class="left" href=""> Second</a></p>
+        </div>
 
-            <li class="list_item"><a href="/lesson1/SV.html">Lesson 1</a></li>
-            <li class="list_item"><a href="/lesson2/index.html">Lesson 2</a></li>
-            <li class="list_item"><a href="/lesson3/index.html">Lesson 3</a></li>
-            <li class="list_item"><a href="/lesson4/index.html">Lesson 4</a></li>
-        </ul>
+        <div class="list_container">
+            <ul class="lessons_list">
+                <li class="list_item"><a href="/lesson1/SV.html"><i class="wi wi-day-cloudy"></i>Lesson 1</a></li>
+                <li class="list_item"><a href="/lesson2/index.html">Lesson 2</a></li>
+                <li class="list_item"><a href="/lesson3/index.html">Lesson 3</a></li>
+                <li class="list_item"><a href="/lesson4/index.html">Lesson 4</a> </li>
+                <li class="list_item"><a href="">Lesson 5</a>
+                    <ul>
+                        <li> <a class="list_item_small" href="/lesson5/index.html">Task "Weather"</a></li>
+                        <li><a class="list_item_small" href="/lesson5/shoplist.html">Task "Shop"</a></li>
+                    </ul>
+                </li>
+                <li class="list_item"><a href="">Lesson 6</a></li>
+            </ul>
+
+        </div>
+
     </div>
 
 </body>
