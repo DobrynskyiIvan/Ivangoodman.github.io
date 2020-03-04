@@ -16,7 +16,7 @@
     text-transform: uppercase;  }
   p.small{
     width: 130px;
-    height: 9px;
+    
     font-family: Montserrat;
     font-size: 12px;
     font-weight: bold;
@@ -26,14 +26,13 @@
     letter-spacing: 4.8px;
     text-align: right;
     color: #898f99;
-    padding-left: 586px;
+    padding-left: 596px;
     padding-top: 143px;
     padding-bottom: 35px;  }
   h.head
   {
     margin-top: 35px;
     width: 532px;
-    height: 36px;
     font-family: Montserrat;
     font-size: 48px;
     font-weight: normal;
@@ -44,10 +43,10 @@
     text-align: right;
     color: #0ec8cb;
     padding-left: 374px;
+    
   }
   p.rest{
-    width: 600px;
-  height: 43px;
+    width: 700px;
   font-family: PTSans;
   font-size: 18px;
   font-weight: normal;
@@ -57,7 +56,8 @@
   letter-spacing: normal;
   text-align: center;
   color: #999999;
-    padding-left: 383px;
+    padding-left: 355px;
+    padding-top: 30px;
   }
   .responsive2 {
     margin-right: 170px;
@@ -72,9 +72,10 @@ div.Rectangle {
   background-color: #f7f7f7;
     float: left;
     width: 24.5%;
+    padding-top: 55px;
 }
 div.Rectangle .circle1 {
-margin-top: 55px;
+
 margin-left: 85px;
 width: 66px;
  height: 66px;
@@ -86,7 +87,7 @@ width: 66px;
         width: 66px;
         height: 66px;
        background-color: #f7f7f7;
-       margin-top: 55px; 
+     
         margin-left: 90px;
         }
         div.Rectangle .circle3 {
@@ -94,7 +95,7 @@ width: 66px;
             width: 66px;
           height: 66px;
           background-color: #f7f7f7;
-          margin-top: 55px;
+       
           margin-left: 85px;
          
             }
@@ -103,14 +104,17 @@ width: 66px;
                 width: 64px;
               height: 66px;
               background-color: #f7f7f7;
-              margin-top: 55px;
+         
               margin-left: 86px;
                 }
  
  div.Rectangle  .desc2{
     text-transform: uppercase;
     width: 165px;
-    height: 41px;
+   
+
+    
+  
     font-family: Montserrat;
     font-size: 21px;
     font-weight: normal;
@@ -118,18 +122,20 @@ width: 66px;
     font-style: normal;
     line-height: normal;
     letter-spacing: normal;
-    text-align: center;
+    text-align: center ;
     color: #1b1b1b;
     margin: block;
     margin-top: 42px;
+    padding-top: 20px;
     margin-left: auto;
     margin-right: auto;
     padding: 0px;
+ 
     }
 
     div.desctext2 {
-  margin-left: auto;
-        margin-right: auto;
+  margin: auto;
+  padding-top: 20px;
         width: 174px;
         height: 101px;
         font-family: PTSans;
@@ -174,67 +180,64 @@ width: 66px;
   div.group {
     
     width: 1550px;
-    height: 289px;
-    background-color: #ffffff;
-    border: solid 1px #1275b9;
-  }
-.responsive {
    
-    margin-top: 56px;
-    margin-bottom: 66px;
-    margin-right: 345px;
-    margin-left: 345px;
+    background-color: #ffffff;
+
+  
+  }
+div.group div.responsive{
+  display: flex;
+  justify-content:center;
+  flex-direction: row;
+  box-sizing: border-box;
+      text-align: center;
+
+     
+
 }
+
 div.gallery { 
-  overflow: auto;
+  display: flex;
+  width: 33.3%;
     text-align: center;
-    float: left;
-    width: 33.3%;
+    justify-content:center;
+    flex-direction: column;
+    align-items :center;
+
+
+
 }
-.circle {
-  overflow: auto;
+div.gallery .circle {
     width: 65px;
     height: 65px;
     border: solid 1px #1275b9;
     background-color:  #1275b9;
     border-radius: 50%;
-    margin-top: 0px;
-    padding: auto;  }
+    margin-top: 0px; }
 
-  .circle:hover {
-    background-color:#ffffff;  }
+ 
+  .circle.first {
+    background:url(/lesson4/img/Tablet\ white.png) no-repeat center center;   }
 
-  .circle div.gallery .first {
-    position: absolute;
-    overflow: auto;
+      .circle.first:hover {
+        background:url(/lesson4/img/Tablet.png) no-repeat center center;  }
     
-    width: 65px;
-    height: 65px;
-    background:url(/lesson4/img/Example!!!.png) no-repeat;
-    margin: auto;    }
-
-    .circle div.gallery .second 
-    {
-        background:url(/lesson4/img/Settings\ white.png) no-repeat;
-    }
-  .circle div.gallery .third {
-            background:url(/lesson4/img/Dashboard\ white.png) no-repeat;}
-  .circle:hover div.gallery .first     {
-        background:url(/lesson4/img/Example!!!.png) no-repeat;    }
-    .circle:hover div.gallery .second {
-        background:url(/lesson4/img/Settings\ blue.png) no-repeat;
+    .circle.second     {
+        background:url(/lesson4/img/Settings\ white.png) no-repeat center center;  }
         
-        }
-        .circle:hover div.gallery .third {
-           
-            background:url(/lesson4/img/Dashboard\ blue.png) no-repeat;
-            }
+    .circle.second:hover  {
+      background:url(/lesson4/img/Settings\ blue.png) no-repeat center center;    }
+
+  .circle.third {
+            background:url(/lesson4/img/Dashboard\ white.png) no-repeat center center;}
+
+        .circle.third:hover  {
+            background:url(/lesson4/img/Dashboard\ blue.png) no-repeat center center;  }
 
 
 div.desc {
     text-transform: uppercase;
     width: 150px;
-    height: 10px;
     font-family:ProximaNova;
     font-size: 14px;
     font-weight: normal;
@@ -244,12 +247,12 @@ div.desc {
     letter-spacing: 0.35px;
     text-align: center;
     color: #000000;
-    padding: 0px;
-    
+    padding-top: 15px;
+
 }
 div.desctext {
     width: 220px;
-    height: 52px;
+    padding-top: 20px;
     font-family: 'Times New Roman', Times, serif;
     font-size: 14px;
     font-weight: 300;
@@ -259,10 +262,6 @@ div.desctext {
     letter-spacing: 0.35px;
     text-align: center;
     color: #9d9d9d;
-    display: block;
-   
- 
-   
 }
 
 
