@@ -4,6 +4,7 @@
 
 }
 
+
   div.group2 { 
     width: 1280px;
   height: 976px;
@@ -185,11 +186,13 @@ width: 66px;
     margin-left: 345px;
 }
 div.gallery { 
+  overflow: auto;
     text-align: center;
     float: left;
     width: 33.3%;
 }
 .circle {
+  overflow: auto;
     width: 65px;
     height: 65px;
     border: solid 1px #1275b9;
@@ -202,7 +205,9 @@ div.gallery {
     background-color:#ffffff;  }
 
   .circle div.gallery .first {
-      opacity: 0;
+    position: absolute;
+    overflow: auto;
+    
     width: 65px;
     height: 65px;
     background:url(/lesson4/img/Example!!!.png) no-repeat;
