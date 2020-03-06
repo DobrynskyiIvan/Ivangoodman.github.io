@@ -1,0 +1,80 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.main_space{
+    width: 1200px;
+    height: 600px;
+    background-color: #f1d536;
+}
+.container{
+    background-color: #ffffff;
+    width: 360px;
+    height: 441px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.money{
+    width: 52px;
+    height: 53px;
+    font-family: Miso;
+    font-size: 70px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.34;
+    letter-spacing: 1.75px;
+    text-align: center;
+    color: #02995b;
+}
+.text_big{
+    font-family: Miso;
+    font-size: 56px;
+    font-weight: normal;
+    line-height: 0.43;
+    letter-spacing: normal;
+
+}
+.text_small{
+    width: 156px;
+    font-family: Lato;
+    font-size: 20px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.3;
+    letter-spacing: 0.5px;
+    text-align: center;
+    color: #333333;}
+
+.cup_container{
+    width: 156px;
+    height: 134px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;}
+
+.cup{
+    width: 135px;
+    height: 77px;
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 18px;
+        background: url(/lesson6/hm1/img/cup.bronze.png) no-repeat center center;}
+
+div.been{
+    width: 36px;
+    height: 45px;
+    margin-left: 42px;
+    margin-top: 15px; 
+    background: url(/lesson6/hm1/img/bean\ bronze.png) no-repeat center center;}
+
+.smoke{
+    width: 49px;
+    height: 46px;
+    margin-bottom: 11px;
+    background: url(/lesson6/hm1/img/smoke\ bronze.png) no-repeat center center;}
+    
