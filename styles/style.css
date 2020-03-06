@@ -76,7 +76,7 @@ li a.list_item_small{
 .lessons_list .list_item{
     padding: 40px 40px;
     text-align: center;
-    border: 1px solid rgb(126, 135, 214);
+    border: 1px solid rgb(248, 249, 250);
 }
 .lessons_list .list_item:hover{
    background-color: rgb(114, 116, 111);
@@ -92,5 +92,19 @@ text-decoration: none;
 .lessons_list .list_item:hover a{
     color :rgb(240, 232, 93);
     font-size: 55px;
+}
+.lessons_list .list_item:hover a.list_item_small{
+    list-style-type: none ;
+    text-decoration: none; 
+    font-size: 55px;
+    text-align: right;
+}
+.lessons_list .list_item:hover a.list_item_small:hover{
+    color :rgb(144, 248, 46);
+    font-size: 75px;
+}
+.lessons_list .list_item:hover a.small{
+    color :rgb(240, 232, 93);
+    font-size: 25px;
 }
 
