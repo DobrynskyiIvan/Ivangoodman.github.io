@@ -6,19 +6,27 @@
     width: 1200px;
     height: 600px;
     background-color: #f1d536;
+    display: flex;
+    flex-direction:row ;
+    align-items: center;
+    justify-content: space-around;
+
+
 }
 .container{
-    background-color: #ffffff;
+    background-color: #ffffff;  
     width: 360px;
     height: 441px;
     display: flex;
-    justify-content:center;
     align-items: center;
     flex-direction: column;
     justify-content: space-around;
+    flex-grow: 0;  
 }
+
+
 .money{
-    width: 52px;
+    width: 91px;
     height: 53px;
     font-family: Miso;
     font-size: 70px;
@@ -56,6 +64,8 @@
     justify-content:center;
     align-items: center;
     flex-direction: column;}
+    .cup_container.gold{
+      padding-bottom: 170px;}
 
 .cup{
     width: 135px;
@@ -63,7 +73,7 @@
     padding-left: 0px;
     padding-right: 0px;
     margin-left: 18px;
-        background: url(/lesson6/hm1/img/cup.bronze.png) no-repeat center center;}
+       }
 
 div.been{
     width: 36px;
@@ -76,5 +86,21 @@ div.been{
     width: 49px;
     height: 46px;
     margin-bottom: 11px;
-    background: url(/lesson6/hm1/img/smoke\ bronze.png) no-repeat center center;}
-    
+}
+    .cup.gold{      
+            background: url(/lesson6/hm1/img/cup.png) no-repeat center center;}
+
+    .smoke.gold{       
+        background: url(/lesson6/hm1/img/smoke.png) no-repeat center center;}
+
+        .cup.bronze{          
+                background: url(/lesson6/hm1/img/cup.bronze.png) no-repeat center center;}
+
+        .smoke.bronze{            
+            background: url(/lesson6/hm1/img/smoke\ bronze.png) no-repeat center center;}
+
+            .cup.silver{          
+                    background: url(/lesson6/hm1/img/cup\ silver.png) no-repeat center center;}
+ 
+            .smoke.silver{              
+                background: url(/lesson6/hm1/img/smoke\ silver.png) no-repeat center center;}
