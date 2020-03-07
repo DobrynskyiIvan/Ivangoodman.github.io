@@ -23,7 +23,7 @@ p{padding-bottom: 40px;}
     padding-top: 140px;
     padding-bottom: 120px; }
 h1{
-    font-family: PlayfairDisplay;
+    font-family: 'Playfair Display', serif;
     font-size: 42px;
     font-weight: normal;
     font-stretch: normal;
@@ -35,7 +35,7 @@ h1{
 
 .text{
     opacity: 0.7;
-    font-family: Lato;
+    font-family:  'Lato', sans-serif;
     font-size: 18px;
     font-weight: 300;
     font-stretch: normal;
@@ -53,7 +53,7 @@ p.text.one:first-letter{
         padding-top: 4px;
         padding-right: 8px;
         padding-left: 3px;    
-    font-family: PlayfairDisplay;
+    font-family:'Playfair Display', serif;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
@@ -66,6 +66,7 @@ p.text.one:first-letter{
     font-size: 24px;
     letter-spacing: -0.12px;
     line-height: 34px;
+    font-style: italic;
     color: rgba(23, 23, 23, 0.7)}
 
 span{
@@ -75,7 +76,7 @@ span{
 }
 .footer{
     padding: 0;
-    font-family: Lato;
+    font-family: 'Lato', sans-serif;
     width: 265px;
     font-size: 18px;
     font-weight: bold;
