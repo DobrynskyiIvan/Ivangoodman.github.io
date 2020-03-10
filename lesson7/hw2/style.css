@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+div.container{
+    width: 1200px;
+    height:890px;
+    background: url(/lesson7/hw2/Монтажна\ область\ 1.png) no-repeat center center;
+}
+.text{
+    padding-top: 30%;
+    padding-left: 15%;
+    padding-right: 10%;
+}
+.one{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    text-transform: uppercase;
+    line-height: normal;
+    letter-spacing: 4.38px;
+    text-align: left;
+    color: #b4b4b4;
+    padding-bottom: 5px;
+}
+.two{
+    font-family:'Montserrat', sans-serif;
+    font-size: 78px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.94;
+    letter-spacing: 4.13px;
+    padding-top: 10px;
+    text-align: left;
+    color: #2a2a2a;
+}
+.three{
+    font-family: Georgia;
+    font-size: 30px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: italic;
+    line-height: 2.07;
+    letter-spacing: normal;
+    text-align: justify;
+    color: #8f8f8f;
+}
+.four{
+    padding-top: 20px;
+    font-family: Georgia;
+    font-size: 27px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.48;
+    letter-spacing: normal;
+    text-align: justify;
+    color: #000000;
+}
+.four.small{
+    font-style: italic;
+}
+.five{
+    font-family: Georgia;
+    font-size: 27px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.48;
+    letter-spacing: normal;
+    text-align: justify;
+    color: #000000;
+
+}
