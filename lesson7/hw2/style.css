@@ -28,10 +28,10 @@ div.container{
     padding-bottom: 5px;
 }
 .two{
-    font-family: FuturaPT;
+    font-family:'Montserrat', sans-serif;
     font-size: 78px;
     text-transform: uppercase;
-    font-weight: 900;
+    font-weight: 700;
     font-stretch: normal;
     font-style: normal;
     line-height: 0.94;
@@ -52,6 +52,7 @@ div.container{
     color: #8f8f8f;
 }
 .four{
+    padding-top: 20px;
     font-family: Georgia;
     font-size: 27px;
     font-weight: normal;
@@ -61,11 +62,9 @@ div.container{
     letter-spacing: normal;
     text-align: justify;
     color: #000000;
-
 }
-.four.one{
+.four.small{
     font-style: italic;
-
 }
 .five{
     font-family: Georgia;
