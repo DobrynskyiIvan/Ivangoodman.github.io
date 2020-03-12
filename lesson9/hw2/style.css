@@ -15,7 +15,7 @@ body{
 }
 h1{
     padding-top: 100px;
-    
+  
     font-family: 'Lato', sans-serif;
     text-transform: uppercase;
     font-size: 34px;
@@ -26,12 +26,16 @@ h1{
     letter-spacing: 5.44px;
     text-align: center;
     color: #3c3c3c;
+margin-bottom: 20px;
+   
 
 }
 hr{
+    border: 4px solid #dddbdb;
+margin: auto;
     text-align: center;
     width: 45px;
-    background-color: #dddbdb;
+   
 }
 p.head{
     font-family: 'Lato', sans-serif;
@@ -46,6 +50,7 @@ p.head{
    margin-top: 40px;
     padding-right: 25%;
     padding-left: 25%;
+   
 }
 .container{
     width: 100%;
