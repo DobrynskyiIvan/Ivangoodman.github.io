@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,700&display=swap');
+*{
+    padding:0;
+    margin: 0px;
+    line-height: 1;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #f6f6f6;
+    background-size: cover;
+    background-attachment: fixed;  
+}
+h1{
+    padding-top: 100px;
+    
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-size: 34px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 5.44px;
+    text-align: center;
+    color: #3c3c3c;
+
+}
+hr{
+    text-align: center;
+    width: 45px;
+    background-color: #dddbdb;
+}
+p.head{
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #3c3c3c;
+   margin-top: 40px;
+    padding-right: 25%;
+    padding-left: 25%;
+}
+.container{
+    width: 100%;
+    height: auto;
+    overflow: auto;
+    margin: auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    /* position: relative;
+    top: 0; left: 0; bottom: 0; right: 0; */
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+div.photo{
+  
+  height: 270px; 
+   
+  
+}
+div.photo1{
+  
+    background:url(/lesson9/hw2/img/PhotoX\ .png) no-repeat center center;
+}
+div.photo1:hover{
+    transition-duration: .4s;
+    background:url(/lesson9/hw2/img/Hover.png) no-repeat center center;
+}
+div.photo2{
+    background:url(/lesson9/hw2/img/alex.png) no-repeat center center;
+}
+div.photo2:hover{
+    transition-duration: .4s;
+    background:url(/lesson9/hw2/img/Hover.png) no-repeat center center;
+}
+div.photo3{
+    
+    background:url(/lesson9/hw2/img/elena.png) no-repeat center center;
+}
+div.photo3:hover{
+    transition-duration: .4s;
+    background:url(/lesson9/hw2/img/Hover.png) no-repeat center center;
+}
+div.photo4{
+    background:url(/lesson9/hw2/img/right\ girl.png) no-repeat center center;
+}
+div.photo4:hover{
+    transition-duration: .4s;
+    background:url(/lesson9/hw2/img/Hover.png) no-repeat center center;
+}
+div.text{
+    padding-top: 20px;
+}
+.box{
+    width: 270px;
+    height: 320px;
+    position: relative;
+    margin-bottom: 5px;
+margin-right: 31px;}
+p.name{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #282528;
+}
+p.profession{
+    font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  text-align: left;
+  color: #646464;
+
+}
+
+
