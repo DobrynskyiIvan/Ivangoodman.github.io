@@ -67,57 +67,92 @@ p.head{
     flex-direction:row;
     flex-wrap: wrap;
 }
-div.photo{
-  
-  height: 270px; 
+
+    div.photo:hover {
+        transition-duration: .4s;
+        background:url(/lesson9/hw2/img/Rectangle\ 4.png) no-repeat center center;}
+
+div.photo:hover div.sm{
+    transition-duration: .4s;
+    display: flex;
+    box-sizing: border-box;
+    justify-content:center;
+    margin: auto;
+    padding-top: 40%;
+    align-items: center;
+    flex-direction:row;
+    flex-wrap: wrap;
+    z-index: 2;}
    
-  
+div.photo:hover .sm1{
+    background:url(/lesson9/hw2/img/G+.png) no-repeat center center;    }
+    
+   div.photo:hover .sm2{
+    background:url(/lesson9/hw2/img/FB.png) no-repeat center center;    }
+
+   div.photo:hover .sm3{
+    background:url(/lesson9/hw2/img/Twitter.png) no-repeat center center; }
+
+   div.photo:hover .social{
+    width: 42px;
+    height: 42px;
+    margin: 3px;
+    z-index: 2;  
+    background-color:#5ecbe7;
+
 }
+
+
+
+
+
+  
+div.photo{
+  height: 270px; }
 div.photo1{
-  
-    background:url(/lesson9/hw2/img/PhotoX\ .png) no-repeat center center;
-}
+    background:url(/lesson9/hw2/img/PhotoX\ .png) no-repeat center center;}
+/* 
 div.photo1:hover{
     transition-duration: .4s;
-    background:url(/lesson9/hw2/img/Hover.png) no-repeat center center;
-}
+    background:url(/lesson9/hw2/img/Hover.png) no-repeat center center;} */
+
 div.photo2{
-    background:url(/lesson9/hw2/img/alex.png) no-repeat center center;
-}
-div.photo2:hover{
+    background:url(/lesson9/hw2/img/alex.png) no-repeat center center;}
+
+/* div.photo2:hover{
     transition-duration: .4s;
-    background:url(/lesson9/hw2/img/Hover.png) no-repeat center center;
-}
+    background:url(/lesson9/hw2/img/Hover.png) no-repeat center center;} */
+
 div.photo3{
-    
-    background:url(/lesson9/hw2/img/elena.png) no-repeat center center;
-}
-div.photo3:hover{
+    background:url(/lesson9/hw2/img/elena.png) no-repeat center center;}
+
+/* div.photo3:hover{
     transition-duration: .4s;
-    background:url(/lesson9/hw2/img/Hover.png) no-repeat center center;
-}
+    background:url(/lesson9/hw2/img/Hover.png) no-repeat center center;} */
+
 div.photo4{
-    background:url(/lesson9/hw2/img/right\ girl.png) no-repeat center center;
-}
-div.photo4:hover{
+    background:url(/lesson9/hw2/img/right\ girl.png) no-repeat center center;}
+
+/* div.photo4:hover{
     transition-duration: .4s;
-    background:url(/lesson9/hw2/img/Hover.png) no-repeat center center;
-}
+    background:url(/lesson9/hw2/img/Hover.png) no-repeat center center;} */
+
 div.text{
-    padding-top: 20px;
-}
+    padding-top: 20px;}
+
 .box{
     width: 270px;
     height: 320px;
     position: relative;
     margin-bottom: 5px;
 margin-right: 31px;}
+
 p.name{
     font-family: 'Lato', sans-serif;
     font-size: 20px;
     font-weight: bold;
-    color: #282528;
-}
+    color: #282528;}
+
 p.profession{
     font-family: 'Lato', sans-serif;
   font-size: 14px;
