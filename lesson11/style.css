@@ -1,0 +1,103 @@
+*{
+    padding:0;
+    margin: 0px;
+    line-height: 1;
+    box-sizing: border-box;
+    
+}
+.container{
+    max-width: 1200px;
+    max-height: 900px;
+    position: absolute;
+    margin: auto;
+    top: 0; left: 0; bottom: 0; right: 0;
+    overflow: auto; 
+    background: url(/lesson11/img/Layer\ 2.png) no-repeat center center;
+    border: 2px solid red;
+}
+.form{
+    border: 2px solid greenyellow;
+    width: 336px;
+    height: 532px;
+    background-color: #ffffff;
+
+}
+.header{
+    width: 336px;
+    height: 72px;
+    background-color: #f8edaf;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 24px;
+    justify-content: baseline;
+
+}
+.text1.big{
+    font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #6e7f7b;
+
+}
+.text1.small{
+    font-family: Montserrat;
+  font-size: 10px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 0.75px;
+  text-align: left;
+  color: #a6a28d;
+
+}
+.text2 .price{
+    font-family: Montserrat;
+  font-size: 36px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  text-align: left;
+  color: #637570;
+
+}
+.form2{
+    padding: 30px;
+}
+
+.form2 input{
+    box-sizing: border-box;
+    width: 100%;
+    border: solid 2px #82d4e7;
+    background-color: #ffffff;
+    padding: 5px ;
+}
+.mounth_first{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+}
+.mounth_first select:first-child,.mounth_first select:last-child{
+    box-sizing: border-box;
+    border: solid 2px #bac8cb;
+    background-color: #ffffff;
+    padding: 4px;
+    flex: 1 1 auto;
+  
+
+}
+.mounth_first select:first-child{
+    margin-right: 16px;
+}
+
+
+
