@@ -13,6 +13,14 @@
         margin: auto;
         top: 0; left: 0; bottom: 0; right: 0;
         overflow: auto;  }
+div.context{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+ height: 70%;
+
+}
 
 .section{
     padding-left: 165px;}
