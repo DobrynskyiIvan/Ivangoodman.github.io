@@ -16,7 +16,14 @@
     border: 2px solid red;
 }
 .form{
-    border: 2px solid greenyellow;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+ 
+    margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+   
     width: 336px;
     height: 532px;
     background-color: #ffffff;
@@ -28,10 +35,10 @@
     background-color: #f8edaf;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-    padding: 24px;
-    justify-content: baseline;
-
+       padding: 24px;
+    
 }
 .text1.big{
     font-family: "Montserrat";
@@ -70,6 +77,16 @@
 }
 .form2{
     padding: 30px;
+  
+  
+}
+form.paiment{
+    border: solid 2px #d1982e3b;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
 }
 
 .form2 input{
@@ -91,13 +108,58 @@
     border: solid 2px #bac8cb;
     background-color: #ffffff;
     padding: 4px;
-    flex: 1 1 auto;
-  
+    flex: 1 1 auto; 
 
 }
 .mounth_first select:first-child{
     margin-right: 16px;
 }
+.cvv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 10px;
 
+}
+.cvv input{
+    width: 30%;
+}
+.cvv p{
+    font-family: "Montserrat";
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #9eabad;
+}
+.confirm{
+   
+    padding-top: 20px;
+    border-top: solid 1px #657477;
+    margin-top: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+
+}
+.confirm button:first-child{
+    
+   
+    background-color: rgb(12, 185, 12);
+    padding: 10px;
+    color: honeydew;
+    font-size: 15px;
+}
+.confirm button:last-child{
+
+    font-size: 10px;
+    padding: 10px;
+
+}
 
 
