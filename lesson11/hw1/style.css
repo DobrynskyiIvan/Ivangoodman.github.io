@@ -31,8 +31,6 @@ footer{
     align-items: center;
     justify-content: space-between;
     padding:20px 164px 20px 164px;
- 
-
 }
 
 footer.part2 p{
@@ -44,13 +42,13 @@ footer.part2 p{
     line-height: 1.56;
     letter-spacing: normal;
     text-align: left;
-    color: #b9b9b9;
-}
-footer.part2 p span{
-    
+    color: #b9b9b9;}
+
+footer.part2 p span{   
     font-weight: bold;
     color: #ff2b58;
 }
+
 footer p.logo{
     font-family: Pacifico;
     font-size: 25px;
@@ -60,8 +58,8 @@ footer p.logo{
     line-height: 1;
     letter-spacing: normal;
     text-align: right;
-    color: #b9b9b9;
-}
+    color: #b9b9b9;}
+
 .content{
     position: relative;
     display: flex;
@@ -69,9 +67,9 @@ footer p.logo{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding-top: 100px;
-    
+    padding-top: 100px; 
 }
+
 .content p:first-child{
     font-family: 'Raleway', sans-serif;
     font-size: 90px;
@@ -146,9 +144,8 @@ form{
 
 }
 input{
-    opacity: 0.5;
-    background-color: #00c4c4;
-    
+    background-color: rgba(	0, 196, 196,  0.5);
+    background-clip: border-box;
     height: 50px;
     font-family: 'Raleway', sans-serif;
     font-size: 15px;
@@ -160,19 +157,21 @@ input{
     text-align: left;
     color: #ffffff;
     margin-bottom: 15px;
+    padding-left: 5px;
 
 }
-input:focus{
+input::-webkit-input-placeholder {
+    color: #252424;
+
+}
+input:focus,textarea:focus{
+    padding-left: 5px;
     border-left: 3px solid blue;
 }
-/* textarea:focus{
-    border-left: 3px solid blue;
 
-} */
 
 form textarea{
-    opacity: 0.5;
-    background-color: #00c4c4;
+    background-color: rgba(	0, 196, 196,  0.5);
     font-family: 'Raleway', sans-serif;
     font-size: 15px;
     font-weight: bold;
@@ -182,8 +181,7 @@ form textarea{
     letter-spacing: normal;
     text-align: left;
     color: #ffffff;
-    
-  
+    padding-left: 5px;
 }
 
 
