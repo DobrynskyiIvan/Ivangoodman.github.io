@@ -23,9 +23,11 @@
 
             <div class="form2">
                 <form action="" class="paiment"><label for="card">Credit card number</label>
-                    <input id="card" type="text" />
+                    <input type="number" name="" id="card">
+
                     <label for="date">Expiration date</label>
                     <div class="mounth_first"> <select id="mounth" class="">
+                            <option>Mounth </option>
                             <option>January </option>
                             <option value="" class="mounth1">February</option>
                             <option value="" class="mounth2">March</option>
@@ -49,18 +51,19 @@
                             <option value="" class="year8">2007</option>
                             <option value="" class="year9">2008</option>
                             <option value="" class="year10">2009</option>
-                        </select></div>
-
+                        </select>
+                    </div>
                     <label for="Cvv">Cvv</label>
                     <div class="cvv">
-                        <input id="Cvv" type="text" />
-                        <p>3 or 4 digits -view example</p>
+                        <input type="password" maxlength="3" name="" id="Cvv">
+                        <p> 3 or 4 digits -<a target="_blank"
+                                href="https://www.capitalone.com/credit-cards/binaries/card/products/platinum-card-art/tablet.png">view
+                                example</a></p>
                     </div>
-
-
-
-                    <div class="confirm"> <button type="submit">Pay</button>
-                        <button type="reset">Cancel order</button></div>
+                    <div class="confirm">
+                        <button type="submit">Pay</button>
+                        <button type="reset">Cancel order</button>
+                    </div>
 
                 </form>
             </div>
