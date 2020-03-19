@@ -4,17 +4,17 @@
     margin: 0px;
     line-height: 1;
     box-sizing: border-box;
-    transition: all .1s ease-in;
+    transition: all  ease-in;
     
 }
 .container{
-    border: 2px solid red;
+
     position: relative;
     margin: auto;
     top: 0; left: 0; bottom: 0; right: 0;
     overflow: auto; 
-    background: url(/lesson11/hw2/img/background.png)no-repeat center center;
-    width: 1900px;
+    background: url(/lesson11/hw2/img/background.png);
+    width: auto;
     height: 800px;
 }
 .content_container{
@@ -55,6 +55,9 @@ li a:focus{
     font-size: 18px;
     border-bottom: 2px solid red;
 }
+.content_sign:not(:target){
+    display: none;
+}
 .form{
     display: flex;
     flex-direction: column;
@@ -87,7 +90,7 @@ li a:focus{
 }
 /* The container */
 label.container_checkbox {
-    border: 2px solid red;
+   
     display: block;
     position: relative;
     padding-left: 35px;
@@ -113,7 +116,7 @@ label.container_checkbox {
   /* Create a custom checkbox */
   .checkmark {
     position: absolute;
-    top: 1px;
+    top: 0;
     left: 0;
     height: 16px;
     width: 16px;
@@ -182,8 +185,21 @@ label.container_checkbox {
     color: #b9b9cc;
 
 }
-.link_footer{
-    border: 2px solid red;
+div.link_footer ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    
+
+    padding-top: 20px;
+}
+div.link_footer li{
+    padding-right: 0px;
+}
+div.link_footer a{
+    text-decoration: underline;
+  
     display: inline-block;
 
 }
