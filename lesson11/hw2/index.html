@@ -23,10 +23,10 @@
                     <form action="#" method="get">
                         <div class="form">
                             <label for="Username">Username</label>
-                            <input type="text" name="Username" id="Username">
+                            <input type="text" minlength="3" name="Username" id="Username">
                             <div class="line_error">Error</div>
                             <label for="Password">Password</label>
-                            <input type="password" name="Password" id="Password">
+                            <input required type="password" name="Password" id="Password">
                             <div class="line_error">Error pasword</div>
                             <div class="checkbox_box">
                                 <label class="container_checkbox">Keep me signed in
@@ -37,11 +37,29 @@
                             <button class="submit_button" type="submit">Sign in</button>
                             <div class="link_footer">
                                 <ul>
-                                    <li class="list_footer"> <a href="#">Forgot password</a></li>
-                                    <li class="list_footer"> <a href="#">Create an account</a> </li>
+                                    <li class="list_footer"> <a class="a_footer" href="#">Forgot password</a></li>
+                                    <li class="list_footer"> <a class="a_footer" href="#">Create an account</a> </li>
 
                                 </ul>
                             </div>
+
+                        </div>
+                    </form>
+
+                </div>
+                <div class="content_sign" id="join">
+                    <form action="#" method="get">
+                        <div class="form">
+                            <label for="Username">Username</label>
+                            <input type="text" name="Username" id="UsernameJoin">
+                            <div class="line_error">Error</div>
+                            <label for="Password">Password</label>
+                            <input type="password" name="Password" id="PasswordJoin">
+                            <label for="Password">Password Confirmed</label>
+                            <input type="password" name="Password" id="PasswordJoinConfirm">
+                            <div class="line_error">Error pasword</div>
+                            <button class="submit_button" type="submit">Registration</button>
+
 
                         </div>
                     </form>
