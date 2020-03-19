@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 *{
     padding:0;
     margin: 0px;
@@ -6,28 +7,31 @@
     
 }
 .container{
-    max-width: 1200px;
+    max-width: 1900px;
     max-height: 900px;
     position: absolute;
     margin: auto;
     top: 0; left: 0; bottom: 0; right: 0;
     overflow: auto; 
-    background: url(/lesson11/img/Layer\ 2.png) no-repeat center center;
-    border: 2px solid red;
+    background: url(/lesson11/img/Layer\ 2.png) ;
+    background-size: cover;
+
+
 }
 .form{
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
- 
     margin: auto;
   position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
-   
+  top: 0; left: 0; bottom: 0; right: 0; 
     width: 336px;
     height: 532px;
     background-color: #ffffff;
 
+}
+label{
+    padding-bottom: 5px;
 }
 .header{
     width: 336px;
@@ -53,7 +57,7 @@
 
 }
 .text1.small{
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;
   font-size: 10px;
   font-weight: normal;
   font-stretch: normal;
@@ -65,7 +69,7 @@
 
 }
 .text2 .price{
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;
   font-size: 36px;
   font-weight: normal;
   font-stretch: normal;
@@ -81,7 +85,7 @@
   
 }
 form.paiment{
-    border: solid 2px #d1982e3b;
+    padding-top: 20px;
     box-sizing: border-box;
     height: 100%;
     display: flex;
@@ -94,9 +98,12 @@ form.paiment{
     width: 100%;
     border: solid 2px #82d4e7;
     background-color: #ffffff;
-    padding: 5px ;
+    padding: 10px ;
+    margin-bottom: 20px;
+    
 }
 .mounth_first{
+    margin-bottom: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -107,25 +114,30 @@ form.paiment{
     box-sizing: border-box;
     border: solid 2px #bac8cb;
     background-color: #ffffff;
-    padding: 4px;
+    padding: 10px ;
     flex: 1 1 auto; 
 
 }
 .mounth_first select:first-child{
     margin-right: 16px;
 }
-.cvv{
+div.cvv{
+    padding-top: 5px;
+    
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     padding-right: 10px;
+    margin-bottom: 30px;
 
 }
 .cvv input{
+    margin-bottom: 0px;
     width: 30%;
 }
 .cvv p{
+   
     font-family: "Montserrat";
   font-size: 12px;
   font-weight: normal;
@@ -149,14 +161,17 @@ form.paiment{
 }
 .confirm button:first-child{
     
-   
+    border: none;
     background-color: rgb(12, 185, 12);
     padding: 10px;
     color: honeydew;
     font-size: 15px;
 }
 .confirm button:last-child{
+    background-color:white;
+    border: none;
 
+text-decoration: underline;
     font-size: 10px;
     padding: 10px;
 
