@@ -1,0 +1,47 @@
+*{
+    margin:0;
+    padding: 0;
+    line-height: 1;
+ }
+.main_container{
+    
+        box-sizing: border-box;
+        position: absolute;
+        margin: auto;
+        top: 0; left: 0; bottom: 0; right: 0;
+        overflow: auto; 
+        width: 367px;
+        height: 777px;
+        background: url(https://szakhar.xyz/svg/IPhone_with_icons.svg) no-repeat center center; 
+ }
+    .top_container{
+        position: absolute;
+        margin: auto;
+        top: 40px; left: 0; bottom: 0; right: 0;  
+        box-sizing: border-box;
+        padding: 30px 30px 120px 55px;
+        height: 459px;
+        width: 310px;
+    
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        justify-content: flex-start;
+    }
+    .button_container{
+        position: absolute;
+        margin: auto;
+    left: 0; bottom: 160px; right: 0;  
+    padding: 13px 35px 0px 48px;
+        box-sizing: border-box;
+    height:92px;
+    width: 300px;
+ 
+    }
+    img{
+        padding-right: 5px;
+        width: 45px;
+        height: 45px;
+    }
+  
