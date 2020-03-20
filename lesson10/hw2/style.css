@@ -7,8 +7,7 @@
     
     }
 .container{
-    max-width: 1900px;
-    max-height: 1700px;
+   
     position: absolute;
     margin: auto;
     top: 0; left: 0; bottom: 0; right: 0;
@@ -17,20 +16,15 @@
     background-size: cover;
 }
 .context{
-    width: 60%; 
-  height: 60%;
-  min-width: 400px;
-  max-width: 700px;
-  max-height: 400px ;
+
+  width: 700px;
+ height: 400px ;
   padding: 40px;
-   height: auto;
-    overflow: auto;
     margin: auto;
     position: absolute;
     top: 0; left: 0; bottom: 0; right: 0;
     background: url(/lesson10/hw2/img/Rounded\ Rectangle\ 1.png) no-repeat center center;
-    background-size: contain;
-    border: 2px solid red;
+    background-size: contain; 
     color: #e1e1e1;
     display: flex;
     flex-direction: row;
@@ -38,6 +32,17 @@
     padding-top: 70px;
     align-items: center;
 }
+
+.color{
+  position: absolute;
+  bottom: 20px;
+  left: 150px;
+  box-sizing: border-box;
+  background: url(/lesson10/hw2/img/bullets.png)no-repeat center center;
+  width: 100px;
+  height: 40px;
+}
+
 .logo{
     background: url(/lesson10/hw2/img/logo.png) no-repeat center center;
     width: 65px;
@@ -45,18 +50,23 @@
     position: absolute;
     top: 20px; left: 20px; bottom: 0; right: 0;
 }
+
 .photo{
     background: url(/lesson10/hw2/img/Nike-SB-Stefan-Janoski-Max.png) no-repeat center center;
-
+   
     width: 330px;
    height: 160px;
 }
-.context2{
-    border: 2px solid red;
+
+div.context2{
+  height: 100%;
+  padding: 30px 40px;
+  
     display: flex;
     flex-direction: column;;
     justify-content: space-between; 
 }
+
 .line1{
     font-family: 'Dosis', sans-serif;
     font-size: 24px;
@@ -69,6 +79,7 @@
     color: #e1e1e1;
     padding-bottom: 20px;
 }
+
 .line2{
     font-size: 14px;
     font-weight: 100;
@@ -79,18 +90,21 @@
     text-align: left;
     color: rgba(225, 225, 225, 0.54);
 }
+
 .checked {
     color: orange;
   }
+
   .line3{
       position: relative;
   }
  
 .custom-select {
-    width: 200px;
+    width: 100px;
   position: relative;
   font-family: Arial;
 }
+
 
 /* .custom-select select {
   display: none; /*hide original SELECT element: } */
@@ -98,6 +112,7 @@
 .select-selected {
   background-color: DodgerBlue;
 }
+
 
 /* Style the arrow inside the select element: */
 .select-selected:after {
@@ -117,6 +132,7 @@
   top: 7px;
 }
 
+
 /* style the items (options), including the selected item: */
 .select-items div,.select-selected {
   color: #ffffff;
@@ -125,6 +141,7 @@
   border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
   cursor: pointer;
 }
+
 
 /* Style items (options): */
 .select-items {
@@ -147,10 +164,12 @@
 .select{
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
     
 }
 select{
-    background-color: rgb(126, 126, 126);
+    background-color: rgba(126, 126, 126, 0.1);
+    color: blanchedalmond;
     font-size: 15px;
     padding: 5px;
     margin: 5px;
@@ -161,10 +180,14 @@ div.select option{
 
 }
 button{
-    margin: 10px 40px;
+  
+  display: inline;
+  box-sizing: border-box;
+  color: blanchedalmond;
+    
     padding: 10px ;
     font-size: 20px;
-    background-color: rgb(126, 126, 126);
+    background-color: rgba(126, 126, 126, 0.3);
     border: none;
 }
  
