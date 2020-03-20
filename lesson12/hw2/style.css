@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+*{
+    margin:0;
+    padding: 0;
+    line-height: 1;
+ }
+.container{
+    background: url(/lesson12/hw2/img/Background\ main.png) ;
+   
+
+   
+    position: relative;
+    margin: auto;
+ 
+    top: 0; left: 0; bottom: 0; right: 0;
+
+}
+.context1{
+    background: url(/lesson12/hw2/img/hero-bg.jpg.png) no-repeat center center;
+   
+    height: 1072px;
+   
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+
+}
+.context1_content{
+    width: 590px;
+    
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.context1 img{
+    padding-bottom: 96px;
+}
+.context1 p.big{
+    font-family: 'Lato', sans-serif;
+    font-size: 54px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 8.64px;
+    text-align: center;
+    color: white;
+    padding-bottom: 50px;
+}
+  
+  .context1 p:last-child{
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.93;
+    letter-spacing: 0.9px;
+    text-align: center;
+    color: #ffffff;
+  }
+  .context2{
+      margin: auto;
+      margin-top: 150px;
+    width: 902px;
+    height: 312px;
+    border: solid 2px #3c3c3c;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 170px;
+   
+   
+  }
+  .context2 h1{
+    width:250px;
+    margin-top:-20px;
+    margin-left:5px;
+    background:white;
+    font-family: Lato;
+    font-size: 34px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 5.44px;
+    text-align: center;
+    color: #3c3c3c;
+    padding-bottom: 70px;
+  }
+
+  .context2 p{
+      padding: 20px 170px;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align:center;
+    color: #3c3c3c;
+  }
+.context3{
+    background: url(/lesson12/hw2/img/services.jpg.png) no-repeat center center;
+   height: 488px;
+    
+   
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;  
+}
+.context3_content{
+    margin: auto;
+    margin-top: 150px;
+  width: 902px;
+  height: 312px;
+  border: solid 2px #ffffff;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 170px;
+
+}
+.context3 h1{
+    width:250px;
+    margin-top:-20px;
+    margin-left:5px;
+   position: relative;
+    font-family: Lato;
+    font-size: 34px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 5.44px;
+    text-align: center;
+    color: #ffffff;
+    padding-bottom: 50px;
+  }
+
+  .context3 p{
+      padding: 20px 170px;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align:center;
+    color: #ffffff;
+  }
