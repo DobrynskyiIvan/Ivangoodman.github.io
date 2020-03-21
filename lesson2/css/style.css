@@ -1,0 +1,52 @@
+body {
+  background-color: white;
+}
+
+body h1 {
+  background-color: #b3321c;
+  color: white;
+  text-align: center;
+}
+
+body img.main {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+body p {
+  color: #221f1f;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 20px;
+}
+
+body p i.eius {
+  color: #0d7ce4;
+  font-weight: bold;
+}
+
+body p span.span {
+  color: #5f56d3;
+}
+
+body div.group {
+  text-align: center;
+}
+
+body div.group img.dashed2 {
+  height: 10%;
+  width: 10%;
+  border-style: dashed;
+  border-color: #121412;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+}
+
+body footer {
+  background-color: #050101;
+  color: white;
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 30px;
+}
