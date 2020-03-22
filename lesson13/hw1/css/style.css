@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
 body .container header {
   font-family: "Open Sans", sans-serif;
@@ -84,7 +85,7 @@ body .container .context .content.left .photo {
   left: 0px;
   top: 0px;
   bottom: 0px;
-  background: url(/lesson13//hw1/img/Rectangle_photo.png) no-repeat center center;
+  background: url(/lesson13//hw1/img/Фон.png) no-repeat center center;
   border: 2px solid #ffca28;
   width: 390px;
   height: 390px;
