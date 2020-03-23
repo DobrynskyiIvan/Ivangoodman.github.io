@@ -831,7 +831,111 @@ form textarea {
   padding-left: 5px;
 }
 
+.container_5 {
+  background: url(/lesson13/hw2/part5/bg_main.png) no-repeat center center;
+  background-size: cover;
+}
+
+.container_5 .context_5 {
+  padding-top: 150px;
+  padding-left: 160px;
+  padding-bottom: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container_5 .context_5 .body_text {
+  width: 570px;
+}
+
+.container_5 .context_5 .body_text p:first-child {
+  font-family: Raleway;
+  font-size: 40px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.68;
+  letter-spacing: normal;
+  text-align: left;
+  color: #262626;
+}
+
+.container_5 .context_5 .body_text p:last-child {
+  padding-top: 30px;
+  font-family: Raleway;
+  font-size: 17px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.59;
+  letter-spacing: normal;
+  text-align: left;
+  color: #262626;
+  padding-bottom: 30px;
+}
+
+.container_5 .context_5 .body_button form.sub {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 50%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.container_5 .context_5 .body_button input.subscribe_5 {
+  opacity: 0.7;
+  font-family: Raleway;
+  font-size: 15px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.8;
+  letter-spacing: normal;
+  text-align: left;
+  color: rgba(38, 38, 38, 0.5);
+  padding-left: 10px;
+  background: none;
+  width: 570px;
+  height: 55px;
+}
+
+.container_5 .context_5 .body_button .subscribe {
+  border: none;
+  -webkit-box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
+  background-color: #96b92c;
+  font-size: 20px;
+  width: 170px;
+  height: 55px;
+  font-family: Raleway;
+  font-size: 20px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.35;
+  letter-spacing: normal;
+  color: #ffffff;
+  cursor: pointer;
+}
+
 .container_main {
+  border: 1px solid #181717;
   max-width: 1900px;
   position: absolute;
   margin: auto;

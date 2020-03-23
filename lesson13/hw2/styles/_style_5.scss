@@ -1,0 +1,88 @@
+.container_5 {
+  background: url(/lesson13/hw2/part5/bg_main.png) no-repeat center center;
+
+  background-size: cover;
+
+  & .context_5 {
+    padding-top: 150px;
+    padding-left: 160px;
+    padding-bottom: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    & .body_text {
+      width: 570px;
+      & p:first-child {
+        font-family: Raleway;
+        font-size: 40px;
+        font-weight: bold;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 0.68;
+        letter-spacing: normal;
+        text-align: left;
+        color: #262626;
+      }
+      & p:last-child {
+        padding-top: 30px;
+        font-family: Raleway;
+        font-size: 17px;
+        font-weight: 300;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.59;
+        letter-spacing: normal;
+        text-align: left;
+        color: #262626;
+        padding-bottom: 30px;
+      }
+    }
+
+    & .body_button {
+      & form.sub {
+        box-sizing: border-box;
+        width: 50%;
+
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+      }
+
+      & input.subscribe_5 {
+        opacity: 0.7;
+        font-family: Raleway;
+        font-size: 15px;
+        font-weight: 300;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.8;
+        letter-spacing: normal;
+        text-align: left;
+        color: rgba(38, 38, 38, 0.5);
+        padding-left: 10px;
+        background: none;
+        width: 570px;
+        height: 55px;
+      }
+      & .subscribe {
+        border: none;
+        box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
+        background-color: #96b92c;
+        font-size: 20px;
+        width: 170px;
+        height: 55px;
+        font-family: Raleway;
+        font-size: 20px;
+        font-weight: 300;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: 1.35;
+        letter-spacing: normal;
+        color: #ffffff;
+        cursor: pointer;
+      }
+    }
+  }
+}
