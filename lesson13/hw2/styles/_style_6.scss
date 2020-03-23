@@ -1,0 +1,199 @@
+* {
+  padding: 0;
+  margin: 0px;
+  line-height: 1;
+  box-sizing: border-box;
+}
+
+.container_6 {
+  height: auto;
+
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  background: url(/lesson9/img/bg.png) no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: honeydew;
+  padding-bottom: 50px;
+}
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 90px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.28;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 100px;
+}
+
+p.head {
+  font-family: Myriad Pro;
+  font-size: 17px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 25px;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 40px;
+  padding-right: 30%;
+  padding-left: 30%;
+}
+
+.container_6 {
+  position: relative;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+}
+
+.container1 {
+  width: 100%;
+  height: auto;
+  overflow: auto;
+  margin: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  /* position: relative;
+    top: 0; left: 0; bottom: 0; right: 0; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 370px;
+  height: 310px;
+  position: relative;
+  box-shadow: 5px 4px 10px 0 rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.container1:hover .box:not(:hover) {
+  opacity: 0.7;
+}
+
+.box:active {
+  transform: scale(1.2);
+  transition-duration: 0.4s;
+  z-index: 2;
+  box-shadow: 5px 4px 10px 5px #53535380;
+}
+
+.shadow {
+  height: 45%;
+  mix-blend-mode: multiply;
+  background-blend-mode: multiply;
+  background-image: linear-gradient(to top, #000000, #ffffff);
+}
+
+.box .text {
+  height: 28%;
+  position: absolute;
+  left: 20px;
+  bottom: 23px;
+  z-index: 1;
+  // display: flex;
+  // justify-content: space-between;
+  // flex-direction: column;
+  // flex-wrap: wrap;
+}
+
+.box p.big {
+  opacity: 1;
+  font-size: 20px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+}
+
+.box p.small {
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.box .date {
+  position: absolute;
+  left: 30px;
+  top: 30px;
+}
+
+.date .num {
+  font-family: "Raleway", sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.78;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.date .mounth {
+  font-family: "Raleway", sans-serif;
+  font-size: 21px;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.19;
+  letter-spacing: normal;
+  text-transform: uppercase;
+  text-align: left;
+  color: #ffffff;
+}
+
+.box.box1 {
+  background: url(/lesson9/img/fruits.png) no-repeat center center;
+}
+
+.box.box2 {
+  background: url(/lesson9/img/cup.png) no-repeat center center;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.box.box3 {
+  background: url(/lesson9/img/berry.png) no-repeat center center;
+}
+
+.date {
+  padding: 8px;
+  background: url(/lesson9/img/day.png) no-repeat center center;
+}
+
+footer.footer {
+  text-transform: uppercase;
+  width: 200px;
+  position: relative;
+  box-sizing: border-box;
+  margin: auto;
+  overflow: auto;
+  background: url(/lesson9/img/button.png) no-repeat center center;
+  font-size: 20px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.25;
+  letter-spacing: normal;
+  text-align: left;
+  padding: 20px 40px 20px 40px;
+}
