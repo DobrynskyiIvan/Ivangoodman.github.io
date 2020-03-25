@@ -1,0 +1,140 @@
+* {
+  padding: 0;
+  margin: 0px;
+  line-height: 1;
+  box-sizing: border-box;
+}
+.container_4 {
+  position: relative;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  background-color: #ffe92f;
+
+  .header_4 {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    .title_4 {
+      font-family: Raleway;
+      font-size: 90px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 0.3;
+      letter-spacing: normal;
+      text-align: center;
+      color: #262626;
+      padding-bottom: 40px;
+    }
+    .subtitle_4 {
+      max-width: 580px;
+      font-family: Raleway;
+      font-size: 17px;
+      font-weight: 300;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.59;
+      letter-spacing: normal;
+      text-align: center;
+      color: #262626;
+    }
+  }
+}
+
+.content_4 {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  & .part1_4 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px;
+    & .knife {
+      width: 770px;
+      height: 550px;
+      box-shadow: 40px 40px 40px 40px rgba(222, 184, 135, 0);
+      // background-color: #00c4c4;
+
+      background: url(/lesson13/hw2/part4/img.png) no-repeat center center;
+      background-size: cover;
+      margin-right: 20px;
+    }
+    .berry {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+
+      & .berry1 {
+        background: url(/lesson13/hw2/part4/berry_1.png) no-repeat center center;
+        background-size: cover;
+        width: 370px;
+        height: 260px;
+        box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
+        // background-color: #00c4c4;
+      }
+      & .berry2 {
+        width: 370px;
+        height: 260px;
+        box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
+        // background-color: #00c4c4;
+        background: url(/lesson13/hw2/part4/berry_2.png) no-repeat center center;
+        background-size: cover;
+      }
+    }
+  }
+  .part2_4 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    justify-content: center;
+
+    margin: 20px;
+    & .fruit1 {
+      width: 50%;
+      background: url(/lesson13/hw2/part4/milk.png) no-repeat center center;
+      background-size: cover;
+      width: 570px;
+      height: 400px;
+      box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
+      margin-right: 20px;
+    }
+    & .fruit2 {
+      width: 50%;
+      background: url(/lesson13/hw2/part4/hyrma.png) no-repeat center center;
+      background-size: cover;
+      width: 570px;
+      height: 400px;
+      box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
+    }
+  }
+  .more {
+    border: none;
+    width: 200px;
+    height: 55px;
+    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
+    background-color: #5585a2;
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.35;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    margin: 40px;
+  }
+}
