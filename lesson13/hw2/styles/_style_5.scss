@@ -4,22 +4,23 @@
   background-size: cover;
 
   & .context_5 {
-    padding-top: 150px;
-    padding-left: 160px;
-    padding-bottom: 250px;
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-bottom: 10%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    width: 100%;
 
     & .body_text {
-      width: 570px;
+      max-width: 570px;
       & p:first-child {
         font-family: Raleway;
         font-size: 40px;
         font-weight: bold;
         font-stretch: normal;
         font-style: normal;
-        line-height: 0.68;
+        line-height: 1;
         letter-spacing: normal;
         text-align: left;
         color: #262626;
@@ -40,48 +41,112 @@
     }
 
     & .body_button {
-      & form.sub {
-        box-sizing: border-box;
-        width: 50%;
+      width: 100%;
+      padding: 0;
 
-        text-align: center;
+      & form.form_context_5 {
         display: flex;
         flex-direction: row;
-        flex-wrap: nowrap;
-      }
+        flex-wrap: wrap;
 
-      & input.subscribe_5 {
-        opacity: 0.7;
-        font-family: Raleway;
-        font-size: 15px;
-        font-weight: 300;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.8;
-        letter-spacing: normal;
-        text-align: left;
-        color: rgba(38, 38, 38, 0.5);
-        padding-left: 10px;
-        background: none;
-        width: 570px;
-        height: 55px;
+        & input.subscribe_5 {
+          width: 670px;
+          font-family: Raleway;
+          font-size: 15px;
+          font-weight: 300;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.8;
+          letter-spacing: normal;
+          text-align: left;
+          color: rgba(38, 38, 38, 0.5);
+          padding-left: 10px;
+          background: none;
+          height: 55px;
+        }
+        & button.subscribe {
+          margin-left: 30px;
+          border: none;
+          box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
+          background-color: #96b92c;
+          font-size: 20px;
+          width: 170px;
+          height: 55px;
+          font-family: Raleway;
+          font-size: 20px;
+          font-weight: 300;
+          font-stretch: normal;
+          font-style: normal;
+          line-height: 1.35;
+          letter-spacing: normal;
+          color: #ffffff;
+          cursor: pointer;
+        }
       }
-      & .subscribe {
-        border: none;
-        box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
-        background-color: #96b92c;
-        font-size: 20px;
-        width: 170px;
-        height: 55px;
-        font-family: Raleway;
-        font-size: 20px;
-        font-weight: 300;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.35;
-        letter-spacing: normal;
-        color: #ffffff;
-        cursor: pointer;
+    }
+  }
+}
+@media only screen and (max-width: 1200px) {
+}
+
+@media only screen and (max-width: 992px) {
+}
+@media only screen and (max-width: 768px) {
+  .container_5 {
+    & .context_5 {
+      & .body_text {
+        max-width: 570px;
+        & p:first-child {
+          line-height: 1;
+          letter-spacing: normal;
+          text-align: center;
+        }
+        & p:last-child {
+          border-radius: 20px;
+          background-color: white;
+        }
+      }
+      & .body_button {
+        & form.form_context_5 {
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          align-items: center;
+        }
+      }
+    }
+  }
+  @media only screen and (max-width: 576px) {
+    .container_5 {
+      & .context_5 {
+        & .body_text {
+          max-width: 570px;
+          & p:first-child {
+            line-height: 1;
+            letter-spacing: normal;
+            text-align: center;
+          }
+          & p:last-child {
+            border-radius: 20px;
+            background-color: white;
+          }
+        }
+        & .body_button {
+          & form.form_context_5 {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            & button.subscribe {
+              margin-left: 0px;
+            }
+            & input.subscribe_5 {
+              max-width: 80%;
+            }
+          }
+        }
       }
     }
   }
