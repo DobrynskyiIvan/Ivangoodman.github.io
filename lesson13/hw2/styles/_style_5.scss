@@ -94,6 +94,11 @@
 @media only screen and (max-width: 768px) {
   .container_5 {
     & .context_5 {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 10px;
       & .body_text {
         max-width: 570px;
         & p:first-child {
@@ -120,6 +125,7 @@
   @media only screen and (max-width: 576px) {
     .container_5 {
       & .context_5 {
+        padding: 10px;
         & .body_text {
           max-width: 570px;
           & p:first-child {
