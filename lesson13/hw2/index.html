@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="/lesson13/hw2/styles/css/style.css">
     <link rel="stylesheet" href="https://i.icomoon.io/public/temp/fc48cf4a6c/UntitledProject/style-svg.css">
     <script defer src="https://i.icomoon.io/public/temp/fc48cf4a6c/UntitledProject/svgxuse.js"></script>
-    <title>Document</title>
+    <script src="/lesson13/hw2/menu.js"></script>
+    <title>Cachee</title>
 </head>
 
 <body>
     <div class="container_main">
         <div class="container_1">
-            <div class="section part1">
+            <div class="section part1" id="home">
                 <div class="context_1">
                     <div class="header">
                         <div class="logo_1">
@@ -21,7 +22,7 @@
                         </div>
                         <div class="navbar">
                             <ul class="navbar1">
-                                <li><a href="">HOME </a></li>
+                                <li><a href="#home">HOME </a></li>
                                 <li><a href="#about"> ABOUT </a></li>
                                 <li><a href="#service">SERVICES </a></li>
                                 <li><a href="#gallery"> GALLERY</a></li>
@@ -29,6 +30,23 @@
                                 <li><a href="#contact"> CONTACT</a></li>
                             </ul>
                         </div>
+                        <div class="menu">
+                            <div id="myNav" class="overlay">
+                                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                                <div class="overlay-content">
+                                    <a onclick="closeNav()" href="#home">HOME </a>
+                                    <a onclick="closeNav()" href="#about"> ABOUT </a>
+                                    <a onclick="closeNav()" href="#service">SERVICES </a>
+                                    <a onclick="closeNav()" href="#gallery"> GALLERY</a>
+                                    <a onclick="closeNav()" href="#blog"> BLOG </a>
+                                    <a onclick="closeNav()" href="#contact"> CONTACT</a>
+                                </div>
+                            </div>
+
+                            <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+                        </div>
+
+
                     </div>
 
 
