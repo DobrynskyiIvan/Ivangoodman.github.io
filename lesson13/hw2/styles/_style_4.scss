@@ -1,10 +1,4 @@
-* {
-  padding: 0;
-  margin: 0px;
-  line-height: 1;
-  box-sizing: border-box;
-}
-.container_4 {
+#gallery_4.container_4 {
   position: relative;
   margin: auto;
   top: 0;
@@ -17,7 +11,7 @@
   .header_4 {
     display: flex;
     flex-direction: column;
-    // justify-content: center;
+
     align-items: center;
     justify-content: space-between;
     .title_4 {
@@ -30,7 +24,7 @@
       letter-spacing: normal;
       text-align: center;
       color: #262626;
-      padding-bottom: 40px;
+      padding: 50px 0px;
     }
     .subtitle_4 {
       max-width: 580px;
@@ -50,25 +44,19 @@
 .content_4 {
   display: flex;
   flex-direction: column;
-  // justify-content: center;
   align-items: center;
   justify-content: space-between;
   & .part1_4 {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-
     justify-content: center;
     flex-wrap: wrap;
     margin: 20px;
+    width: 100%;
     & .knife {
-      width: 770px;
-      height: 550px;
-      box-shadow: 40px 40px 40px 40px rgba(222, 184, 135, 0);
-      // background-color: #00c4c4;
-
-      background: url(/lesson13/hw2/part4/img.png) no-repeat center center;
-      background-size: cover;
+      max-width: 100%;
+      height: auto;
+      box-shadow: 40px 40px 40px 40px rgba(222, 184, 135, 0.2);
       margin-right: 20px;
     }
     .berry {
@@ -77,20 +65,14 @@
       flex-direction: column;
 
       & .berry1 {
-        background: url(/lesson13/hw2/part4/berry_1.png) no-repeat center center;
-        background-size: cover;
-        width: 370px;
-        height: 260px;
+        height: auto;
+        max-width: 100%;
         box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
-        // background-color: #00c4c4;
       }
       & .berry2 {
-        width: 370px;
-        height: 260px;
+        height: auto;
+        max-width: 100%;
         box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
-        // background-color: #00c4c4;
-        background: url(/lesson13/hw2/part4/berry_2.png) no-repeat center center;
-        background-size: cover;
       }
     }
   }
@@ -100,23 +82,16 @@
     flex-direction: row;
     justify-content: space-between;
     justify-content: center;
-
     margin: 20px;
     & .fruit1 {
-      width: 50%;
-      background: url(/lesson13/hw2/part4/milk.png) no-repeat center center;
-      background-size: cover;
-      width: 570px;
-      height: 400px;
+      height: auto;
+      max-width: 100%;
       box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
       margin-right: 20px;
     }
     & .fruit2 {
-      width: 50%;
-      background: url(/lesson13/hw2/part4/hyrma.png) no-repeat center center;
-      background-size: cover;
-      width: 570px;
-      height: 400px;
+      height: auto;
+      max-width: 100%;
       box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
     }
   }
@@ -136,5 +111,46 @@
     text-align: center;
     color: #ffffff;
     margin: 40px;
+  }
+}
+@media screen and (max-width: 1188px) {
+  .content_4 {
+    .part2_4 {
+      margin: 0px;
+      & img.fruit1 {
+        margin-right: 0px;
+        height: auto;
+        max-width: 100%;
+        box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
+      }
+      & img.fruit2 {
+        height: auto;
+        max-width: 100%;
+        box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    & .part1_4 {
+      margin: 0px;
+      & .knife {
+        margin-right: 0px;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  #gallery_4.container_4 {
+    .header_4 {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+
+      .title_4 {
+        font-family: Raleway;
+        font-size: 50px;
+        padding: 30px 0px;
+      }
+    }
   }
 }

@@ -152,6 +152,9 @@ div.context_1 {
   margin-left: 10%;
   background: url(/lesson10/hw1/img/img_berry.png) no-repeat center center;
   background-size: contain;
+  @media only screen and (max-width: 576px) {
+    display: none;
+  }
 }
 div.part2 .text {
   max-width: 500px;
@@ -184,6 +187,9 @@ div.part2 .text {
   letter-spacing: normal;
   text-align: left;
   color: #ffffff;
+  @media only screen and (max-width: 576px) {
+    padding: 10% 10%;
+  }
 }
 
 @media only screen and (max-width: 1200px) {
@@ -209,9 +215,8 @@ div.part2 .text {
   }
 
   .part1 {
-    height: 100%;
     background: url(/lesson10/hw1/img/img.png) no-repeat center center;
-    background-size: cover;
+    background-size: cover 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
