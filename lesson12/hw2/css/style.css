@@ -1,0 +1,792 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Lato:300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+.container {
+  background: url(/lesson12/hw2/img/Background_main.png);
+  max-width: 1920px;
+  border: 1px solid #494848;
+  position: relative;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.container .context1 {
+  background: url(/lesson12/hw2/img/hero-bg.jpg.png) no-repeat center center;
+  width: auto;
+  height: 1072px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .context1 img {
+  padding-bottom: 96px;
+}
+
+.container .context1 p.big {
+  font-family: "Lato", sans-serif;
+  font-size: 54px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 8.64px;
+  text-align: center;
+  color: white;
+  padding-bottom: 50px;
+}
+
+.container .context1_content {
+  width: 590px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.container .context1 p:last-child {
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.93;
+  letter-spacing: 0.9px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.container .context2 {
+  margin: auto;
+  margin-top: 150px;
+  max-width: 902px;
+  padding-bottom: 40px;
+  border: solid 2px #3c3c3c;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 170px;
+}
+
+.container .context2 h1 {
+  width: 250px;
+  margin-top: -20px;
+  margin-left: 5px;
+  background: white;
+  font-family: Lato;
+  font-size: 34px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 5.44px;
+  text-align: center;
+  color: #3c3c3c;
+  padding-bottom: 70px;
+}
+
+.container .context2 p {
+  padding: 20px 170px;
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #3c3c3c;
+}
+
+.container .context3 {
+  background: url(/lesson12/hw2/img/services.jpg.png) no-repeat center center;
+  height: 488px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .context3_content {
+  margin: auto;
+  margin-top: 150px;
+  max-width: 902px;
+  height: 312px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 170px;
+}
+
+.container .context3 legend,
+.container .context4 legend {
+  text-transform: uppercase;
+  z-index: 2;
+  width: 300px;
+  margin-top: -20px;
+  margin-left: 5px;
+  position: relative;
+  font-family: "Lato", sans-serif;
+  font-size: 34px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 5.44px;
+  text-align: center;
+}
+
+.container .context3 legend {
+  color: white;
+}
+
+.container .context3 fieldset {
+  border: 2px solid white;
+  padding: 20px 170px;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  color: #ffffff;
+}
+
+.container .context4 {
+  padding: 100px 0px;
+  margin: auto;
+  max-width: 902px;
+  border: 2px solid white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .context4 fieldset {
+  padding: 20px 170px;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .part,
+.container .part p,
+.container .part h1 {
+  line-height: 1.5;
+  letter-spacing: normal;
+  padding: 20px 0px;
+}
+
+.container .context5 {
+  width: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+}
+
+.container .context5 .foto {
+  background-size: cover;
+  position: relative;
+  margin-bottom: 5px;
+  padding: 20px;
+  padding-top: 180px;
+  text-transform: uppercase;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-family: Lato;
+  font-size: 34px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 5.44px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.container .foto1 {
+  width: 29%;
+  background: url(/lesson12/hw2/img/Layer_wopworkz.png) no-repeat center center;
+}
+
+.container .foto2 {
+  width: 40%;
+  background: url(/lesson12/hw2/img/Layer_join.png) no-repeat center center;
+}
+
+.container .foto3 {
+  width: 29%;
+  background: url(/lesson12/hw2/img/Laye5_market.png) no-repeat center center;
+}
+
+.container .foto4 {
+  width: 29%;
+  background: url(/lesson12/hw2/img/Layer_worktop.png) no-repeat center center;
+}
+
+.container .foto5 {
+  width: 40%;
+  background: url(/lesson12/hw2/img/Layer_copy4.png) no-repeat center center;
+}
+
+.container .foto6 {
+  width: 29%;
+  background: url(/lesson12/hw2/img/Layer_kyiv.png) no-repeat center center;
+}
+
+.container .context4.context6_end legend {
+  padding: 0px 50px;
+}
+
+.container .context4.context6_end button {
+  font-size: 16px;
+  background-color: black;
+  color: white;
+  padding: 20px 130px;
+  letter-spacing: 2.56px;
+  border: none;
+  text-transform: uppercase;
+}
+
+.container .footer {
+  padding-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .footer img.final {
+  padding-right: 30px;
+  width: 35px;
+  height: 37px;
+}
+
+@media screen and (max-width: 760px) {
+  .container .context1 {
+    padding: 40px;
+    width: auto;
+    height: 100%;
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container .context1_content {
+    max-width: 320px;
+  }
+  .container .context1 img {
+    padding-bottom: 46px;
+  }
+  .container .context1 p.big {
+    font-family: "Lato", sans-serif;
+    font-size: 34px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 8.64px;
+    text-align: center;
+    color: white;
+    padding-bottom: 50px;
+  }
+  .container .context1 p:last-child {
+    max-width: 300px;
+  }
+  .container .context2 {
+    margin: auto;
+    margin-top: 50px;
+    max-width: 902px;
+    padding-bottom: 40px;
+    border: solid 2px #3c3c3c;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 70px;
+  }
+  .container .context2 h1 {
+    max-width: 250px;
+    margin-top: -20px;
+    margin-left: 5px;
+    background: white;
+    font-family: Lato;
+    font-size: 34px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 5.44px;
+    text-align: center;
+    color: #3c3c3c;
+    padding-bottom: 70px;
+  }
+  .container .context2 p {
+    padding: 20px 70px;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #3c3c3c;
+  }
+  .container .context3 {
+    height: 488px;
+  }
+  .container .context3_content {
+    margin: auto;
+    margin-top: 50px;
+    max-width: 302px;
+    max-height: 312px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 70px;
+  }
+  .container .context3 legend,
+  .container .context4 legend {
+    text-transform: uppercase;
+    z-index: 2;
+    max-width: 300px;
+    margin-top: -20px;
+    margin-left: 5px;
+    position: relative;
+    font-family: "Lato", sans-serif;
+    font-size: 34px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 5.44px;
+    text-align: center;
+  }
+  .container .context3 legend {
+    color: white;
+  }
+  .container .context3 fieldset {
+    border: 2px solid white;
+    padding: 20px 10px;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+  }
+  .container .context4 {
+    padding: 50px 0px;
+    margin: auto;
+    max-width: 902px;
+    border: 2px solid white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container .context4 fieldset {
+    padding: 20px 10px;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container .part,
+  .container .part p,
+  .container .part h1 {
+    line-height: 1.5;
+    letter-spacing: normal;
+    padding: 20px 0px;
+  }
+  .container .context5 {
+    width: 100%;
+  }
+  .container .context5 .foto {
+    background-size: cover;
+    position: relative;
+    margin-bottom: 5px;
+    padding: 20px;
+    padding-top: 180px;
+    text-transform: uppercase;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    font-family: Lato;
+    font-size: 34px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 5.44px;
+    text-align: left;
+    color: #ffffff;
+  }
+  .container .foto1 {
+    width: 50%;
+    background: url(/lesson12/hw2/img/Layer_wopworkz.png) no-repeat center center;
+  }
+  .container .foto2 {
+    width: 50%;
+    background: url(/lesson12/hw2/img/Layer_join.png) no-repeat center center;
+  }
+  .container .foto3 {
+    width: 50%;
+    background: url(/lesson12/hw2/img/Laye5_market.png) no-repeat center center;
+  }
+  .container .foto4 {
+    width: 50%;
+    background: url(/lesson12/hw2/img/Layer_worktop.png) no-repeat center center;
+  }
+  .container .foto5 {
+    width: 50%;
+    background: url(/lesson12/hw2/img/Layer_copy4.png) no-repeat center center;
+  }
+  .container .foto6 {
+    width: 50%;
+    background: url(/lesson12/hw2/img/Layer_kyiv.png) no-repeat center center;
+  }
+  .container .context4.context6_end legend {
+    padding: 0px 20px;
+  }
+  .container .context4.context6_end button {
+    max-width: 300px;
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    padding: 20px 10px;
+    letter-spacing: 2.56px;
+    border: none;
+    text-transform: uppercase;
+  }
+  .container .footer {
+    padding-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container .footer img.final {
+    padding-right: 30px;
+    width: 35px;
+    height: 37px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container .context5 {
+    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .container .context5 .foto {
+    -webkit-box-shadow: 2px 182;
+            box-shadow: 2px 182;
+    background-size: cover;
+    position: relative;
+    margin-bottom: 5px;
+    padding: 20px;
+    padding-top: 180px;
+    text-transform: uppercase;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .container .context5 .foto.foto1 {
+    width: 90%;
+  }
+  .container .context5 .foto.foto2 {
+    width: 90%;
+  }
+  .container .context5 .foto.foto3 {
+    width: 90%;
+  }
+  .container .context5 .foto.foto4 {
+    width: 90%;
+  }
+  .container .context5 .foto.foto5 {
+    width: 90%;
+  }
+  .container .context5 .foto.foto6 {
+    width: 90%;
+  }
+  .container .context4 fieldset {
+    max-width: 300px;
+    padding: 20px 10px;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.5;
+    letter-spacing: normal;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container .context4.context6_end .part {
+    padding: 0px;
+    width: 90%;
+    margin-right: 0px;
+  }
+  .container .context4.context6_end .part p {
+    padding: 0px;
+    text-align: center;
+    margin-right: 0px;
+    width: 100%;
+  }
+  .container .context4.context6_end .part button {
+    font-size: 16px;
+    background-color: black;
+    color: white;
+    padding: 20px 10px;
+    letter-spacing: 2.56px;
+    border: none;
+    text-transform: uppercase;
+  }
+  .container .context4.context6_end fieldset {
+    width: 90%;
+    height: 100%;
+  }
+  .container .context4.context6_end fieldset legend {
+    font-size: 30px;
+  }
+  .container .context4 .footer {
+    padding-top: 30px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .container .context4 .footer img.final {
+    padding: 30px;
+    width: 35px;
+    height: 37px;
+  }
+}
