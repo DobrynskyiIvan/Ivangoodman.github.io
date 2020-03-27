@@ -386,15 +386,16 @@ div.part2 .text {
   .navbar {
     display: none;
   }
-  // .container_1 .header {
-  //   padding-top: 50px;
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: space-between;
-  //   align-items: center;
-
-  //   padding-bottom: 50px;
-  // }
+  .container_main {
+    & .container_1 {
+      & .section {
+        &.part1 {
+          height: 100%;
+          background: url(/lesson13/hw2/part1/img_Iphone.png);
+        }
+      }
+    }
+  }
 }
 @media only screen and (max-width: 576px) {
   div.part2 .text .big_1 {
