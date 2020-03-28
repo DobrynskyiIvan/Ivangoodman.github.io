@@ -1,206 +1,207 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand:700&display=swap'); 
-*{
-    padding:0;
-    margin: 0px;
-    line-height: 1;
-    box-sizing: border-box;
-    transition: all  ease-in;
-    
+@import url("https://fonts.googleapis.com/css?family=Quicksand:700&display=swap");
+* {
+  padding: 0;
+  margin: 0px;
+  line-height: 1;
+  box-sizing: border-box;
+  transition: all ease-in;
 }
-.container{
+.container {
+  position: relative;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  background: url(/lesson11/hw2/img/background.png);
+  width: auto;
+  height: 800px;
+}
+.content_container {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-top: 52px;
+  width: 400px;
+  height: 496px;
+  /* mix-blend-mode: soft-light;opacity: 0.2; */
 
-    position: relative;
-    margin: auto;
-    top: 0; left: 0; bottom: 0; right: 0;
-    overflow: auto; 
-    background: url(/lesson11/hw2/img/background.png);
-    width: auto;
-    height: 800px;
+  background: url(/lesson11/hw2/img/body.png) no-repeat center center;
 }
-.content_container{
-    position: absolute;
-    margin: auto;
-    top: 0; left: 0; bottom: 0; right: 0;
-    padding-left: 70px;
-    padding-right: 70px;
-   padding-top: 52px;
-    width: 400px;
-    height: 496px;
-    /* mix-blend-mode: soft-light;opacity: 0.2; */
- 
-    background: url(/lesson11/hw2/img/body.png)no-repeat center center;
-
-}
-li{
-    text-decoration: none;
-    list-style: none;
-    /* text-align: center; */
+li {
+  text-decoration: none;
+  list-style: none;
+  /* text-align: center; */
   padding-right: 26px;
-    display: inline-block;
+  display: inline-block;
 }
-li a{
-    text-decoration: none;
-    font-family: Quicksand;
-    font-size: 18px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: left;
-    color: #e1c2f1;
+li a {
+  text-decoration: none;
+  font-family: Quicksand;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #e1c2f1;
 }
-li a:focus{
-    color: #fbf6e4;
-    font-size: 18px;
-    border-bottom: 2px solid red;
+/* li a:focus {
+  color: #fbf6e4;
+  font-size: 18px;
+  border-bottom: 2px solid red;
+} */
+li a:active {
+  color: #fbf6e4;
+  font-size: 18px;
+  border-bottom: 2px solid red;
 }
-.content_sign:not(:target){
-    display: none;
+.content_sign:not(:target) {
+  display: none;
 }
-.form{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; 
-    padding-top: 50px;
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 50px;
 }
-.form label{
-    font-family: 'Quicksand', sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: left;
-    color: #fbf6e4;
-    padding-bottom: 3px;
+.form label {
+  font-family: "Quicksand", sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fbf6e4;
+  padding-bottom: 3px;
 }
-.form input{
-    width: 261px;
-    height: 42px;
-    border: solid 2px rgba(191, 185, 204, 0.54);
-   background: rgba(191, 185, 204, 0);
-   padding-left: 5px;
-   font-size: 16px;
-   color: #fbf6e4;
+.form input {
+  width: 261px;
+  height: 42px;
+  border: solid 2px rgba(191, 185, 204, 0.54);
+  background: rgba(191, 185, 204, 0);
+  padding-left: 5px;
+  font-size: 16px;
+  color: #fbf6e4;
 }
-.line_error{
-    visibility: hidden;
+.line_error {
+  visibility: hidden;
 }
 /* The container */
 label.container_checkbox {
-   
-    display: block;
-    position: relative;
-    padding-left: 35px;
-   
-    cursor: pointer;
-    font-size: 13px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
+  display: block;
+  position: relative;
+  padding-left: 35px;
 
-  
-  /* Hide the browser's default checkbox */
-  .container_checkbox input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-  }
-  
-  /* Create a custom checkbox */
-  .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 16px;
-    width: 16px;
-    background-color: #eee;
-  }
-  
-  /* On mouse-over, add a grey background color */
-  .container_checkbox:hover input ~ .checkmark {
-    background-color: #ccc;
-  }
-  
-  /* When the checkbox is checked, add a blue background */
-  .container_checkbox input:checked ~ .checkmark {
-    background-color: #23ae92;
-  }
-  
-  /* Create the checkmark/indicator (hidden when not checked) */
-  .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-  
-  /* Show the checkmark when checked */
-  .container_checkbox input:checked ~ .checkmark:after {
-    display: block;
-  }
-  
-  /* Style the checkmark/indicator */
-  .container_checkbox .checkmark:after {
-    left: 4px;
-    top: 1px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-.submit_button{
-    border: none;
-    cursor: pointer;
-   
-    background-color: #23ae92;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align:center;
-    color: #fbf6e4;
-    margin-top: 40px;
-    padding: 13px 0 13px 0;
-}
-.link_footer li a{
-    font-size: 13px;
-    font-weight: normal;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: left;
-    color: #b9b9cc;
-
-}
-div.link_footer ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-    
-
-    padding-top: 20px;
-}
-div.link_footer li{
-    padding-right: 0px;
-}
-div.link_footer a{
-    text-decoration: underline;
-  
-    display: inline-block;
-
+  cursor: pointer;
+  font-size: 13px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
+/* Hide the browser's default checkbox */
+.container_checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.container_checkbox:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container_checkbox input:checked ~ .checkmark {
+  background-color: #23ae92;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container_checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container_checkbox .checkmark:after {
+  left: 4px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.submit_button {
+  border: none;
+  cursor: pointer;
+
+  background-color: #23ae92;
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fbf6e4;
+  margin-top: 40px;
+  padding: 13px 0 13px 0;
+}
+.link_footer li a {
+  font-size: 13px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #b9b9cc;
+}
+div.link_footer ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  padding-top: 20px;
+}
+div.link_footer li {
+  padding-right: 0px;
+}
+div.link_footer a {
+  text-decoration: underline;
+
+  display: inline-block;
+}

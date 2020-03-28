@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+@media only screen and (max-width: 576px) {
+  body {
+    background-image: url(/img/wallpapers-art-planet-space-star-energy-desktop-abstraction-abstrakciya-kosmos-original-planety-zvezdy-yenergiya-gdefon.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: "Josefin Sans", sans-serif;
+  }
+  body .container {
+    width: 80%;
+    max-width: 603;
+    margin: auto;
+  }
+  body .container .title {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: normal;
+    color: #8f0f1c;
+    text-align: center;
+    border-bottom: 2px solid #2ed49d;
+    padding: 25px;
+    font-size: 30px;
+    position: relative;
+    -webkit-animation-name: example;
+            animation-name: example;
+    -webkit-animation-duration: 2.5s;
+            animation-duration: 2.5s;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+    -webkit-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;
+  }
+  @-webkit-keyframes example {
+    from {
+      top: 0px;
+    }
+    to {
+      top: 220px;
+      background-color: yellow;
+    }
+  }
+  @keyframes example {
+    from {
+      top: 0px;
+    }
+    to {
+      top: 220px;
+      background-color: yellow;
+    }
+  }
+  body .container #beetroot_img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+    padding-bottom: 5px;
+    padding-top: 10px;
+  }
+  .container .lessons_list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding-top: 70px;
+  }
+  .container .lessons_list li a.list_item_small {
+    font-size: 20px;
+    text-align: right;
+  }
+  @-webkit-keyframes mymove {
+    50% {
+      background-color: #a35516;
+    }
+  }
+  @keyframes mymove {
+    50% {
+      background-color: #a35516;
+    }
+  }
+  .container .lessons_list .list_item {
+    background-color: #5e5b5b;
+    list-style-type: none;
+    text-decoration: none;
+    position: relative;
+    padding: 20px 20px;
+    text-align: center;
+    border: 1px solid #f8f9fa;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  .container .lessons_list .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #131111;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    font-size: 20px;
+    padding: 10px 10px;
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    right: 101%;
+  }
+  .lessons_list .list_item:hover .tooltiptext {
+    visibility: visible;
+  }
+  .lessons_list .list_item:hover {
+    -webkit-animation: mymove 4s infinite;
+            animation: mymove 4s infinite;
+    background-color: #72746f;
+  }
+  .list_item a {
+    text-decoration: none;
+    color: #fdd15f;
+    font-size: 30px;
+    font-family: "Josefin Sans", sans-serif;
+    font-style: normal;
+  }
+  .lessons_list .list_item:hover a {
+    color: #f0e85d;
+    font-size: 40px;
+  }
+  .lessons_list .list_item:hover a.list_item_small {
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 40px;
+    text-align: right;
+  }
+  .lessons_list .list_item:hover a.list_item_small:hover {
+    color: #90f82e;
+    font-size: 30px;
+  }
+  .lessons_list .list_item:hover a.small {
+    color: #f0e85d;
+    font-size: 15px;
+  }
+}
