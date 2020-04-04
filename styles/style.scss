@@ -5,6 +5,130 @@
   text-decoration: none;
   list-style-type: none;
 }
+body {
+  background-image: url(/img/wallpapers-art-planet-space-star-energy-desktop-abstraction-abstrakciya-kosmos-original-planety-zvezdy-yenergiya-gdefon.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "Josefin Sans", sans-serif;
+}
+.container {
+  width: 60%;
+  max-width: 700;
+  margin: auto;
+}
+.title {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: normal;
+  color: #8f0f1c;
+  text-align: center;
+  border-bottom: 2px solid #2ed49d;
+  padding: 25px;
+  font-size: 40px;
+  position: relative;
+  animation-name: example;
+  animation-duration: 2.5s;
+  animation-delay: 1s;
+  animation-fill-mode: backwards;
+}
+@keyframes example {
+  from {
+    top: 0px;
+  }
+  to {
+    top: 320px;
+    background-color: yellow;
+  }
+}
+
+#beetroot_img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 45%;
+  padding-bottom: 5px;
+  padding-top: 10px;
+}
+
+.lessons_list {
+  display: flex;
+  flex-direction: column-reverse;
+
+  padding-top: 100px;
+}
+li a.list_item_small {
+  font-size: 25px;
+  text-align: right;
+}
+@keyframes mymove {
+  50% {
+    background-color: rgb(163, 85, 22);
+  }
+}
+.list_item {
+  background-color: rgb(94, 91, 91);
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.lessons_list .list_item {
+  position: relative;
+  padding: 40px 40px;
+  text-align: center;
+  border: 1px solid rgb(248, 249, 250);
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.lessons_list .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: rgb(19, 17, 17);
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  font-size: 20px;
+  padding: 10px 10px;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  right: 101%;
+}
+.lessons_list .list_item:hover .tooltiptext {
+  visibility: visible;
+}
+.lessons_list .list_item:hover {
+  animation: mymove 4s infinite;
+  background-color: rgb(114, 116, 111);
+}
+.list_item a {
+  text-decoration: none;
+  color: rgb(253, 209, 95);
+  font-size: 55px;
+  font-family: "Josefin Sans", sans-serif;
+  font-style: normal;
+}
+.lessons_list .list_item:hover a {
+  color: rgb(240, 232, 93);
+  font-size: 55px;
+}
+.lessons_list .list_item:hover a.list_item_small {
+  transition: 0.3s;
+
+  list-style-type: none;
+  text-decoration: none;
+  font-size: 55px;
+  text-align: right;
+}
+.lessons_list .list_item:hover a.list_item_small:hover {
+  color: rgb(144, 248, 46);
+  font-size: 75px;
+}
+.lessons_list .list_item:hover a.small {
+  color: rgb(240, 232, 93);
+  font-size: 25px;
+}
 
 @media only screen and (max-width: 576px) {
   body {
@@ -26,7 +150,7 @@
         text-align: center;
         border-bottom: 2px solid #2ed49d;
         padding: 25px;
-        font-size: 30px;
+        font-size: 32px;
         position: relative;
         animation-name: example;
         animation-duration: 2.5s;
