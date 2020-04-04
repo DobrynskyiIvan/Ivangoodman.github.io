@@ -1,0 +1,610 @@
+@import url("https://fonts.googleapis.com/css2?family=Aleo:wght@300;400&family=Josefin+Sans:wght@200;300;400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+}
+
+header {
+  background: url(/Exam/img/header_Image.png) no-repeat center;
+  background-size: cover;
+  padding: 0;
+}
+
+header .context {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  max-width: 1115px;
+}
+
+header .context h1 {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  padding-top: 265px;
+  margin: 0;
+  letter-spacing: 3.3px;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+
+header .context .subtitle {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 22px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 300;
+  line-height: 1.18;
+  letter-spacing: 6px;
+  padding-bottom: 45px;
+}
+
+header .context .search_bar {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .context .search_bar input {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  border: none;
+  color: #999999;
+  width: 480px;
+  height: 60px;
+  background-color: #ffffff;
+  padding-left: 20px;
+}
+
+header .context .search_bar input::-webkit-input-placeholder {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  line-height: 1.86;
+  letter-spacing: 1.8px;
+  color: #999999;
+}
+
+header .context .search_bar input:-ms-input-placeholder {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  line-height: 1.86;
+  letter-spacing: 1.8px;
+  color: #999999;
+}
+
+header .context .search_bar input::-ms-input-placeholder {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  line-height: 1.86;
+  letter-spacing: 1.8px;
+  color: #999999;
+}
+
+header .context .search_bar input::placeholder {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  line-height: 1.86;
+  letter-spacing: 1.8px;
+  color: #999999;
+}
+
+header .context .search_bar button {
+  font-family: "Aleo", serif;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+  line-height: 1.86;
+  letter-spacing: 1.4px;
+  width: 150px;
+  height: 60px;
+  border: solid 2px #ffffff;
+  background-color: #5474fd;
+}
+
+header .context .search_bar button .icon-search:before {
+  text-align: center;
+  font-size: 28px;
+  padding: 2px;
+  content: "\e900";
+  font-weight: 100;
+}
+
+header .context .scroll {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 200;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1.86;
+  letter-spacing: 2.3px;
+  padding: 120px 0px;
+  padding-bottom: 125px;
+}
+
+header .context .scroll .icon-chevron-thin-down:before {
+  padding: 15px;
+  color: white;
+  content: "\e901";
+}
+
+header nav {
+  width: 100%;
+  background-color: #5474fd;
+}
+
+header nav:hover {
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+header nav .nav_context {
+  max-width: 1115px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header nav .nav_context .logo {
+  padding: 29px 0px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: left;
+  line-height: 1.08;
+  letter-spacing: 2.3px;
+}
+
+header nav .nav_context .navigation a {
+  padding-left: 36px;
+  text-decoration: none;
+  font-family: "Aleo", serif;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.86;
+  text-transform: uppercase;
+}
+
+header nav .nav_context .navigation a:hover {
+  color: aqua;
+}
+
+#why_us {
+  background: url(/Exam/img/section2_background.png) no-repeat center center;
+  background-size: cover;
+}
+
+#why_us .context {
+  padding: 120px 0px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  max-width: 1112px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#why_us .info {
+  height: 100%;
+  max-width: 540px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-bottom: 15px;
+}
+
+#why_us .info .title {
+  font-family: "Aleo", serif;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  font-size: 36px;
+  line-height: 1;
+  text-align: left;
+  padding-bottom: 58px;
+}
+
+#why_us .info p.text {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  line-height: 1.63;
+  letter-spacing: 1.3px;
+  text-align: left;
+  color: #e8e8e8;
+}
+
+#why_us .info p.text.text1 {
+  padding-bottom: 28px;
+}
+
+#why_us .info p.text.text2 {
+  padding-bottom: 42px;
+}
+
+#why_us .info a {
+  text-decoration: none;
+}
+
+#why_us .info a.explore_button {
+  padding: 22px 26px;
+  font-family: "Aleo", serif;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1.2px;
+  width: 225px;
+  height: 60px;
+  background: #496aff;
+  /* Old Browsers */
+  /* FF3.6+ */
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, #496aff), color-stop(43%, #496aff), color-stop(43%, #5473fd), color-stop(100%, #5473fd));
+  /* Chrome, Safari4+ */
+  background: -webkit-linear-gradient(45deg, #496aff 0%, #496aff 43%, #5473fd 43%, #5473fd 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg, #496aff 0%, #496aff 43%, #5473fd 43%, #5473fd 100%);
+  /* Opera 11.10+ */
+  /* IE 10+ */
+  background: linear-gradient(45deg, #496aff 0%, #496aff 43%, #5473fd 43%, #5473fd 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#496aff', endColorstr='#5473fd', GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+
+#why_us .info a.explore_button:hover {
+  border: none;
+  background: none;
+  background-color: #51ac14;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+}
+
+#why_us .info a.explore_button:active {
+  -webkit-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+#why_us .photo {
+  max-width: 475px;
+}
+
+#why_us .photo img {
+  width: 350px;
+  height: 220px;
+  background-color: #dddddd;
+}
+
+#why_us .photo img:last-child {
+  float: right;
+}
+
+#how_it_works {
+  background-color: #333333;
+}
+
+#how_it_works .context {
+  margin: 0 auto;
+  max-width: 980px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: url(/Exam/img/section_search_shape.svg) no-repeat center 48px;
+  padding-bottom: 10px;
+}
+
+#how_it_works .context .item {
+  font-family: "Aleo", serif;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  font-size: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 100px 0px;
+  letter-spacing: normal;
+  text-align: center;
+  color: #e8e8e8;
+}
+
+#how_it_works .context .item span {
+  background-color: #333333;
+  font-size: 60px;
+  padding-bottom: 22px;
+}
+
+#how_it_works .context .item span.icon-book:before {
+  content: "\e902";
+  color: #00a2ff;
+}
+
+#how_it_works .context .item span.icon-select:before {
+  content: "\e903";
+  color: #ff6363;
+}
+
+#how_it_works .context .item span.icon-search1:before {
+  content: "\e904";
+  color: #5474fd;
+}
+
+.container.home {
+  background: url(/Exam/img/section3_cube_house.png) no-repeat center center;
+  background-size: cover;
+}
+
+.container.mountains {
+  background: url(/Exam/img/section3_mountains.png) no-repeat center center;
+  background-size: cover;
+}
+
+.container .context {
+  padding-top: 230px;
+  padding-bottom: 100px;
+  max-width: 1113px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .context.mountains {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.container .context .item {
+  padding: 30px;
+  width: 540px;
+  height: 371px;
+  opacity: 0.9;
+  background-color: #232323;
+}
+
+.container .context .item p {
+  padding-top: 20px;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  text-align: left;
+}
+
+.container .context .item p.title {
+  letter-spacing: 0.5px;
+  padding-top: 29px;
+  text-transform: uppercase;
+  letter-spacing: 0.3;
+}
+
+.container .context .item p.text {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 200;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  text-align: left;
+  line-height: 1.63;
+  padding-bottom: 38px;
+}
+
+.container .context .item button {
+  font-family: "Aleo", serif;
+  font-weight: 300;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  font-size: 16px;
+  text-transform: uppercase;
+  width: 225px;
+  height: 60px;
+  background: #496aff;
+  /* Old Browsers */
+  /* FF3.6+ */
+  background: -webkit-gradient(left bottom, right top, color-stop(0%, #496aff), color-stop(43%, #496aff), color-stop(43%, #5473fd), color-stop(100%, #5473fd));
+  /* Chrome, Safari4+ */
+  background: -webkit-linear-gradient(45deg, #496aff 0%, #496aff 43%, #5473fd 43%, #5473fd 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(45deg, #496aff 0%, #496aff 43%, #5473fd 43%, #5473fd 100%);
+  /* Opera 11.10+ */
+  /* IE 10+ */
+  background: linear-gradient(45deg, #496aff 0%, #496aff 43%, #5473fd 43%, #5473fd 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#496aff', endColorstr='#5473fd', GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+  border-radius: 3px;
+  border: none;
+  letter-spacing: 1.2px;
+}
+
+.container .context .item button:hover {
+  border: none;
+  background: none;
+  background-color: #61ebb1;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.container .context .item button:active {
+  -webkit-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+          transform: scale(0.95);
+}

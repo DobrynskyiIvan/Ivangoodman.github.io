@@ -1,0 +1,381 @@
+@import url("https://fonts.googleapis.com/css2?family=Aleo:wght@300;400&family=Josefin+Sans:wght@200;300;400;600;700&display=swap");
+
+@mixin text_Aleo($fs, $weight) {
+    font-family: "Aleo", serif;
+
+    font-weight: $weight;
+    font-stretch: normal;
+    font-style: normal;
+    text-align: center;
+    color: #ffffff;
+    font-size: $fs;
+}
+@mixin text_JosefinSans($fs, $weight) {
+    font-family: "Josefin Sans", sans-serif;
+    font-size: $fs;
+    font-weight: $weight;
+    font-stretch: normal;
+    font-style: normal;
+    text-align: center;
+    color: #ffffff;
+}
+@mixin flex_column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@mixin flex_row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+@mixin background_button {
+    background: rgba(73, 106, 255, 1); /* Old Browsers */
+    background: -moz-linear-gradient(
+        45deg,
+        rgba(73, 106, 255, 1) 0%,
+        rgba(73, 106, 255, 1) 43%,
+        rgba(84, 115, 253, 1) 43%,
+        rgba(84, 115, 253, 1) 100%
+    ); /* FF3.6+ */
+    background: -webkit-gradient(
+        left bottom,
+        right top,
+        color-stop(0%, rgba(73, 106, 255, 1)),
+        color-stop(43%, rgba(73, 106, 255, 1)),
+        color-stop(43%, rgba(84, 115, 253, 1)),
+        color-stop(100%, rgba(84, 115, 253, 1))
+    ); /* Chrome, Safari4+ */
+    background: -webkit-linear-gradient(
+        45deg,
+        rgba(73, 106, 255, 1) 0%,
+        rgba(73, 106, 255, 1) 43%,
+        rgba(84, 115, 253, 1) 43%,
+        rgba(84, 115, 253, 1) 100%
+    ); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(
+        45deg,
+        rgba(73, 106, 255, 1) 0%,
+        rgba(73, 106, 255, 1) 43%,
+        rgba(84, 115, 253, 1) 43%,
+        rgba(84, 115, 253, 1) 100%
+    ); /* Opera 11.10+ */
+    background: -ms-linear-gradient(
+        45deg,
+        rgba(73, 106, 255, 1) 0%,
+        rgba(73, 106, 255, 1) 43%,
+        rgba(84, 115, 253, 1) 43%,
+        rgba(84, 115, 253, 1) 100%
+    ); /* IE 10+ */
+    background: linear-gradient(
+        45deg,
+        rgba(73, 106, 255, 1) 0%,
+        rgba(73, 106, 255, 1) 43%,
+        rgba(84, 115, 253, 1) 43%,
+        rgba(84, 115, 253, 1) 100%
+    ); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#496aff', endColorstr='#5473fd', GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: white;
+}
+header {
+    background: url(/Exam/img/header_Image.png) no-repeat center;
+    background-size: cover;
+    padding: 0;
+    & .context {
+        @include flex_column();
+        margin: 0 auto;
+        max-width: 1115px;
+        & h1 {
+            @include text_JosefinSans(48px, 600);
+            padding-top: 265px;
+            margin: 0;
+            letter-spacing: 3.3px;
+            text-transform: uppercase;
+            padding-bottom: 5px;
+        }
+        & .subtitle {
+            @include text_JosefinSans(22px, normal);
+            font-weight: 300;
+            line-height: 1.18;
+            letter-spacing: 6px;
+            padding-bottom: 45px;
+        }
+        & .search_bar {
+            background-color: #ffffff;
+            @include flex_row();
+            & input {
+                @include text_JosefinSans(16px, normal);
+                border: none;
+                color: #999999;
+                width: 480px;
+                height: 60px;
+                background-color: #ffffff;
+                padding-left: 20px;
+                &::placeholder {
+                    @include text_JosefinSans(14px, normal);
+                    line-height: 1.86;
+                    letter-spacing: 1.8px;
+                    color: #999999;
+                }
+            }
+            & button {
+                @include text_Aleo(14px, 300);
+                @include flex_row();
+                justify-content: center;
+                text-transform: uppercase;
+                line-height: 1.86;
+                letter-spacing: 1.4px;
+                width: 150px;
+                height: 60px;
+                border: solid 2px #ffffff;
+                background-color: #5474fd;
+                & .icon-search:before {
+                    text-align: center;
+                    font-size: 28px;
+                    padding: 2px;
+                    content: "\e900";
+                    font-weight: 100;
+                }
+            }
+        }
+        & .scroll {
+            @include text_JosefinSans(14px, 200);
+            @include flex_column();
+            line-height: 1.86;
+            letter-spacing: 2.3px;
+            padding: 120px 0px;
+            padding-bottom: 125px;
+            & .icon-chevron-thin-down:before {
+                padding: 15px;
+                color: white;
+                content: "\e901";
+            }
+        }
+    }
+    & nav {
+        width: 100%;
+        background-color: #5474fd;
+        &:hover {
+            transition: 0.3s;
+            background-color: rgba($color: #000000, $alpha: 0);
+        }
+
+        & .nav_context {
+            max-width: 1115px;
+            margin: 0 auto;
+            @include flex_row();
+            justify-content: space-between;
+            & .logo {
+                padding: 29px 0px;
+                @include text_JosefinSans(24px, 500);
+                text-transform: uppercase;
+                text-align: left;
+                line-height: 1.08;
+                letter-spacing: 2.3px;
+            }
+            & .navigation {
+                & a {
+                    padding-left: 36px;
+                    text-decoration: none;
+                    @include text_Aleo(14px, 400);
+                    font-weight: 300;
+                    line-height: 1.86;
+                    text-transform: uppercase;
+                    &:hover {
+                        color: aqua;
+                    }
+                }
+            }
+        }
+    }
+}
+#why_us {
+    background: url(/Exam/img/section2_background.png) no-repeat center center;
+    background-size: cover;
+    & .context {
+        padding: 120px 0px;
+
+        margin: 0 auto;
+        @include flex_row();
+        align-items: flex-end;
+        max-width: 1112px;
+        justify-content: space-between;
+    }
+    & .info {
+        height: 100%;
+
+        max-width: 540px;
+        @include flex_column();
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding-bottom: 15px;
+
+        & .title {
+            @include text_Aleo(36px, 400);
+
+            line-height: 1;
+            text-align: left;
+            padding-bottom: 58px;
+        }
+        & p {
+            &.text {
+                @include text_JosefinSans(16px, 200);
+
+                line-height: 1.63;
+                letter-spacing: 1.3px;
+                text-align: left;
+                color: #e8e8e8;
+                &.text1 {
+                    padding-bottom: 28px;
+                }
+                &.text2 {
+                    padding-bottom: 42px;
+                }
+            }
+        }
+        & a {
+            text-decoration: none;
+            &.explore_button {
+                padding: 22px 26px;
+                @include text_Aleo(16px, 300);
+                text-transform: uppercase;
+                text-align: center;
+                letter-spacing: 1.2px;
+                width: 225px;
+                height: 60px;
+                @include background_button();
+                &:hover {
+                    border: none;
+                    background: none;
+                    background-color: rgb(81, 172, 20);
+                    transition: 0.1s;
+                }
+                &:active {
+                    transform: scale(0.95);
+                }
+            }
+        }
+    }
+    .photo {
+        max-width: 475px;
+        & img {
+            width: 350px;
+            height: 220px;
+            background-color: #dddddd;
+            &:last-child {
+                float: right;
+            }
+        }
+    }
+}
+#how_it_works {
+    background-color: #333333;
+    & .context {
+        margin: 0 auto;
+        max-width: 980px;
+        @include flex_row();
+        justify-content: space-between;
+        background: url(/Exam/img/section_search_shape.svg) no-repeat center 48px;
+        padding-bottom: 10px;
+
+        & .item {
+            @include text_Aleo(36px, 300);
+            @include flex_column();
+            padding: 100px 0px;
+
+            letter-spacing: normal;
+            text-align: center;
+            color: #e8e8e8;
+            & span {
+                background-color: #333333;
+                font-size: 60px;
+                padding-bottom: 22px;
+                &.icon-book:before {
+                    content: "\e902";
+                    color: #00a2ff;
+                }
+                &.icon-select:before {
+                    content: "\e903";
+                    color: #ff6363;
+                }
+                &.icon-search1:before {
+                    content: "\e904";
+                    color: #5474fd;
+                }
+            }
+        }
+    }
+}
+.container {
+    &.home {
+        background: url(/Exam/img/section3_cube_house.png) no-repeat center center;
+        background-size: cover;
+    }
+    &.mountains {
+        background: url(/Exam/img/section3_mountains.png) no-repeat center center;
+        background-size: cover;
+    }
+    .context {
+        padding-top: 230px;
+        padding-bottom: 100px;
+        max-width: 1113px;
+        margin: 0 auto;
+        @include flex_row();
+        &.mountains {
+            flex-direction: row-reverse;
+        }
+
+        & .item {
+            padding: 30px;
+            width: 540px;
+            height: 371px;
+            opacity: 0.9;
+            background-color: #232323;
+
+            & p {
+                padding-top: 20px;
+                @include text_JosefinSans(20px, 300);
+                text-align: left;
+                &.title {
+                    letter-spacing: 0.5px;
+                    padding-top: 29px;
+                    text-transform: uppercase;
+                    letter-spacing: 0.3;
+                }
+                &.text {
+                    @include text_JosefinSans(16px, 200);
+                    text-align: left;
+                    line-height: 1.63;
+                    padding-bottom: 38px;
+                }
+            }
+
+            & button {
+                @include text_Aleo(16px, 300);
+                text-transform: uppercase;
+                width: 225px;
+                height: 60px;
+                @include background_button();
+                border-radius: 3px;
+                border: none;
+                letter-spacing: 1.2px;
+                &:hover {
+                    border: none;
+                    background: none;
+                    background-color: rgb(97, 235, 177);
+                    transition: 0.1s;
+                }
+                &:active {
+                    transform: scale(0.95);
+                }
+            }
+        }
+    }
+}
