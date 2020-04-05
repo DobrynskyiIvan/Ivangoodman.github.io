@@ -28,7 +28,7 @@ header .context {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
-  max-width: 1115px;
+  max-width: 1113px;
 }
 
 header .context h1 {
@@ -56,8 +56,8 @@ header .context .subtitle {
   color: #ffffff;
   font-weight: 300;
   line-height: 1.18;
-  letter-spacing: 6px;
-  padding-bottom: 45px;
+  letter-spacing: 5.9px;
+  padding-bottom: 48px;
 }
 
 header .context .search_bar {
@@ -72,6 +72,8 @@ header .context .search_bar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 648px;
+  height: 60px;
 }
 
 header .context .search_bar input {
@@ -82,12 +84,11 @@ header .context .search_bar input {
   font-style: normal;
   text-align: center;
   color: #ffffff;
+  letter-spacing: 1px;
   border: none;
   color: #999999;
-  width: 480px;
-  height: 60px;
+  width: 100%;
   background-color: #ffffff;
-  padding-left: 20px;
 }
 
 header .context .search_bar input::-webkit-input-placeholder {
@@ -99,7 +100,7 @@ header .context .search_bar input::-webkit-input-placeholder {
   text-align: center;
   color: #ffffff;
   line-height: 1.86;
-  letter-spacing: 1.8px;
+  letter-spacing: 1.85px;
   color: #999999;
 }
 
@@ -112,7 +113,7 @@ header .context .search_bar input:-ms-input-placeholder {
   text-align: center;
   color: #ffffff;
   line-height: 1.86;
-  letter-spacing: 1.8px;
+  letter-spacing: 1.85px;
   color: #999999;
 }
 
@@ -125,7 +126,7 @@ header .context .search_bar input::-ms-input-placeholder {
   text-align: center;
   color: #ffffff;
   line-height: 1.86;
-  letter-spacing: 1.8px;
+  letter-spacing: 1.85px;
   color: #999999;
 }
 
@@ -138,13 +139,13 @@ header .context .search_bar input::placeholder {
   text-align: center;
   color: #ffffff;
   line-height: 1.86;
-  letter-spacing: 1.8px;
+  letter-spacing: 1.85px;
   color: #999999;
 }
 
 header .context .search_bar button {
   font-family: "Aleo", serif;
-  font-weight: 300;
+  font-weight: 400;
   font-stretch: normal;
   font-style: normal;
   text-align: center;
@@ -160,22 +161,20 @@ header .context .search_bar button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   text-transform: uppercase;
-  line-height: 1.86;
+  padding: 15px 10px;
   letter-spacing: 1.4px;
-  width: 150px;
-  height: 60px;
+  padding-left: 34px;
   border: solid 2px #ffffff;
   background-color: #5474fd;
 }
 
 header .context .search_bar button .icon-search:before {
   text-align: center;
-  font-size: 28px;
-  padding: 2px;
+  font-size: 26px;
+  padding-left: 10px;
   content: "\e900";
   font-weight: 100;
 }
@@ -201,7 +200,8 @@ header .context .scroll {
   line-height: 1.86;
   letter-spacing: 2.3px;
   padding: 115px 0px;
-  padding-bottom: 135px;
+  padding-bottom: 133px;
+  position: relative;
 }
 
 header .context .scroll .icon-chevron-thin-down:before {
@@ -223,7 +223,7 @@ header nav:hover {
 }
 
 header nav .nav_context {
-  max-width: 1115px;
+  max-width: 1113px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -252,7 +252,7 @@ header nav .nav_context .logo {
   text-transform: uppercase;
   text-align: left;
   line-height: 1.08;
-  letter-spacing: 2.3px;
+  letter-spacing: 1.6px;
 }
 
 header nav .nav_context .navigation a {
@@ -345,7 +345,7 @@ header nav .nav_context .navigation a:hover {
   text-align: center;
   color: #ffffff;
   line-height: 1.63;
-  letter-spacing: 1.3px;
+  letter-spacing: 1.14px;
   text-align: left;
   color: #e8e8e8;
 }
@@ -464,7 +464,7 @@ header nav .nav_context .navigation a:hover {
       -ms-flex-align: center;
           align-items: center;
   padding: 100px 0px;
-  letter-spacing: normal;
+  letter-spacing: -0.1px;
   text-align: center;
   color: #e8e8e8;
 }
@@ -503,7 +503,7 @@ header nav .nav_context .navigation a:hover {
 .container .context {
   padding-top: 230px;
   padding-bottom: 100px;
-  max-width: 1113px;
+  max-width: 1110px;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -526,6 +526,7 @@ header nav .nav_context .navigation a:hover {
 
 .container .context .item {
   padding: 30px;
+  padding-right: 20px;
   width: 540px;
   height: 371px;
   opacity: 0.9;
@@ -541,14 +542,14 @@ header nav .nav_context .navigation a:hover {
   font-style: normal;
   text-align: center;
   color: #ffffff;
-  letter-spacing: normal;
+  letter-spacing: 1px;
   text-align: left;
 }
 
 .container .context .item p.title {
   padding-top: 30px;
   text-transform: uppercase;
-  letter-spacing: -1px;
+  letter-spacing: -0.7px;
 }
 
 .container .context .item p.text {
@@ -562,6 +563,7 @@ header nav .nav_context .navigation a:hover {
   text-align: left;
   line-height: 1.63;
   padding-bottom: 45px;
+  letter-spacing: -0.42px;
 }
 
 .container .context .item button {
@@ -629,7 +631,7 @@ header nav .nav_context .navigation a:hover {
   text-align: center;
   color: #ffffff;
   font-size: 36px;
-  letter-spacing: normal;
+  letter-spacing: 0.55px;
   text-align: center;
   padding-bottom: 89px;
 }
@@ -659,6 +661,7 @@ header nav .nav_context .navigation a:hover {
   padding: 0px 60px;
   padding-bottom: 40px;
   padding-top: 30px;
+  padding-right: 57px;
 }
 
 #coments .context .content .coment .title {
@@ -671,7 +674,7 @@ header nav .nav_context .navigation a:hover {
   color: #ffffff;
   text-transform: uppercase;
   line-height: 1.3;
-  letter-spacing: normal;
+  letter-spacing: -0.64px;
   text-align: left;
   color: #fefefe;
   padding-bottom: 35px;
@@ -687,8 +690,8 @@ header nav .nav_context .navigation a:hover {
   text-align: center;
   color: #ffffff;
   line-height: 1.63;
-  letter-spacing: normal;
-  text-align: unset;
+  letter-spacing: -0.67px;
+  text-align: justify;
   color: #e8e8e8;
 }
 
@@ -699,7 +702,7 @@ header nav .nav_context .navigation a:hover {
 }
 
 #coments .context .content .coment .text .fas.fa-quote-left {
-  font-size: 17px;
+  font-size: 18px;
   color: #5474fd;
   padding: 3px;
 }
