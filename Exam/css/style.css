@@ -76,6 +76,12 @@ header .context .search_bar {
   height: 60px;
 }
 
+@media only screen and (max-width: 650px) {
+  header .context .search_bar {
+    width: 100%;
+  }
+}
+
 header .context .search_bar input {
   font-family: "Josefin Sans", sans-serif;
   font-size: 16px;
@@ -303,6 +309,12 @@ header nav {
   background-color: #5474fd;
 }
 
+@media only screen and (max-width: 1200px) {
+  header nav {
+    padding: 0px 20px;
+  }
+}
+
 header nav:hover {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
@@ -328,8 +340,14 @@ header nav .nav_context {
           justify-content: space-between;
 }
 
+@media only screen and (max-width: 1230px) {
+  header nav .nav_context {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
 header nav .nav_context .logo {
-  padding: 28px 0px;
   font-family: "Josefin Sans", sans-serif;
   font-size: 24px;
   font-weight: 500;
@@ -341,6 +359,35 @@ header nav .nav_context .logo {
   text-align: left;
   line-height: 1.08;
   letter-spacing: 1.6px;
+}
+
+@media only screen and (max-width: 765px) {
+  header nav .nav_context .logo {
+    display: none;
+  }
+}
+
+header nav .nav_context .navigation {
+  padding: 28px 0px;
+}
+
+@media only screen and (max-width: 630px) {
+  header nav .nav_context .navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
 }
 
 header nav .nav_context .navigation a {
@@ -387,6 +434,12 @@ header nav .nav_context .navigation a:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media only screen and (max-width: 1200px) {
+  #why_us .context {
+    padding: 120px 20px;
+  }
 }
 
 #why_us .info {
@@ -499,6 +552,12 @@ header nav .nav_context .navigation a:hover {
   max-width: 475px;
 }
 
+@media only screen and (max-width: 640px) {
+  #why_us .photo {
+    display: none;
+  }
+}
+
 #why_us .photo img {
   width: 350px;
   height: 220px;
@@ -533,6 +592,18 @@ header nav .nav_context .navigation a:hover {
   padding-bottom: 10px;
 }
 
+@media only screen and (max-width: 700px) {
+  #how_it_works .context {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 #how_it_works .context .item {
   font-family: "Aleo", serif;
   font-weight: 300;
@@ -555,6 +626,12 @@ header nav .nav_context .navigation a:hover {
   letter-spacing: -0.1px;
   text-align: center;
   color: #e8e8e8;
+}
+
+@media only screen and (max-width: 700px) {
+  #how_it_works .context .item {
+    padding: 20px 0px;
+  }
 }
 
 #how_it_works .context .item span {
@@ -619,6 +696,13 @@ header nav .nav_context .navigation a:hover {
   height: 371px;
   opacity: 0.9;
   background-color: #232323;
+}
+
+@media only screen and (max-width: 445px) {
+  .container .context .item {
+    width: 100%;
+    height: auto;
+  }
 }
 
 .container .context .item p {
@@ -735,6 +819,23 @@ header nav .nav_context .navigation a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media only screen and (max-width: 975px) {
+  #coments .context .content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 #coments .context .content img {
@@ -742,14 +843,29 @@ header nav .nav_context .navigation a:hover {
   max-height: 284px;
 }
 
+@media only screen and (max-width: 445px) {
+  #coments .context .content img {
+    width: 100%;
+    height: auto;
+  }
+}
+
 #coments .context .content .coment {
   background-color: #333333;
   max-width: 665px;
-  max-height: 284px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0px 60px;
-  padding-bottom: 40px;
-  padding-top: 30px;
+  padding-bottom: 45px;
+  padding-top: 32px;
   padding-right: 57px;
+}
+
+@media only screen and (max-width: 445px) {
+  #coments .context .content .coment {
+    width: 100%;
+    max-height: auto;
+  }
 }
 
 #coments .context .content .coment .title {
@@ -766,7 +882,7 @@ header nav .nav_context .navigation a:hover {
   text-align: left;
   color: #fefefe;
   padding-bottom: 35px;
-  padding-top: 20px;
+  padding-top: 13px;
 }
 
 #coments .context .content .coment .text {
@@ -778,7 +894,7 @@ header nav .nav_context .navigation a:hover {
   text-align: center;
   color: #ffffff;
   line-height: 1.63;
-  letter-spacing: -0.67px;
+  letter-spacing: -0.75px;
   text-align: justify;
   color: #e8e8e8;
 }
@@ -792,7 +908,7 @@ header nav .nav_context .navigation a:hover {
 #coments .context .content .coment .text .fas.fa-quote-left {
   font-size: 18px;
   color: #5474fd;
-  padding: 3px;
+  padding: 4px;
 }
 
 footer {
@@ -824,7 +940,7 @@ footer .context .title {
   text-align: center;
   color: #ffffff;
   text-transform: uppercase;
-  letter-spacing: 3.3px;
+  letter-spacing: 2.8px;
   text-align: center;
   padding-bottom: 5px;
 }
@@ -838,9 +954,9 @@ footer .context .subtitle {
   text-align: center;
   color: #ffffff;
   line-height: 1.63;
-  letter-spacing: 1.2px;
+  letter-spacing: 0.8px;
   text-align: center;
-  padding-bottom: 23px;
+  padding-bottom: 24px;
 }
 
 footer .context .social {
