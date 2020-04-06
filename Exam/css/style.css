@@ -94,8 +94,8 @@ header .context .search_bar input {
   letter-spacing: 1px;
   border: none;
   color: #999999;
-  width: 100%;
-  padding: 19px 30px;
+  width: 85%;
+  padding: 19px 10px;
   background-color: #ffffff;
 }
 
@@ -177,8 +177,8 @@ header .context .search_bar button {
       justify-content: space-around;
   text-transform: uppercase;
   padding: 15px 10px;
-  letter-spacing: 1.4px;
   padding-left: 34px;
+  letter-spacing: 1.4px;
   border: solid 2px #ffffff;
   background-color: #5474fd;
 }
@@ -234,7 +234,7 @@ header .context .search_bar button:active {
 }
 
 header .context .search_bar button .icon-search:before {
-  text-align: center;
+  text-align: left;
   font-size: 26px;
   padding-left: 10px;
   content: "\e900";
@@ -478,6 +478,7 @@ header nav .nav_context .navigation a:hover {
 }
 
 #why_us .info p.text {
+  max-width: 540px;
   font-family: "Josefin Sans", sans-serif;
   font-size: 16px;
   font-weight: 200;
