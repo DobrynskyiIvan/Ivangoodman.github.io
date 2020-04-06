@@ -84,11 +84,17 @@ header .context .search_bar input {
   font-style: normal;
   text-align: center;
   color: #ffffff;
+  text-align: left;
   letter-spacing: 1px;
   border: none;
   color: #999999;
   width: 100%;
+  padding: 19px 30px;
   background-color: #ffffff;
+}
+
+header .context .search_bar input:focus {
+  border: none;
 }
 
 header .context .search_bar input::-webkit-input-placeholder {
@@ -171,6 +177,56 @@ header .context .search_bar button {
   background-color: #5474fd;
 }
 
+header .context .search_bar button:hover {
+  background: none;
+  background-color: #eea810;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+}
+
+header .context .search_bar button:hover .icon-search:before {
+  position: relative;
+  -webkit-animation: search 1s infinite;
+          animation: search 1s infinite;
+}
+
+@-webkit-keyframes search {
+  0% {
+    top: 5px;
+  }
+  25% {
+    left: 5px;
+  }
+  75% {
+    bottom: 5px;
+  }
+  100% {
+    right: 5px;
+  }
+}
+
+@keyframes search {
+  0% {
+    top: 5px;
+  }
+  25% {
+    left: 5px;
+  }
+  75% {
+    bottom: 5px;
+  }
+  100% {
+    right: 5px;
+  }
+}
+
+header .context .search_bar button:active {
+  -webkit-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
 header .context .search_bar button .icon-search:before {
   text-align: center;
   font-size: 26px;
@@ -201,7 +257,39 @@ header .context .scroll {
   letter-spacing: 2.3px;
   padding: 115px 0px;
   padding-bottom: 133px;
+  -webkit-animation: mymove 3s infinite;
+          animation: mymove 3s infinite;
   position: relative;
+}
+
+@-webkit-keyframes mymove {
+  0% {
+    top: 0px;
+  }
+  25% {
+    top: 50px;
+  }
+  75% {
+    top: 25px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@keyframes mymove {
+  0% {
+    top: 0px;
+  }
+  25% {
+    top: 50px;
+  }
+  75% {
+    top: 25px;
+  }
+  100% {
+    top: 0px;
+  }
 }
 
 header .context .scroll .icon-chevron-thin-down:before {
