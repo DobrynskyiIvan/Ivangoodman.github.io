@@ -320,6 +320,7 @@ header {
         }
         & p {
             &.text {
+                max-width: 540px;
                 @include text_JosefinSans(16px, 200);
 
                 line-height: 1.63;
