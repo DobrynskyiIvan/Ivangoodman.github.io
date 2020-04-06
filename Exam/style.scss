@@ -121,8 +121,8 @@ header {
                 letter-spacing: 1px;
                 border: none;
                 color: #999999;
-                width: 100%;
-                padding: 19px 30px;
+                width: 85%;
+                padding: 19px 10px;
                 background-color: #ffffff;
                 &:focus {
                     border: none;
@@ -158,10 +158,10 @@ header {
                 @include flex_row();
                 justify-content: space-around;
                 text-transform: uppercase;
-
                 padding: 15px 10px;
-                letter-spacing: 1.4px;
                 padding-left: 34px;
+                letter-spacing: 1.4px;
+
                 border: solid 2px #ffffff;
                 background-color: #5474fd;
                 &:hover {
@@ -195,7 +195,7 @@ header {
                     transform: scale(0.95);
                 }
                 & .icon-search:before {
-                    text-align: center;
+                    text-align: left;
                     font-size: 26px;
                     padding-left: 10px;
                     content: "\e900";
