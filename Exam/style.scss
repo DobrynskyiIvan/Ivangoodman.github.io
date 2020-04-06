@@ -115,12 +115,16 @@ header {
 
             & input {
                 @include text_JosefinSans(16px, normal);
+                text-align: left;
                 letter-spacing: 1px;
                 border: none;
                 color: #999999;
                 width: 100%;
-
+                padding: 19px 30px;
                 background-color: #ffffff;
+                &:focus {
+                    border: none;
+                }
 
                 &::placeholder {
                     @include text_JosefinSans(14px, normal);
@@ -140,6 +144,36 @@ header {
                 padding-left: 34px;
                 border: solid 2px #ffffff;
                 background-color: #5474fd;
+                &:hover {
+                    // border: none;
+                    background: none;
+                    background-color: rgb(238, 168, 16);
+                    transition: 0.1s;
+                }
+                &:hover {
+                    & .icon-search:before {
+                        position: relative;
+                        animation: search 1s infinite;
+
+                        @keyframes search {
+                            0% {
+                                top: 5px;
+                            }
+                            25% {
+                                left: 5px;
+                            }
+                            75% {
+                                bottom: 5px;
+                            }
+                            100% {
+                                right: 5px;
+                            }
+                        }
+                    }
+                }
+                &:active {
+                    transform: scale(0.95);
+                }
                 & .icon-search:before {
                     text-align: center;
                     font-size: 26px;
@@ -156,12 +190,29 @@ header {
             letter-spacing: 2.3px;
             padding: 115px 0px;
             padding-bottom: 133px;
+            animation: mymove 3s infinite;
+            position: relative;
+
+            @keyframes mymove {
+                0% {
+                    top: 0px;
+                }
+                25% {
+                    top: 50px;
+                }
+                75% {
+                    top: 25px;
+                }
+                100% {
+                    top: 0px;
+                }
+            }
+
             & .icon-chevron-thin-down:before {
                 padding: 15px;
                 color: white;
                 content: "\e901";
             }
-            position: relative;
         }
     }
     & nav {
