@@ -93,7 +93,7 @@
 // } while (condition == true);
 //7 
 
-// var number = prompt("Number one:");
+// var number = prompt("Number for moving:");
 // let move = Number(prompt("counts of move:"));
 // // console.log(Array.from(number));
 // var fruits = Array.from(number);
@@ -112,7 +112,48 @@
 // console.log('the result:', reversed);
 
 
+//8 
+// var way = prompt("You want to start");
+// var dayName = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
+
+// for (var i = 0; i < dayName.length && way == "ok"; i++) {
+//     console.log(dayName[i]);
+//     var way = prompt("Continue type ok");
+
+// }
+
+//9  Вывести таблицу умножения для всех чисел от 2 до 9
+
+// for (var i = 2; i <= 9; i++) {
+//     console.log("special for :", i)
+//     for (let j = 1; j < 11; j++) {
+//         console.log(`${i}*${j}=${i * j}`);
+//     }
 
 
+// }
 
 
+//10 
+// var Z = 0;
+// var N = 50;
+// var K = 100;
+// do {
+//     var result = prompt(" You number is bigger, less, or equal:", N);
+//     if (result == ">") {
+//         Z = N;
+//         N += Math.floor((K - N) / 2);
+//         console.log("is bigger:", N);
+//         var condition = false;
+//     }
+//     else if (result == "<") {
+//         K = N;
+//         N = Z + Math.floor((N - Z) / 2);
+//         console.log("is less:", N);
+//         var condition = false;
+//     }
+//     else if (result == "=") {
+//         console.log(N);
+//         var condition = true;
+//     }
+// } while (condition == false);
