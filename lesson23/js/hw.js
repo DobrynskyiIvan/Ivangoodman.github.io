@@ -1,13 +1,13 @@
 
-var number_1 = Number(prompt("From:"));
+var number_1 = Number(prompt("Подсчитать сумму всех чисел в заданном пользователем диапазоне.  From:"));
 var number_2 = Number(prompt("Till:"));
 
 let counter = 0;
 for (var i = number_1; i < number_2; i++) {
-    console.log(counter += i);
+    console.log(` суммa всех чисел в заданном пользователем диапазоне.${counter += i}`);
 };
 //2 Запросить 2 числа и найти только наибольший общий делитель.
-var number_2_1 = Number(prompt("First:"));
+var number_2_1 = Number(prompt("//2 Запросить 2 числа и найти только наибольший общий делитель.' First:"));
 var number_2_2 = Number(prompt("Second:"));
 
 while (number_2_1 != number_2_2)
@@ -15,27 +15,27 @@ while (number_2_1 != number_2_2)
         number_2_1 = number_2_1 - number_2_2
     else
         number_2_2 = number_2_2 - number_2_1;
-console.log(number_2_1);
+console.log("наибольший общий делитель:", number_2_1);
 
 //3 Запросить у пользователя число и вывести все делители этого числа.
-var number_3 = Number(prompt("Number:"));
+var number_3 = Number(prompt("/3 Запросить у пользователя число и вывести все делители этого числа.  Number:"));
 for (var i = 1; i < number_3; i++) {
     if (number_3 % i == 0)
-        console.log(i);
+        console.log("делители этого числа: ", i);
 };
 
 //4 Определить количество цифр в введенном числе.
-var number_241 = prompt("First:");
+var number_241 = prompt("'//4 Определить количество цифр в введенном числе.' Number:");
 let Arr_to = Array.from(number_241);
 
 var reversed = Arr_to.length;
-console.log(reversed);
+console.log(' количество цифр:', reversed);
 
 //5 
 var fruits = [];
 
 for (var i = 0; i < 10; i++) {
-    fruits.push(Number(prompt("Element:")))
+    fruits.push(Number(prompt("//5 Запросить у пользователя 10 чисел и подсчитать, сколько он ввел положительных, отрицательных и нулей  Element:")))
 
 };
 let counter_1 = 0;
@@ -60,15 +60,15 @@ for (var i = 0; i < fruits.length; i++) {
         counter_5++;
     }
 };
-console.log(counter_1);
-console.log(counter_2);
-console.log(counter_3);
-console.log(counter_4);
-console.log(counter_5);
+console.log('положительных', counter_1);
+console.log('отрицательных', counter_2);
+console.log('нулей', counter_3);
+console.log('четных ', counter_4);
+console.log('нечетных', counter_5);
 
 //6 
 do {
-    var number_6_1 = Number(prompt("Number one:"));
+    var number_6_1 = Number(prompt("//6  Number one:"));
     var number_6_2 = Number(prompt("Number two:"));
     var operator_6_3 = prompt("Operator:");
     if (operator_6_3 == '+') {
@@ -85,12 +85,10 @@ do {
     }
 
 
-    var condition = Boolean(prompt("Continue? type true or false"));
+    var condition = prompt("Continue? type [1] if  'Yes' or [2] if 'No");
     // let condition= Boolean(false);
     // var condition= Number(prompt("Continue? type 1 or 2:"));
-
-
-} while (condition == true);
+} while (condition == 1);
 //7 
 
 var number = prompt("Number for moving:");
@@ -113,7 +111,7 @@ console.log('the result:', reversed);
 
 
 //8 
-var way = prompt("You want to start");
+var way = prompt("You want to start type: [ok]");
 var dayName = new Array("Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday");
 
 for (var i = 0; i < dayName.length && way == "ok"; i++) {
@@ -158,3 +156,17 @@ do {
         var condition = true;
     }
 } while (condition == false);
+
+
+// //11 
+let matrix = [
+    [1, 0, 0, 0, 0],
+    [0, 1, 0, 0, 0],
+    [0, 0, 1, 0, 0],
+    [0, 0, 0, 1, 0],
+    [0, 0, 0, 0, 1]
+];
+matrix.reverse();
+console.log(matrix);
+
+
