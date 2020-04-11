@@ -74,9 +74,7 @@ let specialYear = Number(prompt(" //4 Check special Year:"));
 
 if (specialYear % 100 == 0) {
     console.log("Високосный год is not:", specialYear);
-}
-
-else if (specialYear % 4 == 0 || specialYear % 400 == 0)
+} else if (specialYear % 4 == 0 || specialYear % 400 == 0)
     console.log("Високосный год:", specialYear);
 else
     console.log("Sorry, we are out of " + specialYear + ".");
@@ -90,8 +88,7 @@ let numberPolindrom_rvrs = Array.from(numberPolindrom);
 let reversed = numberPolindrom_rvrs.reverse().join("");
 if (numberPolindrom == reversed) {
     console.log('Reversed number:' + reversed + " is polindrom");
-}
-else
+} else
 
     console.log('Reversed number:', reversed + " is not polindrom");
 
@@ -127,12 +124,11 @@ const paymentBill = Number(prompt("//7 Запросить  сумму покуп
 
 if (paymentBill >= 500) {
     console.log(` Запросить сумму к оплате со скидкой: :${paymentBill * 0.93} `);
-}
-else if (500 > paymentBill && paymentBill >= 300) {
+} else if (500 > paymentBill && paymentBill >= 300) {
     console.log(`Запросить сумму к оплате со скидкой: :${paymentBill * 0.95} `);
-}
-else if (300 > paymentBill && paymentBill >= 200) { console.log(`Запросить сумму к оплате со скидкой: :${paymentBill * 0.97} `); }
-else
+} else if (300 > paymentBill && paymentBill >= 200) {
+    console.log(`Запросить сумму к оплате со скидкой: :${paymentBill * 0.97} `);
+} else
 
 
     console.log(` Запросить сумму к оплате :${paymentBill} `);
