@@ -1,0 +1,37 @@
+* {
+    background-color: yellow;
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    width: 100%;
+    color: royalblue;
+    background-color: salmon;
+    height: 100px;
+    font-size: 20px;
+    padding: 20px;
+}
+
+table {
+    width: 500px;
+    height: 500px;
+    background-color: red;
+
+    & tr {
+        size: 20px;
+
+        & td {
+            text-align: center;
+
+            & button {
+                font-size: 20px;
+                // width: 30px;
+                // height: 50px;
+                background-color: yellowgreen;
+                padding: 20px;
+            }
+        }
+
+    }
+}
