@@ -72,9 +72,12 @@ for (var i = 0; i < fruits.length - 1; i++) {
 //4
 let specialYear = Number(prompt(" //4 Check special Year:"));
 
-if (specialYear % 100 == 0) {
-    console.log("Високосный год is not:", specialYear);
-} else if (specialYear % 4 == 0 || specialYear % 400 == 0)
+if (specialYear % 400 == 0) {
+
+    console.log("Високосный год is :", specialYear);
+
+} else if ((specialYear % 4 == 0) && (specialYear % 100 !== 0))
+
     console.log("Високосный год:", specialYear);
 else
     console.log("Sorry, we are out of " + specialYear + ".");
