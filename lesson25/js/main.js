@@ -54,8 +54,6 @@ function task4() {
     (Boolean(a) == false) ? (a = 0) : (a = a);
     (Boolean(b) == false) ? (b = 0) : (b = b);
 
-
-
     function squre(a, b) {
         if (a && b) {
             console.log(`First atempt:${a * b}`);
@@ -66,7 +64,6 @@ function task4() {
             console.log(`Third atempt:${(a**2)}`);
         else
             console.log("Both 0 or wrong!!")
-
     }
     squre(a, b);
 }
