@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2&family=Manrope:wght@300&display=swap');
+
+* {
+    transition: all .1s ease-in;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+section {
+    padding: 30px;
+
+    & h2 {
+        padding: 30px 0px;
+    }
+
+    & p {
+        font-family: 'Manrope', sans-serif;
+        padding: 30px 40px;
+    }
+
+    & a {
+        text-decoration: none;
+        text-align: right;
+        font-family: 'Baloo Paaji 2', cursive;
+        padding-top: 40px;
+
+
+    }
+}

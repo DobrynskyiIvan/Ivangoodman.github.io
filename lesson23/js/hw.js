@@ -10,11 +10,14 @@ for (let i = number_1; i < number_2; i++) {
 let number_2_1 = Number(prompt("//2 Запросить 2 числа и найти только наибольший общий делитель.' First:"));
 let number_2_2 = Number(prompt("Second:"));
 
-while (number_2_1 != number_2_2)
-    if (number_2_1 > number_2_2)
-        number_2_1 = number_2_1 - number_2_2
-else
-    number_2_2 = number_2_2 - number_2_1;
+while (number_2_1 != number_2_2) {
+    if (number_2_1 > number_2_2) {
+        number_2_1 = number_2_1 - number_2_2;
+    } else {
+        number_2_2 = number_2_2 - number_2_1;
+    }
+}
+
 console.log("наибольший общий делитель:", number_2_1);
 
 //3 Запросить у пользователя число и вывести все делители этого числа.

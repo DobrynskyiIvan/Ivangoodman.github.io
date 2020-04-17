@@ -1,0 +1,125 @@
+* {
+    transition: all .1s ease-in;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: rgb(59, 63, 69);
+}
+
+.box {
+
+    background-color: rgb(59, 63, 69);
+
+    text-align: center;
+
+}
+
+header {
+    height: 90px;
+    font-size: 15px;
+    padding-top: 20px;
+    background-color: rgb(74, 79, 86);
+    margin-bottom: 50px;
+    color: rgb(235, 126, 127);
+}
+
+button {
+
+    width: 800px;
+    height: 75px;
+    background-color: rgb(30, 148, 75);
+    color: rgb(56, 49, 49);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 25px;
+    margin: auto;
+    margin-top: 50px;
+
+}
+
+button:hover {
+    background-color: rgb(133, 179, 85);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+
+.list_group {
+    margin: auto;
+    width: 800px;
+    height: 390px;
+    list-style-type: none;
+    font-size: 0px;
+}
+
+input:checked+label {
+    text-decoration: line-through;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+span {
+    padding-left: 10px;
+    font-size: 12px;
+    font-style: italic;
+}
+
+.list {
+    cursor: pointer;
+    font-size: 25px;
+    color: cornsilk;
+    transition: .3s;
+    text-align: left;
+    height: 64px;
+    font-family: Trebuchet, Arial, sans-serif;
+    padding: 20px 0px;
+}
+
+li.list:active {
+    background-color: rgb(228, 169, 102);
+}
+
+.list:nth-child(odd) {
+    background-color: rgb(136, 131, 158);
+
+}
+
+.list:nth-child(even) {
+    background-color: rgb(122, 117, 147);
+
+}
+
+.list:hover {
+    background-color: rgb(90, 86, 110);
+    border-bottom: 2px solid floralwhite;
+    border-top: 2px solid floralwhite;
+}
+
+.list:checked {
+    text-decoration: line-through;
+}
+
+
+
+
+.button:active {
+    background-color: rgb(38, 145, 221);
+}
+
+.button {
+    padding: 15px 25px;
+    font-size: 24px;
+    background-color: #EE835A;
+    border: none;
+    border-radius: 15px;
+    transition: .3s;
+}
