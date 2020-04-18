@@ -28,7 +28,7 @@ carObject.duration(distance);
 //#region Task --> 2
 
 
-function Convertor(numerator, denominator) {
+function Fraction(numerator, denominator) {
     this.numerator = numerator;
     this.denominator = denominator;
 };
@@ -41,8 +41,12 @@ for (let i = 0; i < 4; i++) {
 }
 
 let arrayNumbers = [];
-let firstDigit = new Convertor(arrayNumbersFraction[0], arrayNumbersFraction[1]);
-let secondDigit = new Convertor(arrayNumbersFraction[2], arrayNumbersFraction[3]);
+let firstDigit = new Fraction(arrayNumbersFraction[0], arrayNumbersFraction[1]);
+console.log(firstDigit);
+
+let secondDigit = new Fraction(arrayNumbersFraction[2], arrayNumbersFraction[3]);
+console.log(secondDigit);
+
 arrayNumbers.push(firstDigit);
 arrayNumbers.push(secondDigit);
 
