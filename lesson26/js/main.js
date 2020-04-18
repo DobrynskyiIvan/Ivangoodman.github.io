@@ -1,29 +1,29 @@
-// //#region Task -->1
+//#region Task -->1
 
-// let carObject = {
-//     concern: "Opel",
-//     model: "Corsa",
-//     year: "2011",
-//     speed: 18, //km/hr
-//     inroduse: function () {
-//         let inroduse = `${this.concern} produce model: ${this.model} that was represent to people in ${this.year} which run with speed ${this.speed} km/hour `
+let carObject = {
+    concern: "Opel",
+    model: "Corsa",
+    year: "2011",
+    speed: 18, //km/hr
+    inroduse: function () {
+        let inroduse = `${this.concern} produce model: ${this.model} that was represent to people in ${this.year} which run with speed ${this.speed} km/hour `
 
-//         console.log(inroduse);
-//     },
-//     duration: function (distance) {
-//         let left = distance % this.speed; //km
-//         let fullHours = (distance - left) / this.speed;
-//         let timesOut = (fullHours - (fullHours % 3)) / 3
-//         let minutes = Math.round(left * 60 / this.speed);
+        console.log(inroduse);
+    },
+    duration: function (distance) {
+        let left = distance % this.speed; //km
+        let fullHours = (distance - left) / this.speed;
+        let timesOut = (fullHours - (fullHours % 3)) / 3
+        let minutes = Math.round(left * 60 / this.speed);
 
-//         console.log(`${fullHours+timesOut} hours and  ${minutes} minutes`);
-//     }
-// }
-// carObject.inroduse();
-// let distance = prompt("enter the distance You need to pass");
-// carObject.duration(distance);
+        console.log(`${fullHours+timesOut} hours and  ${minutes} minutes`);
+    }
+}
+carObject.inroduse();
+let distance = prompt("enter the distance You need to pass");
+carObject.duration(distance);
 
-//#endregion
+// #endregion
 
 //#region Task --> 2
 
@@ -112,6 +112,73 @@ switch (simplify) {
         console.log("Thanks for watching")
         break;
 };
+
+
+
+//#endregion
+
+
+//#region Task -->3
+
+let myDate = new Date();
+let current = myDate;
+myDate = {
+    inroduse: function () {
+        let inroduse = `${current.getHours()} hours ${current.getMinutes()} minutes ${current.getSeconds()} seconds `;
+
+        function answer() {
+            console.log(inroduse);
+        }
+        answer();
+        current.getMinutes()
+    },
+    setSeconds: function (params) {
+        current.setSeconds(params);
+    },
+    setMinutes: function (params) {
+        current.setMinutes(params);
+    },
+    setHours: function (params) {
+        current.setHours(params);
+    }
+};
+let condition = true;
+do {
+    let timeingSet = prompt("Enter digit to set Hours:[1], minutes: [2], seconds: [3], display time: [4]");
+
+    function chekMethod(param) {
+        switch (param) {
+            case "1":
+                let hour = +prompt("Enter hours:")
+                myDate.setHours(current.getHours() + hour);
+                chekMethod("4");
+                break;
+            case "2":
+                let min = +prompt("Enter minutes")
+                myDate.setMinutes(current.getMinutes() + min);
+                chekMethod("4");
+                break;
+            case "3":
+                let sec = +prompt("Enter seconds")
+                myDate.setSeconds(current.getSeconds() + sec);
+                chekMethod("4");
+                break;
+            case "4":
+                myDate.inroduse()
+                break;
+            default:
+                console.log("not one of this")
+                break;
+        };
+    }
+    chekMethod(timeingSet);
+    condition = prompt("Continue type [1]  if no [0]")
+
+} while (condition == true)
+
+
+
+
 
 
 
