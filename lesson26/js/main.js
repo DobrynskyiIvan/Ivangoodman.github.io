@@ -13,7 +13,7 @@ let carObject = {
     duration: function (distance) {
         let left = distance % this.speed; //km
         let fullHours = (distance - left) / this.speed;
-        let timesOut = (fullHours - (fullHours % 3)) / 3
+        let timesOut = (fullHours - (fullHours % 4)) / 4
         let minutes = Math.round(left * 60 / this.speed);
 
         console.log(`${fullHours+timesOut} hours and  ${minutes} minutes`);
