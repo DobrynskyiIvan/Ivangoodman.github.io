@@ -124,8 +124,8 @@ do {
     let listOperations = prompt(text);
     switch (listOperations) {
         case "1":
-            for (let i in product)
-                console.log(product[i]);
+            for (let i of product)
+                console.log(i);
             break;
         case "2":
             console.log(`The all prise in check is:${priceCounter}`);
@@ -181,8 +181,8 @@ function changeText(obj, string) {
     showText(string);
 
     let newString = "";
-    for (let i in obj) {
-        newString += `${obj[i].name}:${obj[i].value};`;
+    for (let i of obj) {
+        newString += `${i.name}:${i.value};`;
     };
     pet.style.cssText = newString;
 }
@@ -224,9 +224,9 @@ let grop = {
 
 //show lecture hall that can feet direct group
 function lectureForGroup(objGroup) {
-    for (let i in lectureHall) {
-        if (lectureHall[i].seats >= objGroup.numberOfStudents) {
-            console.log(`${lectureHall[i].nameLectureHall} lecture hall with ${lectureHall[i].seats} seats is good for group`)
+    for (let i of lectureHall) {
+        if (i.seats >= objGroup.numberOfStudents) {
+            console.log(`${i.nameLectureHall} lecture hall with ${i.seats} seats is good for group`)
         }
     }
 };
@@ -235,9 +235,9 @@ function lectureForGroup(objGroup) {
 function showDirectHall(faculty) {
     console.log(`Aудитории для указанного факультета:`);
     let j = 1;
-    for (let i in lectureHall) {
-        if (lectureHall[i].faculty == faculty) {
-            console.log(` ${j}. ${lectureHall[i].nameLectureHall}`);
+    for (let i of lectureHall) {
+        if (i.faculty == faculty) {
+            console.log(` ${j}. ${i.nameLectureHall}`);
             j++;
         }
     }
@@ -287,8 +287,8 @@ do {
     let listOperations = prompt(textLectureHal);
     switch (listOperations) {
         case "1":
-            for (let i in lectureHall)
-                console.log(lectureHall[i]);
+            for (let i of lectureHall)
+                console.log(i);
             break;
         case "2":
             let facultyName = prompt("факультет:");
