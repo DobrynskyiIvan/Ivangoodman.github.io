@@ -35,6 +35,7 @@ var playList = [
 ];
 
 // console.log(playList);
+
 window.onload = document.write(`<ol id="list"></ol>`);
 
 function camelize(str) {
@@ -50,9 +51,6 @@ function showList(arr) {
     let list = document.getElementById("list");
     for (let i = 0; i < arr.length; i++) {
         let li = document.createElement('li');
-        // if (i == 4) {
-        //     li.innerText = ` ${arr[i].author)}  \n ${arr[i].song} `;
-        // }
         li.innerText = ` ${camelize(arr[i].author)}  \n ${camelize(arr[i].song)} `;
         list.appendChild(li);
     };
@@ -60,6 +58,7 @@ function showList(arr) {
 showList(playList);
 
 /// Task ---> 2
+
 function closeWindow() {
     document.body.firstElementChild.children[1].style.display = "none";
 }
@@ -69,8 +68,9 @@ function openWindow() {
 };
 
 //Task -->3
-let node = null;
 
+let node = null;
+//set colors by click
 function selectNextNode() {
     resetColor();
     if (node == null) {
@@ -78,7 +78,6 @@ function selectNextNode() {
         let list = document.getElementById("trafficcolor");
         node = list.firstElementChild;
         node.style.opacity = 1
-
         return;
 
     }
@@ -91,7 +90,7 @@ function selectNextNode() {
     }
 
 }
-
+//set standart options for color
 function resetColor() {
     let liList = document.getElementsByClassName("round");
     for (let i = 0; i < liList.length; i++) {
