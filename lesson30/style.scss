@@ -1,0 +1,13 @@
+.div_task1 {
+    border: 1px solid red;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    background-color: rgb(177, 174, 174);
+    letter-spacing: 2px;
+}
+
+.textfield {
+    @extend .div_task1;
+    display: none;
+}
