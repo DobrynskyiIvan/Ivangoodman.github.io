@@ -11,8 +11,8 @@ class Circle {
         this._radius = value;
     }
     get diametr() {
-        let diametr = 2 * this.radius
-        return diametr;
+
+        return 2 * this.radius;
     }
     squareCircle() {
         let square = Math.PI * (this.radius ** 2) / 4;
@@ -20,8 +20,8 @@ class Circle {
 
     }
     lengthCircle() {
-        let length = 2 * Math.PI * this.radius;
-        return `this is length of circle: ${length}`;
+
+        return `this is length of circle: ${2 * Math.PI * this.radius}`;
     }
 
 }
@@ -35,8 +35,11 @@ console.log(one.squareCircle());
 
 // Task --> 2
 class Marker {
-    color = "Red";
-    colorLeftInPercent = 5;
+    constructor(color, colorLeftInPercent) {
+        this.color = color,
+            this.colorLeftInPercent = colorLeftInPercent;
+    }
+
     // method that write text and set how much color left  inside
     writeText(string) {
         string = string.replace(/\s+/g, '');
@@ -63,8 +66,8 @@ class MarkerLoader extends Marker {
     }
 };
 // object of new marker
-let newMarker = new MarkerLoader();
 
+let newMarker = new MarkerLoader("Red", 5);
 newMarker.writeText("Cxvfbv");
 newMarker.refill(20);
 
@@ -79,19 +82,11 @@ class Employee {
     }
 }
 // array of employees
-let bankEmployee = [{
-    name: "John",
-    surname: "Smit",
-    age: 30
-}, {
-    name: "Garry",
-    surname: "Teilor",
-    age: 20
-}, {
-    name: "Baron",
-    surname: "O'braiant",
-    age: 25
-}];
+let bankEmployee = [
+    new Employee("John", "Smit", 30),
+    new Employee("Garry", "Teilor", 20),
+    new Employee("Baron", "O'braiant", 25)
+];
 // class impliment bank
 class EmpTable {
     constructor(arrEmp) {

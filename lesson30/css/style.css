@@ -20,8 +20,37 @@ table tr th {
   border: 2px solid grey;
   font-size: 20px;
   padding: 20px;
+  cursor: pointer;
+}
+
+table tr th:hover {
+  background-color: khaki;
 }
 
 table tr td {
   padding: 10px 20px;
+}
+
+.resizable {
+  background: white;
+  width: 100px;
+  height: 100px;
+  position: relative;
+  border: 2px solid #48f442;
+  margin: 30px;
+  padding: 20px;
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.resizable .resizer {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #db0a0a;
+  border: 2px solid #bff442;
+  position: absolute;
+  cursor: nwse-resize;
+  right: -5px;
+  bottom: -5px;
 }

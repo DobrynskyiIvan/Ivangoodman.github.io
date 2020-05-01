@@ -1,0 +1,18 @@
+.resize {
+    /* cursor: pointer; */
+    cursor: ew-resize;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    background-color: chartreuse;
+}
+
+.container {
+
+    position: relative;
+    border: 2px solid red;
+    padding: 20px;
+    width: 20%;
+}
