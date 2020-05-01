@@ -17,15 +17,43 @@ table {
     font-size: 16px;
 
     & tr {
-
         & th {
             border: 2px solid grey;
             font-size: 20px;
             padding: 20px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: khaki;
+            }
         }
 
         & td {
             padding: 10px 20px;
         }
+    }
+}
+
+.resizable {
+    background: white;
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border: 2px solid #48f442;
+    margin: 30px;
+    padding: 20px;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    & .resizer {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: rgb(219, 10, 10);
+        border: 2px solid #bff442;
+        position: absolute;
+        cursor: nwse-resize;
+        right: -5px;
+        bottom: -5px;
     }
 }

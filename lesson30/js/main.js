@@ -22,7 +22,7 @@ document.addEventListener('keydown', function (event) {
 //=============== END OF TASK 1 =======================
 
 
-// ===========         Task 2         =============
+// ===========         Task ------>  2         =============
 // clas of object User
 class User {
     constructor(name, age, country) {
@@ -79,34 +79,56 @@ class UserTable {
     }
 
 
-}
-
+};
 
 // new table that contains users in table
 let Agroup = new UserTable(usersList, table);
 Agroup.getHtml();
-
-let age = document.getElementById("userAge");
-age.addEventListener('click', function (event) {
-
-    Agroup.sortInArray("age");
+//event listener for sort table
+let tableList = document.body.children[1];
+tableList.addEventListener('click', function (event) {
+    if (event.target.id == "userAge") {
+        Agroup.sortInArray("age");
+    }
+    if (event.target.id == "userName") {
+        Agroup.sortInArray("name");
+    }
+    if (event.target.id == "userCountry") {
+        Agroup.sortInArray("country");
+    }
     Agroup.getHtml();
 
 });
 
-let user = document.getElementById("userName");
-user.addEventListener('click', function (event) {
 
-    Agroup.sortInArray("name");
-    Agroup.getHtml();
-
-});
-let country = document.getElementById("userCountry");;
-country.addEventListener('click', function (event) {
-
-    Agroup.sortInArray("country");
-    Agroup.getHtml();
-
-});
 
 //=======================  END OF TASK 2    =========================
+
+
+//========================  TASK ----> 3 ================
+
+function makeResizableDiv(div) {
+    const element = document.querySelector(div);
+    const resizers = document.querySelector('.resizer')
+
+
+    resizers.addEventListener('mousedown', function (e) {
+        e.preventDefault()
+        window.addEventListener('mousemove', resize)
+        window.addEventListener('mouseup', stopResize)
+    })
+
+    function resize(e) {
+        if (resizers.classList.contains('resizer')) {
+            element.style.width = e.pageX - element.getBoundingClientRect().left - 40 + 'px'
+            element.style.height = e.pageY - element.getBoundingClientRect().top - 40 + 'px'
+        }
+    }
+
+    function stopResize() {
+        window.removeEventListener('mousemove', resize)
+    }
+
+}
+
+makeResizableDiv('.resizable')
