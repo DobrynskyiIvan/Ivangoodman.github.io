@@ -10,3 +10,18 @@
 .textfield {
   display: none;
 }
+
+table {
+  border: 2px solid grey;
+  font-size: 16px;
+}
+
+table tr th {
+  border: 2px solid grey;
+  font-size: 20px;
+  padding: 20px;
+}
+
+table tr td {
+  padding: 10px 20px;
+}
