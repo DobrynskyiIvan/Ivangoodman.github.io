@@ -11,3 +11,21 @@
     @extend .div_task1;
     display: none;
 }
+
+table {
+    border: 2px solid grey;
+    font-size: 16px;
+
+    & tr {
+
+        & th {
+            border: 2px solid grey;
+            font-size: 20px;
+            padding: 20px;
+        }
+
+        & td {
+            padding: 10px 20px;
+        }
+    }
+}
