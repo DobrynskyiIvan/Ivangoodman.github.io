@@ -1,6 +1,6 @@
-.resize {
+.resize_right {
     /* cursor: pointer; */
-    cursor: ew-resize;
+    cursor: nwse-resize;
     width: 30px;
     height: 30px;
     position: absolute;
@@ -9,8 +9,19 @@
     background-color: chartreuse;
 }
 
-.container {
+.resize_top {
+    /* cursor: pointer; */
+    cursor: nesw-resize;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-color: chartreuse;
+}
 
+.container {
+    top: 200px;
     position: relative;
     border: 2px solid red;
     padding: 20px;
