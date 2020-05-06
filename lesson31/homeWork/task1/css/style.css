@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+* {
+  margin: 0;
+}
+
+section {
+  background: url(/lesson31/homeWork/task1/img/BG.png) no-repeat center center;
+  background-size: cover;
+  position: relative;
+  padding: 100px;
+}
+
+section main {
+  width: 600px;
+  height: 541px;
+  -webkit-box-shadow: 0px 23px 57px 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 23px 57px 0 rgba(0, 0, 0, 0.4);
+  background-color: #212534;
+  margin: 0 auto;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-height: 115px;
+  background-color: #2b3040;
+  padding: 33px 56px 0px 47px;
+}
+
+.header .page {
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0.7;
+  padding: 0px 20px 18px 10px;
+  cursor: pointer;
+  border-bottom: 2px solid #2b3040;
+}
+
+.header .page.pageActive {
+  opacity: 1;
+  border-bottom: 2px solid #fbfbfb;
+}
+
+.header .page .icon-basket:before {
+  content: "\e900";
+  font-size: 20px;
+  color: #fbfbfb;
+}
+
+.header .page .icon-card:before {
+  content: "\e901";
+  font-size: 20px;
+  color: #fbfbfb;
+}
+
+.header .page .icon-tooltip:before {
+  content: "\e902";
+  font-size: 20px;
+  color: #fbfbfb;
+}
+
+.header .page p {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.75;
+  padding-top: 13px;
+  color: #ffffff;
+}
+
+.context {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 54px 42px 63px 47px;
+}
+
+.context:not(:target) {
+  display: none;
+}
+
+.photo .lineStars {
+  padding-top: 28px;
+  text-align: center;
+}
+
+.photo .lineStars .fa {
+  cursor: pointer;
+}
+
+.photo .lineStars .fa.fa-star {
+  font-size: 20px;
+  color: #4b536b;
+  padding: 0px 3px;
+}
+
+.photo .lineStars .fa.fa-star.check {
+  color: #ffdd3f;
+}
+
+.gameInformation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 320px;
+}
+
+.gameInformation .gameHeader {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 35px;
+}
+
+.gameInformation .gameHeader .gameName {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  padding: 0px;
+}
+
+.gameInformation .gameHeader .gameName .title {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  font-size: 32px;
+  text-align: left;
+  line-height: 1;
+}
+
+.gameInformation .gameHeader .gameName .released {
+  padding-top: 10px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+  text-align: left;
+}
+
+.gameInformation .gameHeader .rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 73px;
+  height: 73px;
+  background-image: url(/lesson31/homeWork/task1/img/score.png);
+  border-radius: 50%;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1.1;
+  color: #aaadbb;
+}
+
+.gameInformation .gameDescripton {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+  font-size: 14px;
+  line-height: 1.57;
+  text-align: left;
+  color: #b7bacd;
+}
+
+.gameInformation .buyMenu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding-top: 60px;
+}
+
+.gameInformation .buyMenu button {
+  cursor: pointer;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  font-size: 16px;
+  width: 164px;
+  height: 55px;
+  border: none;
+  border-radius: 2px;
+  background-color: #13e28d;
+  line-height: 1.25;
+}
+
+.gameInformation .buyMenu button:hover {
+  background: none;
+  background-color: #eea810;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.gameInformation .buyMenu button:active {
+  -webkit-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.gameInformation .buyMenu .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.gameInformation .buyMenu .price .priceToBuy {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  font-size: 32px;
+}
+
+.gameInformation .buyMenu .price .discont {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1.67;
+  color: #fedc3f;
+}

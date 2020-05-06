@@ -1,0 +1,19 @@
+.table {
+    border: 1px solid green;
+    margin: 20px auto;
+
+    & .td {
+        border: 1px solid green;
+        padding: 30px;
+        font-size: 15px;
+    }
+}
+
+button {
+    padding: 10px;
+    background-color: lightcoral;
+}
+
+.btn.active {
+    background-color: green;
+}
