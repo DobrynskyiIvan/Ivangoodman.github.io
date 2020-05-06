@@ -1,12 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
 * {
   margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 section {
   background: url(/lesson31/homeWork/task1/img/BG.png) no-repeat center center;
   background-size: cover;
-  position: relative;
   padding: 100px;
 }
 
@@ -104,10 +106,13 @@ section main {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 54px 42px 63px 47px;
+  display: none;
 }
 
-.context:not(:target) {
-  display: none;
+.context.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .photo .lineStars {

@@ -24,13 +24,14 @@
 
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 section {
     background: url(/lesson31/homeWork/task1/img/BG.png) no-repeat center center;
     background-size: cover;
 
-    position: relative;
     padding: 100px;
 
 
@@ -41,14 +42,9 @@ section {
         background-color: #212534;
         margin: 0 auto;
 
+
     }
 }
-
-
-
-
-
-
 
 .header {
     display: flex;
@@ -69,16 +65,11 @@ section {
         cursor: pointer;
         border-bottom: 2px solid #2b3040;
 
-
-
         &.pageActive {
             opacity: 1;
             border-bottom: 2px solid #fbfbfb;
 
         }
-
-
-
 
         & .icon-basket:before {
             content: "\e900";
@@ -108,22 +99,24 @@ section {
     }
 }
 
-
-
 .context {
 
     @include flex_row();
     justify-content: space-between;
+
     padding: 54px 42px 63px 47px;
+    display: none;
 
-
-    &:not(:target) {
-        display: none;
+    &.active {
+        display: flex;
     }
+
+
 
 }
 
 .photo {
+
 
     & .lineStars {
         padding-top: 28px;
@@ -154,7 +147,6 @@ section {
         width: 100%;
         @include flex_row();
         justify-content: space-between;
-
         padding-bottom: 35px;
 
         .gameName {
