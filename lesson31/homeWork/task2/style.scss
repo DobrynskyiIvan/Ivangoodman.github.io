@@ -1,0 +1,88 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    flex: 1 1 auto;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 500px;
+    background-color: rgb(85, 85, 85);
+
+}
+
+input {
+    width: 480px;
+    color: rgb(253, 253, 253);
+    background-color: rgb(51, 44, 42);
+    height: 50px;
+    font-size: 35px;
+    padding: 10px 10px;
+}
+
+
+
+table {
+    width: 100%;
+    height: 500px;
+    // background-color: red;
+    position: relative;
+
+
+    & tr {
+        // size: 20px;
+
+        & td {
+            cursor: pointer;
+            text-align: center;
+            font-size: 35px;
+            font-weight: 800;
+            background-color: yellowgreen;
+            padding: 10px;
+            border-radius: 3px;
+
+            &.digit {
+                background-color: rgb(202, 211, 183);
+
+                &:hover {
+                    background-color: rgb(171, 185, 140);
+                }
+            }
+
+            &.clear {
+                background-color: rgb(226, 171, 19);
+
+                &:hover {
+                    background-color: rgba(238, 57, 51, 0.973);
+                }
+            }
+
+            &.operator {
+                background-color: rgb(129, 134, 117);
+
+                &:hover {
+                    background-color: rgb(95, 95, 93);
+                }
+            }
+
+            &.equal {
+                background-color: rgb(109, 119, 175);
+                position: absolute;
+                bottom: 2px;
+                right: 1;
+                height: 377px;
+                width: 65px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:hover {
+                    background-color: rgb(255, 123, 0);
+                }
+            }
+
+        }
+
+    }
+}
