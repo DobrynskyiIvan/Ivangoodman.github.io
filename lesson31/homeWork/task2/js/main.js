@@ -78,17 +78,17 @@ function inputEqual() {
         result = firstOperand - displayValue;
         calculator.displayValue = result;
         return;
-    }
+    } else
     if (operator == "+") {
         result = +firstOperand + (+displayValue);
         calculator.displayValue = result;
         return;
-    }
+    } else
     if (operator == "/") {
         result = firstOperand / displayValue;
         calculator.displayValue = result;
         return;
-    }
+    } else
     if (operator == "*") {
         result = firstOperand * displayValue;
         calculator.displayValue = result;
