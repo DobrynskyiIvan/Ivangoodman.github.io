@@ -1,1 +1,84 @@
-/* No CSS */
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 500px;
+  background-color: #555555;
+}
+
+input {
+  width: 480px;
+  color: #fdfdfd;
+  background-color: #332c2a;
+  height: 50px;
+  font-size: 35px;
+  padding: 10px 10px;
+}
+
+table {
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+
+table tr td {
+  cursor: pointer;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 800;
+  background-color: yellowgreen;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+table tr td.digit {
+  background-color: #cad3b7;
+}
+
+table tr td.digit:hover {
+  background-color: #abb98c;
+}
+
+table tr td.clear {
+  background-color: #e2ab13;
+}
+
+table tr td.clear:hover {
+  background-color: rgba(238, 57, 51, 0.973);
+}
+
+table tr td.operator {
+  background-color: #818675;
+}
+
+table tr td.operator:hover {
+  background-color: #5f5f5d;
+}
+
+table tr td.equal {
+  background-color: #6d77af;
+  position: absolute;
+  bottom: 2px;
+  right: 1;
+  height: 377px;
+  width: 65px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+table tr td.equal:hover {
+  background-color: #ff7b00;
+}
