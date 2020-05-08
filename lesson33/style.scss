@@ -1,3 +1,40 @@
-button {
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+label,
+button,
+input {
     padding: 20px;
+    font-size: 25px;
+}
+
+
+
+.selectType,
+.countOfPages {
+    padding: 20px;
+    font-size: 25px;
+}
+
+.display {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100px;
+    height: 200px;
+
+    & .item {
+        background-color: red;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100px;
+        height: 200px;
+        font-size: 30px;
+        color: red;
+    }
 }
