@@ -1,8 +1,9 @@
-let name = "Black";
-let page = 2;
+let url = null;
 
-const url = `http://www.omdbapi.com/?apikey=b386ffd7&s=${name}&page=${page}`;
+function setUrl(name, number) {
+    url = `http://www.omdbapi.com/?apikey=b386ffd7&s=${name}&page=${number}`;
 
+}
 
 function ajaxCall(callback) {
     $.ajax({
@@ -16,6 +17,7 @@ function ajaxCall(callback) {
         error: handleError
     });
 }
+
 
 function handleError() {
     console.error('Something wrong!');
