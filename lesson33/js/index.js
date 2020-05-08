@@ -1,9 +1,21 @@
 $(document).ready(function () {
 
-    $.getScript('js/api/index.js', function () {
+    $(".submit").click(function (e) {
+        e.preventDefault();
+        let someText = $(".inputValue").val();
+        console.log(someText)
 
-        ajaxCall(setSliderItems);
+        let name = someText;
+        let page = 2;
+
+        $.getScript('js/api/index.js', function () {
+            setUrl(name, page)
+            ajaxCall(setSliderItems);
+        });
+
     });
+
+
 
     function setSliderItems(data) {
         // let List = data.map(item => {
