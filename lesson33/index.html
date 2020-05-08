@@ -15,11 +15,25 @@
 <body>
     <div class="content">
         <form action="">
+            <label for="inputValue">Enter a film:</label>
             <input class="inputValue" type="text" name="" id="inputValue">
-            <button class="submit" type="submit">submit</button>
+            <select id="type" class="selectType">
+                <option value="movie">Movie</option>
+                <option value="series">Series</option>
+                <option value="episode">Episode</option>
+
+            </select>
+            <button class="submit" type="submit">Search</button>
         </form>
+        <div class="dispay"></div>
 
     </div>
+
+    <select id="pages" class="countOfPages">
+        <option>Select Page</option>
+
+
+    </select>
 
 </body>
 
