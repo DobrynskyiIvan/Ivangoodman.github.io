@@ -13,14 +13,23 @@ function setPage(number) {
 
 }
 
+function setFilm(id) {
+    url = `http://www.omdbapi.com/?apikey=b386ffd7&i=${id}`
 
-function ajaxCall(callback) {
+}
+
+
+function ajaxCall(callback, pageItems) {
     $.ajax({
         url,
         dataType: 'json',
         success: function (data) {
             if (callback) {
                 callback(data);
+                if (pageItems) {
+                    pageItems(data);
+                }
+
             }
         },
         error: handleError
