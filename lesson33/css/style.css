@@ -89,6 +89,10 @@ form .submit:hover {
   max-width: 1900px;
 }
 
+.content .logo {
+  max-width: 100px;
+}
+
 .content .display {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -108,9 +112,15 @@ form .submit:hover {
   padding-top: 30px;
 }
 
+.content .display p {
+  color: #ee0303;
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
 .content .display .item {
   border-radius: 10px;
-  padding: 10px;
+  padding: 5px 10px;
   margin: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -134,6 +144,11 @@ form .submit:hover {
   z-index: 3;
 }
 
+.content .display .item img {
+  max-width: 300px;
+  max-height: 470px;
+}
+
 .content .display .item:hover {
   background-color: #ff0808;
 }
@@ -150,9 +165,19 @@ form .submit:hover {
 }
 
 .filmDetails .full {
+  border-radius: 10px;
   background-color: white;
   font-size: 20px;
   padding-left: 10px;
+  letter-spacing: 1.5px;
+}
+
+.filmDetails .full .top-date {
+  text-align: center;
+}
+
+.filmDetails .full .name {
+  max-width: 800px;
 }
 
 .filmDetails .full .itemSel {
@@ -160,7 +185,15 @@ form .submit:hover {
   font-size: 16px;
 }
 
+.filmDetails .full .itemSel span {
+  font-weight: 600;
+  color: #929405;
+}
+
 .filmDetails .full p {
+  max-width: 400px;
   padding-top: 20px;
   font-size: 14px;
+  letter-spacing: 2px;
+  line-height: 1.5;
 }

@@ -3,6 +3,7 @@ $(document).ready(function () {
     //start searching
     $(".submit").click(function (e) {
         e.preventDefault();
+        $('.display').empty();
         let name = $(".inputValue").val();
         let type = document.getElementById('type').value;
 
@@ -15,12 +16,20 @@ $(document).ready(function () {
 
 
     function setFilmItems(data) {
-        let list = data.Search
-        console.log(list)
-        let obj = list.map(item => {
-            return `<div  class="item"> <img id="${item.imdbID}"  alt="${item.Title}"  src="${item.Poster}"> </div>   `;
-        });
-        $('.display').append(obj.join(''));
+        if (data.Response == "True") {
+            console.log(data)
+            let list = data.Search
+            console.log(list)
+            let obj = list.map(item => {
+                return `<div  class="item"> <img id="${item.imdbID}"  alt="${item.Title}"  src="${item.Poster}"> </div>   `;
+            });
+            $('.display').append(obj.join(''));
+
+        } else {
+            $('.display').append(`<p ">Try to change Your search information !!!</p>`);
+            console.log(data.Error)
+        }
+        $('.filmDetails').empty();
     };
 
     //show pages when select 
@@ -31,7 +40,7 @@ $(document).ready(function () {
         let page = e.target.value;
         $.getScript('js/api/index.js', function () {
             setPage(page)
-            ajaxCall(setSliderItems);
+            ajaxCall(setFilmItems);
         })
     });
 
@@ -58,15 +67,14 @@ $(document).ready(function () {
             <h2 class="name" itemprop="name"><a class="btn-tooltip">Title: ${item.Title}  </a></h2>
             <div class="origin-name">Runtime: ${item.Runtime} </div>
         </div>
-        <div class="itemSel category"> Genre: ${item.Genre} </div>
-        <div class="itemSel year"> Year: ${item.Year}
+        <div class="itemSel category"><span>Genre:</span>  ${item.Genre} </div>
+        <div class="itemSel year"> <span>Year:</span> ${item.Year}
         </div>
-        <div class="itemSel rating"> imdbRating: ${item.imdbRating}
-        </div>
-
-        <div class="itemSel translate"> Language: ${item.Language} </div>
-        <div class="itemSel actors"> Director: ${item.Director}</div>
-        <div class="itemSel actors"> Actors: ${item.Actors}
+        <div class="itemSel rating"><span> imdbRating:</span> ${item.imdbRating}
+        </div> 
+        <div class="itemSel translate"><span> Language</span>: ${item.Language} </div>
+        <div class="itemSel actors"><span> Director:</span> ${item.Director}</div>
+        <div class="itemSel actors"><span>Actors:</span>  ${item.Actors}
         </div>
         <p itemprop="description">Plot: ${item.Plot} </p>
 
@@ -74,15 +82,12 @@ $(document).ready(function () {
         $('.filmDetails').empty();
         $('.filmDetails').append(info);
     }
+    // showing current film information 
     $('.display').click(function (e) {
         console.log(e.target.id)
         $.getScript('js/api/index.js', function () {
             setFilm(e.target.id)
             ajaxCall(filmSelect);
         })
-
-
-
     });
-
 });
