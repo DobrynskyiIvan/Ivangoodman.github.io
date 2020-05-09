@@ -4,37 +4,129 @@
     box-sizing: border-box;
 }
 
-label,
-button,
-input {
-    padding: 20px;
-    font-size: 25px;
+
+body {
+    background-color: black;
 }
 
 
-
+input,
 .selectType,
 .countOfPages {
     padding: 20px;
     font-size: 25px;
+    border-radius: 3px;
+
 }
 
-.display {
+form {
 
     display: flex;
+    align-items: center;
     flex-direction: row;
-    flex-wrap: wrap;
-    width: 100px;
-    height: 200px;
+    justify-content: space-between;
+    border-radius: 3px;
+    padding-top: 40px;
 
-    & .item {
-        background-color: red;
+    & .inputValue {
+        border: none;
+        text-decoration: none;
+        border: 3px solid;
+
+        &:hover {
+            border: 3px solid yellowgreen;
+        }
+    }
+
+    & .selectType {
+        text-decoration: none;
+        margin: 20px 20px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgb(71, 76, 71);
+            color: white;
+        }
+    }
+
+    & .submit {
+        cursor: pointer;
+        height: 100%;
+        padding: 20px;
+        font-size: 25px;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+        font-weight: 700;
+        text-decoration: none;
+        border: none;
+        border-radius: 3px;
+        background-color: rgba(250, 122, 36, 0.774);
+
+        &:hover {
+            background-color: rgb(36, 209, 36);
+        }
+    }
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1900px;
+
+
+    .display {
         display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         align-items: center;
-        flex-direction: column;
-        width: 100px;
-        height: 200px;
-        font-size: 30px;
-        color: red;
+        justify-content: center;
+        padding-top: 30px;
+
+
+        & .item {
+            border-radius: 10px;
+            padding: 10px;
+            margin: 5px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            color: white;
+            font-size: 30px;
+            width: 300px;
+            height: 480px;
+            background-color: rgb(63, 60, 60);
+            transition: 0.3s ease-in;
+            cursor: pointer;
+            z-index: 3;
+
+            &:hover {
+                background-color: rgb(255, 8, 8);
+            }
+
+        }
+    }
+}
+
+.filmDetails {
+    display: flex;
+    flex-direction: row;
+    padding-top: 30px;
+
+    .full {
+        background-color: white;
+        font-size: 20px;
+        padding-left: 10px;
+
+        & .itemSel {
+            padding-top: 10px;
+            font-size: 16px;
+        }
+
+        & p {
+            padding-top: 20px;
+            font-size: 14px;
+        }
     }
 }
