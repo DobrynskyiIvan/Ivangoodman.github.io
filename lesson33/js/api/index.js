@@ -9,12 +9,12 @@ function setUrl(name, type) {
 }
 
 function setPage(number) {
-    url = `http://www.omdbapi.com/?apikey=b386ffd7&s=${_name}&type=${_type}&page=${number}`
+    url = `https://www.omdbapi.com/?apikey=b386ffd7&s=${_name}&type=${_type}&page=${number}`
 
 }
 
 function setFilm(id) {
-    url = `http://www.omdbapi.com/?apikey=b386ffd7&i=${id}`
+    url = `https://www.omdbapi.com/?apikey=b386ffd7&i=${id}`
 
 }
 
