@@ -5,7 +5,7 @@ function initMap() {
             lat: 48.923113,
             lng: 24.7283538
         },
-        zoom: 13
+        zoom: 12
     });
 
     new AutocompleteDirectionsHandler(map);
@@ -108,6 +108,7 @@ AutocompleteDirectionsHandler.prototype.route = function () {
                 window.alert('Directions request failed due to ' + status);
             }
         });
+    getDistance(this.originPlaceId, this.destinationPlaceId, this.travelMode);
 
 };
 // computeTotalDistance(directionsRenderer.getDirections());
@@ -119,4 +120,47 @@ function computeTotalDistance(result) {
     }
     total = total / 1000;
     document.getElementById('total').innerHTML = total + ' km';
+}
+
+function getDistance(origin, destination, travelMode) {
+
+
+    var geocoder = new google.maps.Geocoder;
+
+    var service = new google.maps.DistanceMatrixService;
+    service.getDistanceMatrix({
+        origins: [{
+            'placeId': origin
+        }],
+        destinations: [{
+            'placeId': destination
+        }],
+        travelMode: travelMode,
+        unitSystem: google.maps.UnitSystem.METRIC,
+        avoidHighways: false,
+        avoidTolls: false
+    }, function (response, status) {
+        if (status !== 'OK') {
+            alert('Error was: ' + status);
+        } else {
+            var originList = response.originAddresses;
+
+            var destinationList = response.destinationAddresses;
+            var outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = '';
+
+
+
+            for (var i = 0; i < originList.length; i++) {
+                var results = response.rows[i].elements;
+
+                for (var j = 0; j < results.length; j++) {
+
+                    outputDiv.innerHTML += originList[i] + ' to ' + destinationList[j] +
+                        ': ' + results[j].distance.text + ' in ' +
+                        results[j].duration.text + '<br>';
+                }
+            }
+        }
+    });
 }

@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="  https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
     <script src="/lesson34/js/main.js"></script>
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDatFfesU3-FBd0sriR1RGEYU4u65nLRSU&libraries=places&callback=initMap "
@@ -14,8 +16,6 @@
 </head>
 
 <body>
-    <div class="result">Total distance:<div class="total" id="total"></div>
-    </div>
 
     <div style="display: none">
         <input id="origin-input" class="controls" type="text" placeholder="Enter an origin location">
@@ -33,8 +33,24 @@
             <label for="changemode-driving">Driving</label>
         </div>
     </div>
+    <div id="right-panel">
+        <div id="inputs">
+
+        </div>
+        <div>
+            <strong>Results</strong>
+        </div>
+        <div id="output"></div>
+        <div class="result">Total distance:<div class="total" id="total"></div>
+        </div>
+
+    </div>
 
     <div id="map"></div>
+    <footer class="container">
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>© 2019-2020 IvanGoodmaN, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </footer>
 
 </body>
 
