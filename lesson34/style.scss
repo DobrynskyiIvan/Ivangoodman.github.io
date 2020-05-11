@@ -1,5 +1,5 @@
 #map {
-    height: 100%;
+    height: 95%;
 }
 
 /* Optional: Makes the sample page fill the window. */
@@ -8,6 +8,7 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
+
 }
 
 .controls {
@@ -64,4 +65,18 @@ body {
     font-family: Roboto;
     font-size: 13px;
     font-weight: 300;
+}
+
+#right-panel {
+    float: right;
+    width: 28%;
+    padding: 2%;
+    font-size: 25px;
+}
+
+#output {
+    padding: 2%;
+    font-size: 15px;
+    letter-spacing: 1.2;
+    line-height: 25px;
 }
