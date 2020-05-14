@@ -84,6 +84,7 @@ AutocompleteDirectionsHandler.prototype.setupPlaceChangedListener = function (
     });
 };
 
+
 AutocompleteDirectionsHandler.prototype.route = function () {
     if (!this.originPlaceId || !this.destinationPlaceId) {
         return;
