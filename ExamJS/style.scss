@@ -69,6 +69,30 @@ $maxWidthContainer:1600px;
     align-items: center;
 }
 
+@mixin button {
+    @include text_GothamBold(14px);
+    color: black;
+    text-transform: uppercase;
+    width: 190px;
+    height: 50px;
+    border: none;
+    background: none;
+    border: 1px solid #000000;
+    letter-spacing: 0.5px;
+
+    &:hover {
+        border: none;
+        background: none;
+        background-color: rgb(97, 235, 177);
+        transition: 0.1s;
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+
+}
+
 * {
     box-sizing: border-box;
     padding: 0px;
@@ -222,54 +246,57 @@ header {
     position: relative;
 }
 
-.slick-dots {
-    z-index: 3;
-    height: 220px;
-    position: absolute;
-    top: 51%;
-    transform: translateY(-50%);
-    right: 40px;
-    display: block;
-    width: 20px;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
+#mainSlider {
 
-    justify-content: space-between;
-
-    & li button::before {
-        font-family: slick;
+    .slick-dots {
+        z-index: 3;
+        height: 220px;
         position: absolute;
-        top: 0px;
-        left: 0px;
-        border: none;
-        content: "";
-        text-align: center;
-    }
-
-    & li.slick-active button {
-        background-color: white;
-
-    }
-
-    & li button {
-        font-family: slick;
-        font-size: 2px;
-        line-height: 0;
+        top: 51%;
+        transform: translateY(-50%);
+        right: 40px;
         display: block;
-        width: 2px;
-        height: 2px;
-        content: "";
-        cursor: pointer;
-        color: transparent;
-        border: 0.5px solid white;
-        border-radius: 50%;
-        outline: none;
+        width: 20px;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
 
-        &:focus {
+        justify-content: space-between;
+
+        & li button::before {
+            font-family: slick;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            border: none;
+            content: "";
+            text-align: center;
+        }
+
+        & li.slick-active button {
             background-color: white;
+
+        }
+
+        & li button {
+            font-family: slick;
+            font-size: 2px;
+            line-height: 0;
+            display: block;
+            width: 2px;
+            height: 2px;
+            content: "";
+            cursor: pointer;
+            color: transparent;
+            border: 0.5px solid white;
+            border-radius: 50%;
+            outline: none;
+
+            &:focus {
+                background-color: white;
+            }
         }
     }
 }
@@ -366,6 +393,14 @@ header {
                 transform: translate(45%, -15%);
 
             }
+
+            .headline {
+                padding-top: 10px;
+            }
+
+            .subtitle {
+                padding-top: 5px;
+            }
         }
     }
 }
@@ -384,7 +419,7 @@ header {
 
 ///======item that contains text inside the box=======
 .item {
-    padding-top: 55px;
+    padding-top: 59px;
     width: 478px;
     height: 471px;
 
@@ -430,7 +465,7 @@ header {
             letter-spacing: 0.35px;
             text-align: left;
             color: #2c4058;
-            padding-top: 50px;
+            padding-top: 52px;
 
             & .fa-map-marker-alt {
                 font-size: 14px;
@@ -440,25 +475,256 @@ header {
     }
 
     & button {
-        @include text_GothamBold(14px);
-        color: black;
-        text-transform: uppercase;
-        width: 190px;
-        height: 50px;
-        border: none;
-        background: none;
-        border: 1px solid #000000;
-        letter-spacing: 0.5px;
+        @include button();
+    }
+}
 
-        &:hover {
-            border: none;
-            background: none;
-            background-color: rgb(97, 235, 177);
-            transition: 0.1s;
+//======== section with triplee slider 
+.newsSection {
+    position: relative;
+    padding-top: 95px;
+    max-height: 1035px;
+    padding-bottom: 200px;
+
+    .news {
+        margin-top: 39px;
+        padding-bottom: 90px;
+        color: white;
+        letter-spacing: 1.5px;
+    }
+
+    & .newsMainBG {
+        position: absolute;
+        width: 100%;
+        max-height: 1035px;
+    }
+}
+
+.slick-prev,
+.slick-next {
+    z-index: 20;
+    width: 40px;
+    height: 40px;
+    opacity: 0.5;
+    border: solid 1px #ffffff;
+    border-radius: 50%;
+
+}
+
+.slick-prev:before,
+.slick-next:before {
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-family: 'FontAwesome';
+}
+
+.slick-prev {
+    left: -95px;
+
+    &:before {
+        content: "\f104";
+    }
+}
+
+.slick-next {
+    right: -95px;
+
+    &:before {
+        content: "\f105";
+    }
+}
+
+/* the slides */
+.slick-slide {
+    margin: 0 13px;
+}
+
+/* the parent */
+.slick-list {
+    margin: 0 -10px;
+}
+
+.slick-dots {
+    display: flex;
+
+    justify-content: space-between;
+    position: absolute;
+    bottom: -80px;
+
+    width: 225px;
+    right: 50%;
+    transform: translateX(50%);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+}
+
+.slick-dots li button:before {
+    font-family: 'slick';
+    font-size: 9px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    text-align: center;
+    opacity: .25;
+    border: 1px solid white;
+    color: rgba(252, 252, 252, 0);
+
+}
+
+.slick-dots li.slick-active button:before {
+    content: '';
+    background-color: white;
+    opacity: .75;
+    color: rgb(255, 255, 255);
+}
+
+// .slick-initialized .slick-slide {
+//     display: block;
+//     filter: alpha(opacity=40);
+//     opacity: 0.4;
+//     transition: all 0.3s ease-out;
+// }
+
+// .slick-initialized .slick-center {
+//     display: block;
+//     filter: alpha(opacity=100);
+//     opacity: 1;
+//     transition: all 0.3s ease-out;
+// }
+
+
+
+
+.sliderTreeple {
+    max-width: $maxWidth;
+    margin: 0 auto;
+}
+
+.sliderTreeple-item .slick-slide .slick-active {
+    max-width: 370px;
+    background: none;
+}
+
+.sliderTreeple-item {
+    position: relative;
+    width: 400px;
+    height: 514px;
+
+
+    & .text {
+        width: 370px;
+        background-color: #ffffff;
+        padding: 23px 15px 27px 20px;
+
+
+        & .title {
+            @include text_GothamMain(22px, 800);
+            text-transform: uppercase;
+            line-height: 1.55;
+            text-align: left;
+            color: #2c4058;
+            text-align: left;
         }
 
-        &:active {
-            transform: scale(0.95);
+        & .subtitle {
+            @include text_OpenSans(18px, 400);
+            line-height: 1.67;
+            text-align: left;
+            color: #4b5562;
+            padding-bottom: 36px;
+        }
+
+        & .authorInfo {
+
+            @include flex_row();
+
+            & .publishInfo {
+
+                padding-left: 20px;
+                justify-content: space-between;
+
+                & .author {
+                    @include text_GothamBold(18px);
+                    text-transform: uppercase;
+                    line-height: 1.22;
+                    letter-spacing: normal;
+                    text-align: left;
+                    color: #2c4058;
+                    text-align: left;
+                    padding-bottom: 5px;
+                }
+
+                & .publishDate {
+                    @include text_GothamBold(14px);
+
+                    letter-spacing: 1px;
+                    text-align: left;
+                    color: #55b7ff;
+                }
+            }
+
         }
     }
+}
+
+.galery {
+
+    position: relative;
+    padding-top: 135px;
+    padding-bottom: 135px;
+    text-align: center;
+
+    & .moreDetails {
+        @include button();
+    }
+
+    & .galeryHeader {
+        margin: 0px;
+        letter-spacing: 0.5px;
+        padding-bottom: 90px;
+    }
+
+    & .imageContainer {
+        padding-bottom: 60px;
+        max-height: 498px;
+        max-width: $maxWidth;
+
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        & .mainImage {
+            height: auto;
+        }
+
+        & .groupImages {
+            padding-left: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+
+    }
+}
+
+.googleMap {
+    border: 1px solid red;
+    width: 1599px;
+    height: 700px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#map {
+    height: 100%;
+
 }
