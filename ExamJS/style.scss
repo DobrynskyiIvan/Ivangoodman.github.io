@@ -1,7 +1,44 @@
-$maxWidth:1200px;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,300&display=swap");
+@import "css/fonts/gothambold/fontGothamBold";
+@import "css/fonts/GothamBook/fontGothamBook";
 
-@mixin text_Aleo($fs, $weight) {
-    font-family: "Aleo", serif;
+@font-face {
+    font-family: "Gotham";
+    src: url("/ExamJS/css/fonts/Gotham/gotham-medium-webfont.woff2") format("woff2"),
+        url("/ExamJS/css/fonts/Gotham/gotham-medium-webfont.woff") format("woff"),
+        url("/ExamJS/css/fonts/Gotham/GothamMediumRegular.ttf") format("truetype"),
+
+}
+
+@font-face {
+    font-family: "Gotham Thin";
+    src: url("/ExamJS/css/fonts/Gotham/GothamThinRegular.otf");
+}
+
+$maxWidth: 1170px;
+$maxWidthContainer:1600px;
+
+@mixin text_GothamThin($fs) {
+    font-family: "Gotham Thin", sans-serif;
+    font-stretch: normal;
+    font-style: normal;
+    text-align: center;
+    color: #ffffff;
+    font-size: $fs;
+}
+
+@mixin text_GothamBold($fs) {
+    font-family: 'Gotham Bold', sans-serif;
+    font-stretch: normal;
+    font-style: normal;
+    text-align: center;
+    color: #ffffff;
+    font-size: $fs;
+}
+
+
+@mixin text_GothamMain($fs, $weight) {
+    font-family: "Gotham";
     font-weight: $weight;
     font-stretch: normal;
     font-style: normal;
@@ -10,8 +47,8 @@ $maxWidth:1200px;
     font-size: $fs;
 }
 
-@mixin text_JosefinSans($fs, $weight) {
-    font-family: "Josefin Sans", sans-serif;
+@mixin text_OpenSans($fs, $weight) {
+    font-family: "Open Sans", sans-serif;
     font-size: $fs;
     font-weight: $weight;
     font-stretch: normal;
@@ -32,13 +69,19 @@ $maxWidth:1200px;
     align-items: center;
 }
 
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+//=================navigation style
 nav {
     width: 100%;
-    background-color: #5474fd;
-
-    @media only screen and (max-width: 1200px) {
-        padding: 0px 20px;
-    }
+    background-color: rgba($color: #5474fd, $alpha: 0.5);
+    padding: 50px 0px 20px 0px;
+    position: fixed;
+    z-index: 2;
 
     // &:hover {
     //     transition: 0.3s;
@@ -46,14 +89,10 @@ nav {
     // }
 
     & .nav_context {
-        max-width: $maxWidth;
         margin: 0 auto;
+        max-width: $maxWidth;
         @include flex_row();
         justify-content: space-between;
-
-        @media only screen and (max-width: 1230px) {
-            justify-content: space-around;
-        }
 
         & .logo {
             cursor: pointer;
@@ -74,19 +113,22 @@ nav {
         border: 1px solid #e4e1e1;
         border-radius: 50%;
         text-decoration: none;
+        margin-left: 20px;
 
         &:hover {
             border: 1px solid #f76714;
+
+            & .fab {
+                color: #f76714;
+            }
         }
 
-        & .fab {
 
+        & .fab {
             font-size: 16px;
             color: white;
 
-            &:hover {
-                color: #f76714;
-            }
+
         }
     }
 }
@@ -94,34 +136,329 @@ nav {
 .navigation {
     @include flex_row();
 
-
-    @media only screen and (max-width: 630px) {
-        @include flex_column();
-        justify-content: space-around;
-        flex-wrap: nowrap;
-    }
+    width: 100%;
+    padding: 13px 55px 20px 110px;
 
     & li {
         list-style-type: circle;
         color: white;
         cursor: pointer;
+        font-size: 22px;
+
+        &:first-child {
+            padding-right: 86px;
+        }
+
+        &:nth-child(2) {
+            padding-right: 88px;
+        }
+
+        &:nth-child(3) {
+            padding-right: 120px;
+        }
+
+
 
         &:hover {
             list-style-type: disc;
-
         }
 
         & a {
-
             text-decoration: none;
-
-            @include text_Aleo(14px, 400);
-
+            @include text_GothamThin(13px);
+            // line-height: 22px;
+            letter-spacing: 1.4px;
             text-transform: uppercase;
 
             &:hover {
                 color: aqua;
             }
+        }
+    }
+}
+
+//===================end of navigation style
+///=======Slider=========
+
+header {
+    max-height: 800px;
+    position: relative;
+    background-image: linear-gradient(to top, #55b7ff, #7e5aff);
+
+    //===== icon for scroll to bottom
+    .roolDown {
+        text-decoration: none;
+        position: absolute;
+        z-index: 20;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid rgb(255, 255, 255);
+        left: 50%;
+        bottom: 50px;
+        transform: translateX(-52%);
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:before {
+            content: "\f107";
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+            font-family: 'FontAwesome';
+
+        }
+    }
+}
+
+
+//====slider 
+.slider {
+    max-width: 1600px;
+
+
+    margin: 0 auto;
+    position: relative;
+}
+
+.slick-dots {
+    z-index: 3;
+    height: 220px;
+    position: absolute;
+    top: 51%;
+    transform: translateY(-50%);
+    right: 40px;
+    display: block;
+    width: 20px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    & li button::before {
+        font-family: slick;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        border: none;
+        content: "";
+        text-align: center;
+    }
+
+    & li.slick-active button {
+        background-color: white;
+
+    }
+
+    & li button {
+        font-family: slick;
+        font-size: 2px;
+        line-height: 0;
+        display: block;
+        width: 2px;
+        height: 2px;
+        content: "";
+        cursor: pointer;
+        color: transparent;
+        border: 0.5px solid white;
+        border-radius: 50%;
+        outline: none;
+
+        &:focus {
+            background-color: white;
+        }
+    }
+}
+
+.slider-item {
+    position: relative;
+
+    & img {
+        opacity: 1;
+    }
+
+    & .text {
+        position: absolute;
+        top: 47%;
+        right: 50%;
+        transform: translate(50%, -19%);
+        max-width: 900px;
+
+        & .title {
+            @include text_GothamMain(80px, 800);
+            text-transform: uppercase;
+            display: inline-block;
+            letter-spacing: 4px;
+            text-align: center;
+            clear: both;
+            overflow: hidden;
+            white-space: nowrap;
+            padding-bottom: 19px;
+        }
+
+        & .autor {
+            @include text_GothamBold(18px);
+            line-height: 22px;
+            text-transform: uppercase;
+            letter-spacing: 6.2px;
+        }
+    }
+}
+
+///====== section WHAT WE DO   ====
+
+///======header of the section===
+.ourWorks {
+    @include text_GothamBold(44px);
+    letter-spacing: 2.8px;
+    padding-top: 132px;
+    color: #000000;
+    text-transform: uppercase;
+    position: relative;
+    overflow: hidden;
+
+    &:after {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        height: 3px;
+        // vertical-align: bottom;
+        width: 100px;
+        top: 100px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-top: 1px solid black;
+    }
+}
+
+///=====main container of the section
+.container {
+    max-width: $maxWidthContainer;
+    margin: 0 auto;
+
+    .context {
+        padding-top: 157px;
+        padding-bottom: 46px;
+        max-width: $maxWidth+6px;
+        margin: 0 auto;
+        @include flex_row();
+
+        justify-content: space-between;
+
+        &.home {
+            flex-direction: row;
+
+            .shadow {
+                right: 0px;
+
+            }
+        }
+
+        &.mountains {
+            flex-direction: row-reverse;
+
+            .shadow {
+                left: 0px;
+                transform: translate(45%, -15%);
+
+            }
+        }
+    }
+}
+
+.picture {
+    position: relative;
+
+    .shadow {
+        position: absolute;
+        top: 0px;
+
+        transform: translate(-45%, -15%);
+        z-index: -1;
+    }
+}
+
+///======item that contains text inside the box=======
+.item {
+    padding-top: 55px;
+    width: 478px;
+    height: 471px;
+
+    & p {
+        &.subtitle {
+            @include text_GothamMain(22px, 400);
+            font-weight: normal;
+            text-transform: uppercase;
+            line-height: 0.55;
+
+            text-align: left;
+            color: #2c4058;
+        }
+
+        &.headline {
+            @include text_GothamMain(44px, 800);
+            text-transform: uppercase;
+            letter-spacing: normal;
+            text-align: left;
+            color: #2c4058;
+            padding-top: 13px;
+        }
+
+        &.text {
+            @include text_OpenSans(18px, 400);
+            text-transform: none;
+
+            padding-top: 23px;
+            padding-bottom: 31px;
+            line-height: 1.67;
+            text-align: left;
+            color: #4b5562;
+            text-align: left;
+
+        }
+
+        &.adress {
+            @include text_OpenSans(18px, 300);
+            text-transform: capitalize;
+
+            font-style: italic;
+            line-height: 1.67;
+            letter-spacing: 0.35px;
+            text-align: left;
+            color: #2c4058;
+            padding-top: 50px;
+
+            & .fa-map-marker-alt {
+                font-size: 14px;
+                padding-right: 3px;
+            }
+        }
+    }
+
+    & button {
+        @include text_GothamBold(14px);
+        color: black;
+        text-transform: uppercase;
+        width: 190px;
+        height: 50px;
+        border: none;
+        background: none;
+        border: 1px solid #000000;
+        letter-spacing: 0.5px;
+
+        &:hover {
+            border: none;
+            background: none;
+            background-color: rgb(97, 235, 177);
+            transition: 0.1s;
+        }
+
+        &:active {
+            transform: scale(0.95);
         }
     }
 }
