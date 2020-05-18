@@ -58,20 +58,28 @@ $(document).ready(function () {
             }
         ]
     });
+    $("input").click(function () {
+        $("input").removeClass("active");
+        $(this).toggleClass("active");
 
-
-
+    });
 
 });
-var map;
+
+
 
 function initMap() {
+    var cairo = {
+        lat: 48.9141283,
+        lng: 24.6783888
+    };
+
+
+
     map = new google.maps.Map(document.getElementById("map"), {
-        center: {
-            lat: 48.9141283,
-            lng: 24.6783888
-        },
+        center: cairo,
         zoom: 13,
+        disableDefaultUI: true,
         styles: [{
                 "elementType": "geometry",
                 "stylers": [{
@@ -230,5 +238,10 @@ function initMap() {
             }
         ]
 
+    });
+    var marker = new google.maps.Marker({
+        map: map,
+        position: cairo,
+        icon: '/ExamJS/img/Pin_png.png'
     });
 }
