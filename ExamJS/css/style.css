@@ -26,6 +26,9 @@
           box-sizing: border-box;
   padding: 0px;
   margin: 0px;
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 nav {
@@ -71,6 +74,15 @@ nav .nav_context .logo {
           align-items: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+}
+
+@media only screen and (max-width: 922px) {
+  .social {
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    display: none;
+  }
 }
 
 .social a {
@@ -119,6 +131,29 @@ nav .nav_context .logo {
   padding: 13px 55px 20px 110px;
 }
 
+@media only screen and (max-width: 1600px) {
+  .navigation {
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    padding: 13px 35px 20px 70px;
+  }
+}
+
+@media only screen and (max-width: 1180px) {
+  .navigation {
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
 .navigation li {
   list-style-type: circle;
   color: white;
@@ -130,12 +165,30 @@ nav .nav_context .logo {
   padding-right: 86px;
 }
 
+@media only screen and (max-width: 1180px) {
+  .navigation li:first-child {
+    padding-right: 0px;
+  }
+}
+
 .navigation li:nth-child(2) {
   padding-right: 88px;
 }
 
+@media only screen and (max-width: 1180px) {
+  .navigation li:nth-child(2) {
+    padding-right: 0px;
+  }
+}
+
 .navigation li:nth-child(3) {
   padding-right: 120px;
+}
+
+@media only screen and (max-width: 1180px) {
+  .navigation li:nth-child(3) {
+    padding-right: 0px;
+  }
 }
 
 .navigation li:hover {
@@ -150,6 +203,7 @@ nav .nav_context .logo {
   text-align: center;
   color: #ffffff;
   font-size: 13px;
+  line-height: 22px;
   letter-spacing: 1.4px;
   text-transform: uppercase;
 }
@@ -196,13 +250,19 @@ header .roolDown:before {
   content: "\f107";
   color: white;
   font-size: 16px;
-  font-family: 'FontAwesome';
+  font-family: "FontAwesome";
 }
 
 .slider {
   max-width: 1600px;
   margin: 0 auto;
   position: relative;
+}
+
+@media only screen and (max-width: 1599px) {
+  .slider {
+    margin: 0;
+  }
 }
 
 #mainSlider .slick-dots {
@@ -270,6 +330,8 @@ header .roolDown:before {
 
 .slider-item img {
   opacity: 1;
+  width: 100%;
+  height: auto;
 }
 
 .slider-item .text {
@@ -280,6 +342,7 @@ header .roolDown:before {
       -ms-transform: translate(50%, -19%);
           transform: translate(50%, -19%);
   max-width: 900px;
+  text-align: center;
 }
 
 .slider-item .text .title {
@@ -300,8 +363,17 @@ header .roolDown:before {
   padding-bottom: 19px;
 }
 
+@media only screen and (max-width: 1007px) {
+  .slider-item .text .title {
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    font-size: 30px;
+  }
+}
+
 .slider-item .text .autor {
-  font-family: 'Gotham Bold', sans-serif;
+  font-family: "Gotham Bold", sans-serif;
   font-stretch: normal;
   font-style: normal;
   text-align: center;
@@ -313,7 +385,7 @@ header .roolDown:before {
 }
 
 .ourWorks {
-  font-family: 'Gotham Bold', sans-serif;
+  font-family: "Gotham Bold", sans-serif;
   font-stretch: normal;
   font-style: normal;
   text-align: center;
@@ -325,6 +397,15 @@ header .roolDown:before {
   text-transform: uppercase;
   position: relative;
   overflow: hidden;
+}
+
+@media only screen and (max-width: 922px) {
+  .ourWorks {
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    padding-top: 32px;
+  }
 }
 
 .ourWorks:after {
@@ -341,9 +422,19 @@ header .roolDown:before {
   border-top: 1px solid black;
 }
 
+@media only screen and (max-width: 922px) {
+  .ourWorks:after {
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    top: 0px;
+  }
+}
+
 .container {
   max-width: 1600px;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .container .context {
@@ -364,6 +455,18 @@ header .roolDown:before {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media only screen and (max-width: 922px) {
+  .container .context {
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-top: 27px;
+  }
 }
 
 .container .context.home {
@@ -401,6 +504,15 @@ header .roolDown:before {
 
 .picture {
   position: relative;
+}
+
+@media only screen and (max-width: 922px) {
+  .picture {
+    -webkit-transition: ease-in-out 0.4s;
+    -o-transition: ease-in-out 0.4s;
+    transition: ease-in-out 0.4s;
+    display: none;
+  }
 }
 
 .picture .shadow {
@@ -488,7 +600,7 @@ header .roolDown:before {
 }
 
 .item button {
-  font-family: 'Gotham Bold', sans-serif;
+  font-family: "Gotham Bold", sans-serif;
   font-stretch: normal;
   font-style: normal;
   text-align: center;
@@ -526,6 +638,15 @@ header .roolDown:before {
   padding-bottom: 200px;
 }
 
+@media only screen and (max-width: 1230px) {
+  .newsSection {
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    padding-bottom: 50px;
+  }
+}
+
 .newsSection .news {
   margin-top: 39px;
   padding-bottom: 90px;
@@ -533,10 +654,21 @@ header .roolDown:before {
   letter-spacing: 1.5px;
 }
 
+@media only screen and (max-width: 1399px) {
+  .newsSection .news {
+    padding-bottom: 10px;
+    -webkit-transition: ease-in 0.4s;
+    -o-transition: ease-in 0.4s;
+    transition: ease-in 0.4s;
+    margin-top: 9px;
+  }
+}
+
 .newsSection .newsMainBG {
   position: absolute;
   width: 100%;
   max-height: 1035px;
+  height: auto;
 }
 
 .slick-prev,
@@ -553,7 +685,7 @@ header .roolDown:before {
 .slick-next:before {
   color: white;
   font-size: 14px;
-  font-family: 'FontAwesome';
+  font-family: "FontAwesome";
 }
 
 .slick-prev {
@@ -601,8 +733,14 @@ header .roolDown:before {
   list-style: none;
 }
 
+@media only screen and (max-width: 1394) {
+  .slick-dots {
+    top: 80px;
+  }
+}
+
 .slick-dots li button:before {
-  font-family: 'slick';
+  font-family: "slick";
   font-size: 9px;
   position: absolute;
   top: 0;
@@ -611,15 +749,15 @@ header .roolDown:before {
   height: 9px;
   border-radius: 50%;
   text-align: center;
-  opacity: .25;
+  opacity: 0.25;
   border: 1px solid white;
   color: rgba(252, 252, 252, 0);
 }
 
 .slick-dots li.slick-active button:before {
-  content: '';
+  content: "";
   background-color: white;
-  opacity: .75;
+  opacity: 0.75;
   color: white;
 }
 
@@ -628,19 +766,41 @@ header .roolDown:before {
   margin: 0 auto;
 }
 
+.slick-track {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: block;
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .sliderTreeple-item .slick-slide .slick-active {
   max-width: 370px;
   background: none;
 }
 
 .sliderTreeple-item {
-  position: relative;
-  width: 400px;
+  max-width: 370px;
   height: 514px;
 }
 
+.sliderTreeple-item .picture img {
+  width: 100%;
+  height: auto;
+}
+
+@media only screen and (max-width: 1130px) {
+  .sliderTreeple-item .picture img {
+    -webkit-transition: ease-in 0.4s;
+    -o-transition: ease-in 0.4s;
+    transition: ease-in 0.4s;
+    display: none;
+  }
+}
+
 .sliderTreeple-item .text {
-  width: 370px;
+  max-width: 370px;
   background-color: #ffffff;
   padding: 23px 15px 27px 20px;
 }
@@ -695,7 +855,7 @@ header .roolDown:before {
 }
 
 .sliderTreeple-item .text .authorInfo .publishInfo .author {
-  font-family: 'Gotham Bold', sans-serif;
+  font-family: "Gotham Bold", sans-serif;
   font-stretch: normal;
   font-style: normal;
   text-align: center;
@@ -711,7 +871,7 @@ header .roolDown:before {
 }
 
 .sliderTreeple-item .text .authorInfo .publishInfo .publishDate {
-  font-family: 'Gotham Bold', sans-serif;
+  font-family: "Gotham Bold", sans-serif;
   font-stretch: normal;
   font-style: normal;
   text-align: center;
@@ -729,8 +889,18 @@ header .roolDown:before {
   text-align: center;
 }
 
+@media only screen and (max-width: 1160px) {
+  .galery {
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+}
+
 .galery .moreDetails {
-  font-family: 'Gotham Bold', sans-serif;
+  font-family: "Gotham Bold", sans-serif;
   font-stretch: normal;
   font-style: normal;
   text-align: center;
@@ -767,9 +937,17 @@ header .roolDown:before {
   padding-bottom: 90px;
 }
 
+@media only screen and (max-width: 1230px) {
+  .galery .galeryHeader {
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    padding-bottom: 50px;
+  }
+}
+
 .galery .imageContainer {
   padding-bottom: 60px;
-  max-height: 498px;
   max-width: 1170px;
   margin: 0 auto;
   display: -webkit-box;
@@ -784,8 +962,24 @@ header .roolDown:before {
           justify-content: space-between;
 }
 
+@media only screen and (max-width: 1160px) {
+  .galery .imageContainer {
+    max-height: auto;
+  }
+}
+
+@media only screen and (max-width: 1160px) {
+  .galery .imageContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .galery .imageContainer .mainImage {
   height: auto;
+  width: 100%;
 }
 
 .galery .imageContainer .groupImages {
@@ -806,7 +1000,7 @@ header .roolDown:before {
 }
 
 .googleMap {
-  width: 1599px;
+  max-width: 1599px;
   height: 700px;
   margin: 0 auto;
   padding: 0;
@@ -818,18 +1012,16 @@ header .roolDown:before {
 
 footer {
   position: relative;
-  height: 524px;
 }
 
 footer .background {
   position: absolute;
   width: 100%;
-  max-height: 524px;
   z-index: -1;
 }
 
 .additionalInfo {
-  width: 770px;
+  max-width: 770px;
   margin: 0 auto;
   padding-top: 200px;
 }
@@ -881,7 +1073,7 @@ footer .background {
 }
 
 .additionalInfo .copiright p {
-  font-family: 'Gotham Bold', sans-serif;
+  font-family: "Gotham Bold", sans-serif;
   font-stretch: normal;
   font-style: normal;
   text-align: center;
@@ -900,10 +1092,19 @@ footer .background {
   z-index: 3;
   position: absolute;
   right: 50%;
-  top: -63%;
+  top: -103%;
   -webkit-transform: translateX(50%);
       -ms-transform: translateX(50%);
           transform: translateX(50%);
+}
+
+@media only screen and (max-width: 922px) {
+  .contactContainer {
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    max-width: 870px;
+  }
 }
 
 .contactContainer .ourWorks.contactHeading {
@@ -920,6 +1121,15 @@ footer .background {
   width: 100%;
   height: auto;
   z-index: -1;
+}
+
+@media only screen and (max-width: 922px) {
+  .contactContainer .formBG {
+    -webkit-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+    max-width: 870px;
+  }
 }
 
 .context {
@@ -971,6 +1181,7 @@ footer .background {
 .context .clientDetails {
   width: 310px;
   height: 190px;
+  padding-left: 75px;
 }
 
 .context .clientDetails .contactForm {
@@ -1018,7 +1229,7 @@ footer .background {
 }
 
 .context .clientDetails .contactForm input.order::-webkit-input-placeholder {
-  font-family: 'Gotham Bold', sans-serif;
+  font-family: "Gotham Bold", sans-serif;
   font-stretch: normal;
   font-style: normal;
   text-align: center;
@@ -1029,7 +1240,7 @@ footer .background {
 }
 
 .context .clientDetails .contactForm input.order:-ms-input-placeholder {
-  font-family: 'Gotham Bold', sans-serif;
+  font-family: "Gotham Bold", sans-serif;
   font-stretch: normal;
   font-style: normal;
   text-align: center;
@@ -1040,7 +1251,7 @@ footer .background {
 }
 
 .context .clientDetails .contactForm input.order::-ms-input-placeholder {
-  font-family: 'Gotham Bold', sans-serif;
+  font-family: "Gotham Bold", sans-serif;
   font-stretch: normal;
   font-style: normal;
   text-align: center;
@@ -1051,7 +1262,7 @@ footer .background {
 }
 
 .context .clientDetails .contactForm input.order::placeholder {
-  font-family: 'Gotham Bold', sans-serif;
+  font-family: "Gotham Bold", sans-serif;
   font-stretch: normal;
   font-style: normal;
   text-align: center;
@@ -1062,7 +1273,7 @@ footer .background {
 }
 
 .context .clientDetails .contactForm .submitForm {
-  font-family: 'Gotham Bold', sans-serif;
+  font-family: "Gotham Bold", sans-serif;
   font-stretch: normal;
   font-style: normal;
   text-align: center;

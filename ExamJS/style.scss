@@ -6,8 +6,7 @@
     font-family: "Gotham";
     src: url("/ExamJS/css/fonts/Gotham/gotham-medium-webfont.woff2") format("woff2"),
         url("/ExamJS/css/fonts/Gotham/gotham-medium-webfont.woff") format("woff"),
-        url("/ExamJS/css/fonts/Gotham/GothamMediumRegular.ttf") format("truetype"),
-
+        url("/ExamJS/css/fonts/Gotham/GothamMediumRegular.ttf") format("truetype");
 }
 
 @font-face {
@@ -16,7 +15,7 @@
 }
 
 $maxWidth: 1170px;
-$maxWidthContainer:1600px;
+$maxWidthContainer: 1600px;
 
 @mixin text_GothamThin($fs) {
     font-family: "Gotham Thin", sans-serif;
@@ -28,14 +27,13 @@ $maxWidthContainer:1600px;
 }
 
 @mixin text_GothamBold($fs) {
-    font-family: 'Gotham Bold', sans-serif;
+    font-family: "Gotham Bold", sans-serif;
     font-stretch: normal;
     font-style: normal;
     text-align: center;
     color: #ffffff;
     font-size: $fs;
 }
-
 
 @mixin text_GothamMain($fs, $weight) {
     font-family: "Gotham";
@@ -90,14 +88,17 @@ $maxWidthContainer:1600px;
     &:active {
         transform: scale(0.95);
     }
-
 }
 
 * {
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
+    transition: all 0.2s ease;
 }
+
+
+
 
 //=================navigation style
 nav {
@@ -106,6 +107,7 @@ nav {
     padding: 50px 0px 20px 0px;
     position: fixed;
     z-index: 2;
+
 
     // &:hover {
     //     transition: 0.3s;
@@ -118,6 +120,10 @@ nav {
         @include flex_row();
         justify-content: space-between;
 
+        // @media only screen and (max-width: 1599px) {
+        //     margin: 0px;
+        // }
+
         & .logo {
             cursor: pointer;
         }
@@ -127,6 +133,12 @@ nav {
 .social {
     @include flex_row();
     flex-wrap: nowrap;
+
+    @media only screen and (max-width: 922px) {
+        transition: all 0.5s ease;
+        display: none;
+    }
+
 
     & a {
         display: flex;
@@ -147,12 +159,9 @@ nav {
             }
         }
 
-
         & .fab {
             font-size: 16px;
             color: white;
-
-
         }
     }
 }
@@ -163,6 +172,20 @@ nav {
     width: 100%;
     padding: 13px 55px 20px 110px;
 
+    @media only screen and (max-width: 1600px) {
+        transition: all 0.5s ease;
+        padding: 13px 35px 20px 70px;
+    }
+
+    @media only screen and (max-width: 1180px) {
+        transition: all 0.5s ease;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+
+
     & li {
         list-style-type: circle;
         color: white;
@@ -171,17 +194,30 @@ nav {
 
         &:first-child {
             padding-right: 86px;
+
+            @media only screen and (max-width: 1180px) {
+                padding-right: 0px;
+
+            }
         }
 
         &:nth-child(2) {
             padding-right: 88px;
+
+            @media only screen and (max-width: 1180px) {
+                padding-right: 0px;
+
+            }
         }
 
         &:nth-child(3) {
             padding-right: 120px;
+
+            @media only screen and (max-width: 1180px) {
+                padding-right: 0px;
+
+            }
         }
-
-
 
         &:hover {
             list-style-type: disc;
@@ -190,7 +226,7 @@ nav {
         & a {
             text-decoration: none;
             @include text_GothamThin(13px);
-            // line-height: 22px;
+            line-height: 22px;
             letter-spacing: 1.4px;
             text-transform: uppercase;
 
@@ -207,6 +243,7 @@ nav {
 header {
     max-height: 800px;
     position: relative;
+
     background-image: linear-gradient(to top, #55b7ff, #7e5aff);
 
     //===== icon for scroll to bottom
@@ -230,24 +267,27 @@ header {
             content: "\f107";
             color: rgb(255, 255, 255);
             font-size: 16px;
-            font-family: 'FontAwesome';
-
+            font-family: "FontAwesome";
         }
     }
 }
 
-
-//====slider 
+//====slider
 .slider {
-    max-width: 1600px;
+    max-width: $maxWidthContainer;
 
 
     margin: 0 auto;
+
+    @media only screen and (max-width: 1599px) {
+        margin: 0;
+
+    }
+
     position: relative;
 }
 
 #mainSlider {
-
     .slick-dots {
         z-index: 3;
         height: 220px;
@@ -277,7 +317,6 @@ header {
 
         & li.slick-active button {
             background-color: white;
-
         }
 
         & li button {
@@ -306,6 +345,8 @@ header {
 
     & img {
         opacity: 1;
+        width: 100%;
+        height: auto;
     }
 
     & .text {
@@ -314,6 +355,7 @@ header {
         right: 50%;
         transform: translate(50%, -19%);
         max-width: 900px;
+        text-align: center;
 
         & .title {
             @include text_GothamMain(80px, 800);
@@ -325,6 +367,13 @@ header {
             overflow: hidden;
             white-space: nowrap;
             padding-bottom: 19px;
+
+            @media only screen and (max-width: 1007px) {
+                transition: all 0.5s ease;
+                font-size: 30px;
+
+
+            }
         }
 
         & .autor {
@@ -348,6 +397,13 @@ header {
     position: relative;
     overflow: hidden;
 
+    @media only screen and (max-width: 922px) {
+        transition: all 0.5s ease;
+
+        padding-top: 32px;
+    }
+
+
     &:after {
         content: "";
         position: absolute;
@@ -359,6 +415,12 @@ header {
         left: 50%;
         transform: translateX(-50%);
         border-top: 1px solid black;
+
+        @media only screen and (max-width: 922px) {
+            transition: all 0.5s ease;
+            top: 0px;
+        }
+
     }
 }
 
@@ -366,22 +428,29 @@ header {
 .container {
     max-width: $maxWidthContainer;
     margin: 0 auto;
+    overflow: hidden;
 
     .context {
         padding-top: 157px;
         padding-bottom: 46px;
-        max-width: $maxWidth+6px;
+        max-width: $maxWidth + 6px;
         margin: 0 auto;
+        // overflow: hidden;
         @include flex_row();
 
         justify-content: space-between;
+
+        @media only screen and (max-width: 922px) {
+            transition: all 0.5s ease;
+            justify-content: center;
+            padding-top: 27px;
+        }
 
         &.home {
             flex-direction: row;
 
             .shadow {
                 right: 0px;
-
             }
         }
 
@@ -391,7 +460,6 @@ header {
             .shadow {
                 left: 0px;
                 transform: translate(45%, -15%);
-
             }
 
             .headline {
@@ -407,6 +475,12 @@ header {
 
 .picture {
     position: relative;
+
+    @media only screen and (max-width: 922px) {
+        transition: ease-in-out 0.4s;
+        display: none;
+    }
+
 
     .shadow {
         position: absolute;
@@ -453,7 +527,6 @@ header {
             text-align: left;
             color: #4b5562;
             text-align: left;
-
         }
 
         &.adress {
@@ -479,24 +552,39 @@ header {
     }
 }
 
-//======== section with triplee slider 
+//======== section with triplee slider
 .newsSection {
     position: relative;
     padding-top: 95px;
     max-height: 1035px;
     padding-bottom: 200px;
 
+    @media only screen and (max-width: 1230px) {
+        transition: all 0.5s ease;
+        padding-bottom: 50px;
+    }
+
+
     .news {
         margin-top: 39px;
         padding-bottom: 90px;
         color: white;
         letter-spacing: 1.5px;
+
+        @media only screen and (max-width: 1399px) {
+            padding-bottom: 10px;
+            transition: ease-in 0.4s;
+            margin-top: 9px;
+
+        }
     }
+
 
     & .newsMainBG {
         position: absolute;
         width: 100%;
         max-height: 1035px;
+        height: auto;
     }
 }
 
@@ -508,14 +596,13 @@ header {
     opacity: 0.5;
     border: solid 1px #ffffff;
     border-radius: 50%;
-
 }
 
 .slick-prev:before,
 .slick-next:before {
     color: rgb(255, 255, 255);
     font-size: 14px;
-    font-family: 'FontAwesome';
+    font-family: "FontAwesome";
 }
 
 .slick-prev {
@@ -558,10 +645,14 @@ header {
     margin: 0;
     list-style: none;
 
+    @media only screen and (max-width:1394) {
+        top: 80px;
+
+    }
 }
 
 .slick-dots li button:before {
-    font-family: 'slick';
+    font-family: "slick";
     font-size: 9px;
 
     position: absolute;
@@ -571,16 +662,15 @@ header {
     height: 9px;
     border-radius: 50%;
     text-align: center;
-    opacity: .25;
+    opacity: 0.25;
     border: 1px solid white;
     color: rgba(252, 252, 252, 0);
-
 }
 
 .slick-dots li.slick-active button:before {
-    content: '';
+    content: "";
     background-color: white;
-    opacity: .75;
+    opacity: 0.75;
     color: rgb(255, 255, 255);
 }
 
@@ -598,12 +688,19 @@ header {
 //     transition: all 0.3s ease-out;
 // }
 
-
-
-
 .sliderTreeple {
     max-width: $maxWidth;
     margin: 0 auto;
+
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: block;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .sliderTreeple-item .slick-slide .slick-active {
@@ -612,16 +709,28 @@ header {
 }
 
 .sliderTreeple-item {
-    position: relative;
-    width: 400px;
+    // position: relative;
+    max-width: 370px;
     height: 514px;
 
+    & .picture {
+        img {
+            width: 100%;
+            height: auto;
+
+            @media only screen and (max-width: 1130px) {
+                transition: ease-in 0.4s;
+                display: none;
+
+            }
+
+        }
+    }
 
     & .text {
-        width: 370px;
+        max-width: 370px;
         background-color: #ffffff;
         padding: 23px 15px 27px 20px;
-
 
         & .title {
             @include text_GothamMain(22px, 800);
@@ -641,11 +750,9 @@ header {
         }
 
         & .authorInfo {
-
             @include flex_row();
 
             & .publishInfo {
-
                 padding-left: 20px;
                 justify-content: space-between;
 
@@ -668,31 +775,51 @@ header {
                     color: #55b7ff;
                 }
             }
-
         }
     }
 }
 
 .galery {
-
     position: relative;
     padding-top: 135px;
     padding-bottom: 135px;
     text-align: center;
 
+
+    @media only screen and (max-width: 1160px) {
+        transition: all 0.5s ease;
+        padding-top: 35px;
+        padding-bottom: 35px;
+    }
+
     & .moreDetails {
         @include button();
+
+
     }
 
     & .galeryHeader {
         margin: 0px;
         letter-spacing: 0.5px;
         padding-bottom: 90px;
+
+        @media only screen and (max-width: 1230px) {
+            transition: all 0.5s ease;
+            padding-bottom: 50px;
+        }
+
     }
 
     & .imageContainer {
+
         padding-bottom: 60px;
-        max-height: 498px;
+        // max-height: 498px;
+
+        @media only screen and (max-width: 1160px) {
+            max-height: auto;
+
+        }
+
         max-width: $maxWidth;
 
         margin: 0 auto;
@@ -700,8 +827,16 @@ header {
         flex-direction: row;
         justify-content: space-between;
 
+        @media only screen and (max-width: 1160px) {
+            flex-direction: column;
+        }
+
         & .mainImage {
             height: auto;
+
+            @media only screen and (max-width: 1160px) {}
+
+            width: 100%;
         }
 
         & .groupImages {
@@ -712,13 +847,11 @@ header {
             justify-content: space-between;
             align-content: space-between;
         }
-
     }
 }
 
 .googleMap {
-
-    width: 1599px;
+    max-width: 1599px;
     height: 700px;
     margin: 0 auto;
     padding: 0;
@@ -726,32 +859,30 @@ header {
 
 #map {
     height: 100%;
-
 }
 
 /////============     FOOTER
 footer {
     position: relative;
 
-    height: 524px;
+    // height: 524px;
     // background: url(/ExamJS/img/FooterBg.png) no-repeat center center;
     // background-size: cover;
     // margin: 0 auto;
 
     & .background {
-
         position: absolute;
         width: 100%;
-        max-height: 524px;
+        // max-height: 524px;
         z-index: -1;
-
     }
 }
 
 .additionalInfo {
-    width: 770px;
+    max-width: 770px;
     margin: 0 auto;
     padding-top: 200px;
+    // border: 1px solid red;
 
     & .repeatHeader {
         @include flex_row();
@@ -777,10 +908,7 @@ footer {
         }
 
         :last-child {
-
             padding-left: 20px;
-
-
         }
 
         & p {
@@ -790,11 +918,8 @@ footer {
             letter-spacing: 1px;
             text-align: left;
             color: #ffffff;
-
         }
-
     }
-
 }
 
 .contactContainer {
@@ -804,11 +929,15 @@ footer {
     z-index: 3;
     position: absolute;
     right: 50%;
-    top: -63%;
+    top: -103%;
     transform: translateX(50%);
 
-    & .ourWorks.contactHeading {
+    @media only screen and (max-width: 922px) {
+        transition: all 0.5s ease;
+        max-width: 870px;
+    }
 
+    & .ourWorks.contactHeading {
         letter-spacing: 1.5px;
         padding-top: 120px;
         margin-top: -10px;
@@ -816,13 +945,17 @@ footer {
     }
 
     & .formBG {
-
         top: 0;
         right: 0;
         position: absolute;
         width: 100%;
         height: auto;
         z-index: -1;
+
+        @media only screen and (max-width: 922px) {
+            transition: all 0.5s ease;
+            max-width: 870px;
+        }
     }
 }
 
@@ -851,12 +984,11 @@ footer {
         }
     }
 
-
-
     & .clientDetails {
-
         width: 310px;
         height: 190px;
+        padding-left: 75px;
+
 
         & .contactForm {
             height: 100%;
@@ -864,8 +996,6 @@ footer {
             @include flex_column();
             justify-content: space-between;
             align-items: flex-end;
-
-
 
             & input.order {
                 width: 100%;
@@ -888,18 +1018,15 @@ footer {
                 }
 
                 &.active {
-
                     opacity: 1;
                 }
 
                 &::placeholder {
-
                     @include text_GothamBold(18px);
 
                     color: #2c4058;
                     text-align: left;
                 }
-
             }
 
             & .submitForm {
@@ -907,10 +1034,7 @@ footer {
                 width: 140px;
                 height: 50px;
                 border: solid 1px #2c4058;
-
             }
         }
     }
-
-
 }

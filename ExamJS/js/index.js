@@ -1,11 +1,7 @@
 $(document).ready(function () {
     $('.slider').slick({
-
         arrows: false,
-
-
         adaptiveHeight: true,
-
         dots: true,
         vertical: true,
         verticalSwiping: true,
@@ -19,13 +15,23 @@ $(document).ready(function () {
         }, 500);
         e.preventDefault();
     });
+    $('.navigation').click(function (e) {
+        var jump = $(this).attr('href');
+        var new_position = $(jump).offset();
+        $('html, body').stop().animate({
+            scrollTop: new_position.top
+        }, 500);
+        e.preventDefault();
+    });
+
+
     $('.sliderTreeple').slick({
 
-        // centerMode: true,
-        // centerPadding: '30px',
+
         slidesToShow: 3,
-        // // autoplay: true,
-        // variableWidth: true,
+
+        autoplay: true,
+        autoplaySpeed: 4000,
         arrows: true,
         dots: true,
         slidesToScroll: 1,
@@ -33,18 +39,23 @@ $(document).ready(function () {
 
                 breakpoint: 1440,
                 settings: {
-                    centerMode: true,
+                    centerMode: false,
+                    // fade: true,
                     centerPadding: '10px',
-                    slidesToShow: 3,
-                    dots: true
+                    slidesToScroll: 1,
+                    slidesToShow: 1,
+                    dots: true,
+                    arrows: false,
                 }
             }, {
-                breakpoint: 768,
+                breakpoint: 1230,
                 settings: {
                     arrows: false,
                     centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 3
+                    // centerPadding: '140px',
+                    slidesToScroll: 1,
+                    slidesToShow: 1,
+                    dots: false
                 }
             },
             {
