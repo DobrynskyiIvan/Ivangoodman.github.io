@@ -806,7 +806,6 @@ header .roolDown:before {
 }
 
 .googleMap {
-  border: 1px solid red;
   width: 1599px;
   height: 700px;
   margin: 0 auto;
@@ -815,4 +814,284 @@ header .roolDown:before {
 
 #map {
   height: 100%;
+}
+
+footer {
+  position: relative;
+  height: 524px;
+}
+
+footer .background {
+  position: absolute;
+  width: 100%;
+  max-height: 524px;
+  z-index: -1;
+}
+
+.additionalInfo {
+  width: 770px;
+  margin: 0 auto;
+  padding-top: 200px;
+}
+
+.additionalInfo .repeatHeader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 35px;
+}
+
+.additionalInfo .copiright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.additionalInfo .copiright p .fa-heart {
+  color: #ffffff;
+  font-size: 14px;
+  padding: 0px;
+  border: none;
+}
+
+.additionalInfo .copiright :first-child {
+  border-right: 1px solid white;
+  padding-right: 20px;
+}
+
+.additionalInfo .copiright :last-child {
+  padding-left: 20px;
+}
+
+.additionalInfo .copiright p {
+  font-family: 'Gotham Bold', sans-serif;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.57;
+  letter-spacing: 1px;
+  text-align: left;
+  color: #ffffff;
+}
+
+.contactContainer {
+  width: 870px;
+  height: 450px;
+  padding: 0px 110px 70px 110px;
+  z-index: 3;
+  position: absolute;
+  right: 50%;
+  top: -63%;
+  -webkit-transform: translateX(50%);
+      -ms-transform: translateX(50%);
+          transform: translateX(50%);
+}
+
+.contactContainer .ourWorks.contactHeading {
+  letter-spacing: 1.5px;
+  padding-top: 120px;
+  margin-top: -10px;
+  padding-bottom: 13px;
+}
+
+.contactContainer .formBG {
+  top: 0;
+  right: 0;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  z-index: -1;
+}
+
+.context {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 35px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.context .contactInfo {
+  height: 190px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.context .contactInfo .details {
+  text-align: left;
+  color: #2c4058;
+  font-size: 18px;
+}
+
+.context .contactInfo .details .fas,
+.context .contactInfo .details .far {
+  color: #7e5aff;
+  font-size: 18px;
+}
+
+.context .clientDetails {
+  width: 310px;
+  height: 190px;
+}
+
+.context .clientDetails .contactForm {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.context .clientDetails .contactForm input.order {
+  width: 100%;
+  text-decoration: none;
+  border: none;
+  border-bottom: 1px solid #2c4058;
+  padding-top: 5px;
+  padding-bottom: 15px;
+  opacity: 0.2;
+  cursor: pointer;
+}
+
+.context .clientDetails .contactForm input.order:active {
+  opacity: 1;
+}
+
+.context .clientDetails .contactForm input.order:focus {
+  padding: 15px;
+  opacity: 1;
+}
+
+.context .clientDetails .contactForm input.order.active {
+  opacity: 1;
+}
+
+.context .clientDetails .contactForm input.order::-webkit-input-placeholder {
+  font-family: 'Gotham Bold', sans-serif;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  font-size: 18px;
+  color: #2c4058;
+  text-align: left;
+}
+
+.context .clientDetails .contactForm input.order:-ms-input-placeholder {
+  font-family: 'Gotham Bold', sans-serif;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  font-size: 18px;
+  color: #2c4058;
+  text-align: left;
+}
+
+.context .clientDetails .contactForm input.order::-ms-input-placeholder {
+  font-family: 'Gotham Bold', sans-serif;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  font-size: 18px;
+  color: #2c4058;
+  text-align: left;
+}
+
+.context .clientDetails .contactForm input.order::placeholder {
+  font-family: 'Gotham Bold', sans-serif;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  font-size: 18px;
+  color: #2c4058;
+  text-align: left;
+}
+
+.context .clientDetails .contactForm .submitForm {
+  font-family: 'Gotham Bold', sans-serif;
+  font-stretch: normal;
+  font-style: normal;
+  text-align: center;
+  color: #ffffff;
+  font-size: 14px;
+  color: black;
+  text-transform: uppercase;
+  width: 190px;
+  height: 50px;
+  border: none;
+  background: none;
+  border: 1px solid #000000;
+  letter-spacing: 0.5px;
+  width: 140px;
+  height: 50px;
+  border: solid 1px #2c4058;
+}
+
+.context .clientDetails .contactForm .submitForm:hover {
+  border: none;
+  background: none;
+  background-color: #61ebb1;
+  -webkit-transition: 0.1s;
+  -o-transition: 0.1s;
+  transition: 0.1s;
+}
+
+.context .clientDetails .contactForm .submitForm:active {
+  -webkit-transform: scale(0.95);
+      -ms-transform: scale(0.95);
+          transform: scale(0.95);
 }
