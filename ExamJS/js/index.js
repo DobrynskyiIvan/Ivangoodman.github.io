@@ -1,3 +1,11 @@
+function myFunction() {
+    var x = document.getElementById("navigation");
+    if (x.className === "nav_context") {
+        x.className += " responsive";
+    } else {
+        x.className = "nav_context";
+    }
+}
 $(document).ready(function () {
     $('.slider').slick({
         arrows: false,
@@ -15,8 +23,15 @@ $(document).ready(function () {
         }, 500);
         e.preventDefault();
     });
+
+    /// responsive navigation
     $('.navigation').click(function (e) {
         var jump = $(this).attr('href');
+
+        // close tab after click
+        if ($(e.target).hasClass("link")) {
+            $(".nav_context").removeClass("responsive");
+        }
         var new_position = $(jump).offset();
         $('html, body').stop().animate({
             scrollTop: new_position.top
@@ -25,53 +40,44 @@ $(document).ready(function () {
     });
 
 
+
+    // change active input in form
+
+    $("input").click(function () {
+        $("input").removeClass("active");
+        $(this).toggleClass("active");
+
+    });
+
+
     $('.sliderTreeple').slick({
-
-
         slidesToShow: 3,
-
-        autoplay: true,
-        autoplaySpeed: 4000,
+        centerMode: true,
+        centerPadding: '-30px',
+        autoplaySpeed: 2000,
         arrows: true,
         dots: true,
         slidesToScroll: 1,
         responsive: [{
-
                 breakpoint: 1440,
                 settings: {
-                    centerMode: false,
-                    // fade: true,
-                    centerPadding: '10px',
-                    slidesToScroll: 1,
-                    slidesToShow: 1,
-                    dots: true,
-                    arrows: false,
-                }
-            }, {
-                breakpoint: 1230,
-                settings: {
-                    arrows: false,
                     centerMode: true,
-                    // centerPadding: '140px',
-                    slidesToScroll: 1,
-                    slidesToShow: 1,
-                    dots: false
+                    slidesToShow: 2
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 990,
                 settings: {
-                    arrows: false,
                     centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1
+                    slidesToShow: 1,
+                    fade: true
                 }
             }
         ]
+
     });
-    $("input").click(function () {
-        $("input").removeClass("active");
-        $(this).toggleClass("active");
+    $('.sliderTreeple').on('swipe', function (event, slick, direction) {
+        console.log(direction);
 
     });
 
@@ -79,6 +85,7 @@ $(document).ready(function () {
 
 
 
+/// ======== Google map init
 function initMap() {
     var cairo = {
         lat: 48.9141283,
