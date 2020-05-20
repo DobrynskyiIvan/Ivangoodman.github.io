@@ -633,13 +633,18 @@ header {
             max-width: 900px
         }
 
+        @media only screen and (max-width: 990px) {
 
+            max-width: 370px;
+        }
 
         .sliderTreeple {
             margin: 0 auto;
             max-width: $maxWidth;
 
             height: 514px;
+
+
         }
 
 
@@ -657,12 +662,7 @@ header {
 
         }
 
-        // & .newsMainBG {
-        //     position: absolute;
-        //     width: 100%;
-        //     // max-height: 1035px;
-        //     height: auto;
-        // }
+
     }
 }
 
@@ -691,6 +691,16 @@ header {
         left: -35px;
     }
 
+    @media only screen and (max-width: 990px) {
+
+        left: -95px;
+    }
+
+    @media only screen and (max-width: 600px) {
+
+        left: -35px;
+    }
+
     &:before {
         content: "\f104";
     }
@@ -700,6 +710,16 @@ header {
     right: -95px;
 
     @media only screen and (max-width: 1100px) {
+        right: -35px;
+    }
+
+    @media only screen and (max-width: 990px) {
+
+        right: -95px;
+    }
+
+    @media only screen and (max-width: 600px) {
+
         right: -35px;
     }
 
