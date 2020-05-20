@@ -15,31 +15,20 @@ $(document).ready(function () {
         verticalSwiping: true,
 
     });
-    $('.roolDown').click(function (e) {
-        var jump = $(this).attr('href');
-        var new_position = $(jump).offset();
-        $('html, body').stop().animate({
-            scrollTop: new_position.top
-        }, 500);
-        e.preventDefault();
-    });
 
-    /// responsive navigation
-    $('.navigation').click(function (e) {
+    // Add smooth scrolling to   links and hide adaptive navigation
+    $('.link').click(function (e) {
         var jump = $(this).attr('href');
-
-        // close tab after click
         if ($(e.target).hasClass("link")) {
             $(".nav_context").removeClass("responsive");
         }
+        e.preventDefault();
         var new_position = $(jump).offset();
         $('html, body').stop().animate({
             scrollTop: new_position.top
-        }, 500);
-        e.preventDefault();
+        }, 1300);
+        return false;
     });
-
-
 
     // change active input in form
 
