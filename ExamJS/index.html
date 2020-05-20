@@ -30,13 +30,15 @@
 
     <header>
         <nav>
-            <div class="nav_context">
+            <div id="navigation" class="nav_context">
                 <div class="logo"><img class="logo" src="/ExamJS/img/Logo.png" alt="" srcset=""></div>
                 <ul class="navigation">
-                    <li><a href="#ourWorks">About Us</a></li>
-                    <li><a href="#projects">projects</a></li>
-                    <li><a href="#newsSection">news</a></li>
-                    <li><a href="#contact">contact</a></li>
+                    <li><a class="link" href="#ourWorks">About Us</a></li>
+                    <li><a class="link" href="#projects">projects</a></li>
+                    <li><a class="link" href="#newsSection">news</a></li>
+                    <li><a class="link" href="#contact">contact</a></li>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i> </a>
                 </ul>
                 <div class="social">
                     <a href=""><i class="fab fa-facebook-f"></i></a>
@@ -55,23 +57,48 @@
 
                     <p class="autor">We make the world's beautiful every day</p>
                 </div>
-
-
                 <img src="/ExamJS/img/slide1.png" alt="">
             </div>
-            <div class="slider-item"><img src="/ExamJS/img/slide1.png" alt=""></div>
-            <div class="slider-item"><img src="/ExamJS/img/slide1.png" alt=""></div>
-            <div class="slider-item"><img src="/ExamJS/img/slide1.png" alt=""></div>
-            <div class="slider-item"><img src="/ExamJS/img/slide1.png" alt=""></div>
+
+            <div class="slider-item">
+                <div class="text">
+                    <p class="title">Front-End</p>
+
+                    <p class="autor">We make the world's beautiful every day</p>
+                </div><img src="/ExamJS/img/slide1.png" alt="">
+            </div>
+            <div class="slider-item">
+                <div class="text">
+                    <p class="title">Core Development</p>
+
+                    <p class="autor">We make the world's beautiful every day</p>
+                </div><img src="/ExamJS/img/slide1.png" alt="">
+            </div>
+            <div class="slider-item">
+                <div class="text">
+                    <p class="title">DataBase Structure</p>
+
+                    <p class="autor">We make the world's beautiful every day</p>
+                </div><img src="/ExamJS/img/slide1.png" alt="">
+            </div>
+            <div class="slider-item">
+                <div class="text">
+                    <p class="title">Simple & mordern</p>
+
+                    <p class="autor">We make the world's beautiful every day</p>
+                </div><img src="/ExamJS/img/slide1.png" alt="">
+            </div>
 
         </div>
+
+
         <a class="roolDown" href="#ourWorks"></a>
     </header>
     <section id="ourWorks">
         <h2 class="ourWorks">What we Do</h2>
         <div class="container">
-            <div class="context home">
-                <div class="picture"><img src="/ExamJS/img/Section1_image1.png" alt="">
+            <div class="context trade">
+                <div class="picture"><img class="mainImage" src="/ExamJS/img/Section1_image1.png" alt="">
                     <img class="shadow" src="/ExamJS/img/Section1_image1_shadow.png" alt=""></div>
                 <div class="item">
                     <p class="subtitle">One World
@@ -87,8 +114,8 @@
             </div>
         </div>
         <div class="container">
-            <div class="context mountains">
-                <div class="picture"><img src="/ExamJS/img/Section1_image2.png" alt="">
+            <div class="context commerce">
+                <div class="picture"><img lass="mainImage" src="/ExamJS/img/Section1_image2.png" alt="">
                     <img class="shadow" src="/ExamJS/img/Section1_image2_shadow.png" alt=""></div>
                 <div class="item">
                     <p class="subtitle">International</p>
@@ -105,31 +132,36 @@
 
     </section>
     <section id="newsSection" class="newsSection">
-        <img class="newsMainBG" src="/ExamJS/img/Section2_Bg_main.png" alt="">
-        <h2 class="ourWorks news">latest news</h2>
-        <div id="news" class="sliderTreeple">
 
-            <div class="sliderTreeple-item">
-                <div class="picture"><img src="/ExamJS/img/slider2_image1_main.png" alt="slider2 image1 main"></div>
-                <div class="text">
-                    <p class="title">See The Unmatched Beauty Of The Great.</p>
-                    <p class="subtitle">Free directories: directories are perfect for customers that are... searching
-                        for</p>
-                    <div class="authorInfo">
-                        <img src="/ExamJS/img/slider2_image1_author.png" alt="" class="authorPhoto">
 
-                        <div class="publishInfo">
-                            <p class="author">Isaac Dunn</p>
-                            <p class="publishDate">09 Feb 2017</p>
-                        </div>
-                    </div>
+        <div class="sliderContainer">
+            <!-- <img class="newsMainBG" src="/ExamJS/img/Section2_Bg_main.png" alt=""> -->
+            <h2 class="news">latest news</h2>
+            <div id="news" class="sliderTreeple">
 
-                </div>
-            </div>
-
-            <div class="sliderTreeple-item">
                 <div class="sliderTreeple-item">
-                    <div class="picture"><img src="/ExamJS/img/slider2_image2_main.png" alt="slider2 image1 main"></div>
+                    <div class="picture"><img src="/ExamJS/img/slider2_image1_main.png" alt="slider2 image1 main"></div>
+                    <div class="text">
+                        <p class="title">See The Unmatched Beauty Of The Great.</p>
+                        <p class="subtitle">Free directories: directories are perfect for customers that are...
+                            searching
+                            for</p>
+                        <div class="authorInfo">
+                            <img src="/ExamJS/img/slider2_image1_author.png" alt="" class="authorPhoto">
+
+                            <div class="publishInfo">
+                                <p class="author">Isaac Dunn</p>
+                                <p class="publishDate">09 Feb 2017</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="sliderTreeple-item">
+                    <div class="picture"><img src="/ExamJS/img/slider2_image2_main.png" alt="slider2 image1 main">
+                    </div>
                     <div class="text">
                         <p class="title">Effective Advertising Pointers.</p>
                         <p class="subtitle">Having a home based business is a wonderful asset to your life...</p>
@@ -144,10 +176,10 @@
 
                     </div>
                 </div>
-            </div>
-            <div class="sliderTreeple-item">
+
                 <div class="sliderTreeple-item">
-                    <div class="picture"><img src="/ExamJS/img/slider2_image3_main.png" alt="slider2 image1 main"></div>
+                    <div class="picture"><img src="/ExamJS/img/slider2_image3_main.png" alt="slider2 image1 main">
+                    </div>
                     <div class="text">
                         <p class="title">Hypnotize Yourself Into The Ghost. </p>
                         <p class="subtitle">There are many things that are important to catalog design....</p>
@@ -161,10 +193,10 @@
 
                     </div>
                 </div>
-            </div>
-            <div class="sliderTreeple-item">
+
                 <div class="sliderTreeple-item">
-                    <div class="picture"><img src="/ExamJS/img/slider2_image3_main.png" alt="slider2 image1 main"></div>
+                    <div class="picture"><img src="/ExamJS/img/slider2_image3_main.png" alt="slider2 image1 main">
+                    </div>
                     <div class="text">
                         <p class="title">Hypnotize Yourself Into The Ghost. </p>
                         <p class="subtitle">There are many things that are important to catalog design....</p>
@@ -179,10 +211,10 @@
 
                     </div>
                 </div>
-            </div>
-            <div class="sliderTreeple-item">
+
                 <div class="sliderTreeple-item">
-                    <div class="picture"><img src="/ExamJS/img/slider2_image3_main.png" alt="slider2 image1 main"></div>
+                    <div class="picture"><img src="/ExamJS/img/slider2_image3_main.png" alt="slider2 image1 main">
+                    </div>
                     <div class="text">
                         <p class="title">Hypnotize Yourself Into The Ghost. </p>
                         <p class="subtitle">There are many things that are important to catalog design....</p>
@@ -199,11 +231,15 @@
                 </div>
             </div>
         </div>
+
+
     </section>
+
     <section id="projects" class="galery">
-        <h2 class="ourWorks galeryHeader"> gallery</h2>
+        <h2 class="galeryHeader"> gallery</h2>
         <div class="imageContainer">
-            <div><img class="mainImage" src="/ExamJS/img/Section3_imageMain.png" alt=""></div>
+            <div><img class="mainImage" src="/ExamJS/img/Section3_imageMain.png" alt="">
+                <img class="round360" src="/ExamJS/img/360.png" alt=""></div>
 
             <div class="groupImages">
                 <img src="/ExamJS/img/Section3_image1.png" alt="" class="gruop">
@@ -218,9 +254,9 @@
         <div id="map"></div>
     </section>
     <footer>
-        <img src="/ExamJS/img/FooterBg.png" alt="" class="background">
+        <img class="backgroundImage" src="/ExamJS/img/FooterBg.png" alt="">
         <div id="contact" class="contactContainer">
-            <h2 class="ourWorks contactHeading  ">Get in touch</h2>
+            <h2 class="contactHeading">Get in touch</h2>
             <div class="context">
                 <div class="contactInfo">
                     <p class="details"><i class="fas fa-map-marker-alt"></i> 91 Nolan Extensions Suite 670 </p>
@@ -241,7 +277,7 @@
         <div class="additionalInfo">
             <div class="repeatHeader">
                 <div class="logo"><img class="logo" src="/ExamJS/img/Logo.png" alt="" srcset=""></div>
-                <div class="social">
+                <div class="social secondPart">
                     <a href=""><i class="fab fa-facebook-f"></i></a>
                     <a href=""><i class="fab fa-twitter"></i></a>
                     <a href=""><i class="fab fa-instagram"></i></a>
