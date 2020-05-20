@@ -120,7 +120,7 @@ $maxWidthContainer: 1600px;
     box-sizing: border-box;
     padding: 0px;
     margin: 0px;
-    transition: all 0.2s ease;
+    // transition: all 0.2s ease;
 }
 
 //=================       Navigation style
@@ -946,17 +946,17 @@ header {
 footer {
     position: relative;
 
-    @media only screen and (max-width: 1160px) {
-        transition: all 0.5s ease;
-        padding-top: 35px;
-        padding-bottom: 35px;
-    }
+    // @media only screen and (max-width: 1160px) {
+    //     transition: all 0.5s ease;
+    //     padding-top: 35px;
+    //     padding-bottom: 35px;
+    // }
 
-    @media only screen and (max-width: 1160px) {
-        transition: all 0.5s ease;
-        padding-top: 35px;
-        padding-bottom: 35px;
-    }
+    // @media only screen and (max-width: 1160px) {
+    //     transition: all 0.5s ease;
+    //     padding-top: 35px;
+    //     padding-bottom: 35px;
+    // }
 
 
     & .backgroundImage {
@@ -1116,6 +1116,27 @@ footer {
     max-width: 770px;
     margin: 0 auto;
     padding-top: 200px;
+
+    @media only screen and (max-width: 1160px) {
+        padding-bottom: 35px;
+
+    }
+
+    @media only screen and (max-width: 844px) {
+        padding-top: 160px;
+    }
+
+    @media only screen and (max-width: 788px) {
+        padding-top: 140px;
+    }
+
+    @media only screen and (max-width: 710px) {
+        padding-top: 200px;
+    }
+
+    @media only screen and (max-width: 430px) {
+        padding-top: 250px;
+    }
 
 
     & .repeatHeader {

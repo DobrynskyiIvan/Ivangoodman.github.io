@@ -26,9 +26,6 @@
           box-sizing: border-box;
   padding: 0px;
   margin: 0px;
-  -webkit-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease;
 }
 
 nav {
@@ -1167,26 +1164,6 @@ footer {
   position: relative;
 }
 
-@media only screen and (max-width: 1160px) {
-  footer {
-    -webkit-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    padding-top: 35px;
-    padding-bottom: 35px;
-  }
-}
-
-@media only screen and (max-width: 1160px) {
-  footer {
-    -webkit-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    transition: all 0.5s ease;
-    padding-top: 35px;
-    padding-bottom: 35px;
-  }
-}
-
 footer .backgroundImage {
   position: absolute;
   width: 100%;
@@ -1478,6 +1455,36 @@ footer .backgroundImage {
   max-width: 770px;
   margin: 0 auto;
   padding-top: 200px;
+}
+
+@media only screen and (max-width: 1160px) {
+  .additionalInfo {
+    padding-bottom: 35px;
+  }
+}
+
+@media only screen and (max-width: 844px) {
+  .additionalInfo {
+    padding-top: 160px;
+  }
+}
+
+@media only screen and (max-width: 788px) {
+  .additionalInfo {
+    padding-top: 140px;
+  }
+}
+
+@media only screen and (max-width: 710px) {
+  .additionalInfo {
+    padding-top: 200px;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .additionalInfo {
+    padding-top: 250px;
+  }
 }
 
 .additionalInfo .repeatHeader {
