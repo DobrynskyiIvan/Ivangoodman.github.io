@@ -6,6 +6,7 @@ function myFunction() {
         x.className = "nav_context";
     }
 }
+
 $(document).ready(function () {
     $('.slider').slick({
         arrows: false,

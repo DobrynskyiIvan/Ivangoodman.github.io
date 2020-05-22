@@ -89,6 +89,22 @@ form .submit:hover {
   max-width: 1900px;
 }
 
+.content .favorite .icon-heart {
+  cursor: pointer;
+}
+
+.content .favorite .icon-heart:hover:before {
+  content: "\e9da";
+  color: white;
+  font-size: 45px;
+}
+
+.content .favorite .icon-heart:before {
+  content: "\e9da";
+  color: red;
+  font-size: 45px;
+}
+
 .content .logo {
   max-width: 100px;
 }
@@ -119,6 +135,7 @@ form .submit:hover {
 }
 
 .content .display .item {
+  position: relative;
   border-radius: 10px;
   padding: 5px 10px;
   margin: 5px;
@@ -151,6 +168,45 @@ form .submit:hover {
 
 .content .display .item:hover {
   background-color: #ff0808;
+}
+
+.item .icon-heart.active:hover:before {
+  color: #ec0101;
+}
+
+.item .icon-heart.active:before {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  content: "\e9da";
+  color: #ec0101;
+  font-size: 35px;
+  z-index: 4;
+}
+
+.item .icon-heart:hover:before {
+  color: #00f7ff;
+}
+
+.item .icon-heart:active:before {
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  color: #00ff73;
+}
+
+.item .icon-heart:before {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  content: "\e9da";
+  color: rosybrown;
+  font-size: 35px;
+  z-index: 4;
+}
+
+.item .icon-heart:before.active {
+  color: white;
 }
 
 .filmDetails {

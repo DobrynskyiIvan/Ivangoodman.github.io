@@ -75,6 +75,33 @@ form {
     margin: 0 auto;
     max-width: 1900px;
 
+    & .favorite {
+
+
+        .icon-heart {
+            cursor: pointer;
+
+            &:hover {
+
+                &:before {
+                    content: "\e9da";
+                    color: white;
+                    font-size: 45px;
+
+
+                }
+            }
+
+            &:before {
+                content: "\e9da";
+                color: red;
+                font-size: 45px;
+
+
+            }
+        }
+    }
+
     & .logo {
         max-width: 100px;
     }
@@ -95,6 +122,7 @@ form {
 
 
         & .item {
+            position: relative;
             border-radius: 10px;
             padding: 5px 10px;
             margin: 5px;
@@ -110,6 +138,8 @@ form {
             cursor: pointer;
             z-index: 3;
 
+
+
             & img {
                 max-width: 300px;
                 max-height: 470px;
@@ -122,6 +152,67 @@ form {
 
         }
     }
+}
+
+.item .icon-heart {
+    &.active {
+
+        &:hover {
+
+            &:before {
+                color: rgb(236, 1, 1);
+
+            }
+        }
+
+        &:before {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            content: "\e9da";
+            color: rgb(236, 1, 1);
+            font-size: 35px;
+
+            z-index: 4;
+
+
+
+        }
+    }
+
+    &:hover {
+
+        &:before {
+            color: rgb(0, 247, 255);
+
+        }
+    }
+
+    &:active {
+
+        &:before {
+            transform: scale(1.1);
+            color: rgb(0, 255, 115);
+
+        }
+    }
+
+    &:before {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        content: "\e9da";
+        color: rosybrown;
+        font-size: 35px;
+
+        z-index: 4;
+
+        &.active {
+            color: white;
+        }
+    }
+
+
 }
 
 .filmDetails {
