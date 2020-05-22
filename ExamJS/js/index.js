@@ -45,6 +45,7 @@ $(document).ready(function () {
         centerMode: true,
         centerPadding: '-30px',
         autoplaySpeed: 2000,
+        autoplay: true,
         arrows: true,
         dots: true,
         slidesToScroll: 1,
@@ -250,6 +251,7 @@ function initMap() {
     var marker = new google.maps.Marker({
         map: map,
         position: cairo,
-        icon: '/ExamJS/img/Pin_png.png'
+        icon: '/ExamJS/img/Pin_png.png',
+        animation: google.maps.Animation.BOUNCE,
     });
 }

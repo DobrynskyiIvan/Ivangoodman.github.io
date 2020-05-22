@@ -10,6 +10,8 @@
     <link rel="stylesheet" href=" css/style.css">
     <link rel="stylesheet" href=" css/layout.css">
     <link rel="stylesheet" href=" css/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -29,7 +31,7 @@
 <body>
 
     <header>
-        <nav>
+        <nav class="show-on-scroll">
             <div id="navigation" class="nav_context">
                 <div class="logo"><img class="logo" src="/ExamJS/img/Logo.png" alt="" srcset=""></div>
                 <ul class="navigation">
@@ -95,7 +97,7 @@
         <a class="roolDown" href="#ourWorks"></a>
     </header>
     <section id="ourWorks">
-        <h2 class="ourWorks">What we Do</h2>
+        <h2 class="ourWorks heading  show-on-scroll ">What we Do</h2>
         <div class="container">
             <div class="context trade">
                 <div class="picture"><img class="mainImage  inline-photo show-on-scroll"
@@ -109,7 +111,8 @@
                         Increasing prosperity in our lives can be accomplished by having the right frame of mind. The
                         truth is, our thoughts are very powerful.
                     </p>
-                    <button type="submit">more details</button>
+                    <button data-aos="fade-left" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000"
+                        type="submit">more details</button>
                     <p class="adress"><i class="fas fa-map-marker-alt"></i> New York City, United States - 1776 feet</p>
                 </div>
             </div>
@@ -126,7 +129,7 @@
                         Successful businesses have many things in common, today we’ll look at the big ‘R’ of recognition
                         and how a digital advertising network may help.
                     </p>
-                    <button type="submit">more details</button>
+                    <button data-aos="fade-right" type="submit">more details</button>
                     <p class="adress"> <i class="fas fa-map-marker-alt"></i>Hong Kong - 1588 Feet</p>
                 </div>
             </div>
@@ -138,7 +141,7 @@
 
         <div class="sliderContainer">
             <!-- <img class="newsMainBG" src="/ExamJS/img/Section2_Bg_main.png" alt=""> -->
-            <h2 class="news">latest news</h2>
+            <h2 class="news animate__animated animate__shakeY">latest news</h2>
             <div id="news" class="sliderTreeple">
 
                 <div class="sliderTreeple-item">
@@ -238,7 +241,7 @@
     </section>
 
     <section id="projects" class="galery">
-        <h2 class="galeryHeader"> gallery</h2>
+        <h2 class="galeryHeader " data-aos="fade-up" data-aos-duration="3000"> gallery</h2>
         <div class="imageContainer">
             <div><img class="mainImage  inline-photo show-on-scroll" src="/ExamJS/img/Section3_imageMain.png" alt="">
                 <img class="round360   " src="/ExamJS/img/360.png" alt=""></div>
@@ -250,7 +253,7 @@
                 <img src="/ExamJS/img/Section3_image4.png" alt="" class="gruop">
             </div>
         </div>
-        <button class="moreDetails">See more</button>
+        <button data-aos="fade-up" data-aos-duration="3000" class="moreDetails">See more</button>
     </section>
     <section class="googleMap">
         <div id="map"></div>
@@ -279,7 +282,7 @@
         <div class="additionalInfo">
             <div class="repeatHeader">
                 <div class="logo"><img class="logo" src="/ExamJS/img/Logo.png" alt="" srcset=""></div>
-                <div class="social secondPart">
+                <div class="social secondPart ">
                     <a href=""><i class="fab fa-facebook-f"></i></a>
                     <a href=""><i class="fab fa-twitter"></i></a>
                     <a href=""><i class="fab fa-instagram"></i></a>
@@ -295,7 +298,7 @@
         </div>
 
     </footer>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="js/show-on-scroll.js"></script>
 </body>
 

@@ -91,7 +91,6 @@ $maxWidthContainer: 1600px;
 }
 
 @mixin h2_text($color) {
-
     @include text_GothamBold(44px);
     letter-spacing: 2.8px;
     padding-top: 32px;
@@ -111,8 +110,6 @@ $maxWidthContainer: 1600px;
         left: 50%;
         transform: translateX(-50%);
         border-top: 1px solid $color;
-
-
     }
 }
 
@@ -490,7 +487,6 @@ header {
         justify-content: space-between;
 
         @media only screen and (max-width: 922px) {
-
             justify-content: center;
             padding-top: 27px;
         }
@@ -606,7 +602,6 @@ header {
 
 //<<<<<<<<<==== section with triplee Slider
 #newsSection {
-
     // position: relative;
 
     padding-top: 100px;
@@ -618,7 +613,6 @@ header {
     height: auto;
 
     @media only screen and (max-width: 1100px) {
-
         padding: 40px 40px 50px 40px;
     }
 
@@ -627,14 +621,11 @@ header {
         margin: 0 auto;
         max-width: $maxWidthContainer;
 
-
         @media only screen and (max-width: 1440px) {
-
-            max-width: 900px
+            max-width: 900px;
         }
 
         @media only screen and (max-width: 990px) {
-
             max-width: 370px;
         }
 
@@ -643,10 +634,7 @@ header {
             max-width: $maxWidth;
 
             height: 514px;
-
-
         }
-
 
         .news {
             @include h2_text(white);
@@ -656,16 +644,11 @@ header {
             letter-spacing: 1.5px;
 
             @media only screen and (max-width: 1100px) {
-
                 padding-bottom: 20px;
             }
-
         }
-
-
     }
 }
-
 
 .slick-prev,
 .slick-next {
@@ -692,12 +675,10 @@ header {
     }
 
     @media only screen and (max-width: 990px) {
-
         left: -95px;
     }
 
     @media only screen and (max-width: 600px) {
-
         left: -35px;
     }
 
@@ -714,12 +695,10 @@ header {
     }
 
     @media only screen and (max-width: 990px) {
-
         right: -95px;
     }
 
     @media only screen and (max-width: 600px) {
-
         right: -35px;
     }
 
@@ -727,7 +706,6 @@ header {
         content: "\f105";
     }
 }
-
 
 .sliderTreeple .slick-list {
     overflow: hidden;
@@ -753,7 +731,6 @@ header {
     list-style: none;
 
     @media only screen and (max-width: 1100px) {
-
         bottom: -25px;
     }
 }
@@ -782,7 +759,6 @@ header {
 }
 
 .sliderTreeple-item .slick-slide .slick-active {
-
     background: none;
 }
 
@@ -791,7 +767,6 @@ header {
     max-width: 370px;
     // height: 514px;
     height: 100%;
-
 
     & .picture {
         img {
@@ -903,7 +878,6 @@ header {
         @media only screen and (max-width: 1160px) {
             flex-direction: column;
             max-width: 580px;
-
         }
 
         div {
@@ -913,7 +887,6 @@ header {
             position: relative;
 
             .round360 {
-
                 position: absolute;
                 right: 50%;
                 top: 50%;
@@ -943,10 +916,7 @@ header {
                 & img {
                     padding-top: 5px;
                 }
-
             }
-
-
         }
     }
 }
@@ -977,7 +947,6 @@ footer {
     //     padding-top: 35px;
     //     padding-bottom: 35px;
     // }
-
 
     & .backgroundImage {
         position: absolute;
@@ -1027,7 +996,6 @@ footer {
             width: 100%;
             height: 100%;
         }
-
     }
 }
 
@@ -1054,8 +1022,6 @@ footer {
         flex-direction: column;
         justify-content: space-between;
 
-
-
         & .details {
             text-align: left;
             color: #2c4058;
@@ -1077,7 +1043,6 @@ footer {
             padding-top: 20px;
             align-self: flex-end;
             width: auto;
-
         }
 
         & .contactForm {
@@ -1139,7 +1104,6 @@ footer {
 
     @media only screen and (max-width: 1160px) {
         padding-bottom: 35px;
-
     }
 
     @media only screen and (max-width: 844px) {
@@ -1157,7 +1121,6 @@ footer {
     @media only screen and (max-width: 430px) {
         padding-top: 250px;
     }
-
 
     & .repeatHeader {
         @include flex_row();
@@ -1211,53 +1174,35 @@ footer {
 
 ///===
 .inline-photo {
-    // border: 1em solid #fff;
-    // border-bottom: 4em solid #fff;
-    // border-radius: .25em;
-    box-shadow: 1em 1em 2em .25em rgba(0, 0, 0, .2);
-    // margin: 2em auto;
+    box-shadow: 1em 1em 2em 0.25em rgba(0, 0, 0, 0.2);
+
     opacity: 0;
     transform: translateY(4em) rotateZ(-5deg);
-    transition: transform 4s .25s cubic-bezier(0, 1, .3, 1),
-        opacity .3s .25s ease-out;
+    transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1), opacity 0.3s 0.25s ease-out;
     // max-width: 600px;
-    // width: 90%;
+    width: 90%;
     will-change: transform, opacity;
+    &.is-visible {
+        opacity: 1;
+        transform: rotateZ(0deg);
+        width: 100%;
+    }
 }
 
-.inline-photo.is-visible {
-    opacity: 1;
-    transform: rotateZ(0deg);
-}
-
-// nav {
-//     opacity: 0;
-//     transition: opacity .5s .25s ease-out;
-// }
-
-// nav.is-visible {
-//     opacity: 1;
-// }
-
-.main-photo {
-    transform: scale(.8);
+nav {
+    opacity: 0;
+    // transition: opacity 5s 0.25s ease-out;
+    &.is-visible {
+        transition: opacity 3s 0.5s ease-out;
+        opacity: 1;
+    }
 }
 
 .heading {
     transform: translate(-50%, calc(-50% + 1em));
-}
-
-.is-visible .main-photo {
-    transform: none;
-}
-
-.is-visible .heading {
-    transform: translate(-50%, -50%);
-}
-
-.main-photo,
-.heading {
-    transition: transform 4s .25s cubic-bezier(0, 1, .3, 1),
-        filter 10s 2s ease-out;
+    transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1), filter 3s 2s ease-out;
     will-change: transform;
+    &.is-visible {
+        transform: translate(0%, -50%);
+    }
 }

@@ -2,7 +2,7 @@
 var scroll = window.requestAnimationFrame ||
     // IE Fallback
     function (callback) {
-        window.setTimeout(callback, 1000 / 60)
+        window.setTimeout(callback, 1000 / 60);
     };
 var elementsToShow = document.querySelectorAll('.show-on-scroll');
 
@@ -38,3 +38,10 @@ function isElementInViewport(el) {
             rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
     );
 }
+
+// You can also use <link> for styles
+
+AOS.init({
+
+    duration: 1200
+});
