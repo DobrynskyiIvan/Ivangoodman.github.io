@@ -1594,3 +1594,59 @@ footer .backgroundImage {
   text-align: left;
   color: #ffffff;
 }
+
+.inline-photo {
+  -webkit-box-shadow: 1em 1em 2em 0.25em rgba(0, 0, 0, 0.2);
+          box-shadow: 1em 1em 2em 0.25em rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  -webkit-transform: translateY(4em) rotateZ(-5deg);
+      -ms-transform: translateY(4em) rotate(-5deg);
+          transform: translateY(4em) rotateZ(-5deg);
+  -webkit-transition: opacity 0.3s 0.25s ease-out, -webkit-transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1);
+  transition: opacity 0.3s 0.25s ease-out, -webkit-transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1);
+  -o-transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1), opacity 0.3s 0.25s ease-out;
+  transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1), opacity 0.3s 0.25s ease-out;
+  transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1), opacity 0.3s 0.25s ease-out, -webkit-transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.inline-photo.is-visible {
+  opacity: 1;
+  -webkit-transform: rotateZ(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotateZ(0deg);
+}
+
+.main-photo {
+  -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.heading {
+  -webkit-transform: translate(-50%, calc(-50% + 1em));
+      -ms-transform: translate(-50%, calc(-50% + 1em));
+          transform: translate(-50%, calc(-50% + 1em));
+}
+
+.is-visible .main-photo {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+}
+
+.is-visible .heading {
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.main-photo,
+.heading {
+  -webkit-transition: -webkit-transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1), -webkit-filter 10s 2s ease-out;
+  transition: -webkit-transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1), -webkit-filter 10s 2s ease-out;
+  -o-transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1), filter 10s 2s ease-out;
+  transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1), filter 10s 2s ease-out;
+  transition: transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1), filter 10s 2s ease-out, -webkit-transform 4s 0.25s cubic-bezier(0, 1, 0.3, 1), -webkit-filter 10s 2s ease-out;
+  will-change: transform;
+}

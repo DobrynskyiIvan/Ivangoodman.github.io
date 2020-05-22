@@ -1,0 +1,91 @@
+@keyframes turnArround {
+    0% {
+        transform: scaleX(1);
+    }
+
+    50% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+@keyframes changeOpacity {
+    0% {
+
+        opacity: 1;
+    }
+
+    49% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.icon-spades:before {
+    content: "\e917";
+    color: black;
+}
+
+.icon-clubs:before {
+    content: "\e918";
+    color: black;
+}
+
+.icon-diamonds:before {
+    content: "\e919";
+    color: red;
+}
+
+.icon-heart:before {
+    content: "\e9da";
+    color: red;
+}
+
+
+table {
+    margin: 0 auto;
+
+    tr {
+
+        th {
+            border-radius: 3px;
+
+            &.th {
+
+                position: relative;
+                color: white;
+                background-color: #535353;
+
+                &:hover {
+                    animation: turnArround 2s ease;
+
+                    .cover {
+                        animation: changeOpacity 2s ease;
+                        opacity: 0;
+                    }
+                }
+
+                & .cover {
+                    border-radius: 3px;
+                    position: absolute;
+                    width: 100%;
+                    height: auto;
+                    left: 0;
+                    top: 0;
+                }
+
+                padding:45px 20px;
+            }
+        }
+    }
+}

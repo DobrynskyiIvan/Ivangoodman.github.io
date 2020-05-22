@@ -8,7 +8,7 @@ $(document).ready(function () {
         let type = document.getElementById('type').value;
 
         $.getScript('js/api/index.js', function () {
-            setUrl(name, type)
+            setUrl(name, type);
             ajaxCall(setFilmItems, pagesSelect);
         });
 
@@ -17,31 +17,31 @@ $(document).ready(function () {
 
     function setFilmItems(data) {
         if (data.Response == "True") {
-            console.log(data)
-            let list = data.Search
-            console.log(list)
+
+            let list = data.Search;
+
             let obj = list.map(item => {
-                return `<div  class="item"> <img id="${item.imdbID}"  alt="${item.Title}"  src="${item.Poster}"> </div>   `;
+                return `<div  class="item"><span class="icon-heart" value="${item.imdbID}"></span> <img id="${item.imdbID}"  alt="${item.Title}"  src="${item.Poster}"> </div>   `;
             });
             $('.display').append(obj.join(''));
 
         } else {
             $('.display').append(`<p ">Try to change Your search information !!!</p>`);
-            console.log(data.Error)
+            console.log(data.Error);
         }
         $('.filmDetails').empty();
-    };
+    }
 
     //show pages when select 
     $(".countOfPages").change(function (e) {
         e.preventDefault();
         $('.display').empty();
-        console.log(e.target.value)
+        console.log(e.target.value);
         let page = e.target.value;
         $.getScript('js/api/index.js', function () {
-            setPage(page)
+            setPage(page);
             ajaxCall(setFilmItems);
-        })
+        });
     });
 
     function pagesSelect(data) {
@@ -51,7 +51,7 @@ $(document).ready(function () {
             $('.countOfPages').append(` <option value="${i}">${i}</option>`);
         }
     }
-    /// show direct film
+    /// ========== show direct film
     function filmSelect(item) {
         let info = `  
         <div class="short">
@@ -82,12 +82,76 @@ $(document).ready(function () {
         $('.filmDetails').empty();
         $('.filmDetails').append(info);
     }
-    // showing current film information 
+
+
+
+    let session = {
+        'screens': [],
+    };
+
+
+
+    // =========    showing current film information 
     $('.display').click(function (e) {
-        console.log(e.target.id)
-        $.getScript('js/api/index.js', function () {
-            setFilm(e.target.id)
-            ajaxCall(filmSelect);
-        })
+        console.log(e.target.id);
+        e.preventDefault();
+
+        if ($(e.target).hasClass("icon-heart")) {
+            let id = $(e.target).attr("value");
+            if ($(e.target).hasClass("active")) {
+
+                const index = session.screens.indexOf(id);
+                if (index > -1) {
+                    session.screens.splice(index, 1);
+                }
+
+            } else {
+
+                if (!session.screens.includes(id)) {
+                    session.screens.push(id);
+                }
+
+            }
+            $(e.target).toggleClass("active");
+            localStorage.setItem('session', JSON.stringify(session));
+        } else if (!$(e.target).hasClass("icon-heart")) {
+            $.getScript('js/api/index.js', function () {
+                setFilm(e.target.id);
+                ajaxCall(filmSelect);
+            });
+            $('html, body').animate({
+                scrollTop: $('.filmDetails').offset().top
+            }, 2000);
+
+        }
     });
+
+
+
+    ////========= Show Favorite movies===
+
+    function showFavorite(item) {
+        let info = `<div  class="item"><span class="icon-heart active" value="${item.imdbID}"> <img id="${item.imdbID}"  alt="${item.Title}"  src="${item.Poster}"> </div>   `;
+        $('.display').append(info);
+
+    }
+
+    $(".favorite").click(function (e) {
+        $('.filmDetails').empty();
+        $('.display').empty();
+        e.preventDefault();
+        var restoredSession = JSON.parse(localStorage.getItem('session'));
+        console.log(restoredSession);
+
+        $.getScript('js/api/index.js', function () {
+            for (let i of restoredSession.screens) {
+                console.log(i);
+                setFilm(i);
+                ajaxCall(showFavorite);
+            }
+        });
+    });
+
+
+
 });
