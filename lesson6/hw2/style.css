@@ -1,133 +1,133 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
 }
-.container{
-    width: 1600px;
-    height: 1400px;
-    background-color: #ffffff;
-    text-align: center;
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    grid-template-areas: "mainContainer mainContainer firstBlog""secondBlog thirdBlog foutrhBlog";
+}
+
+.foto_main {
+    grid-area: mainContainer;
+}
+
+.firstBlog {
+    grid-area: firstBlog;
+}
+
+.secondBlog {
+    grid-area: secondBlog;
+}
+
+.thirdBlog {
+    grid-area: thirdBlog;
+}
+
+.foutrhBlog {
+    grid-area: foutrhBlog;
+}
+
+.container {
+    margin: 0 auto;
+    background-color: #818181;
 
 }
-.main{
 
-    width: 1120px;
-    height: 1100px;
-    background-color: #ffffff;
-    display: flex;
- justify-content:space-between;
- align-content:space-between;
-    flex-direction: row;
-    flex-wrap: wrap;
- 
-    margin-left: 240px;
-    margin-right: 240px;
-    margin-top: 91px;
-   
-   
+.main {
+    max-width: 1120px;
+    /* height: 1100px; */
+    background-color: #818181;
+
 
 }
-p.s_text{
-    width: 129px;
-    height: 13px;
+
+p.s_text {
+    max-width: 129px;
+
     font-family: HansKendrick;
     font-size: 13px;
     font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
     line-height: 2.31;
     letter-spacing: 0.33px;
     text-align: left;
     color: honeydew;
-    margin-left: 18px;
-    margin-bottom: 18px;
+
 }
-p.b_text{
+
+p.b_text {
     font-size: 30px;
     font-weight: 900;
-    font-stretch: normal;
-    font-style: normal;
     line-height: 1.2;
     letter-spacing: 0.75px;
     text-align: left;
-    color: #ffffff;}
-
-.foto_main{
-    width: 740px;
-    height: 540px;
-    display: flex;
-    justify-content:flex-end;
-    align-items: flex-start;
-    flex-direction: column;
-    background:url(/lesson6/hw2/img/Layer\ 8.png) no-repeat center center;
+    color: #ffffff;
 }
 
-.blog{
-    width: 360px;
-    height: 540px;
-  
-    display: flex;
-    justify-content:space-between;
-    align-items: flex-start;
-    flex-direction: column;
+.foto_main {
+
+    background: url(/lesson6/hw2/img/LayerRedCar.png) no-repeat center center;
+}
+
+.blog {
+    display: grid;
+    grid-template-rows: 252px 50px 150px 85px;
+    background-color: #ffffff;
+
+
 
 }
-.foto{
-    width: 360px;
-    height: 251px;
+
+.foto {
+    max-width: 360px;
+    /* height: 251px;  */
 }
-.foto.one{
-    background:url(/lesson6/hw2/img/Layer\ 2.png) no-repeat center center;
-}
-.foto.two{
-    background:url(/lesson6/hw2/img/Layer\ 5.png) no-repeat center center;
-}
-.foto.three{
-    background:url(/lesson6/hw2/img/Layer\ 7.png) no-repeat center center;
-}
-.foto.four{
-    background:url(/lesson6/hw2/img/Layer\ 9.png) no-repeat center center;
-}
-.s_text{
-    width: 129px;
-    height: 13px;
+
+
+.s_text {
+
+
     font-family: HansKendrick;
     font-size: 13px;
     font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
+    padding-left: 30px;
     line-height: 2.31;
     letter-spacing: 0.33px;
     text-align: left;
     color: #818181;
-    margin-left: 18px;
+
 }
-.b_text{
-    width: 307px;
-    height: 78px;
+
+.b_text {
+
     font-family: HansKendrick;
     font-size: 22px;
     font-weight: 900;
-    font-stretch: normal;
-    font-style: normal;
+    padding-left: 30px;
+    padding-right: 25px;
     line-height: 1.36;
     letter-spacing: 0.55px;
     text-align: left;
     color: #1d1d1d;
-    margin-left: 18px;
+
 }
-.icon{
+
+.icon {
+    margin-left: 30px;
     width: 54px;
     height: 54px;
-    background:url(/lesson6/hw2/img/Layer\ 3.png) no-repeat center center;
-    margin-bottom: 18px;
-    margin-left: 18px;
+    background: url(/lesson6/hw2/img/LayerAutorPhoto.png) no-repeat center center;
+
 }
-footer{
+
+footer {
     margin: 0px;
     font-family: HansKendrick;
     font-size: 13px;
-   display: inline;
+    display: inline;
     font-style: normal;
     line-height: 2.31;
     letter-spacing: 0.33px;
