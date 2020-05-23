@@ -1,0 +1,23 @@
+.mainContainer {
+  margin: 0 auto;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 60px; }
+  .mainContainer img {
+    width: 100%; }
+    .mainContainer img.mainImage {
+      grid-row: 1/3;
+      grid-column: 1/3; }
+
+.secondContainer {
+  margin-top: 5px;
+  background-color: black;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr); }
+  .secondContainer img {
+    opacity: 0.5;
+    width: 100%; }
+    .secondContainer img:hover {
+      opacity: 1; }
