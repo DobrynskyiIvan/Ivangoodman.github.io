@@ -1,0 +1,195 @@
+%bigText {
+    max-width: 435px;
+    font-size: 22px;
+    font-weight: 900;
+    line-height: 1.36;
+    letter-spacing: 0.55px;
+    text-align: left;
+    padding-left: 30px;
+    text-transform: uppercase;
+}
+
+%smallText {
+    font-size: 13px;
+    font-weight: 500;
+    padding-left: 30px;
+    line-height: 2.31;
+    letter-spacing: 0.33px;
+    text-align: left;
+    color: #818181;
+    padding-top: 28px;
+    text-transform: uppercase;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    background-color: #818181;
+    padding-top: 40px;
+
+    .main {
+        max-width: 1120px;
+        background-color: #818181;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 20px;
+        grid-template-areas: "mainContainer mainContainer firstBlog"
+            "secondBlog thirdBlog foutrhBlog";
+
+        @media only screen and (max-width: 954px) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 20px;
+            grid-template-areas: "mainContainer mainContainer "
+                "firstBlog secondBlog ""thirdBlog foutrhBlog";
+
+        }
+
+        @media only screen and (max-width: 465px) {
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4, 1fr);
+            gap: 20px;
+            grid-template-areas: "mainContainer   "
+                "firstBlog"
+                " secondBlog"
+                "thirdBlog"
+                " foutrhBlog";
+
+        }
+
+        .foto_main {
+            grid-area: mainContainer;
+
+            @media only screen and (max-width: 954px) {
+                justify-self: center;
+            }
+        }
+
+        .firstBlog {
+            grid-area: firstBlog;
+        }
+
+        .secondBlog {
+            grid-area: secondBlog;
+        }
+
+        .thirdBlog {
+            grid-area: thirdBlog;
+        }
+
+        .foutrhBlog {
+            grid-area: foutrhBlog;
+        }
+    }
+}
+
+.blog {
+    display: grid;
+    grid-template-rows: 252px 50px 150px 85px;
+    background-color: #ffffff;
+    justify-content: end;
+    box-sizing: border-box;
+
+    grid-template-areas: "firstPhoto  "
+        "smallText"
+        "bigText"
+        "iconText"
+
+
+    ;
+
+    @media only screen and (max-width: 954px) {
+        grid-template-rows: repeat(auto-fit, minmax(20px, 1fr));
+    }
+
+    .foto {
+        & img {
+            grid-area: firstPhoto;
+            width: 100%;
+            height: auto;
+
+        }
+    }
+
+    .s_text {
+        grid-area: smallText;
+        @extend %smallText;
+
+        padding-top: 28px;
+
+    }
+
+    .b_text {
+        grid-area: bigText;
+        @extend %bigText;
+        padding-top: 21px;
+
+
+        padding-right: 25px;
+
+        color: #1d1d1d;
+
+    }
+
+    .icon {
+        grid-area: iconText;
+
+        margin: auto auto 25px 29px;
+        width: 54px;
+        height: 54px;
+        background: url(/lesson6/hw2/img/LayerAutorPhoto.png) no-repeat center center;
+    }
+}
+
+.foto_main {
+    background: url(/lesson6/hw2/img/LayerRedCar.png) no-repeat center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 40px;
+
+    & .date {
+        @extend %smallText;
+        color: white;
+    }
+
+    & .describe {
+        @extend %bigText;
+        color: #ffffff;
+        font-size: 30px;
+    }
+
+}
+
+
+footer {
+    max-height: 30px;
+    font-size: 13px;
+    font-weight: 500;
+
+
+    line-height: 2.31;
+
+    text-align: left;
+    color: white;
+    padding-top: 28px;
+    padding-bottom: 30px;
+    text-transform: uppercase;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+
+
+    & span {
+        justify-self: end;
+
+        & img {
+            max-width: 30px;
+        }
+    }
+}

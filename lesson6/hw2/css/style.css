@@ -1,0 +1,211 @@
+.blog .b_text, .foto_main .describe {
+  max-width: 435px;
+  font-size: 22px;
+  font-weight: 900;
+  line-height: 1.36;
+  letter-spacing: 0.55px;
+  text-align: left;
+  padding-left: 30px;
+  text-transform: uppercase;
+}
+
+.blog .s_text, .foto_main .date {
+  font-size: 13px;
+  font-weight: 500;
+  padding-left: 30px;
+  line-height: 2.31;
+  letter-spacing: 0.33px;
+  text-align: left;
+  color: #818181;
+  padding-top: 28px;
+  text-transform: uppercase;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.container {
+  background-color: #818181;
+  padding-top: 40px;
+}
+
+.container .main {
+  max-width: 1120px;
+  background-color: #818181;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[2];
+      grid-template-rows: repeat(2, 1fr);
+  gap: 20px;
+      grid-template-areas: "mainContainer mainContainer firstBlog" "secondBlog thirdBlog foutrhBlog";
+}
+
+@media only screen and (max-width: 954px) {
+  .container .main {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+        grid-template-areas: "mainContainer mainContainer " "firstBlog secondBlog " "thirdBlog foutrhBlog";
+  }
+}
+
+@media only screen and (max-width: 465px) {
+  .container .main {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (1fr)[4];
+        grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
+        grid-template-areas: "mainContainer   " "firstBlog" " secondBlog" "thirdBlog" " foutrhBlog";
+  }
+}
+
+.container .main .foto_main {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: mainContainer;
+}
+
+@media only screen and (max-width: 954px) {
+  .container .main .foto_main {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+}
+
+.container .main .firstBlog {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: firstBlog;
+}
+
+.container .main .secondBlog {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: secondBlog;
+}
+
+.container .main .thirdBlog {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: thirdBlog;
+}
+
+.container .main .foutrhBlog {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: foutrhBlog;
+}
+
+.blog {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 252px 50px 150px 85px;
+      grid-template-rows: 252px 50px 150px 85px;
+  background-color: #ffffff;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+      grid-template-areas: "firstPhoto  " "smallText" "bigText" "iconText";
+}
+
+@media only screen and (max-width: 954px) {
+  .blog {
+    -ms-grid-rows: (minmax(20px, 1fr))[auto-fit];
+        grid-template-rows: repeat(auto-fit, minmax(20px, 1fr));
+  }
+}
+
+.blog .foto img {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: firstPhoto;
+  width: 100%;
+  height: auto;
+}
+
+.blog .s_text {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: smallText;
+  padding-top: 28px;
+}
+
+.blog .b_text {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: bigText;
+  padding-top: 21px;
+  padding-right: 25px;
+  color: #1d1d1d;
+}
+
+.blog .icon {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: iconText;
+  margin: auto auto 25px 29px;
+  width: 54px;
+  height: 54px;
+  background: url(/lesson6/hw2/img/LayerAutorPhoto.png) no-repeat center center;
+}
+
+.foto_main {
+  background: url(/lesson6/hw2/img/LayerRedCar.png) no-repeat center center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding-bottom: 40px;
+}
+
+.foto_main .date {
+  color: white;
+}
+
+.foto_main .describe {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+footer {
+  max-height: 30px;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 2.31;
+  text-align: left;
+  color: white;
+  padding-top: 28px;
+  padding-bottom: 30px;
+  text-transform: uppercase;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+footer span {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+footer span img {
+  max-width: 30px;
+}
