@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/libs.min.css">
+
+    <link rel="stylesheet" href=" css/style.css">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">
+    </script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/index.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDatFfesU3-FBd0sriR1RGEYU4u65nLRSU&libraries=places&callback=initMap "
+        async defer>
+    </script>
+    <title>Monticello</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="show-on-scroll">
+            <div id="navigation" class="nav_context">
+                <div class="logo"><img class="logo" src=" img/Logo.png" alt="" srcset=""></div>
+                <ul class="navigation">
+                    <li><a class="link" href="#ourWorks">About Us</a></li>
+                    <li><a class="link" href="#projects">projects</a></li>
+                    <li><a class="link" href="#newsSection">news</a></li>
+                    <li><a class="link" href="#contact">contact</a></li>
+                    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                        <i class="fa fa-bars"></i> </a>
+                </ul>
+                <div class="social">
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+
+                </div>
+            </div>
+        </nav>
+
+        <div id="mainSlider" class="slider">
+
+            <div class="slider-item">
+                <div class="text">
+                    <p class="title">Simple & mordern</p>
+
+                    <p class="autor">We make the world's beautiful every day</p>
+                </div>
+                <img src="img/slide1.png" alt="">
+            </div>
+
+            <div class="slider-item">
+                <div class="text">
+                    <p class="title">Front-End</p>
+
+                    <p class="autor">We make the world's beautiful every day</p>
+                </div><img src="img/slide1.png" alt="">
+            </div>
+            <div class="slider-item">
+                <div class="text">
+                    <p class="title">Core Development</p>
+
+                    <p class="autor">We make the world's beautiful every day</p>
+                </div><img src="img/slide1.png" alt="">
+            </div>
+            <div class="slider-item">
+                <div class="text">
+                    <p class="title">DataBase Structure</p>
+
+                    <p class="autor">We make the world's beautiful every day</p>
+                </div><img src="img/slide1.png" alt="">
+            </div>
+            <div class="slider-item">
+                <div class="text">
+                    <p class="title">Simple & mordern</p>
+
+                    <p class="autor">We make the world's beautiful every day</p>
+                </div><img src="img/slide1.png" alt="">
+            </div>
+
+        </div>
+
+
+        <a class="roolDown" href="#ourWorks"></a>
+    </header>
+    <section id="ourWorks">
+        <h2 class="ourWorks heading  show-on-scroll ">What we Do</h2>
+        <div class="container">
+            <div class="context trade">
+                <div class="picture"><img class="mainImage  inline-photo show-on-scroll" src="img/Section1_image1.png"
+                        alt="">
+                    <img class="shadow" src="img/Section1_image1_shadow.png" alt=""></div>
+                <div class="item">
+                    <p class="subtitle">One World
+                    </p>
+                    <p class="headline">Trade Center </p>
+                    <p class="text">
+                        Increasing prosperity in our lives can be accomplished by having the right frame of mind. The
+                        truth is, our thoughts are very powerful.
+                    </p>
+                    <button data-aos="fade-left" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1000"
+                        type="submit">more details</button>
+                    <p class="adress"><i class="fas fa-map-marker-alt"></i> New York City, United States - 1776 feet</p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="context commerce">
+                <div class="picture"><img class="mainImage inline-photo show-on-scroll " src="img/Section1_image2.png"
+                        alt="">
+                    <img class="shadow" src="img/Section1_image2_shadow.png" alt=""></div>
+                <div class="item">
+                    <p class="subtitle">International</p>
+                    <p class="headline">Commerce Centre </p>
+                    <p class="text">
+                        Successful businesses have many things in common, today we’ll look at the big ‘R’ of recognition
+                        and how a digital advertising network may help.
+                    </p>
+                    <button data-aos="fade-right" type="submit">more details</button>
+                    <p class="adress"> <i class="fas fa-map-marker-alt"></i>Hong Kong - 1588 Feet</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section id="newsSection" class="newsSection">
+
+
+        <div class="sliderContainer">
+
+            <h2 class="news animate__animated animate__shakeY">latest news</h2>
+            <div id="news" class="sliderTreeple">
+
+                <div class="sliderTreeple-item">
+                    <div class="picture"><img src="img/slider2_image1_main.png" alt="slider2 image1 main"></div>
+                    <div class="text">
+                        <p class="title">See The Unmatched Beauty Of The Great.</p>
+                        <p class="subtitle">Free directories: directories are perfect for customers that are...
+                            searching
+                            for</p>
+                        <div class="authorInfo">
+                            <img src="img/slider2_image1_author.png" alt="" class="authorPhoto">
+
+                            <div class="publishInfo">
+                                <p class="author">Isaac Dunn</p>
+                                <p class="publishDate">09 Feb 2017</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div class="sliderTreeple-item">
+                    <div class="picture"><img src="img/slider2_image2_main.png" alt="slider2 image1 main">
+                    </div>
+                    <div class="text">
+                        <p class="title">Effective Advertising Pointers.</p>
+                        <p class="subtitle">Having a home based business is a wonderful asset to your life...</p>
+                        <div class="authorInfo">
+                            <img src="img/slider2_image2_author.png" alt="" class="authorPhoto">
+                            <div class="publishInfo">
+                                <p class="author">Dominic Freeman</p>
+                                <p class="publishDate">24 Apr 2017</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="sliderTreeple-item">
+                    <div class="picture"><img src="img/slider2_image3_main.png" alt="slider2 image1 main">
+                    </div>
+                    <div class="text">
+                        <p class="title">Hypnotize Yourself Into The Ghost. </p>
+                        <p class="subtitle">There are many things that are important to catalog design....</p>
+                        <div class="authorInfo">
+                            <img src="img/slider2_image3_author.png" alt="" class="authorPhoto">
+                            <div class="publishInfo">
+                                <p class="author">Alice Ward</p>
+                                <p class="publishDate">30 Dec 2017</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="sliderTreeple-item">
+                    <div class="picture"><img src="img/slider2_image3_main.png" alt="slider2 image1 main">
+                    </div>
+                    <div class="text">
+                        <p class="title">Hypnotize Yourself Into The Ghost. </p>
+                        <p class="subtitle">There are many things that are important to catalog design....</p>
+                        <div class="authorInfo">
+                            <img src="img/slider2_image3_author.png" alt="" class="authorPhoto">
+                            <div class="publishInfo">
+                                <p class="author">Alice Ward</p>
+                                <p class="publishDate">30 Dec 2017</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="sliderTreeple-item">
+                    <div class="picture"><img src="img/slider2_image3_main.png" alt="slider2 image1 main">
+                    </div>
+                    <div class="text">
+                        <p class="title">Hypnotize Yourself Into The Ghost. </p>
+                        <p class="subtitle">There are many things that are important to catalog design....</p>
+                        <div class="authorInfo">
+                            <img src="img/slider2_image3_author.png" alt="" class="authorPhoto">
+                            <div class="publishInfo">
+                                <p class="author">Alice Ward</p>
+                                <p class="publishDate">30 Dec 2017</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <section id="projects" class="galery">
+        <h2 class="galeryHeader " data-aos="fade-up" data-aos-duration="3000"> gallery</h2>
+        <div class="imageContainer">
+            <div><img class="mainImage  inline-photo show-on-scroll" src="  img/Section3_imageMain.png" alt="">
+                <img class="round360   " src="  img/360.png" alt=""></div>
+
+            <div class="groupImages">
+                <img src=" img/Section3_image1.png" alt="" class="gruop">
+                <img src="  img/Section3_image2.png" alt="" class="gruop">
+                <img src="  img/Section3_image3.png" alt="" class="gruop">
+                <img src="  img/Section3_image4.png" alt="" class="gruop">
+            </div>
+        </div>
+        <button data-aos="fade-up" data-aos-duration="3000" class="moreDetails">See more</button>
+    </section>
+    <section class="googleMap">
+        <div id="map"></div>
+    </section>
+    <footer>
+        <img class="backgroundImage" src="  img/FooterBg.png" alt="">
+        <div id="contact" class="contactContainer">
+            <h2 class="contactHeading">Get in touch</h2>
+            <div class="context">
+                <div class="contactInfo">
+                    <p class="details"><i class="fas fa-map-marker-alt"></i> 91 Nolan Extensions Suite 670 </p>
+                    <p class="details"><i class="fas fa-phone-alt"></i> +001 356-868-2454</p>
+                    <p class="details"><i class="fas fa-inbox"></i> gahuy93@gmail.com</p>
+                    <p class="details"><i class="far fa-clock"></i> From 07:05AM to 19:30PM </p>
+                </div>
+                <div class="clientDetails">
+                    <form class="contactForm" action="#" method="">
+                        <input class="order active" type="text" placeholder="Name Surname">
+                        <input class="order" type="text" placeholder="Email">
+                        <button class="submitForm" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+            <img class="formBG" src=" img/SectionMap_FormBg.png" alt="">
+        </div>
+        <div class="additionalInfo">
+            <div class="repeatHeader">
+                <div class="logo"><img class="logo" src="  img/Logo.png" alt="" srcset=""></div>
+                <div class="social secondPart ">
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+
+                </div>
+            </div>
+            <div class="copiright">
+                <p>Copyrights © 2017 Monticello </p>
+                <p>Made with <i class="fas fa-heart"></i>by Ga Huy</p>
+            </div>
+
+
+        </div>
+
+    </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+</body>
+
+</html>
