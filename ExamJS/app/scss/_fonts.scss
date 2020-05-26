@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,300&display=swap");
+
+@font-face {
+    font-family: 'Gotham Bold';
+    src: url('../css/fonts/gothambold/gothambold1.eot');
+    src: local('gothambold1'), url('../css/fonts/gothambold/gothambold1.woff') format('woff'), url('../css/fonts/gothambold/gothambold1.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Gotham Book';
+    src: url('./GothamBook.eot');
+    src: local('GothamBook'), url('../css/fonts/GothamBook/GothamBook.woff') format('woff'), url('../css/fonts/GothamBook/GothamBook.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "Gotham";
+    src: url("../css/fonts/Gotham/gotham-medium-webfont.woff2") format("woff2"),
+        url("../css/fonts/Gotham/gotham-medium-webfont.woff") format("woff"),
+        url("../css/fonts/Gotham/GothamMediumRegular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Gotham Thin";
+    src: url("../css/fonts/Gotham/GothamThinRegular.otf");
+}
