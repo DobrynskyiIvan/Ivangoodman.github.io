@@ -1,0 +1,72 @@
+@import "fonts";
+div.main {
+    background-color: green;
+    padding: 20px;
+}
+.wrapper {
+    padding-top: 30px;
+    margin: 0 auto;
+    width: 600px;
+}
+
+section {
+    position: relative;
+
+    .timer {
+        background-color: yellow;
+        border-radius: 5px;
+        position: absolute;
+        top: 0;
+        right: 30px;
+        padding: 10px;
+    }
+}
+.done {
+    text-decoration: line-through;
+}
+
+.click {
+    background-color: yellow;
+    border-radius: 5px;
+    text-align: center;
+    height: auto;
+    padding: 10px;
+    .toggleButton {
+        padding: 0px;
+    }
+}
+
+.deletebox {
+    width: 300px;
+    height: 300px;
+    border: 1px solid red;
+}
+
+.second {
+    height: auto;
+    border: 2px solid red;
+    padding: 30px;
+    text-align: center;
+}
+
+button {
+    padding: 20px;
+    height: 40px;
+    width: 200px;
+}
+
+.todo-list-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .delete {
+        padding: 0px;
+        border-radius: 50%;
+        margin: 0px;
+        width: 20px;
+        height: 20px;
+        &:active {
+            background-color: red;
+        }
+    }
+}

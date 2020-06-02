@@ -1,0 +1,26 @@
+body {
+  background: aquamarine;
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .img {
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    background: url('../assets/js.png') no-repeat center center;
+    background-size: contain;
+  }
+
+  .text {
+    text-align: center;
+    font-size: 14px;
+  }
+}

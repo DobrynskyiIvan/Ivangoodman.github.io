@@ -1,0 +1,37 @@
+* {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: royalblue;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 450px;
+    overflow: auto;
+    border: 2px solid orange;
+}
+
+li {
+    padding: 10px;
+    font-size: 16px;
+    color: royalblue;
+    border-bottom: 1px solid lightslategrey;
+}
+
+li i {
+    color: slategrey;
+}
+.appContainer {
+    text-align: center;
+}
+.title {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 30px;
+    color: grey;
+}
