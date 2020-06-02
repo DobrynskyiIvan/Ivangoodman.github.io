@@ -1,3 +1,5 @@
 {
-    "liveServer.settings.multiRootWorkspaceName": "Beetroot"
+    "liveServer.settings.multiRootWorkspaceName": "Beetroot",
+    "eslint.alwaysShowStatus": true,
+    "eslint.lintTask.enable": true
 }
