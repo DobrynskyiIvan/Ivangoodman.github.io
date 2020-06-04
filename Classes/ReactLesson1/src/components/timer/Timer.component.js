@@ -19,9 +19,9 @@ class Timer extends React.Component {
   }
   render() {
     return (
-      <div>
-        <h1>Timer</h1>
-        <h2>Зараз {this.state.date.toLocaleTimeString()}.</h2>
+      <div  >
+        <h2>Timer</h2>
+        <h2>Now is:<i> {this.state.date.toLocaleTimeString()}</i>.</h2>
       </div>
     );
   }

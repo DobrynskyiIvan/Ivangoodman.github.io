@@ -1,4 +1,5 @@
 import React from "react";
+import ToDoItem from "../ToDoItem/ToDoItem.component";
 
 /* eslint-disable react/prop-types */
 class ToDoList extends React.Component {
@@ -6,24 +7,40 @@ class ToDoList extends React.Component {
     super(props);
   }
   DeleteItem(id) {
-    console.log(id);
+     
     this.props.onBtnDelete(id);
+  }
+  ReturnItem(id){
+    console.log("Delete item",id);
+    this.props.onBtnReturn(id);
   }
 
   renderList() {
     const { data } = this.props;
+    
 
     if (data) {
+
       return data.map((item, i) => {
-        return (
-          <li className="todo-list-item" key={i}>
-            {item.email}
-            <button onClick={() => this.DeleteItem(item.id)} className="delete">
-              &times;
-            </button>
-          </li>
-        );
-      });
+        if(item.status=='not-buy'&this.props.status) {  
+          return ( 
+            <ToDoItem
+            key={i}
+            id={item.id}
+            item={item}
+            DeleteItem={this.DeleteItem.bind(this)}
+            status={this.props.status}
+          /> 
+               );}
+              else if(item.status=='buy'&!this.props.status){    
+                 return ( <ToDoItem
+                key={i}
+                id={item.id}
+                item={item}
+                ReturnItem={this.ReturnItem.bind(this)}
+                status={this.props.status}
+                />) }  ;})
+                            
     }
   }
   render() {

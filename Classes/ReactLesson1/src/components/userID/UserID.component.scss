@@ -1,5 +1,13 @@
 .Comment {
-    background-color: goldenrod;
-    border: 2px solid red;
-    font-size: 20px;
+  background-color: goldenrod;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  margin: 10px auto;
+  & .UserInfo {
+    & .UserInfo-name {
+      font-size: 25px;
+    }
+  }
 }

@@ -2,22 +2,30 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./components/App/App.component";
 import "./styles/sass/style.scss";
-import Kinder from "./components/kinder/Kinder.component";
+ 
 import Timer from "./components/Timer/Timer.component";
 import UserID from "./components/UserID/UserID.component";
 import Course from "./components/Course/Course.component";
 import LoginControl from "./components/Login/Login.component";
-import Toggle from "./components/Toggle/Toggle.component";
+ 
+import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
 
 ReactDOM.render(<Course />, document.querySelector("#course"));
-ReactDOM.render(<App />, document.querySelector("#app"));
-ReactDOM.render(<Kinder />, document.querySelector("#main"));
+ReactDOM.render(
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>,
+  document.querySelector("#app")
+);
+ 
 ReactDOM.render(<Timer />, document.getElementById("root"));
+
+
 const comment = {
   date: new Date(),
-  text: "Some part from React",
+  text: "Some text",
   author: {
-    name: "Hello Find",
+    name: "Convert end use DATA from Fetch",
     avatarUrl: "https://placekitten.com/g/64/64",
   },
 };
@@ -28,6 +36,6 @@ ReactDOM.render(
 );
 
 /* eslint-disable react/prop-types */
-ReactDOM.render(<Toggle />, document.getElementById("click"));
+ 
 
 ReactDOM.render(<LoginControl />, document.getElementById("second"));
