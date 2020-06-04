@@ -6,6 +6,7 @@ const styles = {
   ul: {
     listStyle: "none",
     color: "red",
+    border:"none"
   },
 };
 TodoList.propTypes = {
