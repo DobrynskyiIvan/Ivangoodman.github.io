@@ -50,6 +50,8 @@ function Course() {
     <Context.Provider value={{ RemoveTodo }}>
       <div className="wrapper">
         <h1>React tutorial</h1>
+
+        {/* //Suspense lets your components “wait” for something before they can render */}
         <React.Suspense fallback={<p>Loading</p>}>
           {" "}
           <AddTodo onCreate={Addtodo} />{" "}
