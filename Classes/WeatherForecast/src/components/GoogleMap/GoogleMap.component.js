@@ -62,7 +62,7 @@ export default class MyFancyComponent extends React.PureComponent {
       isMarkerShown: false,
       position: {
         lat: 36.721275,
-        lng:-4.421399
+        lng: -4.421399,
       },
     };
   }
@@ -95,14 +95,17 @@ export default class MyFancyComponent extends React.PureComponent {
 
   render() {
     return (
-      <div className="mapContainer"><div className="mapBorder">   {this.props.children}
-      <MyMapComponent
-        isMarkerShown={this.state.isMarkerShown}
-        onMarkerClick={this.handleMarkerClick.bind(this)}
-        onMapClick={this.onMapClick.bind(this)}
-        position={this.state.position}
-      /></div>
-     
+      <div className="mapContainer">
+        <div className="mapBorder">
+          {" "}
+          {this.props.children}
+          <MyMapComponent
+            isMarkerShown={this.state.isMarkerShown}
+            onMarkerClick={this.handleMarkerClick.bind(this)}
+            onMapClick={this.onMapClick.bind(this)}
+            position={this.state.position}
+          />
+        </div>
       </div>
     );
   }

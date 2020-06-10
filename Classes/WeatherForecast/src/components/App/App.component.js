@@ -5,20 +5,16 @@ import MyFancyComponent from "../GoogleMap/GoogleMap.component";
 import Cordinates from "../../context";
 import "../App/App.component.css";
 import TextOutput from "./TextOutput.component";
-import FetchComponent from '../Fatch/Fetch.component'
-import Post from '../Text/Post.component'
+import FetchComponent from "../Fatch/Fetch.component";
+import Post from "../Text/Post.component";
 import LoaderComponent from "../Loader/Loader.component";
-
 
 const api = {
   key: "a20076d10bad57cf71e1c2f13a832e72",
   url: "https://api.openweathermap.org/data/2.5/",
 };
 
-
 // <FetchComponent url="http://example.com/posts" render={post => <Post post={post} />} />
-
-
 
 export default class App extends React.Component {
   constructor(props) {
@@ -27,63 +23,63 @@ export default class App extends React.Component {
       query: "",
       weather: {},
       isOpen: false,
-      link:'',
-      loading:true
+      link: "",
+      loading: true,
     };
   }
-
 
   // ======== search city weather  by input
   search(evt) {
     if (evt.key == "Enter") {
-        let Link = `${api.url}weather?q=${this.state.query}&units=metric&APPID=${api.key}`
-        this.setState({link:Link})
-      this.fetchFun(Link)
+      let Link = `${api.url}weather?q=${this.state.query}&units=metric&APPID=${api.key}`;
+      this.setState({ link: Link });
+      this.fetchFun(Link);
       this.state.query = "";
     }
   }
 
-//=======fetch call by input
-  fetchFun(link){
-    fetch( link  )
-        .then((res) => res.json())
-        .then((result) => {
-          console.log("result:", result);
-          this.setState({ weather: result });
-          this.setState({loading:false})
-        });
-
+  //=======fetch call by input
+  fetchFun(link) {
+    fetch(link)
+      .then((res) => res.json())
+      .then((result) => {
+        console.log("result:", result);
+        this.setState({ weather: result });
+        this.setState({ loading: false });
+      });
   }
-  
+
   onInputChange(e) {
-   
     return this.setState({ query: e.target.value });
   }
 
- // async function for click on map 
-  async  loadJson(url ) {
+  // async function for click on map
+  async loadJson(url) {
     // (1)
     let response = await fetch(url); // (2)
-  
+
     if (response.status == 200) {
       let json = await response.json(); // (3)
       console.log("json", json);
-      await   this.setState({ weather: json });
-      console.log(this.state.weather)
-      this.setState({loading:false})
+      await this.setState({ weather: json });
+      console.log(this.state.weather);
+      this.setState({ loading: false });
       return json;
     }
-  
+
     throw new Error(response.status);
   }
 
-  /// 
+  ///
   setWeatherByCord(x) {
-    let url = `${  api.url }forecast?lat=${x.latLng.lat()}&lon=${x.latLng.lng()}&units=metric&APPID=${ api.key }`;
+    let url = `${
+      api.url
+    }forecast?lat=${x.latLng.lat()}&lon=${x.latLng.lng()}&units=metric&APPID=${
+      api.key
+    }`;
     this.loadJson(url).catch(alert); // Error: 404 (4)
-   
   }
- 
+
   render() {
     let i = this.state.weather;
     return (
@@ -120,9 +116,8 @@ export default class App extends React.Component {
             </Button>
           </div>
           <div className="loader">
-            
-                {this.state.loading &&     <LoaderComponent/>}</div>
-      
+            {this.state.loading && <LoaderComponent />}
+          </div>
 
           {/* //Try to create component that will show answer depent from result 
           {this.state.link ? ( <FetchComponent url={this.state.link} render={post => <Post post={post}/>} />
@@ -130,42 +125,41 @@ export default class App extends React.Component {
           ) : (  
             ""
           )} */}
-        { this.state.weather.cod== "404" ? (<h2 className="error">{this.state.weather.message}....</h2> ) : (  
+          {this.state.weather.cod == "404" ? (
+            <h2 className="error">{this.state.weather.message}....</h2>
+          ) : (
             ""
           )}
-               
 
-          {typeof this.state.weather.main != "undefined" ? (<TextOutput weather={this.state.weather}/>
-          
-          ) : (  
+          {typeof this.state.weather.main != "undefined" ? (
+            <TextOutput weather={this.state.weather} />
+          ) : (
             ""
           )}
-             {typeof this.state.weather.city != "undefined" ? (<Post post={this.state.weather}/>
-          
-          ) : (  
+          {typeof this.state.weather.city != "undefined" ? (
+            <Post post={this.state.weather} />
+          ) : (
             ""
-          )}  
-           {this.state.isOpen ? (
-          <Cordinates.Provider value={this.setWeatherByCord.bind(this)}>
-            <MyFancyComponent>
-              <div className="mapButton">
-                <Button
-                  variant="contained"
-                  color="secondary"
-                  type="submit"
-                  onClick={() => {
-                    this.setState({ isOpen: false });
-                  }}
-                >
-                  Close Map
-                </Button>
-              </div>
-            </MyFancyComponent>
-          </Cordinates.Provider>
-        ) : null}
+          )}
+          {this.state.isOpen ? (
+            <Cordinates.Provider value={this.setWeatherByCord.bind(this)}>
+              <MyFancyComponent>
+                <div className="mapButton">
+                  <Button
+                    variant="contained"
+                    color="secondary"
+                    type="submit"
+                    onClick={() => {
+                      this.setState({ isOpen: false });
+                    }}
+                  >
+                    Close Map
+                  </Button>
+                </div>
+              </MyFancyComponent>
+            </Cordinates.Provider>
+          ) : null}
         </main>
-
-       
       </div>
     );
   }

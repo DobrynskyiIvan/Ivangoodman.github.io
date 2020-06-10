@@ -41,11 +41,13 @@ module.exports = {
       template: "./src/index.html",
     }),
     new CleanWebpackPlugin(), // плагін який очищує папку dist перед збіркою
-   new CopyWebpackPlugin({ // плагін для копіювання файлів
-       patterns: [{
-          from: path.resolve(__dirname, './favicon.ico'),
-           to: path.resolve(__dirname, 'dist')
-         },
+    new CopyWebpackPlugin({
+      // плагін для копіювання файлів
+      patterns: [
+        {
+          from: path.resolve(__dirname, "./favicon.ico"),
+          to: path.resolve(__dirname, "dist"),
+        },
         //   {
         //   from:   'src/assets/',
         //   to:  'dist/img/',
@@ -54,9 +56,9 @@ module.exports = {
         //   },
         //   // Should be absolute
         //   cacheTransform: path.resolve(__dirname, 'dist/cache'),
-        // 
-      ]
-    })
+        //
+      ],
+    }),
   ],
   optimization: {
     // оптимізація
