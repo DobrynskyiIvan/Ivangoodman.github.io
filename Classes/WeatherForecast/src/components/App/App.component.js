@@ -1,57 +1,172 @@
-import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { Button } from "@material-ui/core";
+import MyFancyComponent from "../GoogleMap/GoogleMap.component";
+import Cordinates from "../../context";
+import "../App/App.component.css";
+import TextOutput from "./TextOutput.component";
+import FetchComponent from '../Fatch/Fetch.component'
+import Post from '../Text/Post.component'
+import LoaderComponent from "../Loader/Loader.component";
 
 
-const api={
-    key:'a20076d10bad57cf71e1c2f13a832e72',
-    url:'https://api.openweathermap.org/data/2.5/'}
+const api = {
+  key: "a20076d10bad57cf71e1c2f13a832e72",
+  url: "https://api.openweathermap.org/data/2.5/",
+};
 
-export default class App extends React.Component{
-    constructor(props) {
-        super(props);
-        this.state = {
-          query: "",
-          weather:{}
-        };
-      }
-    search(evt){
-        if(evt.key=='Enter'){
-            fetch(`${api.url}weather?q=${query}&units=metric&APPID=${api.key}`)
-            .then(res=>res.json())
-            .then(result=>this.setState({weather:result}));
-        }
 
+// <FetchComponent url="http://example.com/posts" render={post => <Post post={post} />} />
+
+
+
+export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      query: "",
+      weather: {},
+      isOpen: false,
+      link:'',
+      loading:true
+    };
+  }
+
+
+  // ======== search city weather  by input
+  search(evt) {
+    if (evt.key == "Enter") {
+        let Link = `${api.url}weather?q=${this.state.query}&units=metric&APPID=${api.key}`
+        this.setState({link:Link})
+      this.fetchFun(Link)
+      this.state.query = "";
     }
-    dateBuilder(d){
-       const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-      const days=  ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-      let day=days[d.getDay()];
-      let date=d.getDate();
-      let month=months[d.getMonth()];
-      let year=d.getFullYear();
+  }
+
+//=======fetch call by input
+  fetchFun(link){
+    fetch( link  )
+        .then((res) => res.json())
+        .then((result) => {
+          console.log("result:", result);
+          this.setState({ weather: result });
+          this.setState({loading:false})
+        });
+
+  }
+  
+  onInputChange(e) {
+   
+    return this.setState({ query: e.target.value });
+  }
+
+ // async function for click on map 
+  async  loadJson(url ) {
+    // (1)
+    let response = await fetch(url); // (2)
+  
+    if (response.status == 200) {
+      let json = await response.json(); // (3)
+      console.log("json", json);
+      await   this.setState({ weather: json });
+      console.log(this.state.weather)
+      this.setState({loading:false})
+      return json;
+    }
+  
+    throw new Error(response.status);
+  }
+
+  /// 
+  setWeatherByCord(x) {
+    let url = `${  api.url }forecast?lat=${x.latLng.lat()}&lon=${x.latLng.lng()}&units=metric&APPID=${ api.key }`;
+    this.loadJson(url).catch(alert); // Error: 404 (4)
+   
+  }
  
-      return `${day} ${date} ${month} ${year}  `
-    }
+  render() {
+    let i = this.state.weather;
+    return (
+      <div
+        className={
+          typeof this.state.weather.main != "undefined"
+            ? i.main.temp > 16
+              ? "app warm"
+              : "app"
+            : "app"
+        }
+      >
+        <main>
+          <div className="search-box">
+            <input
+              type="text"
+              className="search-bar"
+              placeholder="Search.."
+              onChange={this.onInputChange.bind(this)}
+              value={this.state.query}
+              onKeyPress={this.search.bind(this)}
+            />
+          </div>
+          <div className="mapButton">
+            <Button
+              type="submit"
+              onClick={() => {
+                this.setState({ isOpen: true });
+              }}
+              variant="contained"
+              color="primary"
+            >
+              Open Map
+            </Button>
+          </div>
+          <div className="loader">
+            
+                {this.state.loading &&     <LoaderComponent/>}</div>
+      
 
+          {/* //Try to create component that will show answer depent from result 
+          {this.state.link ? ( <FetchComponent url={this.state.link} render={post => <Post post={post}/>} />
+          
+          ) : (  
+            ""
+          )} */}
+        { this.state.weather.cod== "404" ? (<h2 className="error">{this.state.weather.message}....</h2> ) : (  
+            ""
+          )}
+               
 
-    render(){
-          return(
-            <div className="app "> 
-            <main>
-                <div className="search-box"><input type="text"
-                 className="search-bar" 
-                 placeholder='Search..'
-                 />
-                </div>
-                <div className="location-box">
-                    <div className="location">New York City,Us</div>
-                    <div className="date">{this.dateBuilder(new Date())}</div> 
-                </div>
-                <div className="weather-box">
-                    <div className="temp">15 c</div>
-                    <div className="weather">Sunny</div>
-                </div>
-            </main></div>
-        )
-    }
+          {typeof this.state.weather.main != "undefined" ? (<TextOutput weather={this.state.weather}/>
+          
+          ) : (  
+            ""
+          )}
+             {typeof this.state.weather.city != "undefined" ? (<Post post={this.state.weather}/>
+          
+          ) : (  
+            ""
+          )}  
+           {this.state.isOpen ? (
+          <Cordinates.Provider value={this.setWeatherByCord.bind(this)}>
+            <MyFancyComponent>
+              <div className="mapButton">
+                <Button
+                  variant="contained"
+                  color="secondary"
+                  type="submit"
+                  onClick={() => {
+                    this.setState({ isOpen: false });
+                  }}
+                >
+                  Close Map
+                </Button>
+              </div>
+            </MyFancyComponent>
+          </Cordinates.Provider>
+        ) : null}
+        </main>
+
+       
+      </div>
+    );
+  }
 }
