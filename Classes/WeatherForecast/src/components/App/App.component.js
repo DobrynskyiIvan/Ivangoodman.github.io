@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { Button } from "@material-ui/core";
-import MyFancyComponent from "../GoogleMap/GoogleMap.component";
-import Cordinates from "../../context";
+import MapDisplayComponent from "../GoogleMap/GoogleMap.component";
+import {Cordinates} from "../../context";
 import "../App/App.component.css";
-import TextOutput from "./TextOutput.component";
+import TextOutput from "../Text/TextOutput.component";
 import FetchComponent from "../Fatch/Fetch.component";
 import Post from "../Text/Post.component";
 import LoaderComponent from "../Loader/Loader.component";
@@ -27,6 +27,22 @@ export default class App extends React.Component {
       loading: true,
     };
   }
+  asyncCallbyCordinates(lat, lng) {
+    let url = `${api.url}forecast?lat=${lat}&lon=${lng}&units=metric&APPID=${api.key}`;
+    this.loadJson(url).catch(alert); // Error: 404 (4)
+  }
+  componentDidMount() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        this.asyncCallbyCordinates(
+          position.coords.latitude,
+          position.coords.longitude
+        );
+      });
+    } else {
+      alert("Geoloaction is not supported by your browser");
+    }
+  }
 
   // ======== search city weather  by input
   search(evt) {
@@ -38,7 +54,7 @@ export default class App extends React.Component {
     }
   }
 
-  //=======fetch call by input
+  //=========================fetch call by input
   fetchFun(link) {
     fetch(link)
       .then((res) => res.json())
@@ -53,7 +69,7 @@ export default class App extends React.Component {
     return this.setState({ query: e.target.value });
   }
 
-  // async function for click on map
+  //======================== async function for click on map
   async loadJson(url) {
     // (1)
     let response = await fetch(url); // (2)
@@ -61,7 +77,7 @@ export default class App extends React.Component {
     if (response.status == 200) {
       let json = await response.json(); // (3)
       console.log("json", json);
-      await this.setState({ weather: json });
+      this.setState({ weather: json });
       console.log(this.state.weather);
       this.setState({ loading: false });
       return json;
@@ -70,14 +86,13 @@ export default class App extends React.Component {
     throw new Error(response.status);
   }
 
-  ///
+  ///=========================== set  Weather   By   Cord
   setWeatherByCord(x) {
-    let url = `${
-      api.url
-    }forecast?lat=${x.latLng.lat()}&lon=${x.latLng.lng()}&units=metric&APPID=${
-      api.key
-    }`;
-    this.loadJson(url).catch(alert); // Error: 404 (4)
+    this.asyncCallbyCordinates(x.latLng.lat(), x.latLng.lng());
+  }
+  curWeather(x) {
+    console.log(x);
+    this.asyncCallbyCordinates(x.lat, x.lng);
   }
 
   render() {
@@ -93,6 +108,7 @@ export default class App extends React.Component {
         }
       >
         <main>
+          {/* Search box for weather */}
           <div className="search-box">
             <input
               type="text"
@@ -103,6 +119,7 @@ export default class App extends React.Component {
               onKeyPress={this.search.bind(this)}
             />
           </div>
+          {/* Open Map button */}
           <div className="mapButton">
             <Button
               type="submit"
@@ -125,25 +142,29 @@ export default class App extends React.Component {
           ) : (  
             ""
           )} */}
+
+          {/* Display code error when wrong search */}
           {this.state.weather.cod == "404" ? (
             <h2 className="error">{this.state.weather.message}....</h2>
           ) : (
             ""
           )}
-
+          {/* Output for search container */}
           {typeof this.state.weather.main != "undefined" ? (
             <TextOutput weather={this.state.weather} />
           ) : (
             ""
           )}
+          {/* Output for map container */}
           {typeof this.state.weather.city != "undefined" ? (
             <Post post={this.state.weather} />
           ) : (
             ""
           )}
+          {/* Map container */}
           {this.state.isOpen ? (
             <Cordinates.Provider value={this.setWeatherByCord.bind(this)}>
-              <MyFancyComponent>
+              <MapDisplayComponent curWeather={this.curWeather.bind(this)}>
                 <div className="mapButton">
                   <Button
                     variant="contained"
@@ -156,7 +177,7 @@ export default class App extends React.Component {
                     Close Map
                   </Button>
                 </div>
-              </MyFancyComponent>
+              </MapDisplayComponent>
             </Cordinates.Provider>
           ) : null}
         </main>
