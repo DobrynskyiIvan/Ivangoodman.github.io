@@ -8,7 +8,8 @@ import {
   InfoWindow,
 } from "react-google-maps";
 import MapStyle from "../GoogleMap/Google.map.style";
-import Cordinates from "../../context";
+import {Cordinates} from "../../context";
+import { Button } from "@material-ui/core";
 //  const googleMapURL: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDatFfesU3-FBd0sriR1RGEYU4u65nLRSU&libraries=geometry,drawing,places';
 
 // render() {
@@ -32,16 +33,17 @@ const MyMapComponent = compose(
   return (
     <GoogleMap
       defaultZoom={8}
-      defaultCenter={{ lat: props.position.lat, lng: props.position.lng }}
+      defaultCenter={props.position}
       onClick={props.onMapClick}
       defaultOptions={{ styles: MapStyle }}
     >
       {props.isMarkerShown && (
-        <Marker
-          position={{ lat: props.position.lat, lng: props.position.lng }}
-          onClick={props.onMarkerClick}
-        />
+        <Marker position={props.position} onClick={props.onMarkerClick} />
       )}
+      <Marker
+        icon="https://www.robotwoods.com/dev/misc/bluecircle.png"
+        position={props.currentPosition}
+      />
       {!props.isMarkerShown && (
         <InfoWindow
           position={{ lat: props.position.lat, lng: props.position.lng }}
@@ -51,11 +53,18 @@ const MyMapComponent = compose(
           </div>
         </InfoWindow>
       )}
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={props.handleClick.bind(this)}
+      >
+        Current Position
+      </Button>
     </GoogleMap>
   );
 });
 
-export default class MyFancyComponent extends React.PureComponent {
+export default class MapDisplayComponent extends React.PureComponent {
   constructor(props) {
     super(props);
     this.state = {
@@ -64,16 +73,46 @@ export default class MyFancyComponent extends React.PureComponent {
         lat: 36.721275,
         lng: -4.421399,
       },
+      currentPosition: {
+        lat: 36.721275,
+        lng: -4.421399,
+      },
     };
   }
+  geolocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        this.setState({
+          currentPosition: {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude,
+          },
+          position: {
+            lat: position.coords.latitude,
+            lng: position.coords.longitude,
+          },
+        });
+ 
+      });
+    } else {
+      alert("Geoloaction is not supported by your browser");
+    }
+  }
+  async handleClick() {
+    await this.geolocation();
+
+    this.props.curWeather(this.state.position);
+  }
   componentDidMount() {
+    this.geolocation();
+
     this.delayedShowMarker();
   }
 
   delayedShowMarker() {
     setTimeout(() => {
       this.setState({ isMarkerShown: true });
-    }, 2000);
+    }, 3000);
   }
 
   handleMarkerClick(e) {
@@ -81,8 +120,6 @@ export default class MyFancyComponent extends React.PureComponent {
     this.delayedShowMarker();
   }
   onMapClick(e) {
-    // console.log("event map:",e.latLng.lat() )
-    // console.log("event map:",e.latLng.lng() )
     this.context(e);
 
     this.setState({
@@ -104,10 +141,12 @@ export default class MyFancyComponent extends React.PureComponent {
             onMarkerClick={this.handleMarkerClick.bind(this)}
             onMapClick={this.onMapClick.bind(this)}
             position={this.state.position}
+            handleClick={this.handleClick.bind(this)}
+            currentPosition={this.state.currentPosition}
           />
         </div>
       </div>
     );
   }
 }
-MyFancyComponent.contextType = Cordinates;
+MapDisplayComponent.contextType = Cordinates;

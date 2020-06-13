@@ -3,23 +3,24 @@ import React, { PureComponent } from "react";
 function degToCompass(num) {
   var val = Math.floor(num / 22.5 + 0.5);
   var arr = [
-    "N",
-    "NNE",
-    "NE",
-    "ENE",
-    "E",
-    "ESE",
-    "SE",
-    "SSE",
-    "S",
-    "SSW",
-    "SW",
-    "WSW",
-    "W",
-    "WNW",
-    "NW",
-    "NNW",
+    "North",
+    "North-Northeast",
+    "Northeast",
+    "East-Northeast",
+    "East",
+    "East-Southeast",
+    "Southeast",
+    "South-Southeast	",
+    "South",
+    "South-Southwest",
+    "Southwest",
+    "West-Southwest",
+    "West",
+    "West-Northwes",
+    "Northwest",
+    "North-Northwest",
   ];
+
   return <span className="wind">{arr[val % 16]} </span>;
 }
 export function Detail(props) {
