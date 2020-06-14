@@ -24,6 +24,8 @@ export default function Buttons(props) {
             return ( 
           <div key={i}>
               <Button
+              style={{borderRadius:6,
+                margin: '5px 0px',}}
               onClick={() => { 
                 groupList[i].show=!item.show 
                 props.onToggle();

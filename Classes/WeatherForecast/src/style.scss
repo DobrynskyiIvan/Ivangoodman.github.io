@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;800&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap");
 * {
@@ -16,7 +17,7 @@ main {
   background-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.75)
+    rgba(0, 0, 0, 0.4)
   );
   padding: 25px;
 }
@@ -61,30 +62,40 @@ main {
 }
 .timeline {
   .time {
-    padding: 3px;
-    margin: 1px;
-    background-color: rgba(27, 235, 165, 0.5);
-    border-radius: 3px;
+    padding: 4px 8px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    border-radius: 6px;
     color: rgb(194, 190, 190);
   }
 }
 .location-box {
   & .location {
-    color: rgb(189, 184, 184);
-    font-size: 32px;
+    color: royalblue;
+    font-size: 48px;
 
     text-align: center;
-    text-shadow: 3px 3px rgba(50, 50, 50, 0.5);
+
     font-family: "Open Sans", sans-serif;
   }
   .date {
-    font-size: 20px;
+    font-size: 24px;
     text-align: center;
+    padding-bottom: 10px;
     color: #fff;
-    & .time {
-      font-family: "Open Sans", sans-serif;
-      font-size: 24px;
-      color: rgb(252, 177, 64);
+    font-family: "Montserrat", sans-serif;
+    &.sun {
+      font-size: 18px;
+      padding-bottom: 0px;
+      & .time {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 800;
+        font-size: 24px;
+        letter-spacing: 1.5px;
+      }
     }
   }
   .choise {
@@ -128,26 +139,27 @@ main {
 .weather-box {
   min-width: 300px;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 16px;
-  border: 1px solid rgb(252, 177, 64);
-  padding: 10px;
+  // border: 1px solid rgb(252, 177, 64);
+
   @media only screen and (max-width: 480px) {
     min-width: 260px;
   }
 
   .temp {
-    font-family: "Roboto", sans-serif;
+    font-family: "Montserrat", sans-serif;
     display: inline-block;
-    margin: 5px auto;
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 15px 25px;
-    font-size: 82px;
-    color: rgba(47, 182, 245, 0.829);
-    text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+    // margin: 5px auto;
+    // background-color: rgba(255, 255, 255, 0.2);
+    padding: 0px 25px opx;
+    font-size: 100px;
+    color: #fff;
+    //text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
     border-radius: 16px;
     text-align: center;
-    box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+
+    font-weight: 300;
     @media only screen and (max-width: 480px) {
       font-size: 52px;
     }
@@ -155,14 +167,29 @@ main {
   .weather {
     color: #fff;
     text-transform: capitalize;
-    font-size: 20px;
+    font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 300;
+    &.icon {
+      margin-top: -10px;
+    }
+    &.description {
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-family: "Montserrat", sans-serif;
+      padding-bottom: 8px;
+    }
+
     .wind {
       font-size: 24px;
-      color: rgb(252, 177, 64);
+      text-transform: capitalize;
+      line-height: 1.4;
+      font-weight: 300;
     }
     .speed {
       font-size: 24px;
-      color: rgb(18, 245, 139);
+
       text-transform: lowercase;
     }
   }

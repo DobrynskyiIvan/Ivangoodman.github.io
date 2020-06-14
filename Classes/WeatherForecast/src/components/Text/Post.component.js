@@ -36,10 +36,10 @@ function Post(props) {
         </div>
         <div className="date"> {<DateComponent date={new Date()} />}</div>
 
-        <div className="date">
+        <div className="date sun">
           Sunrise: <Time sec={i.sunrise + i.timezone} />
         </div>
-        <div className="date">
+        <div className="date sun">
           Sunset: <Time sec={i.sunset + i.timezone} />
         </div>
       </div>

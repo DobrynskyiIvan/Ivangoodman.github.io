@@ -30,10 +30,10 @@ export function Detail(props) {
     <div className="weather-box">
       <div className="temp">{Math.round(i.main.temp)} °C</div>
 
-      <div className="weather">
+      <div className="weather icon">
         <img src={url} />
       </div>
-      <div className="weather">{i.weather[0].description}</div>
+      <div className="weather description">{i.weather[0].description}</div>
       <div className="weather">Humidity: {i.main.humidity} %</div>
       <div className="weather">Pressure: {i.main.pressure} hPa</div>
       <div className="weather">
