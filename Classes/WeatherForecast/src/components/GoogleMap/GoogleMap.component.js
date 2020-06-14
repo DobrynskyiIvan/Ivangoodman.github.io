@@ -38,7 +38,13 @@ const MyMapComponent = compose(
       defaultOptions={{ styles: MapStyle }}
     >
       {props.isMarkerShown && (
-        <Marker position={props.position} onClick={props.onMarkerClick} />
+        <Marker 
+        icon= {{url:'https://cdn2.iconfinder.com/data/icons/IconsLandVistaMapMarkersIconsDemo/256/MapMarker_Marker_Outside_Chartreuse.png',
+        scaledSize:new  google.maps.Size(45,45)
+      }} 
+        position={props.position} 
+        onClick={props.onMarkerClick}
+         />
       )}
       <Marker
         icon="https://www.robotwoods.com/dev/misc/bluecircle.png"
@@ -53,13 +59,15 @@ const MyMapComponent = compose(
           </div>
         </InfoWindow>
       )}
-      <Button
-        variant="contained"
-        color="primary"
-        onClick={props.handleClick.bind(this)}
-      >
-        Current Position
-      </Button>
+      <div className="currentPositionButton">  <Button
+      
+      variant="contained"
+      color="primary"
+      onClick={props.handleClick.bind(this)}
+    >
+      Current Position
+    </Button></div>
+    
     </GoogleMap>
   );
 });

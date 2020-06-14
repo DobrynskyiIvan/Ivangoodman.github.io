@@ -37,7 +37,7 @@ export function Detail(props) {
       <div className="weather">Humidity: {i.main.humidity} %</div>
       <div className="weather">Pressure: {i.main.pressure} hPa</div>
       <div className="weather">
-        Wind direction: {degToCompass(i.wind.deg)} speed:
+        Wind direction: {degToCompass(i.wind.deg)}<br/> speed:
         <span className="speed"> {i.wind.speed} meter/sec </span>{" "}
       </div>
     </div>
