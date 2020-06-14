@@ -1,4 +1,6 @@
 import React from "react";
 const Cordinates = React.createContext();
 const WeatherDetail=React.createContext();
-export   {Cordinates,WeatherDetail }  ;
+const Scroll=React.createContext();
+ 
+export   {Cordinates,WeatherDetail,Scroll }  ;

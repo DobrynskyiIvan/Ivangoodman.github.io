@@ -39,8 +39,8 @@ function toggleTodo() {
   
   }
 
-  return ( 
-<Buttons  timezone={props.timezone } onToggle={toggleTodo} group={group}/>
+  return ( <div className="buttonGroup"><Buttons  timezone={props.timezone } onToggle={toggleTodo} group={group}/></div>
+
    
   );
 }
