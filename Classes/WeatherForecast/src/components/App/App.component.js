@@ -5,7 +5,7 @@ import MapDisplayComponent from "../GoogleMap/GoogleMap.component";
 import { Cordinates } from "../../context";
 import "../App/App.component.css";
 import TextOutput from "../Text/TextOutput.component";
-
+import ChoseOption from '../Text/ChoseOption.component'
 import Post from "../Text/Post.component";
 import LoaderComponent from "../Loader/Loader.component";
 
@@ -25,6 +25,7 @@ export default class App extends React.Component {
       isOpen: false,
       link: "",
       loading: true,
+      startMessage:true
     };
     this.myRef = React.createRef();
     this.child = React.createRef();
@@ -50,11 +51,14 @@ export default class App extends React.Component {
         this.asyncCallbyCordinates(
           position.coords.latitude,
           position.coords.longitude
+
         );
       });
     } else {
+
       alert("Geoloaction is not supported by your browser");
     }
+   
   }
 
   // ======== search city weather  by input
@@ -75,6 +79,8 @@ export default class App extends React.Component {
         // console.log("result:", result);
         this.setState({ weather: result });
         this.setState({ loading: false });
+        this.setState({startMessage:false});
+        
       });
   }
 
@@ -91,8 +97,9 @@ export default class App extends React.Component {
       let json = await response.json(); // (3)
       // console.log("json", json);
       this.setState({ weather: json });
-      console.log(this.state.weather);
+     // console.log(this.state.weather);
       this.setState({ loading: false });
+      this.setState({startMessage:false});
       return json;
     }
 
@@ -148,6 +155,7 @@ export default class App extends React.Component {
             </Button>
           </div>
           <div className="loader">
+            {this.state.startMessage&&<ChoseOption/> }
             {this.state.loading && <LoaderComponent />}
           </div>
 
