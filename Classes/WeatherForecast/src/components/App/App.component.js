@@ -1,11 +1,11 @@
-import React, { Component,useRef, useEffect } from "react";
+import React, { Component, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
 import { Button } from "@material-ui/core";
 import MapDisplayComponent from "../GoogleMap/GoogleMap.component";
-import {Cordinates} from "../../context";
+import { Cordinates } from "../../context";
 import "../App/App.component.css";
 import TextOutput from "../Text/TextOutput.component";
-import FetchComponent from "../Fatch/Fetch.component";
+
 import Post from "../Text/Post.component";
 import LoaderComponent from "../Loader/Loader.component";
 
@@ -13,7 +13,6 @@ const api = {
   key: "a20076d10bad57cf71e1c2f13a832e72",
   url: "https://api.openweathermap.org/data/2.5/",
 };
- 
 
 // <FetchComponent url="http://example.com/posts" render={post => <Post post={post} />} />
 
@@ -27,17 +26,23 @@ export default class App extends React.Component {
       link: "",
       loading: true,
     };
-    this.myRef = React.createRef()  
+    this.myRef = React.createRef();
+    // this.child = React.createRef();
   }
   asyncCallbyCordinates(lat, lng) {
     let url = `${api.url}forecast?lat=${lat}&lon=${lng}&units=metric&APPID=${api.key}`;
     this.loadJson(url).catch(alert); // Error: 404 (4)
   }
-  scrollToMyRef = () => window.scrollTo({
-    top: document.body.scrollHeight,
-   
-    behavior: 'smooth'
-  })    // run this method to execute scrolling. 
+  // onClick = () => {
+  //   this.child.current.executeScroll();
+  // };
+
+  scrollToMyRef = () =>
+    window.scrollTo({
+      top: document.body.scrollHeight,
+
+      behavior: "smooth",
+    }); // run this method to execute scrolling.
 
   componentDidMount() {
     if (navigator.geolocation) {
@@ -67,7 +72,7 @@ export default class App extends React.Component {
     fetch(link)
       .then((res) => res.json())
       .then((result) => {
-        console.log("result:", result);
+        // console.log("result:", result);
         this.setState({ weather: result });
         this.setState({ loading: false });
       });
@@ -84,7 +89,7 @@ export default class App extends React.Component {
 
     if (response.status == 200) {
       let json = await response.json(); // (3)
-      console.log("json", json);
+      // console.log("json", json);
       this.setState({ weather: json });
       console.log(this.state.weather);
       this.setState({ loading: false });
@@ -105,6 +110,7 @@ export default class App extends React.Component {
 
   render() {
     let i = this.state.weather;
+
     return (
       <div
         className={
@@ -115,7 +121,6 @@ export default class App extends React.Component {
             : "app"
         }
       >
-        
         <main>
           {/* Search box for weather */}
           <div className="search-box">
@@ -134,8 +139,7 @@ export default class App extends React.Component {
               type="submit"
               onClick={() => {
                 this.setState({ isOpen: true });
-                this.scrollToMyRef()
-
+                this.scrollToMyRef();
               }}
               variant="contained"
               color="primary"
@@ -168,7 +172,7 @@ export default class App extends React.Component {
           )}
           {/* Output for map container */}
           {typeof this.state.weather.city != "undefined" ? (
-            <Post post={this.state.weather} />
+            <Post ref={this.child} post={this.state.weather} />
           ) : (
             ""
           )}
@@ -176,7 +180,16 @@ export default class App extends React.Component {
           {this.state.isOpen ? (
             <Cordinates.Provider value={this.setWeatherByCord.bind(this)}>
               <MapDisplayComponent curWeather={this.curWeather.bind(this)}>
-                <div  ref={this.myRef}  className="mapButton">
+                <div ref={this.myRef} className="mapButton">
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    // onClick={() => {
+                    //   this.onClick();
+                    // }}
+                  >
+                    Go to Forecast
+                  </Button>{" "}
                   <Button
                     variant="contained"
                     color="secondary"
