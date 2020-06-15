@@ -8,7 +8,7 @@ import {
   InfoWindow,
 } from "react-google-maps";
 import MapStyle from "../GoogleMap/Google.map.style";
-import {Cordinates} from "../../context";
+import { Cordinates } from "../../context";
 import { Button } from "@material-ui/core";
 //  const googleMapURL: 'https://maps.googleapis.com/maps/api/js?key=AIzaSyDatFfesU3-FBd0sriR1RGEYU4u65nLRSU&libraries=geometry,drawing,places';
 
@@ -38,13 +38,15 @@ const MyMapComponent = compose(
       defaultOptions={{ styles: MapStyle }}
     >
       {props.isMarkerShown && (
-        <Marker 
-        icon= {{url:'https://cdn2.iconfinder.com/data/icons/IconsLandVistaMapMarkersIconsDemo/256/MapMarker_Marker_Outside_Chartreuse.png',
-        scaledSize:new  google.maps.Size(45,45)
-      }} 
-        position={props.position} 
-        onClick={props.onMarkerClick}
-         />
+        <Marker
+          icon={{
+            url:
+              "https://cdn2.iconfinder.com/data/icons/IconsLandVistaMapMarkersIconsDemo/256/MapMarker_Marker_Outside_Chartreuse.png",
+            scaledSize: new google.maps.Size(45, 45),
+          }}
+          position={props.position}
+          onClick={props.onMarkerClick}
+        />
       )}
       <Marker
         icon="https://www.robotwoods.com/dev/misc/bluecircle.png"
@@ -59,15 +61,16 @@ const MyMapComponent = compose(
           </div>
         </InfoWindow>
       )}
-      <div className="currentPositionButton">  <Button
-      
-      variant="contained"
-      color="primary"
-      onClick={props.handleClick.bind(this)}
-    >
-      Current Position
-    </Button></div>
-    
+      <div className="currentPositionButton">
+        {" "}
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={props.handleClick.bind(this)}
+        >
+          Current Position
+        </Button>
+      </div>
     </GoogleMap>
   );
 });
@@ -87,6 +90,7 @@ export default class MapDisplayComponent extends React.PureComponent {
       },
     };
   }
+
   geolocation() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {
@@ -100,7 +104,6 @@ export default class MapDisplayComponent extends React.PureComponent {
             lng: position.coords.longitude,
           },
         });
- 
       });
     } else {
       alert("Geoloaction is not supported by your browser");
