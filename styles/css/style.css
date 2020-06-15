@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -7,10 +8,15 @@
 }
 
 body {
-  background-image: url(/img/wallpapers-art-planet-space-star-energy-desktop-abstraction-abstrakciya-kosmos-original-planety-zvezdy-yenergiya-gdefon.jpg);
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
+  background: #485563;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #29323c, #485563);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-gradient(linear, left top, right top, from(#29323c), to(#485563));
+  background: -webkit-linear-gradient(left, #29323c, #485563);
+  background: -o-linear-gradient(left, #29323c, #485563);
+  background: linear-gradient(to right, #29323c, #485563);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   font-family: "Josefin Sans", sans-serif;
 }
 
@@ -23,7 +29,7 @@ body {
 .title {
   font-family: "Josefin Sans", sans-serif;
   font-weight: normal;
-  color: #8f0f1c;
+  color: #9c111f;
   text-align: center;
   border-bottom: 2px solid #2ed49d;
   padding: 25px;
@@ -45,7 +51,7 @@ body {
   }
   to {
     top: 320px;
-    background-color: yellow;
+    background-color: #80b309;
   }
 }
 
@@ -55,7 +61,7 @@ body {
   }
   to {
     top: 320px;
-    background-color: yellow;
+    background-color: #80b309;
   }
 }
 
@@ -82,6 +88,7 @@ body {
 li a.list_item_small {
   font-size: 25px;
   text-align: right;
+  font-family: "Work Sans", sans-serif;
 }
 
 @-webkit-keyframes mymove {
@@ -97,7 +104,7 @@ li a.list_item_small {
 }
 
 .list_item {
-  background-color: #5e5b5b;
+  background-color: rgba(94, 91, 91, 0.5);
   list-style-type: none;
   text-decoration: none;
 }
@@ -139,18 +146,13 @@ li a.list_item_small {
 
 .list_item a {
   text-decoration: none;
-  color: #fdd15f;
-  font-size: 55px;
+  color: white;
+  font-size: 25px;
   font-family: "Josefin Sans", sans-serif;
   font-style: normal;
 }
 
-.lessons_list .list_item:hover a {
-  color: #f0e85d;
-  font-size: 55px;
-}
-
-.lessons_list .list_item:hover a.list_item_small {
+.lessons_list .list_item a.list_item_small {
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -158,25 +160,21 @@ li a.list_item_small {
   text-decoration: none;
   font-size: 55px;
   text-align: right;
-}
-
-.lessons_list .list_item:hover a.list_item_small:hover {
-  color: #90f82e;
-  font-size: 75px;
-}
-
-.lessons_list .list_item:hover a.small {
-  color: #f0e85d;
-  font-size: 25px;
+  color: #6c52ff;
 }
 
 @media only screen and (max-width: 576px) {
   body {
-    background-image: url(/img/wallpapers-art-planet-space-star-energy-desktop-abstraction-abstrakciya-kosmos-original-planety-zvezdy-yenergiya-gdefon.jpg);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
     font-family: "Josefin Sans", sans-serif;
+    background: #141e30;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #141e30, #243b55);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: -webkit-gradient(linear, left top, right top, from(#141e30), to(#243b55));
+    background: -webkit-linear-gradient(left, #141e30, #243b55);
+    background: -o-linear-gradient(left, #141e30, #243b55);
+    background: linear-gradient(to right, #141e30, #243b55);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   }
   body .container {
     width: 80%;
@@ -276,41 +274,5 @@ li a.list_item_small {
     z-index: 1;
     top: -5px;
     right: 101%;
-  }
-  .lessons_list .list_item:hover .tooltiptext {
-    visibility: visible;
-  }
-  .lessons_list .list_item:hover {
-    -webkit-animation: mymove 4s infinite;
-            animation: mymove 4s infinite;
-    background-color: #72746f;
-  }
-  .list_item a {
-    text-decoration: none;
-    color: #fdd15f;
-    font-size: 30px;
-    font-family: "Josefin Sans", sans-serif;
-    font-style: normal;
-  }
-  .lessons_list .list_item:hover a {
-    color: #f0e85d;
-    font-size: 40px;
-  }
-  .lessons_list .list_item:hover a.list_item_small {
-    -webkit-transition: 0.3s;
-    -o-transition: 0.3s;
-    transition: 0.3s;
-    list-style-type: none;
-    text-decoration: none;
-    font-size: 40px;
-    text-align: right;
-  }
-  .lessons_list .list_item:hover a.list_item_small:hover {
-    color: #90f82e;
-    font-size: 30px;
-  }
-  .lessons_list .list_item:hover a.small {
-    color: #f0e85d;
-    font-size: 15px;
   }
 }
