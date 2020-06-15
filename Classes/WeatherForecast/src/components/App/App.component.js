@@ -27,15 +27,15 @@ export default class App extends React.Component {
       loading: true,
     };
     this.myRef = React.createRef();
-    // this.child = React.createRef();
+    this.child = React.createRef();
   }
   asyncCallbyCordinates(lat, lng) {
     let url = `${api.url}forecast?lat=${lat}&lon=${lng}&units=metric&APPID=${api.key}`;
     this.loadJson(url).catch(alert); // Error: 404 (4)
   }
-  // onClick = () => {
-  //   this.child.current.executeScroll();
-  // };
+  onClick = () => {
+    this.child.current.scroll();
+  };
 
   scrollToMyRef = () =>
     window.scrollTo({
@@ -184,9 +184,9 @@ export default class App extends React.Component {
                   <Button
                     variant="contained"
                     color="primary"
-                    // onClick={() => {
-                    //   this.onClick();
-                    // }}
+                     onClick={() => {
+                        this.onClick();
+                     }}
                   >
                     Go to Forecast
                   </Button>{" "}
