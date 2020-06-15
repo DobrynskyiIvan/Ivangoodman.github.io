@@ -14,16 +14,12 @@ main {
   position: relative;
   max-width: 1120px;
   min-height: 100vh;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.2),
-    rgba(0, 0, 0, 0.4)
-  );
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4));
   padding: 25px;
 }
 .app {
   background: #747474;
-  background-image: url("./assets/cold.jpg"); /* fallback */
+  background-image: url("./assets/cold.webp"); /* fallback */
   // background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.75)); /* W3C */
 
   background-size: cover;
