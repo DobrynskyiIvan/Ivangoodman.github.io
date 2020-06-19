@@ -34,6 +34,7 @@ export default class App extends React.Component {
     this.myRef = React.createRef();
     this.child = React.createRef();
     this.addSlide = React.createRef();
+    this.sliderRef = React.createRef()
   }
   asyncCallbyCordinates(lat, lng) {
     let url = `${api.url}forecast?lat=${lat}&lon=${lng}&units=metric&APPID=${api.key}`;
@@ -224,6 +225,13 @@ export default class App extends React.Component {
                   aria-label="add"
                   onClick={() => {
                     this.storage();
+                    
+                   // window.scrollTo(0, this.sliderRef.current.offsetTop)
+                   window.scrollTo({
+                    top: this.sliderRef.current.offsetTop,
+                    behavior: "smooth",
+                  });
+
                     }}
                 >
                   <AddIcon />
@@ -234,7 +242,7 @@ export default class App extends React.Component {
             ""
           )}
           {/* {Carousel}  delbutton={this.delButton.bind(this)}*/}
-          {this.state.open && <Slide ref={this.addSlide} />}
+          {this.state.open && <div ref={this.sliderRef}><Slide  ref={this.addSlide} /></div> }
 
           {this.state.isOpen ? (
             <Cordinates.Provider value={this.setWeatherByCord.bind(this)}>
