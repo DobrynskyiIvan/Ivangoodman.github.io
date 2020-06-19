@@ -36,13 +36,13 @@ body {
   font-size: 40px;
   position: relative;
   -webkit-animation-name: example;
-          animation-name: example;
+  animation-name: example;
   -webkit-animation-duration: 2.5s;
-          animation-duration: 2.5s;
+  animation-duration: 2.5s;
   -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  animation-delay: 1s;
   -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
+  animation-fill-mode: backwards;
 }
 
 @-webkit-keyframes example {
@@ -80,8 +80,8 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
+  -ms-flex-direction: column-reverse;
+  flex-direction: column-reverse;
   padding-top: 100px;
 }
 
@@ -140,7 +140,7 @@ li a.list_item_small {
 
 .lessons_list .list_item:hover {
   -webkit-animation: mymove 4s infinite;
-          animation: mymove 4s infinite;
+  animation: mymove 4s infinite;
   background-color: #72746f;
 }
 
@@ -160,7 +160,7 @@ li a.list_item_small {
   text-decoration: none;
   font-size: 55px;
   text-align: right;
-  color: #6c52ff;
+  color: #8d8d8d;
 }
 
 @media only screen and (max-width: 576px) {
@@ -191,13 +191,13 @@ li a.list_item_small {
     font-size: 32px;
     position: relative;
     -webkit-animation-name: example;
-            animation-name: example;
+    animation-name: example;
     -webkit-animation-duration: 2.5s;
-            animation-duration: 2.5s;
+    animation-duration: 2.5s;
     -webkit-animation-delay: 1s;
-            animation-delay: 1s;
+    animation-delay: 1s;
     -webkit-animation-fill-mode: backwards;
-            animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
   }
   @-webkit-keyframes example {
     from {
@@ -231,8 +231,8 @@ li a.list_item_small {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    -ms-flex-direction: column-reverse;
+    flex-direction: column-reverse;
     padding-top: 70px;
   }
   .container .lessons_list li a.list_item_small {
