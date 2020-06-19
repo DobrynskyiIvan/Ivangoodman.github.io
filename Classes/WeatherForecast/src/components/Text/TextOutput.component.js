@@ -11,6 +11,7 @@ function TextOutput(props) {
       <div className="location-box">
         <div className="location">
           {i.name},{i.sys.country}
+          <div className="addTofollow">{props.children}</div>
         </div>
 
         <div className="date">{<DateComponent date={new Date()} />}</div>

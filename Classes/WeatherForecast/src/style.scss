@@ -72,10 +72,23 @@ main {
   & .location {
     color: royalblue;
     font-size: 48px;
+    @media only screen and (max-width: 450px) {
+      font-size: 38px;
+    }
 
     text-align: center;
 
     font-family: "Open Sans", sans-serif;
+    position: relative;
+    .addTofollow {
+      position: absolute;
+      top: 0;
+      right: 0;
+      @media only screen and (max-width: 843px) {
+        top: -60px;
+        right: 80%;
+      }
+    }
   }
   .date {
     font-size: 24px;
@@ -168,6 +181,9 @@ main {
     font-weight: 300;
     &.icon {
       margin-top: -10px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
     }
     &.description {
       font-weight: 600;
