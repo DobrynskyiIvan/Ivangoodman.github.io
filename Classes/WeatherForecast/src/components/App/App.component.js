@@ -1,20 +1,23 @@
 import React, { Component, useRef, useEffect } from "react";
 import PropTypes from "prop-types";
-import { Button } from "@material-ui/core";
+import { Button, Fab } from "@material-ui/core";
+import blueGrey from "@material-ui/core/colors/blueGrey";
+
+import AddIcon from "@material-ui/icons/Add";
 import MapDisplayComponent from "../GoogleMap/GoogleMap.component";
 import { Cordinates } from "../../context";
 import "../App/App.component.css";
 import TextOutput from "../Text/TextOutput.component";
-import ChoseOption from '../Text/ChoseOption.component'
+import ChoseOption from "../Text/ChoseOption.component";
 import Post from "../Text/Post.component";
 import LoaderComponent from "../Loader/Loader.component";
+
+import Slide from "../Carousel/Slide.component";
 
 const api = {
   key: "a20076d10bad57cf71e1c2f13a832e72",
   url: "https://api.openweathermap.org/data/2.5/",
 };
-
-// <FetchComponent url="http://example.com/posts" render={post => <Post post={post} />} />
 
 export default class App extends React.Component {
   constructor(props) {
@@ -24,11 +27,13 @@ export default class App extends React.Component {
       weather: {},
       isOpen: false,
       link: "",
-      loading: true,
-      startMessage:true
+      loading:  true ,
+      startMessage: true,
+      open: (localStorage.getItem("storageCount") === null) ? false : true,
     };
     this.myRef = React.createRef();
     this.child = React.createRef();
+    this.addSlide = React.createRef();
   }
   asyncCallbyCordinates(lat, lng) {
     let url = `${api.url}forecast?lat=${lat}&lon=${lng}&units=metric&APPID=${api.key}`;
@@ -51,14 +56,11 @@ export default class App extends React.Component {
         this.asyncCallbyCordinates(
           position.coords.latitude,
           position.coords.longitude
-
         );
       });
     } else {
-
       alert("Geoloaction is not supported by your browser");
     }
-   
   }
 
   // ======== search city weather  by input
@@ -79,9 +81,38 @@ export default class App extends React.Component {
         // console.log("result:", result);
         this.setState({ weather: result });
         this.setState({ loading: false });
-        this.setState({startMessage:false});
-        
+        this.setState({ startMessage: false });
       });
+  }
+
+  storage() {
+    let name=(typeof this.state.weather.city != "undefined" )?(this.state.weather.city.name):this.state.weather.name;
+    if (localStorage.getItem("storageCount") === null) {
+      let sliderCity = [];
+
+      sliderCity.push(name);
+      let count = JSON.stringify(sliderCity);
+      localStorage.setItem("storageCount", count);
+      this.setState({
+        open: true,
+      });
+
+      return;
+    }
+    let sliderCity = JSON.parse(localStorage.getItem("storageCount"));
+    if (!sliderCity.includes(name)) {
+      // this.setState({
+      //   open: false,
+      // });
+      sliderCity.push(name);
+      let count = JSON.stringify(sliderCity);
+      localStorage.setItem("storageCount", count);
+
+      this.setState({
+        open: true,
+      });
+      this.addSlide.current.rerender();
+    }
   }
 
   onInputChange(e) {
@@ -97,9 +128,9 @@ export default class App extends React.Component {
       let json = await response.json(); // (3)
       // console.log("json", json);
       this.setState({ weather: json });
-     // console.log(this.state.weather);
+      console.log(this.state.weather);
       this.setState({ loading: false });
-      this.setState({startMessage:false});
+      this.setState({ startMessage: false });
       return json;
     }
 
@@ -111,10 +142,8 @@ export default class App extends React.Component {
     this.asyncCallbyCordinates(x.latLng.lat(), x.latLng.lng());
   }
   curWeather(x) {
-    console.log(x);
     this.asyncCallbyCordinates(x.lat, x.lng);
   }
-
   render() {
     let i = this.state.weather;
 
@@ -146,6 +175,7 @@ export default class App extends React.Component {
               type="submit"
               onClick={() => {
                 this.setState({ isOpen: true });
+                this.setState({ loading: false });
                 this.scrollToMyRef();
               }}
               variant="contained"
@@ -154,17 +184,11 @@ export default class App extends React.Component {
               Open Map
             </Button>
           </div>
+          {/* Loader component options */}
           <div className="loader">
-            {this.state.startMessage&&<ChoseOption/> }
+            {this.state.startMessage && <ChoseOption />}
             {this.state.loading && <LoaderComponent />}
           </div>
-
-          {/* //Try to create component that will show answer depent from result 
-          {this.state.link ? ( <FetchComponent url={this.state.link} render={post => <Post post={post}/>} />
-          
-          ) : (  
-            ""
-          )} */}
 
           {/* Display code error when wrong search */}
           {this.state.weather.cod == "404" ? (
@@ -174,17 +198,44 @@ export default class App extends React.Component {
           )}
           {/* Output for search container */}
           {typeof this.state.weather.main != "undefined" ? (
-            <TextOutput weather={this.state.weather} />
+         <TextOutput weather={this.state.weather} > {
+          // Button that adds city to list
+          <Fab
+            color="primary"
+            aria-label="add"
+            onClick={() => {
+              this.storage();
+              }}
+          >
+            <AddIcon />
+          </Fab>
+        }  </TextOutput>
+           
           ) : (
             ""
           )}
           {/* Output for map container */}
           {typeof this.state.weather.city != "undefined" ? (
-            <Post ref={this.child} post={this.state.weather} />
+            <Post ref={this.child} post={this.state.weather}>
+              {
+                // Button that adds city to list
+                <Fab
+                  color="primary"
+                  aria-label="add"
+                  onClick={() => {
+                    this.storage();
+                    }}
+                >
+                  <AddIcon />
+                </Fab>
+              }
+            </Post>
           ) : (
             ""
           )}
-          {/* Map container */}
+          {/* {Carousel}  delbutton={this.delButton.bind(this)}*/}
+          {this.state.open && <Slide ref={this.addSlide} />}
+
           {this.state.isOpen ? (
             <Cordinates.Provider value={this.setWeatherByCord.bind(this)}>
               <MapDisplayComponent curWeather={this.curWeather.bind(this)}>
@@ -192,15 +243,15 @@ export default class App extends React.Component {
                   <Button
                     variant="contained"
                     color="primary"
-                     onClick={() => {
-                        this.onClick();
-                     }}
+                    onClick={() => {
+                      this.onClick();
+                    }}
                   >
                     Go to Forecast
                   </Button>{" "}
                   <Button
                     variant="contained"
-                    color="secondary"
+                    style={{ color: blueGrey[500] }}
                     type="submit"
                     onClick={() => {
                       this.setState({ isOpen: false });

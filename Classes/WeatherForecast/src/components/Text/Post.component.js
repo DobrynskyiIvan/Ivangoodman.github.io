@@ -22,7 +22,6 @@ const scrollToRef = (ref) =>
 
 // General scroll to element function
 function Post(props, ref) {
-
   const [current, setWeather] = React.useState();
   const myRef = useRef(null);
   const executeScroll = () => scrollToRef(myRef);
@@ -30,9 +29,8 @@ function Post(props, ref) {
   useImperativeHandle(ref, () => ({
     scroll: () => {
       scrollToRef(myRef);
-    }
+    },
   }));
-
 
   let i = props.post.city;
   function setCurrentWeather(obj) {
@@ -43,6 +41,7 @@ function Post(props, ref) {
       <div className="location-box">
         <div className="location">
           {i.name},{i.country}
+          <div className="addTofollow">{props.children}</div>
         </div>
         <div className="date"> {<DateComponent date={new Date()} />}</div>
 
@@ -53,7 +52,7 @@ function Post(props, ref) {
           Sunset: <Time sec={i.sunset + i.timezone} />
         </div>
       </div>
-      <div ref={myRef}  className="descriptionWrapper">
+      <div ref={myRef} className="descriptionWrapper">
         <Detail
           weather={
             typeof current !== "undefined" ? current : props.post.list[0]

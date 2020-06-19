@@ -81,12 +81,12 @@ export default class MapDisplayComponent extends React.PureComponent {
     this.state = {
       isMarkerShown: false,
       position: {
-        lat: 36.721275,
-        lng: -4.421399,
+        lat: 48.92013050976879,
+        lng: 24.71177101135254,
       },
       currentPosition: {
-        lat: 36.721275,
-        lng: -4.421399,
+        lat: 48.92013050976879,
+        lng: 24.71177101135254,
       },
     };
   }
