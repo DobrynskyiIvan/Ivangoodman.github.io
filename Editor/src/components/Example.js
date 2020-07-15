@@ -30,42 +30,11 @@ var IsJsonString = function (str) {
   return true;
 };
 
-class Hypothesis extends React.PureComponent {
-  render() {
-    return (
-      <RPure string="hypothesis">
-        <div>
-          <EditorExp appearance="chromeless" />
-        </div>
-      </RPure>
-    );
-  }
-}
 
-/// =======function  for pattern
-function EditorExp(prp) {
-  return (
-    <Editor
-      {...(prp.appearance) & (appearance = "chromeless")}
-      allowBlockType={true}
-      allowTasksAndDecisions={true}
-      allowBreakout={true}
-      allowRule={true}
-      allowCodeBlocks={true}
-      allowLists={true}
-      allowTextColor={true}
-      allowTables={true}
-      allowHelpDialog={true}
-      allowQuote={true}
-      allowPanel={true}
-      // {...prp.collabEditProvider &( collabEditProvider={this.collabProvider})}
-      onChange={this.handleChangeInTheEditor}
-      defaultValue={this.defaultValue}
-    />
-  );
-}
 
-/// =======Class for pattern
+/// =================Class for pattern
+
+
 class RPure extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -93,121 +62,128 @@ class RPure extends React.PureComponent {
     });
   }
 
-  render() {
+  /// =======function  for pattern Editor
+  EditorExp(prp) {
+    let output={};
+    if(prp.editor=="appearance"){
+          
+        output={
+          appearance : "chromeless"
+        }
+      }
+      // else if(prp.editor=="collabEditProvider"){
+      //   output={
+      //     collabEditProvider={this.collabProvider}
+      //   }
+      // }
+ 
     return (
-      <div>
-        {" "}
-        {this.props.children}
+      <React.Fragment>
+        <Editor
+        { ...output}
+          //(prp.appearance) && (appearance = "chromeless")
+          allowBlockType={true}
+          allowTasksAndDecisions={true}
+          allowBreakout={true}
+          allowRule={true}
+          allowCodeBlocks={true}
+          allowLists={true}
+          allowTextColor={true}
+          allowTables={true}
+          allowHelpDialog={true}
+          allowQuote={true}
+          allowPanel={true}
+          // {...prp.collabEditProvider &( collabEditProvider={this.collabProvider})}
+          onChange={this.handleChangeInTheEditor}
+          defaultValue={this.defaultValue}
+        />
         <input type="hidden" value={this.state.json} name={this.props.string} />
-      </div>
+      </React.Fragment>
     );
+  }
+  renderBlock(obj) {
+
+    if (obj.Resizable) {
+      let classString = `form-control atlaskit-resizable atlaskit-resizable__${this.props.string}`;
+      return (
+        <Resizable className={classString}>
+          <div className="wrap-editor">{this.EditorExp(this.props.editor)}</div>
+        </Resizable>
+      );
+    } else {
+      return (
+        <div>
+          {this.EditorExp(this.props.editor)}
+          
+        </div>
+      );
+    }
+  }
+
+  render() {
+    return <React.Fragment> {this.renderBlock(this.props)}</React.Fragment>;
   }
 }
 
 class Devnotes extends React.PureComponent {
   render() {
-    return (
-      <RPure string="dev_notes">
-        {" "}
-        <div>
-          <EditorExp />
-        </div>
-      </RPure>
-    );
+    return <RPure string="dev_notes"> </RPure>;
   }
 }
 
 class Comment extends React.PureComponent {
   render() {
     return (
-      <RPure button={true}>
-        {" "}
-        <div>
-          <Editor
-            allowBlockType={true}
-            allowTasksAndDecisions={true}
-            allowBreakout={true}
-            allowRule={true}
-            allowCodeBlocks={true}
-            allowLists={true}
-            allowTextColor={true}
-            allowTables={true}
-            allowHelpDialog={true}
-            allowQuote={true}
-            allowPanel={true}
-            onChange={this.handleChangeInTheEditor}
-            defaultValue={this.defaultValue}
-            collabEditProvider={this.collabProvider}
-          />
-          <input type="hidden" value={this.state.json} name="message" />
-        </div>
-      </RPure>
+      <RPure
+        button={true}
+        string="message"
+        editor="collabEditProvider"
+      ></RPure>
     );
   }
 }
 
 class Qanotes extends React.PureComponent {
   render() {
-    return (
-      <RPure string="qa_notes">
-        {" "}
-        <div>
-          <EditorExp />
-        </div>
-      </RPure>
-    );
+    return <RPure string="qa_notes"></RPure>;
   }
 }
 
 class Allocation extends React.PureComponent {
   render() {
     return (
-      <RPure string="allocation">
-        {" "}
-        <div>
-          <EditorExp appearance="chromeless" />
-        </div>
-      </RPure>
+      <RPure string="allocation" editor="appearance" ></RPure>
     );
   }
 }
-
-class Learnings extends React.PureComponent {
+class Hypothesis extends React.PureComponent {
   render() {
     return (
-      <RPure button={true} string="learnings">
-        <Resizable class="form-control atlaskit-resizable atlaskit-resizable__learning">
-          <div class="wrap-editor">
-            <EditorExp appearance="chromeless" />
-          </div>
-        </Resizable>
-      </RPure>
-    );
-  }
-}
-
-class NextSteps extends React.PureComponent {
-  render() {
-    return (
-      <RPure button={true} string="next_steps">
-        <Resizable class="form-control atlaskit-resizable atlaskit-resizable__next_steps">
-          <div class="wrap-editor">
-            <EditorExp appearance="chromeless" />
-          </div>
-        </Resizable>
-      </RPure>
+      <RPure string="hypothesis" editor="appearance"></RPure>
     );
   }
 }
 
 class PreviewLinks extends React.PureComponent {
   render() {
+    return <RPure string="preview_links"> </RPure>;
+  }
+}
+
+class Learnings extends React.PureComponent {
+  render() {
     return (
-      <RPure string="preview_links">
-        {" "}
-        <div>
-          <EditorExp />
-        </div>
+      <RPure button={true} string="learnings" Resizable="true" editor="appearance" >
+      </RPure>
+    );
+  }
+}
+  
+class NextSteps extends React.PureComponent {
+  render() {
+    return (
+      <RPure button={true} string="next_steps" Resizable="true" editor="appearance">
+         
       </RPure>
     );
   }

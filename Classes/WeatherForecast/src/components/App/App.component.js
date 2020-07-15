@@ -232,7 +232,7 @@ export default class App extends React.Component {
                     behavior: "smooth",
                   });
 
-                    }}
+                    }} 
                 >
                   <AddIcon />
                 </Fab>
