@@ -171,6 +171,7 @@ let textStyle = [{
         name: " color",
         value: "blue"
     }
+    
 ];
 
 function changeText(obj, string) {
