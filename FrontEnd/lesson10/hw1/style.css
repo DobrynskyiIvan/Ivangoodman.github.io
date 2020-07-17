@@ -30,7 +30,7 @@ div.context {
 
 .part1 {
   height: 100%;
-  background: url(/lesson10/hw1/img/img.png) no-repeat center center;
+  background: url(./img/img.png) no-repeat center center;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -136,7 +136,7 @@ div.context {
   display: flex;
   flex-direction: row;
 
-  background: url(/lesson10/hw1/img/bg.png) no-repeat center center;
+  background: url(./img/bg.png) no-repeat center center;
   background-image: radial-gradient(circle at 0 0, #00c4c4, #00b7b7, #00adad, #009c9c),
     linear-gradient(to bottom, #00c4c4, #00c4c4);
   margin: 0px;
@@ -150,7 +150,7 @@ div.context {
   width: 50%;
 
   margin-left: 120px;
-  background: url(/lesson10/hw1/img/img_berry.png) no-repeat center center;
+  background: url(./img/img_berry.png) no-repeat center center;
   background-size: contain;
 }
 div.part2 .text {

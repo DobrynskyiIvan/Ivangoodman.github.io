@@ -1,20 +1,16 @@
 * {
   margin: 0px;
   padding: 0px;
-
 }
-
 
 div.group2 {
   max-width: 1280px;
   height: 976px;
   background-color: #ffffff;
   margin: 0 auto;
-
 }
 
 div.main {
-
   height: 418px;
   text-transform: uppercase;
   display: flex;
@@ -48,8 +44,6 @@ h.head {
   letter-spacing: 4.8px;
   text-align: right;
   color: #0ec8cb;
-
-
 }
 
 p.rest {
@@ -68,7 +62,6 @@ p.rest {
 .responsive2 {
   margin: 0 auto;
   margin-bottom: 138px;
-
 }
 
 div.Rectangle {
@@ -86,48 +79,36 @@ div.Rectangle {
 }
 
 div.Rectangle .circle1 {
-
-
   width: 66px;
   height: 66px;
   background-color: #f7f7f7;
-  background: url(/lesson4/img/Anchor.png) no-repeat;
+  background: url(../img/Anchor.png) no-repeat;
 }
 
 div.Rectangle .circle2 {
-  background: url(/lesson4/img/Diamond\ black.png) no-repeat;
+  background: url(../img/Diamond\black.png) no-repeat;
   width: 66px;
   height: 66px;
   background-color: #f7f7f7;
-
-
 }
 
 div.Rectangle .circle3 {
-  background: url(/lesson4/img/Eyeglasses.png) no-repeat;
+  background: url(../img/Eyeglasses.png) no-repeat;
   width: 66px;
   height: 66px;
   background-color: #f7f7f7;
-
-
-
 }
 
 div.Rectangle .circle4 {
-  background: url(/lesson4/img/Monitor.png) no-repeat;
+  background: url(../img/Monitor.png) no-repeat;
   width: 64px;
   height: 66px;
   background-color: #f7f7f7;
-
-
 }
 
 div.Rectangle .desc2 {
   text-transform: uppercase;
   width: 165px;
-
-
-
 
   font-family: Montserrat;
   font-size: 21px;
@@ -140,7 +121,6 @@ div.Rectangle .desc2 {
   margin-left: auto;
   margin-right: auto;
   padding: 0px;
-
 }
 
 div.desctext2 {
@@ -157,8 +137,6 @@ div.desctext2 {
   letter-spacing: normal;
   text-align: center;
   color: #777777;
-
-
 }
 
 div.Rectangle:hover {
@@ -167,19 +145,19 @@ div.Rectangle:hover {
 }
 
 div.Rectangle:hover .circle1 {
-  background: url(/lesson4/img/Anchor\ white.png) no-repeat;
+  background: url(../img/Anchor\white.png) no-repeat;
 }
 
 div.Rectangle:hover .circle2 {
-  background: url(/lesson4/img/Diamond.png) no-repeat;
+  background: url(../img/Diamond.png) no-repeat;
 }
 
 div.Rectangle:hover .circle3 {
-  background: url(/lesson4/img/Eyeglasses\ white.png) no-repeat;
+  background: url(../img/Eyeglasses\white.png) no-repeat;
 }
 
 div.Rectangle:hover .circle4 {
-  background: url(/lesson4/img/Monitor\ white.png) no-repeat;
+  background: url(../img/Monitor\white.png) no-repeat;
 }
 
 div.Rectangle:hover .desc2 {
@@ -188,19 +166,14 @@ div.Rectangle:hover .desc2 {
 
 div.Rectangle:hover div.desctext2 {
   color: #ffffff;
-
 }
 
-
 div.group {
-
   max-width: 1550px;
 
   background-color: #ffffff;
   margin: 0 auto;
   padding-bottom: 30px;
-
-
 }
 
 div.group div.responsive {
@@ -209,9 +182,6 @@ div.group div.responsive {
   flex-direction: row;
   box-sizing: border-box;
   text-align: center;
-
-
-
 }
 
 div.gallery {
@@ -221,9 +191,6 @@ div.gallery {
   justify-content: center;
   flex-direction: column;
   align-items: center;
-
-
-
 }
 
 div.gallery .circle {
@@ -235,31 +202,29 @@ div.gallery .circle {
   margin-top: 0px;
 }
 
-
 .circle.first {
-  background: url(/lesson4/img/Tablet\ white.png) no-repeat center center;
+  background: url(../img/Tablet\white.png) no-repeat center center;
 }
 
 .circle.first:hover {
-  background: url(/lesson4/img/Tablet.png) no-repeat center center;
+  background: url(../img/Tablet.png) no-repeat center center;
 }
 
 .circle.second {
-  background: url(/lesson4/img/Settings\ white.png) no-repeat center center;
+  background: url(../img/Settings\white.png) no-repeat center center;
 }
 
 .circle.second:hover {
-  background: url(/lesson4/img/Settings\ blue.png) no-repeat center center;
+  background: url(../img/Settings\blue.png) no-repeat center center;
 }
 
 .circle.third {
-  background: url(/lesson4/img/Dashboard\ white.png) no-repeat center center;
+  background: url(../img/Dashboard\white.png) no-repeat center center;
 }
 
 .circle.third:hover {
-  background: url(/lesson4/img/Dashboard\ blue.png) no-repeat center center;
+  background: url(../img/Dashboard\blue.png) no-repeat center center;
 }
-
 
 div.desc {
   text-transform: uppercase;
@@ -274,13 +239,12 @@ div.desc {
   text-align: center;
   color: #000000;
   padding-top: 15px;
-
 }
 
 div.desctext {
   width: 220px;
   padding-top: 20px;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 14px;
   font-weight: 300;
   font-stretch: normal;
@@ -290,7 +254,6 @@ div.desctext {
   text-align: center;
   color: #9d9d9d;
 }
-
 
 @media only screen and (max-width: 600px) {
   .responsive {

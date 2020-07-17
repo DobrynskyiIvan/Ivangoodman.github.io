@@ -14,7 +14,7 @@
   bottom: 0;
   right: 0;
   overflow: auto;
-  background: url(/lesson11/hw2/img/background.png);
+  background: url(./img/background.png);
   width: auto;
   height: 800px;
 }
@@ -32,7 +32,7 @@
   height: 496px;
   /* mix-blend-mode: soft-light;opacity: 0.2; */
 
-  background: url(/lesson11/hw2/img/body.png) no-repeat center center;
+  background: url(./img/body.png) no-repeat center center;
 }
 li {
   text-decoration: none;

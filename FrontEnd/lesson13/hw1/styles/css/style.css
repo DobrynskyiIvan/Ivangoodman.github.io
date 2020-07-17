@@ -45,14 +45,14 @@ body .container .context {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   margin-top: 20px;
 }
 
@@ -61,20 +61,20 @@ body .container .context .content {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 body .container .context .content.left {
-  background: url(/lesson13/hw1/img/image_border.png) no-repeat center center;
+  background: url(../../img/image_border.png) no-repeat center center;
   border-right: 2px solid #ffcc00;
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   width: 50%;
 }
 
@@ -85,7 +85,7 @@ body .container .context .content.left .photo {
   left: 0px;
   top: 0px;
   bottom: 0px;
-  background: url(/lesson13//hw1/img/Фон.png) no-repeat center center;
+  background: url("../../img/image_border.png") no-repeat center center;
   border: 2px solid #ffca28;
   width: 390px;
   height: 390px;
@@ -117,15 +117,15 @@ body .container .context .content.right .body {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 body .container .context .content.right .body .icon-angle-right:before {
@@ -161,15 +161,15 @@ body .container .context .content.right .body .part3 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
 }
 
 body .container .context .content.right .body .part3 .sn {
@@ -177,12 +177,12 @@ body .container .context .content.right .body .part3 .sn {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: url(/lesson13/hw1/img/Ellipse_1.png) no-repeat center center;
+  -ms-flex-align: center;
+  align-items: center;
+  background: url(../../img/image_border.png) no-repeat center center;
   width: 32px;
   height: 32px;
   padding: 3px;
@@ -245,8 +245,8 @@ body .container .context .content.right .body .part6 {
 body .container .context .content.right .body .part6:active {
   background-color: greenyellow;
   -webkit-transform: scale(0.95);
-      -ms-transform: scale(0.95);
-          transform: scale(0.95);
+  -ms-transform: scale(0.95);
+  transform: scale(0.95);
   -webkit-transition: 0.1s;
   -o-transition: 0.1s;
   transition: 0.1s;
@@ -256,5 +256,5 @@ body .container .context .content.right .body .part6:active {
 body footer {
   height: 30px;
   padding-top: 30px;
-  background: url(/lesson13/hw1/img/pagination.png) no-repeat center center;
+  background: url(../../img/pagination.png) no-repeat center center;
 }
