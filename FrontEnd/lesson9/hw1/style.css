@@ -1,29 +1,32 @@
-*{
-    padding:0;
+* {
+    padding: 0;
     margin: 0px;
     line-height: 1;
-    box-sizing: border-box;}
+    box-sizing: border-box;
+}
 
-body{
-    font-family: 'Roboto', sans-serif;
-    background:url(/lesson9/img/bg.png) no-repeat center center;
+body {
+    font-family: "Roboto", sans-serif;
+    background: url(../img/bg.png) no-repeat center center;
     background-size: cover;
     background-attachment: fixed;
-    color: honeydew;}
+    color: honeydew;
+}
 
-h1{
-    font-family: 'Raleway', sans-serif;
-  font-size: 90px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 0.28;
-  letter-spacing: normal;
-  text-align: center;
-  color: #ffffff;
-  padding-top: 100px;}
+h1 {
+    font-family: "Raleway", sans-serif;
+    font-size: 90px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.28;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    padding-top: 100px;
+}
 
-p.head{
+p.head {
     font-family: Myriad Pro;
     font-size: 17px;
     font-weight: normal;
@@ -33,18 +36,22 @@ p.head{
     letter-spacing: normal;
     text-align: center;
     color: #ffffff;
-   margin-top: 40px;
+    margin-top: 40px;
     padding-right: 30%;
-    padding-left: 30%;}
+    padding-left: 30%;
+}
 
-.container{
-   
+.container {
     position: absolute;
     margin: auto;
-    top: 0; left: 0; bottom: 0; right: 0;
-    overflow: auto;  }
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+}
 
-.container1{   
+.container1 {
     width: 100%;
     height: auto;
     overflow: auto;
@@ -54,48 +61,55 @@ p.head{
     /* position: relative;
     top: 0; left: 0; bottom: 0; right: 0; */
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
-    flex-direction:row;
-    flex-wrap: wrap;}
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
-.box{
+.box {
     width: 370px;
     height: 310px;
     position: relative;
     box-shadow: 5px 4px 10px 0 rgba(0, 0, 0, 0.5);
     display: flex;
-    justify-content:flex-end;
-    flex-direction:column;
+    justify-content: flex-end;
+    flex-direction: column;
     flex-wrap: wrap;
-    margin-bottom: 10px;}
+    margin-bottom: 10px;
+}
 
-    .container1:hover .box:not(:hover){
-        opacity: 0.7;    } 
-       
- .box:active{
-         transform: scale(1.2);
-         transition-duration: .4s;
-         z-index: 2;  
-         box-shadow: 5px 4px 10px 5px #53535380;     }
+.container1:hover .box:not(:hover) {
+    opacity: 0.7;
+}
 
-.shadow{
+.box:active {
+    transform: scale(1.2);
+    transition-duration: 0.4s;
+    z-index: 2;
+    box-shadow: 5px 4px 10px 5px #53535380;
+}
+
+.shadow {
     height: 45%;
     mix-blend-mode: multiply;
     background-blend-mode: multiply;
-    background-image: linear-gradient(to top, #000000, #ffffff);}
+    background-image: linear-gradient(to top, #000000, #ffffff);
+}
 
-.box .text{
+.box .text {
     height: 28%;
     position: absolute;
-    left: 20px;   bottom:23px;
+    left: 20px;
+    bottom: 23px;
     z-index: 1;
     display: flex;
-    justify-content:space-between;
-    flex-direction:column;
-    flex-wrap: wrap;}
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
 
-.box p.big{
+.box p.big {
     opacity: 1;
     font-size: 20px;
     font-weight: bold;
@@ -104,68 +118,78 @@ p.head{
     line-height: 1.25;
     letter-spacing: normal;
     text-align: left;
-    color: #ffffff;}
-    
-.box p.small{
-        font-size: 13px;
-         font-weight: 300;    }
+    color: #ffffff;
+}
 
- .box .date{
-        position: absolute;
-        left: 30px;   top:30px;    }
+.box p.small {
+    font-size: 13px;
+    font-weight: 300;
+}
 
-    .date .num{
-        font-family: 'Raleway', sans-serif;
-        font-size: 32px;
-        font-weight: bold;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 0.78;
-        letter-spacing: normal;
-        text-align: center;
-        color: #ffffff;    }
+.box .date {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+}
 
-    .date .mounth{
-        font-family: 'Raleway', sans-serif;
-        font-size: 21px;
-        font-weight: 700;
-        font-stretch: normal;
-        font-style: normal;
-        line-height: 1.19;
-        letter-spacing: normal;
-        text-transform: uppercase;
-        text-align: left;
-        color: #ffffff;    }
+.date .num {
+    font-family: "Raleway", sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.78;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+}
 
-.box.box1{
-    background: url(/lesson9/img/fruits.png)no-repeat center center;    }
+.date .mounth {
+    font-family: "Raleway", sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.19;
+    letter-spacing: normal;
+    text-transform: uppercase;
+    text-align: left;
+    color: #ffffff;
+}
 
-.box.box2{
-    background: url(/lesson9/img/cup.png)no-repeat center center;
+.box.box1 {
+    background: url(../img/fruits.png) no-repeat center center;
+}
+
+.box.box2 {
+    background: url(../img/cup.png) no-repeat center center;
     margin-left: 30px;
-    margin-right: 30px;}
+    margin-right: 30px;
+}
 
-.box.box3{
-    background: url(/lesson9/img/berry.png)no-repeat center center;}
+.box.box3 {
+    background: url(../img/berry.png) no-repeat center center;
+}
 
-.date{
+.date {
     padding: 8px;
-    background: url(/lesson9/img/day.png)no-repeat center center;  }
+    background: url(../img/day.png) no-repeat center center;
+}
 
-footer{
+footer {
     text-transform: uppercase;
     width: 200px;
     position: relative;
     box-sizing: border-box;
     margin: auto;
-    overflow: auto; 
-    background:url(/lesson9/img/button.png) no-repeat center center;
+    overflow: auto;
+    background: url(../img/button.png) no-repeat center center;
     font-size: 20px;
-  font-weight: 300;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: 1.25;
-  letter-spacing: normal;
-  text-align: left;
-  padding: 20px 40px 20px 40px;}
- 
+    font-weight: 300;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: left;
+    padding: 20px 40px 20px 40px;
+}

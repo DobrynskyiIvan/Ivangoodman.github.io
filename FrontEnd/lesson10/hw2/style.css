@@ -1,110 +1,115 @@
-@import url('https://fonts.googleapis.com/css?family=Dosis&display=swap');
-*{
-    padding:0;
-    margin: 0px;
-    line-height: 1;
-    box-sizing: border-box;
-    
-    }
-.container{
-   
-    position: absolute;
-    margin: auto;
-    top: 0; left: 0; bottom: 0; right: 0;
-    overflow: auto; 
-    background: url(/lesson10/hw2/img/main\ bg.png) no-repeat center center;
-    background-size: cover;
+@import url("https://fonts.googleapis.com/css?family=Dosis&display=swap");
+* {
+  padding: 0;
+  margin: 0px;
+  line-height: 1;
+  box-sizing: border-box;
 }
-.context{
-
+.container {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
+  background: url(./img/main.png) no-repeat center center;
+  background-size: cover;
+}
+.context {
   width: 700px;
- height: 400px ;
+  height: 400px;
   padding: 40px;
-    margin: auto;
-    position: absolute;
-    top: 0; left: 0; bottom: 0; right: 0;
-    background: url(/lesson10/hw2/img/Rounded\ Rectangle\ 1.png) no-repeat center center;
-    background-size: contain; 
-    color: #e1e1e1;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-top: 70px;
-    align-items: center;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: url(./img/RoundedRectangle1.png) no-repeat center center;
+  background-size: contain;
+  color: #e1e1e1;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 70px;
+  align-items: center;
 }
 
-.color{
+.color {
   position: absolute;
   bottom: 20px;
   left: 150px;
   box-sizing: border-box;
-  background: url(/lesson10/hw2/img/bullets.png)no-repeat center center;
+  background: url(./img/bullets.png) no-repeat center center;
   width: 100px;
   height: 40px;
 }
 
-.logo{
-    background: url(/lesson10/hw2/img/logo.png) no-repeat center center;
-    width: 65px;
-    height: 45px;
-    position: absolute;
-    top: 20px; left: 20px; bottom: 0; right: 0;
+.logo {
+  background: url(./img/logo.png) no-repeat center center;
+  width: 65px;
+  height: 45px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  bottom: 0;
+  right: 0;
 }
 
-.photo{
-    background: url(/lesson10/hw2/img/Nike-SB-Stefan-Janoski-Max.png) no-repeat center center;
-   
-    width: 330px;
-   height: 160px;
+.photo {
+  background: url(./img/Nike-SB-Stefan-Janoski-Max.png) no-repeat center center;
+
+  width: 330px;
+  height: 160px;
 }
 
-div.context2{
+div.context2 {
   height: 100%;
   padding: 30px 40px;
-  
-    display: flex;
-    flex-direction: column;;
-    justify-content: space-between; 
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.line1{
-    font-family: 'Dosis', sans-serif;
-    font-size: 24px;
-    font-weight: 100;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.08;
-    letter-spacing: 0.48px;
-    text-align: left;
-    color: #e1e1e1;
-    padding-bottom: 20px;
+.line1 {
+  font-family: "Dosis", sans-serif;
+  font-size: 24px;
+  font-weight: 100;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.08;
+  letter-spacing: 0.48px;
+  text-align: left;
+  color: #e1e1e1;
+  padding-bottom: 20px;
 }
 
-.line2{
-    font-size: 14px;
-    font-weight: 100;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.86;
-    letter-spacing: 0.28px;
-    text-align: left;
-    color: rgba(225, 225, 225, 0.54);
+.line2 {
+  font-size: 14px;
+  font-weight: 100;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.86;
+  letter-spacing: 0.28px;
+  text-align: left;
+  color: rgba(225, 225, 225, 0.54);
 }
 
 .checked {
-    color: orange;
-  }
+  color: orange;
+}
 
-  .line3{
-      position: relative;
-  }
- 
+.line3 {
+  position: relative;
+}
+
 .custom-select {
-    width: 100px;
+  width: 100px;
   position: relative;
   font-family: Arial;
 }
-
 
 /* .custom-select select {
   display: none; /*hide original SELECT element: } */
@@ -112,7 +117,6 @@ div.context2{
 .select-selected {
   background-color: DodgerBlue;
 }
-
 
 /* Style the arrow inside the select element: */
 .select-selected:after {
@@ -132,16 +136,15 @@ div.context2{
   top: 7px;
 }
 
-
 /* style the items (options), including the selected item: */
-.select-items div,.select-selected {
+.select-items div,
+.select-selected {
   color: #ffffff;
   padding: 8px 16px;
   border: 1px solid transparent;
   border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
   cursor: pointer;
 }
-
 
 /* Style items (options): */
 .select-items {
@@ -158,36 +161,33 @@ div.context2{
   display: none;
 }
 
-.select-items div:hover, .same-as-selected {
+.select-items div:hover,
+.same-as-selected {
   background-color: rgba(0, 0, 0, 0.1);
 }
-.select{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    
+.select {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
 }
-select{
-    background-color: rgba(126, 126, 126, 0.1);
-    color: blanchedalmond;
-    font-size: 15px;
-    padding: 5px;
-    margin: 5px;
+select {
+  background-color: rgba(126, 126, 126, 0.1);
+  color: blanchedalmond;
+  font-size: 15px;
+  padding: 5px;
+  margin: 5px;
 }
-div.select option{
-    background-color: rgb(126, 126, 126);
-    font-size: 15px;
-
+div.select option {
+  background-color: rgb(126, 126, 126);
+  font-size: 15px;
 }
-button{
-  
+button {
   display: inline;
   box-sizing: border-box;
   color: blanchedalmond;
-    
-    padding: 10px ;
-    font-size: 20px;
-    background-color: rgba(126, 126, 126, 0.3);
-    border: none;
+
+  padding: 10px;
+  font-size: 20px;
+  background-color: rgba(126, 126, 126, 0.3);
+  border: none;
 }
- 

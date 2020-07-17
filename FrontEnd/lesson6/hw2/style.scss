@@ -38,28 +38,29 @@
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, 1fr);
         gap: 20px;
-        grid-template-areas: "mainContainer mainContainer firstBlog"
+        grid-template-areas:
+            "mainContainer mainContainer firstBlog"
             "secondBlog thirdBlog foutrhBlog";
 
         @media only screen and (max-width: 954px) {
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(3, 1fr);
             gap: 20px;
-            grid-template-areas: "mainContainer mainContainer "
-                "firstBlog secondBlog ""thirdBlog foutrhBlog";
-
+            grid-template-areas:
+                "mainContainer mainContainer "
+                "firstBlog secondBlog " "thirdBlog foutrhBlog";
         }
 
         @media only screen and (max-width: 465px) {
             grid-template-columns: 1fr;
             grid-template-rows: repeat(4, 1fr);
             gap: 20px;
-            grid-template-areas: "mainContainer   "
+            grid-template-areas:
+                "mainContainer   "
                 "firstBlog"
                 " secondBlog"
                 "thirdBlog"
                 " foutrhBlog";
-
         }
 
         .foto_main {
@@ -95,13 +96,11 @@
     justify-content: end;
     box-sizing: border-box;
 
-    grid-template-areas: "firstPhoto  "
+    grid-template-areas:
+        "firstPhoto  "
         "smallText"
         "bigText"
-        "iconText"
-
-
-    ;
+        "iconText";
 
     @media only screen and (max-width: 954px) {
         grid-template-rows: repeat(auto-fit, minmax(20px, 1fr));
@@ -112,7 +111,6 @@
             grid-area: firstPhoto;
             width: 100%;
             height: auto;
-
         }
     }
 
@@ -121,7 +119,6 @@
         @extend %smallText;
 
         padding-top: 28px;
-
     }
 
     .b_text {
@@ -129,11 +126,9 @@
         @extend %bigText;
         padding-top: 21px;
 
-
         padding-right: 25px;
 
         color: #1d1d1d;
-
     }
 
     .icon {
@@ -142,12 +137,12 @@
         margin: auto auto 25px 29px;
         width: 54px;
         height: 54px;
-        background: url(/lesson6/hw2/img/LayerAutorPhoto.png) no-repeat center center;
+        background: url() no-repeat center center;
     }
 }
 
 .foto_main {
-    background: url(/lesson6/hw2/img/LayerRedCar.png) no-repeat center center;
+    background: url() no-repeat center center;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -163,15 +158,12 @@
         color: #ffffff;
         font-size: 30px;
     }
-
 }
-
 
 footer {
     max-height: 30px;
     font-size: 13px;
     font-weight: 500;
-
 
     line-height: 2.31;
 
@@ -183,7 +175,6 @@ footer {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
-
 
     & span {
         justify-self: end;

@@ -1,39 +1,41 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
-*{
-    padding:0;
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+* {
+    padding: 0;
     margin: 0px;
     line-height: 1;
     box-sizing: border-box;
-    
 }
-.container{
+.container {
     max-width: 1900px;
     max-height: 900px;
     position: absolute;
     margin: auto;
-    top: 0; left: 0; bottom: 0; right: 0;
-    overflow: auto; 
-    background: url(/lesson11/img/Layer\ 2.png) ;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    background: url(./img/Layer.png);
     background-size: cover;
-
-
 }
-.form{
+.form {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     margin: auto;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
     width: 336px;
     height: 532px;
     background-color: #ffffff;
-
 }
-label{
+label {
     padding-bottom: 5px;
 }
-.header{
+.header {
     width: 336px;
     height: 72px;
     background-color: #f8edaf;
@@ -41,140 +43,123 @@ label{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-       padding: 24px;
-    
+    padding: 24px;
 }
-.text1.big{
+.text1.big {
     font-family: "Montserrat";
-  font-size: 14px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: left;
-  color: #6e7f7b;
-
+    font-size: 14px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #6e7f7b;
 }
-.text1.small{
-    font-family: 'Montserrat', sans-serif;
-  font-size: 10px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: 0.75px;
-  text-align: left;
-  color: #a6a28d;
-
+.text1.small {
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.75px;
+    text-align: left;
+    color: #a6a28d;
 }
-.text2 .price{
-    font-family: 'Montserrat', sans-serif;
-  font-size: 36px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  text-align: left;
-  color: #637570;
-
+.text2 .price {
+    font-family: "Montserrat", sans-serif;
+    font-size: 36px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    text-align: left;
+    color: #637570;
 }
-.form2{
+.form2 {
     padding: 30px;
-  
-  
 }
-form.paiment{
+form.paiment {
     padding-top: 20px;
     box-sizing: border-box;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
+    justify-content: space-between;
 }
 
-.form2 input{
+.form2 input {
     box-sizing: border-box;
     width: 100%;
     border: solid 2px #82d4e7;
     background-color: #ffffff;
-    padding: 10px ;
+    padding: 10px;
     margin-bottom: 20px;
-    
 }
-.mounth_first{
+.mounth_first {
     margin-bottom: 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-
-
 }
-.mounth_first select:first-child,.mounth_first select:last-child{
+.mounth_first select:first-child,
+.mounth_first select:last-child {
     box-sizing: border-box;
     border: solid 2px #bac8cb;
     background-color: #ffffff;
-    padding: 10px ;
-    flex: 1 1 auto; 
-
+    padding: 10px;
+    flex: 1 1 auto;
 }
-.mounth_first select:first-child{
+.mounth_first select:first-child {
     margin-right: 16px;
 }
-div.cvv{
+div.cvv {
     padding-top: 5px;
-    
+
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     padding-right: 10px;
     margin-bottom: 30px;
-
 }
-.cvv input{
+.cvv input {
     margin-bottom: 0px;
     width: 30%;
 }
-.cvv p{
-   
+.cvv p {
     font-family: "Montserrat";
-  font-size: 12px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center;
-  color: #9eabad;
+    font-size: 12px;
+    font-weight: normal;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #9eabad;
 }
-.confirm{
-   
+.confirm {
     padding-top: 20px;
     border-top: solid 1px #657477;
     margin-top: 20px;
     box-sizing: border-box;
     display: flex;
-    flex-direction:column;
+    flex-direction: column;
     justify-content: space-between;
-
 }
-.confirm button:first-child{
-    
+.confirm button:first-child {
     border: none;
     background-color: rgb(12, 185, 12);
     padding: 10px;
     color: honeydew;
     font-size: 15px;
 }
-.confirm button:last-child{
-    background-color:white;
+.confirm button:last-child {
+    background-color: white;
     border: none;
 
-text-decoration: underline;
+    text-decoration: underline;
     font-size: 10px;
     padding: 10px;
-
 }
-
-

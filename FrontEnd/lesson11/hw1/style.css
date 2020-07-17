@@ -1,39 +1,43 @@
-@import url('https://fonts.googleapis.com/css?family=Pacifico|Raleway:300,600&display=swap');
-*{
-    padding:0;
+@import url("https://fonts.googleapis.com/css?family=Pacifico|Raleway:300,600&display=swap");
+* {
+    padding: 0;
     margin: 0px;
     line-height: 1;
     box-sizing: border-box;
-    
 }
-.container{
+.container {
     position: relative;
     margin: auto;
-    top: 0; left: 0; bottom: 0; right: 0;
-    overflow: auto; 
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
     width: 1500px;
 }
 
-.part1{
+.part1 {
     position: relative;
     margin: auto;
-    top: 0; left: 0; bottom: 0; right: 0;
-    overflow: auto; 
-    background: url(/lesson11/hw1/img/img.png) no-repeat center center;
-     padding-bottom: 40px; 
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: auto;
+    background: url(./img/img.png) no-repeat center center;
+    padding-bottom: 40px;
 }
-footer{
-   
+footer {
     background-color: black;
     display: flex;
     box-sizing: border-box;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding:20px 164px 20px 164px;
+    padding: 20px 164px 20px 164px;
 }
 
-footer.part2 p{
+footer.part2 p {
     font-family: Raleway;
     font-size: 16px;
     font-weight: 300;
@@ -42,14 +46,15 @@ footer.part2 p{
     line-height: 1.56;
     letter-spacing: normal;
     text-align: left;
-    color: #b9b9b9;}
+    color: #b9b9b9;
+}
 
-footer.part2 p span{   
+footer.part2 p span {
     font-weight: bold;
     color: #ff2b58;
 }
 
-footer p.logo{
+footer p.logo {
     font-family: Pacifico;
     font-size: 25px;
     font-weight: normal;
@@ -58,20 +63,21 @@ footer p.logo{
     line-height: 1;
     letter-spacing: normal;
     text-align: right;
-    color: #b9b9b9;}
+    color: #b9b9b9;
+}
 
-.content{
+.content {
     position: relative;
     display: flex;
     box-sizing: border-box;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding-top: 100px; 
+    padding-top: 100px;
 }
 
-.content p:first-child{
-    font-family: 'Raleway', sans-serif;
+.content p:first-child {
+    font-family: "Raleway", sans-serif;
     font-size: 90px;
     font-weight: bold;
     font-stretch: normal;
@@ -81,10 +87,9 @@ footer p.logo{
     text-align: center;
     color: #262626;
     padding-bottom: 50px;
-
 }
-.content p:last-child{
-    font-family: 'Raleway', sans-serif;
+.content p:last-child {
+    font-family: "Raleway", sans-serif;
     font-size: 17px;
     font-weight: 300;
     font-stretch: normal;
@@ -94,31 +99,27 @@ footer p.logo{
     text-align: center;
     color: #262626;
     max-width: 340px;
-    
 }
-.contact_form{
+.contact_form {
     padding-top: 50px;
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
-    
-    justify-content: center;
 
+    justify-content: center;
 }
 
-.contact_info{
-    
+.contact_info {
     width: 50%;
     padding-left: 50px;
 }
-.contact_detail p:first-child{ 
+.contact_detail p:first-child {
     padding: 10px;
     font-size: 17px;
     font-weight: bold;
-
 }
-.contact_detail p:last-child{
-    font-family: 'Raleway', sans-serif;
+.contact_detail p:last-child {
+    font-family: "Raleway", sans-serif;
     font-size: 20px;
     font-weight: 300;
     font-stretch: normal;
@@ -127,27 +128,25 @@ footer p.logo{
     letter-spacing: normal;
     text-align: left;
     color: #262626;
-
 }
-.contact_user{
+.contact_user {
     width: 50%;
-   
+
     padding-left: 170px;
 }
-form{
+form {
     height: 100%;
     width: 450px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 }
-input{
-    background-color: rgba(	0, 196, 196,  0.5);
+input {
+    background-color: rgba(0, 196, 196, 0.5);
     background-clip: border-box;
     height: 50px;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     font-size: 15px;
     font-weight: bold;
     font-stretch: normal;
@@ -158,21 +157,19 @@ input{
     color: #ffffff;
     margin-bottom: 15px;
     padding-left: 5px;
-
 }
 input::-webkit-input-placeholder {
     color: #252424;
-
 }
-input:focus,textarea:focus{
+input:focus,
+textarea:focus {
     padding-left: 5px;
     border-left: 3px solid blue;
 }
 
-
-form textarea{
-    background-color: rgba(	0, 196, 196,  0.5);
-    font-family: 'Raleway', sans-serif;
+form textarea {
+    background-color: rgba(0, 196, 196, 0.5);
+    font-family: "Raleway", sans-serif;
     font-size: 15px;
     font-weight: bold;
     font-stretch: normal;
@@ -183,5 +180,3 @@ form textarea{
     color: #ffffff;
     padding-left: 5px;
 }
-
-

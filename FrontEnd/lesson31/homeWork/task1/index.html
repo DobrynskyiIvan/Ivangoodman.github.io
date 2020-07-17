@@ -1,130 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/lesson31/homeWork/task1/iconmoon/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="/lesson31/homeWork/task1/iconmoon/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <script src="https://code.jquery.com/jquery-3.5.0.min.js"
-        integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.0.min.js"
+      integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ="
+      crossorigin="anonymous"
+    ></script>
     <script src=" js/main.js"></script>
 
     <title>Lesson 31</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <section>
-        <main>
-            <div class="header">
-                <a href="#one" class="page   ">
-                    <span class="icon-tooltip"></span>
-                    <p>INFORMATION</p>
-                </a>
-                <a href="#two" class="page ">
-                    <span class="icon-card"></span>
-                    <p>RATINGS INFO</p>
-                </a>
-                <a href="#tree" class="page ">
-                    <span class="icon-basket"></span>
-                    <p>WHERE TO BUY</p>
-                </a>
+      <main>
+        <div class="header">
+          <a href="#one" class="page">
+            <span class="icon-tooltip"></span>
+            <p>INFORMATION</p>
+          </a>
+          <a href="#two" class="page">
+            <span class="icon-card"></span>
+            <p>RATINGS INFO</p>
+          </a>
+          <a href="#tree" class="page">
+            <span class="icon-basket"></span>
+            <p>WHERE TO BUY</p>
+          </a>
+        </div>
+        <div id="one" class="context">
+          <div class="photo">
+            <img src="./img/photo.png" alt="" srcset="" />
+            <p class="lineStars">
+              <span class="fa fa-star check"></span>
+              <span class="fa fa-star check"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </p>
+          </div>
+          <div class="gameInformation">
+            <div class="gameHeader">
+              <div class="gameName">
+                <p class="title">FarCry 4</p>
+                <p class="released">First Released Nov 17, 2014</p>
+              </div>
+              <div class="rating">7.8</div>
             </div>
-            <div id="one" class="context    ">
-                <div class="photo"><img src="/lesson31/homeWork/task1/img/photo.png" alt="" srcset="">
-                    <p class="lineStars">
-                        <span class="fa fa-star  check "></span>
-                        <span class="fa fa-star check "></span>
-                        <span class="fa fa-star  "></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span></p>
-                </div>
-                <div class="gameInformation">
-                    <div class="gameHeader">
-                        <div class="gameName">
-                            <p class="title">FarCry 4</p>
-                            <p class="released">First Released Nov 17, 2014</p>
-                        </div>
-                        <div class="rating">7.8</div>
-                    </div>
-                    <p class="gameDescripton">In Far Cry 4, players find themselves in Kyrat, a breathtaking, perilous
-                        and wild region of the Hima
-                        layas struggling under the regime of a despotic self-appointed king.</p>
-                    <div class="buyMenu">
-                        <div class="price">
-                            <p class="discont">20% OFF!</p>
-                            <p class="priceToBuy">$59.96</p>
-                        </div>
-                        <button type="submit">BUY IT NOW</button>
-                    </div>
-                </div>
-
+            <p class="gameDescripton">
+              In Far Cry 4, players find themselves in Kyrat, a breathtaking,
+              perilous and wild region of the Hima layas struggling under the
+              regime of a despotic self-appointed king.
+            </p>
+            <div class="buyMenu">
+              <div class="price">
+                <p class="discont">20% OFF!</p>
+                <p class="priceToBuy">$59.96</p>
+              </div>
+              <button type="submit">BUY IT NOW</button>
             </div>
-            <div id="tree" class="context">
-                <div class="photo"><img src="/lesson31/homeWork/task1/img/photo.png" alt="" srcset="">
-                    <p class="lineStars">
-                        <span class="fa fa-star  check "></span>
-                        <span class="fa fa-star check "></span>
-                        <span class="fa fa-star  "></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span></p>
-                </div>
-                <div class="gameInformation">
-                    <div class="gameHeader">
-                        <div class="gameName">
-                            <p class="title">Game Over 2</p>
-                            <p class="released">First Released Sep 3, 2017</p>
-                        </div>
-                        <div class="rating">7.8</div>
-                    </div>
-                    <p class="gameDescripton">In Far Cry 4, players find themselves in Kyrat, a breathtaking, perilous
-                        and wild region of the Hima
-                        layas struggling under the regime of a despotic self-appointed king.</p>
-                    <div class="buyMenu">
-                        <div class="price">
-                            <p class="discont">20% OFF!</p>
-                            <p class="priceToBuy">$59.96</p>
-                        </div>
-                        <button type="submit">BUY IT NOW</button>
-                    </div>
-                </div>
-
+          </div>
+        </div>
+        <div id="tree" class="context">
+          <div class="photo">
+            <img src="./img/photo.png" alt="" srcset="" />
+            <p class="lineStars">
+              <span class="fa fa-star check"></span>
+              <span class="fa fa-star check"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </p>
+          </div>
+          <div class="gameInformation">
+            <div class="gameHeader">
+              <div class="gameName">
+                <p class="title">Game Over 2</p>
+                <p class="released">First Released Sep 3, 2017</p>
+              </div>
+              <div class="rating">7.8</div>
             </div>
-            <div id="two" class="context">
-                <div class="photo"><img src="/lesson31/homeWork/task1/img/photo.png" alt="" srcset="">
-                    <p class="lineStars">
-                        <span class="fa fa-star  check "></span>
-                        <span class="fa fa-star check "></span>
-                        <span class="fa fa-star  "></span>
-                        <span class="fa fa-star"></span>
-                        <span class="fa fa-star"></span></p>
-                </div>
-                <div class="gameInformation">
-                    <div class="gameHeader">
-                        <div class="gameName">
-                            <p class="title"> Just Start 2020</p>
-                            <p class="released">First Released Nov 17, 2014</p>
-                        </div>
-                        <div class="rating">8</div>
-                    </div>
-                    <p class="gameDescripton">In Far Cry 4, players find themselves in Kyrat, a breathtaking, perilous
-                        and wild region of the Hima
-                        layas struggling under the regime of a despotic self-appointed king.</p>
-                    <div class="buyMenu">
-                        <div class="price">
-                            <p class="discont">20% OFF!</p>
-                            <p class="priceToBuy">$59.96</p>
-                        </div>
-                        <button type="submit">BUY IT NOW</button>
-                    </div>
-                </div>
-
+            <p class="gameDescripton">
+              In Far Cry 4, players find themselves in Kyrat, a breathtaking,
+              perilous and wild region of the Hima layas struggling under the
+              regime of a despotic self-appointed king.
+            </p>
+            <div class="buyMenu">
+              <div class="price">
+                <p class="discont">20% OFF!</p>
+                <p class="priceToBuy">$59.96</p>
+              </div>
+              <button type="submit">BUY IT NOW</button>
             </div>
-        </main>
+          </div>
+        </div>
+        <div id="two" class="context">
+          <div class="photo">
+            <img src="./img/photo.png" alt="" srcset="" />
+            <p class="lineStars">
+              <span class="fa fa-star check"></span>
+              <span class="fa fa-star check"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+              <span class="fa fa-star"></span>
+            </p>
+          </div>
+          <div class="gameInformation">
+            <div class="gameHeader">
+              <div class="gameName">
+                <p class="title">Just Start 2020</p>
+                <p class="released">First Released Nov 17, 2014</p>
+              </div>
+              <div class="rating">8</div>
+            </div>
+            <p class="gameDescripton">
+              In Far Cry 4, players find themselves in Kyrat, a breathtaking,
+              perilous and wild region of the Hima layas struggling under the
+              regime of a despotic self-appointed king.
+            </p>
+            <div class="buyMenu">
+              <div class="price">
+                <p class="discont">20% OFF!</p>
+                <p class="priceToBuy">$59.96</p>
+              </div>
+              <button type="submit">BUY IT NOW</button>
+            </div>
+          </div>
+        </div>
+      </main>
     </section>
-
-</body>
-
+  </body>
 </html>
