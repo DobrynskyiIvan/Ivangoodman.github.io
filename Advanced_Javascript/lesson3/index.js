@@ -63,4 +63,59 @@ function getUsers() {
 
 
 
+  //////======== Task 4====
+  /*
+Реализовать функцию bind которая должна работать так как показано в usage
+Не использоапть ES 6
+Подсказка - нужно использовать arguments, apply, closure (замыкания)
+*/
+
+const user = {
+    firstName: "Bill"
+  };
+ 
+  function add(a, b, c) {
+    return `${this.firstName} adds ${a + b + c}`;
+  };
+
+
+  function bind(fn, args) {
+      
+      let A=[...arguments];
+   
+      let B=[];
+      if(!isNaN(A[2])){
+            B.push(A[2]);
+      } 
+       if(!isNaN(A[3])){
+          B.push(A[3]);
+      } 
+       if(!isNaN(A[3])){
+         B.push(A[4]);
+      }
+   return  function () { 
+
+      if(arguments.length==1){
+        B.push(arguments) }
+      else if(arguments.length>1){
+       for (const i in arguments) {
+        B.push(arguments[i])
+         }
+       }
+    return fn.apply(args,[B[0],B[1],B[2]])
+      }
+ 
+   };
+
+ 
+  
+  
+  // usage
+  console.log("[1]:",bind(add, user)(1, 2, 3)); // Bill adds 6
+  console.log("[2]:",bind(add, user, 1)(2, 3)); // Bill adds 6
+  console.log("[3]:",bind(add, user, 1, 2, 3)()); // Bill adds 6
+  console.log("[4]:",bind(add, user, 1, 2, 3)(4, 5, 6)); // Bill adds 6
+
+
+
 
