@@ -1,0 +1,200 @@
+*****************************************************
+1. Установка webpack
+- открываем терминал в каталоге 04_files и набираем команды
+
+  npm init -y
+  npm i -D webpack webpack-cli webpack-dev-server
+
+--------------------------------------------
+3 способа испльзования webpack
+1.  webpack.config.js
+
+2. Из cli
+     webpack <entry.js> <outpub.js> --colors --progress
+     webpack-dev-server <entry.js>  --port=3000
+
+3. Из лоюбого js файла
+   const webpack = require('webpack')
+   webpack({
+            // configuration object here
+   }, (err, status) => {
+            // Compile callback
+   });
+
+-----------------------------------------------
+Entry file -> если его не задать, то по умолчанию  webpack  ищет файл src/index.js и будет компилировать его в dist/main.js
+
+
+В терминале набираем команду
+
+    webpack
+
+Получим WARNING in configuration. Это потому,  что не указан mode
+По умолчанию компиляция проходить в режиме production
+https://webpack.js.org/concepts/mode/#src/components/Sidebar/Sidebar.jsx
+
+
+Поэтому в терминале набираем команду
+
+    webpack --mode=development
+
+
+
+
+
+
+
+*****************************************************
+2. Запуск webpack через файл package.json
+
+Чтобы постоянно не набирать к cli длинные команды, их лучше вынести в свойство
+"scripts"  файла package.json
+
+ "scripts": {
+    "webpack": "webpack",
+    "dev": "npm run webpack --  --mode development --watch",
+    "prod": "npm run webpack -- --mode production"
+  }
+
+
+
+
+
+
+*****************************************************
+3. Конфигурационный файл webpack
+
+https://webpack.js.org/concepts/entry-points/
+https://webpack.js.org/concepts/output/
+
+// ------------------------------ webpack.config.js
+
+module.exports =  (env = {mode: 'development'})  => {
+        const isProduction = env.mode === 'production';
+    return {
+      mode: env.mode,
+        entry: "./src/index.js",
+        output: {
+            path:   __dirname + "/dist",
+            filename:"bundle.js"
+        }
+    }
+}
+
+------------------------------ //
+
+Изменим скрипты запуска
+
+"scripts": {
+    "webpack": "webpack",
+    "dev": "npm run webpack --  --env.mode development --watch",
+    "prod": "npm run webpack -- --env.mode production"
+  }
+
+-----------------------------------------------
+Запустим скрипт и увидим сообщение в консоли
+Изменим файл index.js
+// ------------------------------ src/index.js
+import Person from "./components/Person";
+
+const u = new Person("Bill");
+------------------------------ //
+
+И посмотрим на файл dist/bundle.js
+В коде файла увидим что класс Person имеет сиетаксис ES 6
+А нам желательно его иметь в синтаксисе ES 5
+Для этого надо использовать транспайлер babel
+https://babeljs.io/
+
+
+
+
+
+
+*****************************************************
+4. Loaders
+
+
+https://webpack.js.org/concepts/loaders/
+Loaders указывают webpack как модифицировать файлы перед их добавлением в graph
+То есть loaders - это по сути модификаторы файлов
+
+-----------------------------------------------  общий вид  loader
+module: {
+        rules: [
+                { ... loader 1 ...},
+                { ... loader 2 ...},
+                 .....
+                { ... loader n ...},
+        ]
+}
+
+
+-----------------------------------------------------------
+
+Устанавливаем   babel-loader
+https://webpack.js.org/loaders/babel-loader/
+https://babeljs.io/setup#installation
+
+
+
+npm i -D babel-loader @babel/core @babel/preset-env
+
+------------------------------- rules
+ {  test: /\.js$/,   exclude: /node_modules/,    use: ['babel-loader'] }
+
+---------------- .babelrc
+{
+    "presets": ["@babel/preset-env"]
+}
+
+----------------------------------------------------------------- /
+если опять  посмотрим на файл dist/bundle.js
+то увидим что класс Person сейчвс меет синтаксис ES 5
+
+
+
+
+
+
+*****************************************************
+webpack_dev_server
+
+https://webpack.js.org/configuration/dev-server/#src/components/Sidebar/Sidebar.jsx
+
+"scripts": {
+    ...
+    "dev": "webpack-dev-server  --env.mode development --progress --hide-modules --open",
+    ...
+  }
+---------------------------
+
+По умолчанию все файлы отдает из корневой директории
+ - переносим файл index.html в каталог src/  и меняем у него
+ путь подключения  bundle.js
+
+ <script src="bundle.js"></script>
+
+Добваляем в webpack.config.js
+// ------------------------------ webpack.config.js
+
+ devServer: {
+    contentBase: path.join(__dirname, 'src'),
+    compress: true,
+    port: 9000
+  }
+
+------------------------------ //
+
+
+====================================== HOMEWORK ===================
+
+1.  Подключить к созданному в классе проекту на webpack модуль
+    компиляции SASS и проверить его работу
+    Использовать пакеты и документацию на них
+
+    css-loader, sass-loader, node-sass, mini-css-extract-plugin
+
+2   Реализовать минимизацию CSS файлов в  режиме работы production
+    Использовать пакет
+        optimize-css-assets-webpack-plugin
