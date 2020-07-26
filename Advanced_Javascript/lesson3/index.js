@@ -80,32 +80,20 @@ const user = {
 
 
   function bind(fn, args) {
-      
-      let A=[...arguments];
-   
-      let B=[];
-      if(!isNaN(A[2])){
-            B.push(A[2]);
-      } 
-       if(!isNaN(A[3])){
-          B.push(A[3]);
-      } 
-       if(!isNaN(A[3])){
-         B.push(A[4]);
-      }
-   return  function () { 
 
-      if(arguments.length==1){
-        B.push(arguments) }
-      else if(arguments.length>1){
-       for (const i in arguments) {
-        B.push(arguments[i])
-         }
-       }
-    return fn.apply(args,[B[0],B[1],B[2]])
-      }
- 
-   };
+    let outerArgs = [].slice.call(arguments, 2);
+  
+    return function() {
+  
+      const innerArgs = [].slice.call(arguments);
+  
+      const allArgs = outerArgs.concat(innerArgs);
+  
+      return console.log(fn.apply(args, allArgs));
+  
+    };
+  
+  }
 
  
   
