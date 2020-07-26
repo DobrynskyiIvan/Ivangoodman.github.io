@@ -1,6 +1,6 @@
 const path = require("path");
-const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
- 
+const HtmlWebpackPlugin = require("html-webpack-plugin"); //installed via npm
+
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = (env = { mode: "development" }) => {
@@ -15,7 +15,7 @@ module.exports = (env = { mode: "development" }) => {
     mode: env.mode,
     devtool: isProduction ? "" : "inline-source-map",
     entry: {
-      app: ["./src/index.js", "./src/scss/style.scss" ],
+      app: ["./src/index.js", "./src/scss/style.scss"],
     },
     output: {
       path: __dirname + "/dist",
@@ -29,7 +29,7 @@ module.exports = (env = { mode: "development" }) => {
           exclude: /node_modules/,
           use: ["babel-loader"],
         },
-         
+
         {
           test: /\.(sa|sc|c)ss$/,
           use: [
@@ -48,30 +48,28 @@ module.exports = (env = { mode: "development" }) => {
         },
       ],
     },
-    plugins     : [
- 
-            new MiniCssExtractPlugin({
-        filename: `styles/[name].css`
+    plugins: [
+      new MiniCssExtractPlugin({
+        filename: `styles/[name].css`,
       }),
       new HtmlWebpackPlugin({
-              template: "./src/index.html",
-           }
-      )
-    // plugins: [
-    //   new HtmlWebpackPlugin({
-    //     template: "./src/index.html",
-    //   }),
-    //   // new CleanWebpackPlugin(), // плагін який очищує папку dist перед збіркою
-    //   new CopyWebpackPlugin({
-    //     // плагін для копіювання файлів
-    //     patterns: [
-    //       {
-    //         from: path.resolve(__dirname, "src/favicon.ico"),
-    //         to: path.resolve(__dirname, "dist"),
-    //       },
-    //     ],
-    //   }),
-   ],
+        template: "./src/index.html",
+      }),
+      // plugins: [
+      //   new HtmlWebpackPlugin({
+      //     template: "./src/index.html",
+      //   }),
+      //   // new CleanWebpackPlugin(), // плагін який очищує папку dist перед збіркою
+      //   new CopyWebpackPlugin({
+      //     // плагін для копіювання файлів
+      //     patterns: [
+      //       {
+      //         from: path.resolve(__dirname, "src/favicon.ico"),
+      //         to: path.resolve(__dirname, "dist"),
+      //       },
+      //     ],
+      //   }),
+    ],
     devServer: {
       contentBase: path.join(__dirname, "src"),
       compress: true,
