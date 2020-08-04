@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home work 7</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+</head>
+
+<body>
+    <div id="spinner" class="spinner" style="color:blue;"><img src="i/spinner.gif" height="32"></div>
+    <div id="root"></div> ​
+    <script crossorigin src="https://unpkg.com/react@16.8.6/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16.8.6/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    <script crossorigin src="https://unpkg.com/prop-types@15.7.2/prop-types.js"></script>
+    <script type="text/babel">
+        const root = document.getElementById("root");
+        const URL = "https://jsonplaceholder.typicode.com/users";
+        const spinner = document.getElementById("spinner");
+
+        const App = () => {
+            const [error, setError] = React.useState(null);
+            const [isLoaded, setIsLoaded] = React.useState(false);
+            const [data, setData] = React.useState([]);
+            const [list, setItems] = React.useState([]);
+            React.useEffect(() => {
+                fetch(URL)
+                    .then(res => res.json())
+                    .then(
+                        (result) => {
+                            setIsLoaded(true);
+                            setData(result);
+                            setItems(result)
+                            spinner.remove();
+                        },
+
+                        (error) => {
+                            setIsLoaded(true);
+                            setError(error);
+                        }
+                    )
+            }, [])
+            const search = ({ target }) => {
+                setItems(data.filter(item => item['name'].toLowerCase().includes(target.value.toLowerCase())))
+
+
+            }
+
+            if (error) {
+                return <div>Error: {error.message}</div>;
+            } else if (!isLoaded) {
+                return <div>Loading...</div>;
+            } else {
+                return (
+                    <div>
+
+                        <input placeholder="Search...." onChange={search} />
+                        <table className="table">
+
+                            <thead >
+                                <tr>
+                                    <th  >  Name  </th>
+                                    <th  >  User Name  </th>
+                                    <th  >  Email </th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {list.map(item => (
+                                    <tr key={item.id + item.phone}  >
+                                        <td>{item.name}</td>
+                                        <td>{item.username}</td>
+                                        <td>{item.email}</td>
+
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+
+                    </div>
+                );
+            }
+        }
+
+        // class App extends React.Component {
+        //     constructor(props) {
+        //         super(props);
+        //         this.state = {
+        //             error: null,
+        //             isLoaded: false,
+        //             data: [],
+        //             list: []
+        //         };
+        //     }
+        //     componentDidMount() {
+        //         fetch(URL)
+        //             .then(res => res.json())
+        //             .then(
+        //                 (result) => {
+        //                     console.log(result)
+        //                     spinner.remove();
+        //                     this.setState({
+        //                         isLoaded: true,
+        //                         data: result,
+        //                         list: result
+        //                     });
+        //                 },
+
+
+        //                 (error) => {
+        //                     this.setState({
+        //                         isLoaded: true,
+        //                         error
+        //                     });
+        //                 }
+        //             )
+
+        //     }
+        //     search = ({ target }) => {
+
+
+        //         const data = this.state.data;
+
+        //         this.setState({
+        //             list: data.filter(item => {
+        //                 return item['name'].toLowerCase().includes(target.value.toLowerCase())
+
+        //             })
+        //         })
+
+        //     }
+
+        //     render() {
+        //         const { error, isLoaded, items } = this.state;
+        //         if (error) {
+        //             return <div>Error: {error.message}</div>;
+        //         } else if (!isLoaded) {
+        //             return <div>Loading...</div>;
+        //         } else {
+        //             return (<div>
+
+        //                 <input placeholder="Search...." onChange={this.search} />
+        //                 <table className="table">
+
+        //                     <thead >
+        //                         <tr>
+        //                             <th  >  Name  </th>
+        //                             <th  >  User Name  </th>
+        //                             <th  >  Email </th>
+
+        //                         </tr>
+        //                     </thead>
+        //                     <tbody>
+        //                         {this.state.list.map(item => (
+        //                             <tr key={item.id + item.phone}  >
+        //                                 <td>{item.name}</td>
+        //                                 <td>{item.username}</td>
+        //                                 <td>{item.email}</td>
+
+        //                             </tr>
+        //                         ))}
+        //                     </tbody>
+        //                 </table>
+
+        //             </div>
+        //             )
+        //         }
+        //     }
+        // }
+
+
+
+        ReactDOM.render(<App />, root)
+    </script>
+</body>
+
+</html>
