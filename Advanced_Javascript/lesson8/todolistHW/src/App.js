@@ -9,11 +9,9 @@ class App extends React.Component {
     state = {
         todos: defaultState,
         listToshow:[],
-        notfound:false,
-        searchTerm: ''
-
-       
-    }
+        value:'',
+      searchTerm: ''
+     }
 
     addTodo = newTodo => this.setState(({todos}) => ({
         todos: [newTodo, ...todos]
@@ -36,53 +34,48 @@ class App extends React.Component {
     markAllActive = () => this.setState(({ todos }) => ({
         todos: todos.map(todo => ({ ...todo, completed: false}))
     }))
-    search = ( ) => {
-            const {todos}=this.state;
-            let founded= todos.filter(item => {
-                return item['value'].toLowerCase().includes(this.state.searchTerm.toLowerCase())
-
-            })
-        this.setState({ 
-            listToshow: founded,
-             searchTerm: '',
-             notfound:founded.length===0
-         }
-         )
-
-     } 
-   
-     componentDidUpdate(prevProps, prevState ){
-       
-        if (( prevState.listToshow.length>1) & (prevState.listToshow.length===this.state.listToshow.length)) {
-         
-            this.setState({  listToshow:  [] }) }
-          }
-      
     
+     get getFiltered() {
+        const { searchTerm,todos } = this.state;
+      
+
+        return todos
+            .filter(todo =>
+                todo.value.toLowerCase().includes(searchTerm.toLocaleLowerCase())
+            )
+           
+    }
+   
     
      addSearchTerm = ({ target }) => {  
-         this.setState({  searchTerm:  target.value }) }
+         this.setState({  value:  target.value  
+        }) }
 
-            
-
+                
+    handleSearch=()=>{
+        this.setState({  searchTerm: this.state.value })  
+    }
+    componentDidUpdate(prevProps, prevState ){
+        
+        if (( prevState.searchTerm.length>1) & (prevState.searchTerm.length===this.state.searchTerm.length)) {
+        
+            this.setState({  searchTerm: '' ,value:''}) }
+        }
+    
     render() {
        
-        const todos =   this.state.listToshow.length>1? this.state.listToshow : this.state.todos;
-     
-       
-     
-       
-        const completedTodos = todos.filter(todo => todo.completed)
+        const todos =this.getFiltered;
+         const completedTodos = todos.filter(todo => todo.completed)
         const activeTodos = todos.filter(todo => !todo.completed)
 
         return (
             <div className={"container"}>
                     <Filter 
                     placeholder={'Search in all list....'}
-                    searchTerm={this.state.searchTerm}
+                    searchTerm={this.state.value}
                     onChange={this.addSearchTerm  }/>
-                    <button onClick={this.search} className={"btn btn-success btn-lg btn-block"} > Search in All list</button>
-                 { this.state.notfound? <h3 > Not found elements!!!</h3>:null} 
+                    <button onClick={this.handleSearch} className={"btn btn-success btn-lg btn-block"} > Search in All list</button>
+                 { this.getFiltered.length==0? <h3 > Not found elements!!!</h3>:null} 
                 <h2>TODO list:</h2>
                 <br/>
                 <NewTodo addTodo={this.addTodo}/>
