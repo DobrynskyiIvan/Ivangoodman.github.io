@@ -1,0 +1,16 @@
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.user {
+  position: relative;
+  min-width: 150px;
+  background: lightblue;
+  display: inline-block;
+  padding: 1rem;
+  cursor: pointer;
+  margin-right: 10px;
+  text-align: center;
+  font-size: 1.3rem;
+}
