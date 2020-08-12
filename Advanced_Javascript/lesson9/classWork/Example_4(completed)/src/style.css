@@ -1,0 +1,38 @@
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.user {
+  position: relative;
+  min-width: 150px;
+  background: lightblue;
+  display: inline-block;
+  padding: 1rem;
+  cursor: pointer;
+  margin-top: 50px;
+  margin-right: 10px;
+  text-align: center;
+}
+.statusList {
+  background: #eee;
+  padding: 5px;
+  margin: 5px 0;
+}
+.top-tooltip {
+  position: absolute;
+  top: -10px;
+  width: 80%;
+  background: #666;
+  color: white;
+  text-align: center;
+}
+button {
+  -webkit-appearance: none;
+  border: 1px solid #999;
+  background: #bbb;
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+}
