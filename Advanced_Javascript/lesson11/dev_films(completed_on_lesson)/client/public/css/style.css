@@ -11,7 +11,11 @@ button:active {
     outline: none;
 }
 
-
+.description{
+    padding: 10px;
+    line-height: 1.3;
+    height: 70%;
+}
 .m-3 {
     margin: 1rem;
 }

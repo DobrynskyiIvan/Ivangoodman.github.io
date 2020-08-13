@@ -34,7 +34,7 @@ const films = [
     description:
       "RISE OF THE LEGEND is a story about Lee Chong Wei, who was born in a poor family. He has the talent of playing badminton and went through a lot of difficulties with the spirit of never giving up, finally he becomes a national player.",
   },
- /* 
+  /* 
  {
     _id: id(),
     title: "Siji: Driver",
