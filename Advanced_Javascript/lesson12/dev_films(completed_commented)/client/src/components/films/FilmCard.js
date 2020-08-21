@@ -1,11 +1,12 @@
 import React, {useState, useContext} from "react"
 import Featured from "./Featured"
+import {Link} from 'react-router-dom';
 import PropTypes from "prop-types"
-import {AppContext} from '../App'
+import {AppContext} from '../FilmsPage'
 
 const FilmCard = React.memo(({film}) => {
     const [isShowDescription, toggleDescription] = useState(false);
-    const {editFilm, deleteFilm} = useContext(AppContext)
+    const {  deleteFilm} = useContext(AppContext)
     const [confirm, setConfirm] = useState(false)
     const showConfirm = () => setConfirm(true)
     const hideConfirm = () => setConfirm(false)
@@ -28,9 +29,10 @@ const FilmCard = React.memo(({film}) => {
             )}
 
             <div className="content">
-              <span href="#" className="header">
-                  {film?.title}
-              </span>
+            <Link to={`/film/${film._id}`} className="header">
+                        {film.title}
+                    </Link>
+              
                 <div className="meta">
                     <i className="icon users"/> {film?.director}
                     <span className="right floated">
@@ -42,6 +44,7 @@ const FilmCard = React.memo(({film}) => {
                        className={`icon link eye ${isShowDescription ? "slash" : ""}`}
                     />
                 </div>
+         
             </div>
 
             <div className="extra content">
@@ -56,9 +59,9 @@ const FilmCard = React.memo(({film}) => {
                     </div>
                 ) : (
                     <div className="ui two buttons">
-            <span  className="ui green basic button"  onClick={() => editFilm(film)}>
-              <i className="ui icon edit" />
-            </span>
+           <Link to={`/films/edit/${film._id}`} className="ui green basic button">
+                                <i className="ui icon edit" />
+                            </Link>
                         <span className="ui red basic button" onClick={showConfirm}>
               <i className="ui icon trash" />
             </span>

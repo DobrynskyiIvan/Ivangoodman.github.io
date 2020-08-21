@@ -1,129 +1,89 @@
 import React, {Component} from "react"
-import FilmsList from "./films"
-import {orderBy} from 'lodash';
-import {films} from "../data"
-import FilmsForm from "./forms/FilmsForm"
+import jwtDecode from 'jwt-decode'
+ import Film from './films/Film'
+ import {Route} from 'react-router-dom';
+ import {Async,lazyImport} from './Async'
 import TopNavigation from "./TopNavigation"
-import {generate as id} from "shortid"
-import LoginForm from "./forms/LoginForm";
-import RegistrationForm from "./forms/RegistrationForm";
-
-const AppContext = React.createContext()
-export {AppContext}
-// const login={
-//     email:"",
-//     password:""
-// }
-// const register={
-//     email:"",
-//     password:"",
-//     passwordConfirm:""
-// }
+import {setAuthorizationHeader} from '../utils'
+ 
+const HomePage = Async(lazyImport('./HomePage'));
+const FilmsPage = Async(lazyImport('./FilmsPage'));
+const SignupPage = Async(lazyImport('./SignupPage'));
+const LoginPage = Async(lazyImport('./LoginPage'));
+ 
 
 class App extends Component {
     state = {
-        films: [],
-        showAddForm: false,
-        selectedFilm: {},
-    }
-
-    componentDidMount() {
-        this.setState({
-            films: this.sortFilms(films),
-        })
-    }
-
-    sortFilms = films => orderBy(films, ["featured", "title"], ["desc", "asc"])
-
-    toggleFeatured = id =>
-        this.setState(({films}) => ({
-            films: this.sortFilms(
-                films.map(item =>
-                    item._id === id ? {...item, featured: !item.featured} : item,
-                ),
-            ),
-        }))
-
-    showAddForm = e => this.setState({
-        showAddForm: true,
-        selectedFilm: {}
-    })
-
-    hideAddForm = e => this.setState({
-        showAddForm: false,
-        selectedFilm: {}
-    })
-
-    saveFilm = film =>
-        this.setState(({films, showAddForm}) => ({
-            films: this.sortFilms([...films, {...film, _id: id()}]),
-            showAddForm: false,
-        }))
-
-    selectFilmForEdit = selectedFilm => {
-        this.setState({
-            selectedFilm,
-            showAddForm: true,
-        })
-    }
-
-    saveFilm = film => (film._id ? this.updateFilm(film) : this.addFilm(film))
-
-    addFilm = film =>
-        this.setState(({films, showAddForm}) => ({
-            films: this.sortFilms([...films, {...film, _id: id()}]),
-            showAddForm: false,
-        }))
-
-    updateFilm = film =>
-        this.setState(({films, showAddForm}) => ({
-            films: this.sortFilms(
-                films.map(item => (item._id === film._id ? film : item)),
-            ),
-            showAddForm: false,
-        }))
-
-    deleteFilm = film =>
-        this.setState(({films, selectedFilm, showAddForm}) => ({
-            films: films.filter(item => item._id !== film._id),
-            selectedFilm: {},
-            showAddForm: false,
-        }))
-
-    render() {
-        const {films, showAddForm, selectedFilm} = this.state
-        const numCol = showAddForm ? "ten" : "sixteen"
-
-        return (
-            <AppContext.Provider
-                value={{
-                    toggleFeatured: this.toggleFeatured,
-                    editFilm: this.selectFilmForEdit,
-                    deleteFilm: this.deleteFilm,
-                }}
-            >
+        user: {
+            token: null,
+            role: 'user'
+        },
+        message: '',}
+    
+        componentDidMount() {
+            if(localStorage.filmsToken) {
+                this.setState({
+                    user: {
+                        token: localStorage.filmsToken,
+                        role: jwtDecode(localStorage.filmsToken).user.role
+                    }})
+                setAuthorizationHeader(localStorage.filmsToken)
+            }
+        }
+    
+        login = token => {
+            this.setState({user: {
+                    token,
+                    role: jwtDecode(token).user.role
+                }})
+            localStorage.filmsToken = token
+            setAuthorizationHeader(token)
+        }
+    
+        logout = () => {
+            this.setState({user: {token: null, role: 'user'}})
+            setAuthorizationHeader()
+            delete localStorage.filmsToken
+        }
+    
+        setMessage = message => this.setState({message})
+    
+        render() {
+            const {user, message} = this.state;
+            const isUserAdmin = this.state.user.role === 'admin';
+    
+            return (
                 <div className="ui container">
-                    <TopNavigation showAddForm={this.showAddForm}/>
-                    {/* <LoginForm initState={login}></LoginForm>
-                    <RegistrationForm initState={register}></RegistrationForm> */}
-
-                    <div className="ui stackable grid">
-                        {this.state.showAddForm && (
-                            <div className="six wide column">
-                                <FilmsForm   submit={this.saveFilm}
-                                             hideAddForm={this.hideAddForm}
-                                             film={this.state.selectedFilm}  />
-                            </div>
-                        )}
-
-                        <div className={`${numCol} wide column`}>
-                            <FilmsList films={films}/>
+                    <TopNavigation logout={this.logout} isAuth={user.token} isAdmin={isUserAdmin} />
+    
+                    {message && (
+                        <div className={'ui info message'}>
+                            <i className={'close icon'} onClick={() => this.setMessage("")} />
+                            {message}
                         </div>
-                    </div>
+                    )}
+    
+                    <Route exact path="/" component={HomePage} />
+                    <Route
+                        path="/films"
+                        render={props => (
+                            <FilmsPage {...props} user={this.state.user}/>
+                        )}
+                    />
+                    <Route path="/film/:_id" exact component={Film} />
+                    <Route
+                        path="/signup"
+                        render={props => (
+                            <SignupPage {...props} setMessage={this.setMessage} />
+                        )}
+                    />
+                    <Route
+                        path="/login"
+                        render={props => <LoginPage {...props} login={this.login} />}
+                    />
                 </div>
-            </AppContext.Provider>
-        )
+            )
+        }
     }
-}
-
-export default App
+    
+    export default App
