@@ -1,89 +1,71 @@
-import React, {Component} from "react"
-import jwtDecode from 'jwt-decode'
- import Film from './films/Film'
- import {Route} from 'react-router-dom';
- import {Async,lazyImport} from './Async'
+import React, {useState, useEffect} from "react"
+import {Route} from "react-router-dom"
+import Film from "./films/Film"
 import TopNavigation from "./TopNavigation"
-import {setAuthorizationHeader} from '../utils'
- 
-const HomePage = Async(lazyImport('./HomePage'));
-const FilmsPage = Async(lazyImport('./FilmsPage'));
-const SignupPage = Async(lazyImport('./SignupPage'));
-const LoginPage = Async(lazyImport('./LoginPage'));
- 
+import {Async, lazyImport} from "./Async"
+import LoginPage from "./LoginPage"
+import {setAuthorizationHeader} from "../utils"
+import jwtDecode from "jwt-decode"
 
-class App extends Component {
-    state = {
-        user: {
-            token: null,
-            role: 'user'
-        },
-        message: '',}
-    
-        componentDidMount() {
-            if(localStorage.filmsToken) {
-                this.setState({
-                    user: {
-                        token: localStorage.filmsToken,
-                        role: jwtDecode(localStorage.filmsToken).user.role
-                    }})
-                setAuthorizationHeader(localStorage.filmsToken)
-            }
-        }
-    
-        login = token => {
-            this.setState({user: {
-                    token,
-                    role: jwtDecode(token).user.role
-                }})
-            localStorage.filmsToken = token
-            setAuthorizationHeader(token)
-        }
-    
-        logout = () => {
-            this.setState({user: {token: null, role: 'user'}})
-            setAuthorizationHeader()
-            delete localStorage.filmsToken
-        }
-    
-        setMessage = message => this.setState({message})
-    
-        render() {
-            const {user, message} = this.state;
-            const isUserAdmin = this.state.user.role === 'admin';
-    
-            return (
-                <div className="ui container">
-                    <TopNavigation logout={this.logout} isAuth={user.token} isAdmin={isUserAdmin} />
-    
-                    {message && (
-                        <div className={'ui info message'}>
-                            <i className={'close icon'} onClick={() => this.setMessage("")} />
-                            {message}
-                        </div>
-                    )}
-    
-                    <Route exact path="/" component={HomePage} />
-                    <Route
-                        path="/films"
-                        render={props => (
-                            <FilmsPage {...props} user={this.state.user}/>
-                        )}
-                    />
-                    <Route path="/film/:_id" exact component={Film} />
-                    <Route
-                        path="/signup"
-                        render={props => (
-                            <SignupPage {...props} setMessage={this.setMessage} />
-                        )}
-                    />
-                    <Route
-                        path="/login"
-                        render={props => <LoginPage {...props} login={this.login} />}
-                    />
-                </div>
-            )
-        }
+const AppContext = React.createContext()
+export {AppContext}
+const HomePage = Async(lazyImport("./HomePage"))
+const FilmsPage = Async(lazyImport("./FilmsPage"))
+const SignupPage = Async(lazyImport("./SignupPage"))
+const initialState = {
+  token: null,
+  role: "user",
+}
+const App = props => {
+  const [user, setUser] = useState(initialState)
+  const [message, setMessage] = useState("")
+  useEffect(() => {
+    if (localStorage.filmsToken) {
+      setUser({
+        token: localStorage.filmsToken,
+        role: jwtDecode(localStorage.filmsToken).user.role,
+      })
+      setAuthorizationHeader(localStorage.filmsToken)
     }
-    
-    export default App
+  }, [])
+  const login = token => {
+    setUser({token, role: jwtDecode(token).user.role})
+    localStorage.filmsToken = token
+    setAuthorizationHeader(token)
+  }
+  const logout = () => {
+    setUser({token: null, role: "user"})
+    setAuthorizationHeader()
+    delete localStorage.filmsToken
+  }
+  return (
+    <div className="ui container">
+      <TopNavigation
+        logout={logout}
+        isAuth={user.token}
+        isAdmin={user.token && user.role === "admin"}
+      />
+      {message && (
+        <div className="ui info message">
+          <i className="close icon" onClick={() => setMessage("")} />
+          {message}
+        </div>
+      )}
+      <Route exact path="/" component={HomePage} />
+      <Route
+        path="/films"
+        render={props => <FilmsPage {...props} user={user} />}
+      />
+      <Route
+        path="/signup"
+        render={props => <SignupPage {...props} setMessage={setMessage} />}
+      />
+      <Route path="/film/:_id" exact component={Film} />
+      <Route
+        path="/login"
+        render={props => <LoginPage {...props} login={login} />}
+      />
+    </div>
+  )
+}
+export default App
