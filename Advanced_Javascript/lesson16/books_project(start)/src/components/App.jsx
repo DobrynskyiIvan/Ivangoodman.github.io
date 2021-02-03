@@ -13,7 +13,7 @@ const App = props => (
             <Route exact path="/" component={BookPage}/>
             <Route path="/add-book" component={BookForm}/>
             <Route
-        path="/edit-book"
+        path="/edit-book/:id"
         render={props => <BookForm {...props}  />}
       />
         </div>
