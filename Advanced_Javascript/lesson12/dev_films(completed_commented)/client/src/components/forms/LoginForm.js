@@ -17,6 +17,7 @@ const LoginForm = props => {
     if (Object.keys(errors).length === 0) {
       setLoading(true)
       props.submit(form).catch(error => {
+ 
         setErrors(error.response.data.errors)
         setLoading(false)
       })
@@ -31,6 +32,7 @@ const LoginForm = props => {
   const cls = loading ? "ui form loading" : "ui form"
   return (
     <form className={cls} onSubmit={handleSubmit}>
+      <FormMessage>{errors.global}</FormMessage>
       <div className={errors.email ? "error field" : "field"}>
         <label>Email</label>
         <input

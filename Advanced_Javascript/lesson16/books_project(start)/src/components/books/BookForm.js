@@ -6,13 +6,15 @@ import { mapToArr } from '../../utils'
 import {addBookAction,editBookAction} from '../../ac/index'
 import { useForm, Controller } from 'react-hook-form'
 
-const BookForm = ({bookForEdit, categories, addBookAction,editBookAction,location}) => {
+const BookForm = ({bookForEdit, categories, addBookAction,editBookAction,  match }) => {
     const [redirect, setRedirect] = useState(false);
     const {register, handleSubmit, errors, control, setError, getValues} = useForm();
     const options = [{value: '-1', label: 'Choose category'}]
     categories.map(cat => options.push(({value: cat._id, label: cat.title })))
      
-    const editetBook = location.pathname === "/edit-book" ? true :false
+  const editetBook = !!match.params.id
+ 
+
  
     function onSubmit(data, event) {
         event.preventDefault();
@@ -88,14 +90,14 @@ const BookForm = ({bookForEdit, categories, addBookAction,editBookAction,locatio
     )
 }
 
-function mapStateToProps(state) {
+function mapStateToProps(state,ownProps) {
     const {categories} = state.categoriesBooks;
     const books=state.books;
 
-  
+   
     return {
         categories: mapToArr(categories),
-        bookForEdit: books.find(it=>it._id===state.activeBook)
+      bookForEdit: books.find(it=>it._id=== ownProps.match.params.id)
     }
 }
 

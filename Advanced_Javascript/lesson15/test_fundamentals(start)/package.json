@@ -1,0 +1,26 @@
+{
+  "name": "beetroot_mocking_test",
+  "version": "1.0.0",
+  "description": "JavaScript Advanced Mocking Fundamentals",
+  "private": true,
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "assert": "^2.0.0",
+    "babel-core": "^6.26.3",
+    "create-jest-runner": "^0.5.3",
+    "glob": "^7.1.6",
+    "jest": "^25.1.0",
+    "jest-watch-typeahead": "^0.4.2"
+  },
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [],
+  "author": "Beetrot Academy",
+  "license": "MIT"
+}

@@ -5,6 +5,7 @@ import api from "../api"
 function LoginPage(props) {
   const submit = user =>
     api.users.login(user).then(token => {
+      
       props.login(token)
       props.history.push("/films")
     })

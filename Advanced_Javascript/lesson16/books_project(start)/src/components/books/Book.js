@@ -8,7 +8,7 @@ const Book = ({book, isActive, toggle}) => {
     const [redirect, setRedirect] = useState(false);
     return(
         <li className={'list-group-item'}>
-             {redirect && <Redirect to="/edit-book" />}
+             {redirect && <Redirect to={`/edit-book/${book._id}`}/>}
             <h2 onClick={toggle}>{book.title}</h2>
             <p>Category: {book.categoryId}</p>
             {isActive && (<div><p>{book.desc}</p>
